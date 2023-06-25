@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/fonts/fonts.scss';
+
+:root {
+  --grey100: #5A5C5E;
+  --grey80: #7B7D80;
+  --grey60: #ACAFB2;
+  --grey40: #DDE1E5;
+  --grey20: #F5FBFF;
+  --red100: #A90F09;
+  --red80: #A93733;
+  --red60: #A95855;
+  --red40: #A97876;
+  --red20: #A99998;
+}

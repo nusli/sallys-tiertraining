@@ -1,0 +1,54 @@
+//Schwarz
+
+@font-face {
+  font-family: "schwartz";
+  font-style: normal;
+  font-weight: 500;
+  src: url(schwartz.ttf) format("truetype");
+}
+
+//Worstveld
+
+@font-face {
+  font-family: "worstveld";
+  font-style: normal;
+  font-weight: 500;
+  src: url(WorstveldSling.ttf) format("truetype");
+}
+
+//Ubuntu
+
+@font-face {
+  font-family: "ubuntu";
+  font-style: bold;
+  font-weight: bold;
+  src: url(Ubuntu-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-style: normal;
+  font-weight: bolder;
+  src: url(Ubuntu-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-style: normal;
+  font-weight: normal;
+  src: url(Ubuntu-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-style: italic;
+  font-weight: normal;
+  src: url(Ubuntu-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-style: normal;
+  font-weight: thin;
+  src: url(Ubuntu-Light.ttf) format("truetype");
+}
