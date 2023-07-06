@@ -12,3 +12,70 @@
   --red40: #A97876;
   --red20: #A99998;
 }
+
+*{
+  user-select: none;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+html, body{
+height: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+}
+body{
+  user-select: none;
+  font-family: "ubuntu";
+  font-style: normal;
+  font-size: 18pt;
+  color: black;
+}
+h1{
+  user-select: none;
+  font-family: "schwartz";
+  font-size: 42pt;
+  color: black;
+}
+h2{
+  user-select: none;
+  font-family: "worstveld";
+  font-size: 64pt;
+  color: var(--red100);
+}
+h3{
+  user-select: none;
+  font-family: "worstveld";
+  font-size: 45pt;
+  color: var(--red100);
+}
+a{
+  text-decoration: none;
+  user-select: none;
+  font-family: "schwartz";
+  font-size: 1.1rem;
+  color: black;
+}
+/* input, textarea{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 14pt;
+} */
+section{
+  position: relative;
+  padding: 80px 120px;
+}
+nav{
+  position: fixed;
+  width: 100vw;
+  height: 145px;
+  background-image: url(./assets/backgrounds/red_top.svg);
+  background-size: 100%;
+  background-position: bottom;
+  padding: 0px 120px;
+}
+footer{
+  padding: 80px 120px 20px;
+	background-color: var(--colorDark);
+	width: 100vw;
+}

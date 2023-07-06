@@ -1,1 +1,42 @@
-<p>navigation works!</p>
+<nav>
+  <div id="navbar">
+    <div id="nav-logo" class="nav-entry"></div>
+    <div class="nav-entry">
+      <div class="nav-entry-top">
+        <a>Hundetraining (Gruppe)</a>
+        <figure class="nav-arrow"></figure>
+      </div>
+      <ul *ngIf="groups_open">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+      </ul>
+    </div>
+    <div class="nav-entry">
+      <div class="nav-entry-top">
+        <a>Hundetraining (einzeln)</a>
+        <figure class="nav-arrow"></figure>
+      </div>
+      <ul *ngIf="individual_open">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+      </ul>
+    </div>
+    <div class="nav-entry">
+      <div class="nav-entry-top">
+        <a>Reitunterricht</a>
+        <figure class="nav-arrow"></figure>
+      </div>
+      <ul *ngIf="horse_open">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+      </ul>
+    </div>
+    <div class="nav-entry">
+      <a>Das bin ich</a>
+    </div>
+  </div>
+</nav>
+

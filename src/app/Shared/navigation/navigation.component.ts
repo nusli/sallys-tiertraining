@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  groups_open = false;
+  individual_open = false;
+  horse_open = false;
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

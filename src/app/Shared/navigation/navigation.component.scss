@@ -1,0 +1,30 @@
+#navbar{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-entry
+{
+  width: 17vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-entry-top{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav-arrow{
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/interaction/arrow_forward_24px.svg);
+  background-position: center;
+  background-size: 100%;
+}
