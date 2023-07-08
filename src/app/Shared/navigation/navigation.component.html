@@ -1,10 +1,14 @@
 <nav>
+  <figure id="nav-bg-red"></figure>
+  <figure id="nav-bg-grey"></figure>
   <div id="navbar">
-    <div id="nav-logo" class="nav-entry"></div>
-    <div class="nav-entry">
+    <figure id="nav-logo" class="nav-entry">
+      <img src="../../../assets/interaction/sallys_logo.svg" alt="sallys logo">
+    </figure>
+    <div class="nav-entry" [ngClass]="groups_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a>Hundetraining (Gruppe)</a>
-        <figure class="nav-arrow"></figure>
+        <a (click)="switchCategories('')">Hundetraining (Gruppe)</a>
+        <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
       </div>
       <ul *ngIf="groups_open">
         <li>Eintrag 1</li>
@@ -12,10 +16,10 @@
         <li>Eintrag 3</li>
       </ul>
     </div>
-    <div class="nav-entry">
+    <div class="nav-entry" [ngClass]="individual_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a>Hundetraining (einzeln)</a>
-        <figure class="nav-arrow"></figure>
+        <a (click)="switchCategories('')">Hundetraining (einzeln)</a>
+        <figure [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('individual_open')"></figure>
       </div>
       <ul *ngIf="individual_open">
         <li>Eintrag 1</li>
@@ -23,10 +27,10 @@
         <li>Eintrag 3</li>
       </ul>
     </div>
-    <div class="nav-entry">
+    <div class="nav-entry" [ngClass]="horse_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a>Reitunterricht</a>
-        <figure class="nav-arrow"></figure>
+        <a (click)="switchCategories('')">Reitunterricht</a>
+        <figure [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('horse_open')"></figure>
       </div>
       <ul *ngIf="horse_open">
         <li>Eintrag 1</li>
@@ -35,7 +39,7 @@
       </ul>
     </div>
     <div class="nav-entry">
-      <a>Das bin ich</a>
+      <a (click)="switchCategories('')">Das bin ich</a>
     </div>
   </div>
 </nav>

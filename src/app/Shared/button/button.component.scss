@@ -1,0 +1,55 @@
+
+.primary
+{
+  background-color: var(--red100);
+}
+
+.secondary
+{
+  border-color: var(--red100);
+}
+.primary:hover
+{
+  background-color: var(--grey80);
+  color: var(--red100);
+}
+
+.secondary:hover
+{
+  border-color: var(--grey80);
+  color: var(--red100);
+}
+.btn-top
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+.withoutContext
+{
+  justify-content: center;
+}
+.withContext
+{
+  justify-content: space-between;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  font-family: "worstveld";
+  font-size: 1.5rem;
+  color: var(--red100);
+}
+
+.open{
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  background-color: #f5fbffe7;
+  border: 1px solid var(--red100);
+
+}

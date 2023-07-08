@@ -4,15 +4,16 @@ import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer
 import { FooterComponent } from './footer/footer.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ButtonComponent } from './button/button.component';
 
 
 
 @NgModule({
-  declarations: [CookieDisclaimerComponent, FooterComponent, HeroSectionComponent, NavigationComponent],
+  declarations: [CookieDisclaimerComponent, FooterComponent, HeroSectionComponent, NavigationComponent, ButtonComponent],
   imports: [
     CommonModule
   ],
-  exports: [CookieDisclaimerComponent, FooterComponent, HeroSectionComponent, NavigationComponent]
+  exports: [CookieDisclaimerComponent, FooterComponent, HeroSectionComponent, NavigationComponent, ButtonComponent]
 })
 
 export class SharedModule { }

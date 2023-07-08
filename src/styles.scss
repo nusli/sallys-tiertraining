@@ -23,37 +23,42 @@ html, body{
 height: 100%;
 overflow-x: hidden;
 overflow-y: auto;
+scroll-behavior: smooth;
+scrollbar-width: 0;
+scrollbar-color: #ffffff00;
 }
 body{
+  text-align: center;
   user-select: none;
   font-family: "ubuntu";
   font-style: normal;
-  font-size: 18pt;
+  font-size: 1.13rem;
   color: black;
 }
 h1{
+  text-align: center;
   user-select: none;
   font-family: "schwartz";
-  font-size: 42pt;
+  font-size: 2.63rem;
   color: black;
 }
 h2{
   user-select: none;
   font-family: "worstveld";
-  font-size: 64pt;
+  font-size: 4rem;
   color: var(--red100);
 }
 h3{
   user-select: none;
   font-family: "worstveld";
-  font-size: 45pt;
+  font-size: 2.81rem;
   color: var(--red100);
 }
 a{
   text-decoration: none;
   user-select: none;
   font-family: "schwartz";
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   color: black;
 }
 /* input, textarea{
@@ -63,19 +68,95 @@ a{
 } */
 section{
   position: relative;
-  padding: 80px 120px;
+  padding: 5.56vw 8.33vw;
 }
 nav{
   position: fixed;
+  z-index: 100;
   width: 100vw;
-  height: 145px;
-  background-image: url(./assets/backgrounds/red_top.svg);
-  background-size: 100%;
-  background-position: bottom;
-  padding: 0px 120px;
+  padding: 0px;
 }
 footer{
-  padding: 80px 120px 20px;
+  padding: 5.56vw 8.33vw 20px;
 	background-color: var(--colorDark);
 	width: 100vw;
+}
+
+.h1-p{
+  margin-bottom: 2.5rem;
+}
+
+.p-content{
+  margin-bottom: 5.56vw;
+}
+
+.nav-arrow-open{
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/arrow_up_24px_black.svg);
+  background-position: center;
+  background-size: 100%;
+}
+
+.nav-arrow-closed{
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/arrow_down_24px_red.svg);
+  background-position: center;
+  background-size: 100%;
+}
+.nav-arrow-closed:hover{
+  background-image: url(./assets/interaction/arrow_down_24px_black.svg);
+}
+.nav-arrow-open:hover{
+  background-image: url(./assets/interaction/arrow_up_24px_red.svg);
+}
+
+.nav-arrow-left{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/arrow_back_24px_red.svg);
+  background-position: center;
+  background-size: 100%;
+}
+.nav-arrow-left:hover{
+  background-image: url(./assets/interaction/arrow_back_24px_black.svg);
+}
+.nav-arrow-right{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/arrow_forward_24px_red.svg);
+  background-position: center;
+  background-size: 100%;
+}
+.nav-arrow-right:hover{
+  background-image: url(./assets/interaction/arrow_forward_24px_black.svg);
+}
+.nav-arrow-left-disabled{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/arrow_back_24px_lightgrey.svg);
+  background-position: center;
+  background-size: 100%;
+}
+.nav-arrow-right-disabled{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/arrow_forward_24px_lightgrey.svg);
+  background-position: center;
+  background-size: 100%;
+}
+
+button{
+  padding: 1rem;
+  width: 11.625rem;
+  height: 3.5rem;
+  margin: 0 1.25rem;
+  border-radius: 0.25rem;
+  border: 0.12rem solid #ffffff00;
+  font-family: "ubuntu-bolder";
+  color: black;
+  font-size: 1rem;
 }

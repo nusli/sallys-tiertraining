@@ -16,5 +16,25 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  switchCategories(category:string){
+
+    if(category === "groups_open"){
+      this.individual_open = false;
+      this.horse_open = false;
+      this.groups_open = !this.groups_open;
+    } else if(category === "individual_open"){
+      this.groups_open = false;
+      this.individual_open = !this.individual_open;
+      this.horse_open = false;
+    } else if(category === "horse_open"){
+      this.groups_open = false;
+      this.individual_open = false;
+      this.horse_open = !this.horse_open;
+    } else{
+      this.groups_open = false;
+      this.individual_open = false;
+      this.horse_open = false;
+    }
+  }
 
 }
