@@ -46,7 +46,7 @@
   z-index: 1;
 }
 #footer-bg-redfade{
-  background-image: url(../../../assets/backgrounds/red_fade_bottom.svg);
+  background-image: url(../../../assets/backgrounds/red60_bottom.svg);
   background-size: 105vw;
   background-position: top;
   position: absolute;
@@ -55,4 +55,180 @@
   width: 105vw;
   height: 100%;
   z-index: 2;
+}
+#footer-fade{
+  background: linear-gradient(180deg, var(--red60), white);
+  position: absolute;
+  top: 7vw;
+  left: -1vw;
+  width: 105vw;
+  height: 100%;
+  z-index: 3;
+}
+
+#footer-container
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 7.5vw 8.33vw 0;
+}
+
+.footer-content
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-entry
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 27vw;
+  min-height: 205px;
+}
+figure.footer-entry
+{
+  justify-content: center;
+}
+
+.footer-entry img
+{
+  width: 80%;
+  height: auto;
+}
+
+.directlinks
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.directlinks ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  list-style: none;
+  padding-left: 0;
+  font-family: "ubuntu";
+  font-size: 1rem;
+  color: black;
+}
+.directlinks ul:nth-of-type(2){
+  align-items: flex-start;
+}
+.directlinks ul li{
+  margin: 0.3rem 0.6rem;
+}
+.contact
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.contact-entry
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem;
+  font-size: 1rem;
+}
+.contact-icon
+{ display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3rem;
+}
+.social
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons
+{
+  margin-top: 0.3rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credentials
+{
+  margin-top: 5.56vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "ubuntu";
+  font-size: 0.81rem;
+}
+.credentials a
+{
+  font-family: "ubuntu-bolder";
+  font-size: 0.81rem;
+  color: black;
+}
+
+.credentials a span
+{
+  font-family: "ubuntu-bolder";
+  font-size: 0.81rem;
+  color: var(--red100);
+}
+
+#footer-qualification
+{
+  margin-top: 2.2vw;
+  padding: 0 8.33vw;
+}
+
+.qualification-container
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qualification
+{
+  margin: 0.63rem 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+}
+.qualification img
+{
+  max-height: 120px;
+  max-width: 120px;
+}
+
+.qualification-large
+{
+  background-color: #f5fbffe7;
+  border: 1px solid var(--red100);
+  margin: 0.63rem 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vw;
+  width: 20vw;
+}
+.qualification-large img
+{
+  max-height: 19vw;
+  max-width: 19vw;
 }

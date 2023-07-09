@@ -19,5 +19,86 @@
 <section id="footer-credentials">
   <figure id="footer-bg-red"></figure>
   <figure id="footer-bg-redfade"></figure>
+  <figure id="footer-fade"></figure>
+  <div id="footer-container">
+    <div class="footer-content">
+      <figure class="footer-entry">
+        <img src="../../../assets/icons/sallys_logo.svg" alt="sallys tiertraining logo">
+      </figure>
+      <div class="footer-entry">
+        <h4>Direktlinks</h4>
+        <div class="directlinks">
+          <ul>
+            <li>Hundetraining (Gruppe)</li>
+            <li>Hundetraining (einzeln)</li>
+            <li>Reitunterricht</li>
+            <li>Das bin ich</li>
+          </ul>
+          <ul>
+            <li>Galerie</li>
+            <li>Glossar</li>
+            <li>Impressum & AGB</li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-entry">
+        <h4>Kontaktiere mich!</h4>
+        <div class="contact">
+          <div class="contact-entry">
+            <figure class="contact-icon">
+              <img src="../../../assets/interaction/call_24px_red.svg" alt="Sally anrufen">
+            </figure>
+            <p>0174 97 89 210</p>
+          </div>
+          <div class="contact-entry">
+            <figure class="contact-icon">
+              <img src="../../../assets/interaction/email_24px_red.svg" alt="Sally mailen">
+            </figure>
+            <p>info@sallys-tiertraining.de</p>
+          </div>
+        </div>
+        <div class="social">
+          <figure class="social-icons">
+            <img src="../../../assets/icons/tiktok.png" alt="Sally's Tiktok">
+          </figure>
+          <figure class="social-icons">
+            <img src="../../../assets/icons/insta.svg" alt="Sally's Instagram">
+          </figure>
+          <figure class="social-icons">
+            <img src="../../../assets/icons/fb.png" alt="Sally's Facebook">
+          </figure>
+          <figure class="social-icons">
+            <img src="../../../assets/icons/yt.svg" alt="Sally's Youtube">
+          </figure>
+          <figure class="social-icons">
+            <img src="../../../assets/icons/whatsapp.svg" alt="Sally's Whatsapp">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="credentials">
+      <a href="">© Sally's <span>Tiertraining</span> 2023</a>
+      <a href="">sedra<span>neo</span>.</a>
+    </div>
+    <div id="footer-qualification">
+      <div class="qualification-container">
+        <figure *ngIf="!dosbOpen" class="qualification" (click)="dosbOpen = !dosbOpen" >
+          <img src="../../../assets/icons/dosb.png" alt="DOSB">
+        </figure>
+        <figure *ngIf="dosbOpen" class="qualification-large" (click)="dosbOpen = !dosbOpen">
+          <img src="../../../assets/qualis/dosb.jpg" alt="Lizenz des DOSB">
+        </figure>
+
+        <figure *ngIf="!zeugnisOpen"class="qualification" (click)="zeugnisOpen = !zeugnisOpen">
+          <img src="../../../assets/icons/sa.svg" alt="Sachsen-Anhalt">
+        </figure>
+        <figure *ngIf="zeugnisOpen"class="qualification-large" (click)="zeugnisOpen = !zeugnisOpen">
+          <img src="../../../assets/qualis/zeugnis.jpg" alt="Zeugnis im Land Sachsen-Anhalt">
+        </figure>
+      </div>
+    </div>
+  </div>
+
 </section>
-<section id="footer-qualification"></section>
+
