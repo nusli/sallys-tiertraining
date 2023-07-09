@@ -7,7 +7,8 @@
     </figure>
     <div class="nav-entry" [ngClass]="groups_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a (click)="switchCategories('')">Hundetraining (Gruppe)</a>
+        <!--Für größere Bildschirme: Hundetraining (Gruppe)?!-->
+        <a (click)="switchCategories('')">Hunde (Gruppe)</a>
         <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
       </div>
       <ul *ngIf="groups_open">
@@ -18,7 +19,7 @@
     </div>
     <div class="nav-entry" [ngClass]="individual_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a (click)="switchCategories('')">Hundetraining (einzeln)</a>
+        <a (click)="switchCategories('')">Hunde (EINZELN)</a>
         <figure [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('individual_open')"></figure>
       </div>
       <ul *ngIf="individual_open">
@@ -29,7 +30,7 @@
     </div>
     <div class="nav-entry" [ngClass]="horse_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a (click)="switchCategories('')">Reitunterricht</a>
+        <a (click)="switchCategories('')">REITUNTERRICHT</a>
         <figure [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('horse_open')"></figure>
       </div>
       <ul *ngIf="horse_open">
@@ -39,7 +40,7 @@
       </ul>
     </div>
     <div class="nav-entry">
-      <a (click)="switchCategories('')">Das bin ich</a>
+      <a (click)="switchCategories('')">DAS BIN ICH</a>
     </div>
   </div>
 </nav>

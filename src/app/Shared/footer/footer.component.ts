@@ -16,7 +16,7 @@ export class FooterComponent implements OnInit {
   };
 
   dosbOpen = false;
-  zeugnisOpen = true;
+  zeugnisOpen = false;
 
   constructor() { }
 

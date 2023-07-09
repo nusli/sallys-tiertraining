@@ -38,9 +38,10 @@ body{
 h1{
   text-align: center;
   user-select: none;
-  font-family: "schwartz";
+  font-family: "schwartz";;
   font-size: 2.63rem;
   color: black;
+  text-transform: uppercase;
 }
 h2{
   user-select: none;
@@ -64,6 +65,7 @@ a{
   text-decoration: none;
   user-select: none;
   font-family: "schwartz";
+  text-transform: uppercase;
   font-size: 1.13rem;
   color: black;
 }
@@ -82,18 +84,15 @@ nav{
   width: 100vw;
   padding: 0px;
 }
-footer{
-  padding: 5.56vw 8.33vw 20px;
-	background-color: var(--colorDark);
-	width: 100vw;
-}
 
 .h1-p{
   margin-bottom: 2.5rem;
 }
-
+.h1-h2{
+  margin-bottom: .3rem;
+}
 .p-content{
-  margin-bottom: 5.56vw;
+  margin-bottom: 5vw;
 }
 
 .nav-arrow-open{
