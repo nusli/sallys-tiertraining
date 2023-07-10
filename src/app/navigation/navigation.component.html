@@ -2,13 +2,13 @@
   <figure id="nav-bg-red"></figure>
   <figure id="nav-bg-grey"></figure>
   <div id="navbar">
-    <figure id="nav-logo" class="nav-entry">
+    <figure routerLink="" id="nav-logo" class="nav-entry">
       <img src="../../../assets/icons/sallys_logo.svg" alt="sallys logo">
     </figure>
     <div class="nav-entry" [ngClass]="groups_open? 'open' : ''">
       <div class="nav-entry-top">
         <!--Für größere Bildschirme: Hundetraining (Gruppe)?!-->
-        <a (click)="switchCategories('')">Hunde (Gruppe)</a>
+        <a routerLink="/Hundegruppentraining"  (click)="switchCategories('')">HUNDE (Gruppe)</a>
         <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
       </div>
       <ul *ngIf="groups_open">
@@ -19,7 +19,7 @@
     </div>
     <div class="nav-entry" [ngClass]="individual_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a (click)="switchCategories('')">Hunde (EINZELN)</a>
+        <a  routerLink="/Hundeeinzeltraining" routerLinkActive="active" (click)="switchCategories('')">HUNDE (EINZELN)</a>
         <figure [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('individual_open')"></figure>
       </div>
       <ul *ngIf="individual_open">
@@ -30,7 +30,7 @@
     </div>
     <div class="nav-entry" [ngClass]="horse_open? 'open' : ''">
       <div class="nav-entry-top">
-        <a (click)="switchCategories('')">REITUNTERRICHT</a>
+        <a routerLink="/Reitunterricht" routerLinkActive="active" (click)="switchCategories('')">REITUNTERRICHT</a>
         <figure [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('horse_open')"></figure>
       </div>
       <ul *ngIf="horse_open">
@@ -40,7 +40,7 @@
       </ul>
     </div>
     <div class="nav-entry">
-      <a (click)="switchCategories('')">DAS BIN ICH</a>
+      <a routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
     </div>
   </div>
 </nav>

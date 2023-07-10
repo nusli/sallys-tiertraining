@@ -1,0 +1,42 @@
+.hero-container
+{
+  position: relative;
+  padding-top: 1vh;
+  width: 100vw;
+  height: 68vh;
+}
+#hero-image
+{
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../../../assets/pictures/5.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+#fader1
+{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
+  position: absolute;
+  left: 0;
+  top: 16vh;
+  width: 100vw;
+  height: 35vh;
+}
+.hero-content
+{
+  padding: 0 8.33vw;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 58vh;
+}
+
+#hero-article
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

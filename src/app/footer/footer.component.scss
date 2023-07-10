@@ -6,7 +6,7 @@
 
 #footer-news
 {
-  background-image: url(../../../assets/backgrounds/news-dummy.jpg);
+  background-image: url(../../assets/backgrounds/news-dummy.jpg);
   background-size: 100%;
   background-position: center;
 }
@@ -35,7 +35,7 @@
 }
 
 #footer-bg-red{
-  background-image: url(../../../assets/backgrounds/red_bottom.svg);
+  background-image: url(../../assets/backgrounds/red_bottom.svg);
   background-size: 105vw;
   background-position: top;
   position: absolute;
@@ -46,7 +46,7 @@
   z-index: 1;
 }
 #footer-bg-redfade{
-  background-image: url(../../../assets/backgrounds/red60_bottom.svg);
+  background-image: url(../../assets/backgrounds/red60_bottom.svg);
   background-size: 105vw;
   background-position: top;
   position: absolute;
@@ -174,11 +174,15 @@ figure.footer-entry
   font-family: "ubuntu";
   font-size: 0.81rem;
 }
-.credentials a
+.credentials a, .directlinks li, .contact p
 {
   font-family: "ubuntu-bolder";
   font-size: 0.81rem;
   color: black;
+}
+.credentials a:hover, .directlinks li:hover, .contact p:hover
+{
+  color: var(--red100);
 }
 
 .credentials a span

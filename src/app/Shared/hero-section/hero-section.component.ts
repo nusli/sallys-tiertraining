@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })
+
 export class HeroSectionComponent implements OnInit {
 
   constructor() { }
