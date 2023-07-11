@@ -159,6 +159,20 @@ nav{
   background-position: center;
   background-size: 100%;
 }
+.nav-close{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/close_24px_red.svg);
+  background-position: center;
+  background-size: 100%;
+}
+.nav-close:hover{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/interaction/close_24px_black.svg);
+  background-position: center;
+  background-size: 100%;
+}
 
 button{
   padding: 1rem;

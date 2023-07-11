@@ -1,0 +1,31 @@
+<app-picture-article></app-picture-article>
+<app-picture-article></app-picture-article>
+<section>
+  <article>
+    <h1 class="h1-p">Irgendwas zum Kursangebot</h1>
+    <p class="h1-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+  </article>
+</section>
+
+<div class="picture-frame-container">
+  <app-picture-frame [(contentOpen)]="contentsOpen[0]" [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)"></app-picture-frame>
+  <app-picture-frame [(contentOpen)]="contentsOpen[1]" [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)"></app-picture-frame>
+</div>
+<div *ngIf="contentsOpen[0] || contentsOpen[1]" class="picture-frame-description-content">
+  <article *ngFor="let article of chosenContent" class="picture-frame-article">
+    <h2>{{ article.header }}</h2>
+    <p>{{ article.text }}</p>
+  </article>
+  <figure class="nav-close" (click)="closeContents(0,1)"></figure>
+</div>
+<div class="picture-frame-container">
+  <app-picture-frame [(contentOpen)]="contentsOpen[2]" [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)"></app-picture-frame>
+  <app-picture-frame [(contentOpen)]="contentsOpen[3]" [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)"></app-picture-frame>
+</div>
+<div *ngIf="contentsOpen[2] || contentsOpen[3]" class="picture-frame-description-content">
+  <article *ngFor="let article of chosenContent" class="picture-frame-article">
+    <h2>{{ article.header }}</h2>
+    <p>{{ article.text }}</p>
+  </article>
+  <figure class="nav-close" (click)="closeContents(2,3)"></figure>
+</div>
