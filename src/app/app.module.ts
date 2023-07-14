@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GlossarComponent } from './glossar/glossar.component';
+import { GlossarArticleComponent } from './Glossar/glossar-article/glossar-article.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GlossarComponent } from './glossar/glossar.component';
     NavigationComponent,
     FooterComponent,
     GalleryComponent,
-    GlossarComponent
+    GlossarComponent,
+    GlossarArticleComponent
   ],
   imports: [
     BrowserModule,

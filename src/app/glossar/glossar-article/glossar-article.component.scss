@@ -1,0 +1,119 @@
+.glossar-article-content
+{
+  position: relative;
+  margin: 1.39vw 8.33vw;
+  padding: 2.5rem;
+  width: 83.34vw;
+  background-color: #f5fbffe7;
+  border: 1px solid var(--red100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.glossar-content
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+}
+article{
+  text-align: left;
+}
+.glossar-content figure
+{
+  align-self: flex-end;
+}
+
+.image-article-container
+{
+  position: relative;
+  width: 100%;
+  min-height: 344px;
+  height: 32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.glossar-article-image
+{
+  width: 50%;
+  height: 100%;
+  min-height: 344px;
+}
+.image-article-container
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.image-article-container .article-image
+{
+  position: absolute;
+  top:0;
+  width: 100%;
+  min-height: 344px;
+  height: 32%;
+  background-image: url(../../../assets/pictures/5.jpg);
+  background-size: 100%;
+  background-position: center;
+  z-index: 1
+}
+
+.image-article-container .faderstart
+{
+  position: absolute;
+  top: 0;
+  width: 24%;
+  height: 32%;
+  min-height: 344px;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+  right: 0;
+}
+.left-picture .faderstart
+{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+  right: 0;
+}
+.right-picture .faderstart
+{
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), white);
+  left: 0;
+}
+
+
+
+.image-article-container .faderend
+{
+  position: absolute;
+  width: 24%;
+  height: 32%;
+  min-height: 344px;
+  z-index: 3;
+  top: 0;
+}
+.left-picture .faderend
+{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+  right: -1%;
+}
+.right-picture .faderend
+{
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), white);
+  left: -1%;
+}
+
+
+ .picture-article-article
+{
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 41.67%;
+  height: 32%;
+  min-height: 344px;
+}
+

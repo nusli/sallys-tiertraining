@@ -14,7 +14,7 @@ import { PictureArticleComponent } from './picture-article/picture-article.compo
   imports: [
     CommonModule
   ],
-  exports: [CookieDisclaimerComponent, HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent]
+  exports: [CookieDisclaimerComponent, HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent]
 })
 
 export class SharedModule { }

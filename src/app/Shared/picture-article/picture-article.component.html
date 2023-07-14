@@ -1,14 +1,44 @@
-<div class="article-container">
-  <figure id="article-image">
+<div class="image-article-container" [ngClass]="leftPicture ? 'left-image-article-container': 'right-image-article-container'">
+  <figure class="article-image">
   </figure>
-  <figure class="fader" id="fader1"></figure>
+  <figure class="faderstart"></figure>
+  <figure class="faderend"></figure>
   <div class="article-content">
-    <article id="picture-article-article">
+    <article class="picture-article-article">
       <h2 class="h1-p">Ein wirklich knalliger Slogan</h2>
-      <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
 
       <!-- Bedingung!-->
-      <a></a>
+      <a *ngIf="extendedContentAvailable" (click)="extendedContentOpen = true">Mehr erfahren</a>
     </article>
   </div>
+</div>
+<div *ngIf="extendedContentOpen" class="extended-content">
+  <article>
+    <h2>Eine schöne Geschichte</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+      sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+      sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+      no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+  </article>
+  <article>
+    <h2>Noch eine schöne Geschichte</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+      sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+      sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+      no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+  </article>
+  <figure class="nav-close" (click)="extendedContentOpen = false"></figure>
 </div>

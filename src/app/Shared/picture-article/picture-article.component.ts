@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-picture-article',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./picture-article.component.scss']
 })
 export class PictureArticleComponent {
-
+  @Input() leftPicture = true;
+  extendedContentAvailable = true;
+  extendedContentOpen = false;
 }
