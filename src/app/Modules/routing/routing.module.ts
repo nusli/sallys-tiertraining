@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MeComponent } from 'src/app/Me/me/me.component';
-import { GroupComponent } from 'src/app/Group/group/group.component';
-import { HorseComponent } from 'src/app/Horse/horse/horse.component';
-import { ImpressumComponent } from 'src/app/Impressum/impressum/impressum.component';
-import { IndividualComponent } from 'src/app/Individual/individual/individual.component';
+import { MeComponent } from 'src/app/me/me.component';
+import { GroupComponent } from 'src/app/group/group.component';
+import { HorseComponent } from 'src/app/horse/horse.component';
+import { ImpressumComponent } from 'src/app/impressum/impressum.component';
+import { IndividualComponent } from 'src/app/individual/individual.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LandingModule } from 'src/app/Landing/landing.module';

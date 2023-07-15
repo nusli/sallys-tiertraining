@@ -1,23 +1,14 @@
-<div class="glossar-article-content">
-  <h1>{{ glossarEntry.title }}</h1>
+<div class="glossar-article-content" [ngClass]="articleOpen?'open':'closed'">
+  <div class="title-and-nav">
+    <h1>{{ glossarEntry.title }}</h1>
+    <figure [ngClass]="articleOpen ? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="articleOpen = !articleOpen"></figure>
+  </div>
   <div *ngIf="articleOpen" class="glossar-content">
     <article>
       <h2 class="h1-p">{{glossarEntry.subtitle1}}</h2>
       <p>{{ glossarEntry.text1 }}</p>
     </article>
     <div class="image-article-container left-picture">
-      <div class="glossar-article-image">
-        <figure class="article-image">
-        </figure>
-        <figure class="faderstart"></figure>
-        <figure class="faderend"></figure>
-      </div>
-      <article class="picture-article-article">
-        <h2 class="h1-p">{{glossarEntry.subtitle2}}</h2>
-        <p>{{glossarEntry.text2}}</p>
-      </article>
-    </div>
-    <div class="image-article-container right-picture">
       <div class="glossar-article-image">
         <div class="image-container">
           <figure class="article-image">
@@ -27,9 +18,22 @@
         </div>
       </div>
       <article class="picture-article-article">
-        <h2 class="h1-p">{{glossarEntry.subtitle3}}</h2>
+        <h2 class="h1-h2">{{glossarEntry.subtitle2}}</h2>
+        <p>{{glossarEntry.text2}}</p>
+      </article>
+    </div>
+    <div class="image-article-container right-picture">
+      <article class="picture-article-article">
+        <h2 class="h1-h2">{{glossarEntry.subtitle3}}</h2>
         <p>{{glossarEntry.text3}}</p>
       </article>
+      <div class="glossar-article-image">
+        <div class="image-container">
+          <figure class="article-image"></figure>
+          <figure class="faderstart"></figure>
+          <figure class="faderend"></figure>
+        </div>
+      </div>
     </div>
 
     <figure class="nav-close" (click)="articleOpen = false"></figure>

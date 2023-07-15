@@ -5,11 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RoutingModule } from './Modules/routing/routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './Shared/shared.module';
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationComponent } from './Shared/navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GlossarComponent } from './glossar/glossar.component';
-import { GlossarArticleComponent } from './Glossar/glossar-article/glossar-article.component';
+import { GlossarArticleComponent } from './glossar/glossar-article/glossar-article.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { GlossarArticleComponent } from './Glossar/glossar-article/glossar-artic
     FooterComponent,
     GalleryComponent,
     GlossarComponent,
-    GlossarArticleComponent
+    GlossarArticleComponent,
   ],
   imports: [
     BrowserModule,

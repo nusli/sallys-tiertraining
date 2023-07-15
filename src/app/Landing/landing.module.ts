@@ -1,7 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { CoursesComponent } from "./courses/courses.component";
 import { LandingHeroComponent } from "./landing-hero/landing-hero.component";
-import { LandingComponent } from "./landing/landing.component";
+import { LandingComponent } from "./landing.component";
 import { NgModule } from "@angular/core";
 import { CardComponent } from "./card/card.component";
 import { RouterModule } from "@angular/router";
