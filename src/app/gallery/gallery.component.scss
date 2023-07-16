@@ -10,7 +10,7 @@
   width: 100%;
   height: 42vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .slider-wrapper
@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
 }
-.picture-frame-description-content figure
+.picture-frame-description-content .nav-close
 {
   align-self: flex-end;
 }

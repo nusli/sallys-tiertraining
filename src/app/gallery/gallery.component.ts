@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -14,10 +14,10 @@ export class GalleryComponent {
   leftArrowActive = false;
   rightArrowActive = true;
 
-  direction = 'left';
+  direction = 'right';
+  screenWidth = window.innerWidth;
 
   closeOthers(openFrame: number, open: boolean){
-    console.log(openFrame, open);
     for (let i = 0; i<this.contentsOpen.length; i++){
       this.contentsOpen[i] = false;
     }
@@ -35,11 +35,11 @@ export class GalleryComponent {
   }
 
   onClick(direction: string): void{
+    this.direction = direction;
     this.move();
   }
-
   move(){
-    const slidesContainer = document.querySelector("#landing-courses-slides-container");
+    const slidesContainer = document.querySelector("#gallery-slides-container");
     if(this.direction == "left"){
       this.rightArrowActive = true;
       if(slidesContainer!.scrollLeft - slidesContainer!.clientWidth <= 0){
@@ -50,12 +50,12 @@ export class GalleryComponent {
 
     }else{
       this.leftArrowActive = true;
-
-      if(slidesContainer!.scrollLeft + slidesContainer!.clientWidth >= slidesContainer!.scrollWidth - slidesContainer!.clientWidth){
+      console.log(slidesContainer!.scrollLeft, this.screenWidth)
+      if(slidesContainer!.scrollLeft + 0.7722*this.screenWidth >= slidesContainer!.scrollWidth - 0.7722*this.screenWidth){
         this.rightArrowActive = false;
         this.direction = "left";
       }
-      slidesContainer!.scrollLeft += slidesContainer!.clientWidth;
+      slidesContainer!.scrollLeft += 0.7722*this.screenWidth;
     }
   }
 }

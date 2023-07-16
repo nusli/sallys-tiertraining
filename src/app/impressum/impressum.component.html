@@ -1,1 +1,22 @@
 <app-hero-section></app-hero-section>
+<section class="impressum-section" id="impressum">
+  <h1>Impressum</h1>
+  <article *ngFor="let text of impressumTexts">
+    <h2>{{ text.subtitle }}</h2>
+    <p>{{ text.text }}</p>
+  </article>
+</section>
+<section class="impressum-section" id="agb">
+  <h1>Allgemeine Geschäftsbedingungen</h1>
+  <article *ngFor="let text of agbTexts">
+    <h2>{{ text.subtitle }}</h2>
+    <p>{{ text.text }}</p>
+  </article>
+</section>
+<section class="impressum-section" id="privacy">
+  <h1>Datenschutz und Cookies</h1>
+  <article *ngFor="let text of privacyTexts">
+    <h2>{{ text.subtitle }}</h2>
+    <p>{{ text.text }}</p>
+  </article>
+</section>
