@@ -47,30 +47,53 @@ h1{
   color: black;
   text-transform: uppercase;
 }
+.mobile-h1
+{
+  font-size: 2rem;
+}
 h2{
   user-select: none;
   font-family: "worstveld";
   font-size: 4rem;
   color: var(--red100);
 }
+.mobile-h2
+{
+  font-size: 2.5rem;
+}
+
 h3{
   user-select: none;
   font-family: "worstveld";
   font-size: 2.81rem;
   color: var(--red100);
 }
+.mobile-h3
+{
+  font-size: 2rem;
+}
+
 h4{
   user-select: none;
   font-family: "worstveld";
   font-size: 2.5rem;
   color: var(--red100);
 }
+.mobile-h4
+{
+  font-size: 1.5rem;
+}
+
 a{
   text-decoration: none;
   user-select: none;
   font-family: "schwartz";
   font-size: 1.13rem;
   color: black;
+}
+.mobile-a
+{
+  font-size: 0.88rem;
 }
 /* input, textarea{
   font-family: "Montserrat";
@@ -81,6 +104,10 @@ section{
   position: relative;
   padding: 5.56vw 8.33vw;
 }
+.mobile-section{
+  padding: 6.25vh 8.33vw;
+}
+
 nav{
   position: fixed;
   z-index: 100;

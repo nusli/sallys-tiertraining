@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class HeroSectionComponent implements OnInit {
 
+  @Input() mobilePortrait = false;
   constructor() { }
 
   ngOnInit(): void {

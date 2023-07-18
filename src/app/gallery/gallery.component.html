@@ -1,33 +1,46 @@
 <app-hero-section></app-hero-section>
 
 <div class="picture-frame-container">
-  <app-picture-frame [(contentOpen)]="contentsOpen[0]" [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)"></app-picture-frame>
-  <app-picture-frame [(contentOpen)]="contentsOpen[1]" [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)"></app-picture-frame>
+  <app-picture-frame [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)"></app-picture-frame>
+  <app-picture-frame [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)"></app-picture-frame>
 </div>
-<div *ngIf="contentsOpen[0] || contentsOpen[1]" class="picture-frame-description-content">
+<div *ngIf="articlesOpen[0] || articlesOpen[1]" class="picture-frame-description-content">
   <div class="slider-and-nav">
-    <figure [ngClass]="leftArrowActive ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="onClick('left')">
+    <figure class="nav-arrow-left" (click)="onClick('left')">
     </figure>
+
     <div class="slider-wrapper">
-      <div id="gallery-slides-container" class="slides-container">
-        <figure *ngFor="let picture of chosenContent; let i = index" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
+        <figure *ngFor="let picture of chosenContent; let i = index" [ngClass]="activeFrame===i?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
         </figure>
-      </div>
     </div>
-    <figure [ngClass]="rightArrowActive ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="onClick('right')">
+
+    <figure class="nav-arrow-right" (click)="onClick('right')">
     </figure>
   </div>
-  <figure *ngFor="let picture of chosenContent" class="picture-frame-article">
-  </figure>
+  <div class="dots">
+    <figure *ngFor="let dot of chosenContent; let i = index" class="dot" [ngClass]="activeFrame===i?'active':'inactive'" (click)="currentSlide(i)"></figure>
+  </div>
   <figure class="nav-close" (click)="closeContents(0,1)"></figure>
 </div>
 <div class="picture-frame-container">
-  <app-picture-frame [(contentOpen)]="contentsOpen[2]" [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)"></app-picture-frame>
-  <app-picture-frame [(contentOpen)]="contentsOpen[3]" [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)"></app-picture-frame>
+  <app-picture-frame [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)"></app-picture-frame>
+  <app-picture-frame [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)"></app-picture-frame>
 </div>
-<div *ngIf="contentsOpen[2] || contentsOpen[3]" class="picture-frame-description-content">
-  <figure *ngFor="let picture of chosenContent" class="picture-frame-article">
-    <img [src]="picture">
-  </figure>
-  <figure class="nav-close" (click)="closeContents(2,3)"></figure>
+<div *ngIf="articlesOpen[2] || articlesOpen[3]" class="picture-frame-description-content">
+  <div class="slider-and-nav">
+    <figure class="nav-arrow-left" (click)="onClick('left')">
+    </figure>
+
+    <div class="slider-wrapper">
+        <figure *ngFor="let picture of chosenContent; let i = index" [ngClass]="activeFrame===i?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
+        </figure>
+    </div>
+
+    <figure class="nav-arrow-right" (click)="onClick('right')">
+    </figure>
+  </div>
+  <div class="dots">
+    <figure *ngFor="let dot of chosenContent; let i = index" class="dot" [ngClass]="activeFrame===i?'active':'inactive'" (click)="currentSlide(i)"></figure>
+  </div>
+  <figure class="nav-close" (click)="closeContents(0,1)"></figure>
 </div>

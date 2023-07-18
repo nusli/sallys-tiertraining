@@ -1,7 +1,7 @@
-<div class="hero-container">
-  <figure id="hero-image">
+<div *ngIf="!mobilePortrait" class="hero-container">
+  <figure class="hero-image">
   </figure>
-  <figure class="fader" id="fader1"></figure>
+  <figure class="fader"></figure>
   <!-- WEITERE FADER NÖTIG?!
   <figure class="fader" id="fader2"></figure>
   <figure class="fader" id="fader3"></figure>
@@ -14,4 +14,18 @@
       <app-button buttonTitle="Mehr erfahren" [primary]="false"></app-button>
     </article>
   </div>
+</div>
+
+<div *ngIf="mobilePortrait" class="mobile-hero-container">
+  <div class="mobile-hero-image-container">
+    <figure class="hero-image">
+    </figure>
+    <figure class="fader"></figure>
+  </div>
+  <article class="hero-article">
+    <h1 class="h1-h2">DAS IST DER HEROTITLE</h1>
+    <h2 class="h1-p">Ein wirklich knalliger Slogan</h2>
+    <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+    <app-button [mobilePortrait]="mobilePortrait" buttonTitle="Mehr erfahren" [primary]="false"></app-button>
+  </article>
 </div>

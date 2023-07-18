@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-landing-hero',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing-hero.component.scss']
 })
 export class LandingHeroComponent {
-
+@Input() mobilePortrait = false;
 }

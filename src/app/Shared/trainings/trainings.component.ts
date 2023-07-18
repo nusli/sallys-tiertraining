@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-trainings',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./trainings.component.scss']
 })
 export class TrainingsComponent {
+  @Input() mobilePortrait = false;
   articlesOpen = [false, false, false, false];
   contentsOpen = [false, false, false, false];
 

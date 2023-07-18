@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,6 +26,7 @@ import { GlossarArticleComponent } from './glossar/glossar-article/glossar-artic
     RoutingModule,
     ReactiveFormsModule,
     SharedModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

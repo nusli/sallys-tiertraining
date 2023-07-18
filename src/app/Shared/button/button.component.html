@@ -1,6 +1,6 @@
 <button [ngClass]="primary?'primary':'secondary'">
   <div class="btn-top" [ngClass]="withContext? 'withContext' : 'withoutContext'">
-    <p>{{buttonTitle}}</p>
+    <p [ngStyle]="{'font-size.rem': buttonFontSize}">{{buttonTitle}}</p>
     <figure *ngIf="withContext" [ngClass]="context_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="context_open = !context_open"></figure>
   </div>
   <ul *ngIf="context_open" class="open">

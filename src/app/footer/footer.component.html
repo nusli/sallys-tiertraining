@@ -1,12 +1,12 @@
-<section id="footer-cta">
+<section id="footer-cta" [ngClass]="{'mobile-section':mobilePortrait}">
   <h1 class="h1-p">Kontaktiere mich</h1>
   <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
   <div class="button-holder">
-    <app-button [primary]="true" buttonTitle="Kontaktformular"></app-button>
+    <app-button *ngIf="!mobilePortrait" [primary]="true" buttonTitle="Kontaktformular"></app-button>
     <app-button [primary]="false" [withContext]="true" buttonTitle="Kontakt"></app-button>
   </div>
 </section>
-<section id="footer-news" *ngIf="newsAvailable">
+<section class="footer-news" *ngIf="newsAvailable" [ngClass]="{'mobile-section':mobilePortrait}">
   <div class="news-holder">
     <figure [ngClass]="actualNews.index !=0 ? 'nav-arrow-left' : 'nav-arrow-left-disabled'"></figure>
     <article>
@@ -16,10 +16,10 @@
     <figure [ngClass]="actualNews.index != lastNews ? 'nav-arrow-right' : 'nav-arrow-right-disabled'"></figure>
   </div>
 </section>
-<section id="footer-credentials">
-  <figure id="footer-bg-red"></figure>
-  <figure id="footer-bg-redfade"></figure>
-  <figure id="footer-fade"></figure>
+<section class="footer-credentials" [ngClass]="{'mobile-section':mobilePortrait}">
+  <figure class="footer-bg-red"></figure>
+  <figure class="footer-bg-redfade"></figure>
+  <figure class="footer-fade"></figure>
   <div id="footer-container">
     <div class="footer-content">
       <figure routerLink="" routerLinkActive="active" class="footer-entry">

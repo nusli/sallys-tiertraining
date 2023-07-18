@@ -1,3 +1,12 @@
+.mobile-section h1
+{
+  font-size: 2rem;
+}
+.mobile-section p
+{
+  font-size: 0.88rem;
+}
+
 .slider-and-nav
 {
   width: 100%;
@@ -5,6 +14,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.mobile-section .slider-and-nav
+{
+  height: 308px;
 }
 .slider-wrapper
 {
@@ -14,6 +27,12 @@
   overflow-x: hidden;
   overflow-y: visible;
 }
+
+.mobile-section .slider-wrapper
+{
+  height: 308px;
+}
+
 .slides-container
 {
   width: 100%;
@@ -25,7 +44,11 @@
   overflow-x: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
+}
 
+.mobile-section .slides-container
+{
+  height: 308px;
 }
 figure
 {

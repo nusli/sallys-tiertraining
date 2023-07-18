@@ -1,4 +1,4 @@
-<section>
+<section [ngClass]="{'mobile-section': mobilePortrait}">
   <article>
     <h1 class="h1-p">Irgendwas zum Kursangebot</h1>
     <p class="h1-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
@@ -9,7 +9,7 @@
     <div class="slider-wrapper">
       <div id="landing-courses-slides-container" class="slides-container">
         <app-card
-        *ngFor="let item of [].constructor(4); let i = index"></app-card>
+        *ngFor="let item of [].constructor(4); let i = index" [mobilePortrait]="mobilePortrait"></app-card>
       </div>
     </div>
     <figure [ngClass]="rightArrowActive ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="onClick('right')">

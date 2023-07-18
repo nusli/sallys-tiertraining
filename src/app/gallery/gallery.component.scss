@@ -22,25 +22,51 @@
   overflow-x: hidden;
   overflow-y: visible;
 }
-.slides-container
-{
-  width: 463.32vw;
-  height: 40.49vw;
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.slides-container figure
+.slider-wrapper figure
 {
   height: 40.49vw;
   width: 77.22vw;
   background-size: contain;
   background-repeat:no-repeat;
   background-position: center;
+}
+.slideVisible
+{
+  display: block;
+}
+.slideHidden
+{
+  display: none;
+}
+
+.dots
+{
+  width: 77.22vw;
+  height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot
+{
+  height: 1rem;
+  background-size: 100%;
+  margin: 0 0.2rem;
+}
+.inactive
+{
+  width: 1rem;
+  background-image: url(../../assets/interaction/dot_16px_red20.svg);
+}
+.inactive:hover
+{
+  background-image: url(../../assets/interaction/dot_16px_red.svg);
+}
+.active
+{
+  width: 2rem;
+  background-image: url(../../assets/interaction/dot_16px_red_active.svg);
 }
 
 .picture-frame-description-content
