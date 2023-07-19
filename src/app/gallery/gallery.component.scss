@@ -89,3 +89,65 @@
 {
   margin-bottom: 2.5rem;
 }
+
+//Mobile Responsiveness
+.mobile-picture-frames{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-picture-frames .frames-and-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-picture-frames .picture-frame-description-content
+{
+  display: block;
+  position: relative;
+  width: 83.34vw;
+  padding: 0;
+  margin: 0 0 6.25vh;
+}
+.mobile-picture-frames .dots
+{
+  position: absolute;
+  left: 0;
+  bottom: 1.88rem;
+  height: 0.75rem;
+}
+.mobile-picture-frames .dot
+{
+  height: 0.7rem;
+}
+.mobile-picture-frames .inactive
+{
+  width: 0.7rem;
+}
+.mobile-picture-frames .active
+{
+  width: 1.4rem;
+}
+.mobile-picture-frames .slider-wrapper
+{
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+.mobile-picture-frames .slide
+{
+  background-size: cover;
+  width: 100%;
+  height: 110.84vw;
+}
+.landscape
+{
+  height: 62.5vw;
+}
+.mobile-picture-frames .nav-close{
+  position: absolute;
+  right:0.88rem;
+  bottom: 0.88rem;
+}

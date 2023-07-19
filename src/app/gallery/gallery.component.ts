@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -6,15 +6,21 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent {
+  @Input() mobilePortrait = false;
   articlesOpen = [false, false, false, false];
   chosenContent= [
     '../../assets/pictures/dummy1.JPG', '../../assets/pictures/dummy2.jpg', '../../assets/pictures/dummy3.jpg', '../../assets/pictures/dummy4.jpg', '../../assets/pictures/dummy5.jpg', '../../assets/pictures/dummy6.jpg'
   ]
+  ratios= [
+    'p', 'l', 'l', 'p', 'l', 'l'
+  ]
+  pictureHeight = 110.84;
   leftArrowActive = false;
   rightArrowActive = true;
 
   screenWidth = window.innerWidth;
   activeFrame = 0;
+  swipeCoord = 0;
 
   closeOthers(openFrame: number, open: boolean){
     for (let i = 0; i<this.articlesOpen.length; i++){
@@ -46,6 +52,12 @@ export class GalleryComponent {
   }
   showSlide(n: number)
   {
+    if (this.ratios[n]==="p")
+    {
+      this.pictureHeight = 110.84;
+    } else{
+      this.pictureHeight = 62.51;
+    }
     if(n > this.chosenContent.length-1)
     {
       this.activeFrame=0
@@ -53,6 +65,24 @@ export class GalleryComponent {
       this.activeFrame = this.chosenContent.length-1
     } else {
       this.activeFrame = n
+    }
+  }
+
+  onSwipe(e: TouchEvent, when: string): void
+  {
+    const coord: number = e.changedTouches[0].clientX;
+    if (when === 'start'){
+      this.swipeCoord = coord;
+    } else if (when === 'end'){
+      const direction = coord - this.swipeCoord;
+      if(direction > 0)
+      {
+        this.onClick("left")
+        console.log("left")
+      }else{
+        this.onClick("right")
+        console.log("right")
+      }
     }
   }
 }

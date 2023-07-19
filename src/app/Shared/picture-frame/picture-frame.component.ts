@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
   styleUrls: ['./picture-frame.component.scss']
 })
 export class PictureFrameComponent{
+  @Input() mobilePortrait = false;
   @Input() articleOpen = false;
   @Input() contentOpen = false;
 
@@ -14,6 +15,7 @@ export class PictureFrameComponent{
     title: 'Fun Agility',
     claim: 'Was ist eigentlich Fun Agility?',
     text: 'elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    textMobile: 'elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
   }
   @Output() contentOpenChange = new EventEmitter<boolean>();
   @Output() articleOpenChange = new EventEmitter<boolean>();

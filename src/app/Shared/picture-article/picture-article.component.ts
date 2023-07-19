@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./picture-article.component.scss']
 })
 export class PictureArticleComponent {
+  @Input() mobilePortrait = false;
   @Input() leftPicture = true;
   extendedContentAvailable = true;
   extendedContentOpen = false;

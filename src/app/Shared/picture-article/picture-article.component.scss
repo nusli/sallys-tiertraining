@@ -5,6 +5,7 @@
   height: 32.43vw;
   margin: 40px 0 80px 0;
 }
+
 .image-article-container .article-image
 {
   position: absolute;
@@ -15,6 +16,7 @@
   background-size: 100%;
   background-position: center;
 }
+
 .left-image-article-container .article-image
 {
   left:0;
@@ -74,6 +76,7 @@
   height: 32.43vw;
 }
 
+
 .left-image-article-container .article-content
 {
   right: 8.33vw;
@@ -91,6 +94,7 @@
   justify-content: center;
   text-align: left;
 }
+
 .image-article-container a
 {
   margin-top: 2.5rem;
@@ -112,6 +116,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .extended-content figure
 {
   align-self: flex-end;
@@ -120,4 +125,75 @@
 .extended-content h2, .extended-content p
 {
   margin-bottom: 2.5rem;
+}
+
+//Mobile Responsiveness
+.mobile-article
+{
+  height: auto;
+  min-height: 245px;
+  margin: 6.25vh 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-article h2
+{
+  font-size: 2.5rem;
+}
+.mobile-article .h1-p
+{
+  margin-bottom: 0.9rem;
+}
+
+.mobile-article p, .mobile-article a
+{
+  font-size: 0.88rem;
+}
+.mobile-article .image-content {
+  width: 100vw;
+  height: 68.06vw;
+  min-height: 245px;
+}
+
+.mobile-article .image-content .article-image{
+  width: 100vw;
+  height: 68.06vw;
+  min-height: 245px;
+}
+
+.mobile-article .fader
+{
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
+  left: 0;
+  top: 24vh;
+  width: 100%;
+  height: 15vh;
+}
+.mobile-article .article-content
+{
+  position: relative;
+  margin: 0 8.33vw;
+  width: 83.34vw;
+  height: auto;
+}
+.mobile-article .picture-article-article
+{
+  align-items: center;
+  text-align: center;
+}
+.mobile-extended-content
+{
+  padding: 0.75rem;
+}
+.mobile-extended-content h2
+{
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.mobile-extended-content p
+{
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
 }

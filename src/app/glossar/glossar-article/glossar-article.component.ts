@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./glossar-article.component.scss']
 })
 export class GlossarArticleComponent {
+  @Input() mobilePortrait = false;
   @Input() glossarEntry = {
     title: 'Agility',
     subtitle1: 'Was ist eigentlich Agility?',

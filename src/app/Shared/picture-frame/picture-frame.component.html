@@ -1,4 +1,4 @@
-<div  class="outer-frame" (mouseover)="borderOn = true" (mouseleave)="borderOn = false">
+<div  class="outer-frame" [ngClass]="{'mobile-frame':mobilePortrait}" (mouseover)="borderOn = true" (mouseleave)="borderOn = false">
   <figure [ngClass]="articleOpen ? 'outer-frame-open' : ''" class="outer-frame-background"></figure>
   <div class="frame-content">
     <div  *ngIf="!articleOpen" [ngClass]="borderOn ? 'withBorder' : 'withoutBorder'" class="inner-frame-title" (click)="openArticle()">
@@ -8,9 +8,10 @@
       <figure class="nav-close" (click)="openArticle()"></figure>
       <article>
         <div class="article-content">
-          <h1>{{ frame.title }}</h1>
+          <h1 *ngIf="!mobilePortrait">{{ frame.title }}</h1>
           <h2>{{ frame.claim }}</h2>
-          <p>{{ frame.text }}</p>
+          <p *ngIf="!mobilePortrait">{{ frame.text }}</p>
+          <p *ngIf="mobilePortrait">{{ frame.textMobile}}</p>
         </div>
         <a (click)="getContent()">Mehr erfahren</a>
       </article>

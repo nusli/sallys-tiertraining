@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-me',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./me.component.scss']
 })
 export class MeComponent {
-
+  @Input() mobilePortrait = false;
 }

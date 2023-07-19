@@ -25,3 +25,55 @@
 {
   margin-bottom: 2.5rem;
 }
+
+//Mobile Responsiveness
+.mobile-section
+{
+  padding-bottom: 0.9rem;
+}
+
+.mobile-section h1
+{
+  font-size: 2rem;
+}
+
+.mobile-section .h1-p
+{
+  margin-bottom: 0.9rem;
+}
+.mobile-section p
+{
+  font-size: 0.88rem;
+  margin-bottom: 0.3rem;
+}
+.mobile-picture-frames
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frames-and-content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frames-and-content .picture-frame-description-content{
+  padding: 0.75rem;
+}
+.frames-and-content article{
+  padding: 0;
+  margin: 0;
+}
+.frames-and-content h2
+{
+  font-size: 2.5rem;
+  margin-bottom: 0.45rem;
+}
+.frames-and-content p
+{
+  font-size: 0.88rem;
+  margin-bottom: 0.9rem;
+}
