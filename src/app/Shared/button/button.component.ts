@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-
+  @Input() buttonType = "button";
   @Input() primary = true;
   @Input() withContext = false;
   @Input() buttonTitle = "";

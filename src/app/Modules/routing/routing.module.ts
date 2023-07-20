@@ -11,6 +11,7 @@ import { LandingModule } from 'src/app/Landing/landing.module';
 import { GalleryComponent } from 'src/app/gallery/gallery.component';
 import { GlossarComponent } from 'src/app/glossar/glossar.component';
 import { SharedModule } from 'src/app/Shared/shared.module';
+import { ContactComponent } from 'src/app/contact/contact.component';
 
 
 export const routes: Routes = [
@@ -21,10 +22,11 @@ export const routes: Routes = [
   {path: 'Impressum', component: ImpressumComponent},
   {path: 'Galerie', component: GalleryComponent},
   {path: 'Glossar', component: GlossarComponent},
+  {path: 'Kontakt', component: ContactComponent},
 ];
 
 @NgModule({
-  declarations: [ImpressumComponent,MeComponent, GroupComponent, HorseComponent, IndividualComponent],
+  declarations: [ImpressumComponent,MeComponent, GroupComponent, HorseComponent, IndividualComponent, ContactComponent],
   imports: [
     CommonModule, FormsModule, SharedModule, LandingModule, RouterModule.forRoot(routes,
       {

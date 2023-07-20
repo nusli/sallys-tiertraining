@@ -1,0 +1,124 @@
+<app-hero-section [mobilePortrait]="mobilePortrait"></app-hero-section>
+<section class="form-section" [ngClass]="{'mobile-section':mobilePortrait}">
+  <form novalidate (ngSubmit)="sendCredentials(cta_form)" #cta_form="ngForm">
+    <article class="personal-data">
+      <h1 class="h1-p">Deine Kontaktdaten</h1>
+      <div class="personal-data-entry">
+        <div class="column-data-entry">
+          <label for="lastName">Nachname</label>
+          <input id="lastName" type="text" placeholder="Dein Nachname" ngModel name="lastName" required #lastName="ngModel">
+        </div>
+        <div class="column-data-entry">
+          <label for="firstName">Vorame</label>
+          <input id="firstName" type="text" placeholder="Dein Vorname" ngModel name="firstName" required #firstName="ngModel">
+        </div>
+      </div>
+      <div class="personal-data-entry">
+        <div class="column-data-entry">
+          <label for="email">E-Mail</label>
+          <input id="email" type="email" placeholder="deine-mail@mail.com" ngModel name="usermail" required email #usermail="ngModel">
+        </div>
+        <div class="column-data-entry">
+          <label for="phone">Telefonnummer </label>
+          <input id="phone" type="n" placeholder="12345 6789" ngModel name="userphone">
+        </div>
+      </div>
+    </article>
+    <article class="interests">
+      <h1 class="h1-p">Was interessiert dich?</h1>
+      <div class="interests-content">
+        <div class="interest-column">
+          <h4 class="h3-p">Pferde</h4>
+          <label>
+            <input type="checkbox" name="ridingLessons" id="ridingLessons" ngModel> Reitunterricht
+          </label>
+          <label>
+            <input type="checkbox" name="horseInfo" id="horseInfo" ngModel> Allgemeine Informationen
+          </label>
+        </div>
+        <div class="interest-column">
+          <h4 class="h3-p">Hundetraining (einzeln)</h4>
+          <label>
+            <input type="checkbox" name="individual1" id="individual1" ngModel> Thema 1
+          </label>
+          <label>
+            <input type="checkbox" name="individual2" id="individual2" ngModel> Thema 2
+          </label>
+        </div>
+        <div class="interest-column">
+          <h4 class="h3-p">Hundetraining (Gruppe)</h4>
+          <label>
+            <input type="checkbox" name="funagility" id="funagility" ngModel> Funagility
+          </label>
+          <label>
+            <input type="checkbox" name="locagility" id="locagility" ngModel> Locagility
+          </label>
+          <label>
+            <input type="checkbox" name="mantrailing" id="mantrailing" ngModel> Mantrailing
+          </label>
+          <label>
+            <input type="checkbox" name="tricks" id="tricks" ngModel> Tricks & Parcours
+          </label>
+          <label>
+            <input type="checkbox" name="puppies" id="puppies" ngModel> Welpen
+          </label>
+        </div>
+      </div>
+
+    </article>
+    <article class="messages">
+      <h1 class="h1-p">Schreib mir doch ein paar Zeilen</h1>
+      <div class="message">
+        <textarea id="message" placeholder="Dein Text" ngModel name="usermessage" required text #usermessage="ngModel"></textarea>
+      </div>
+    </article>
+    <article class="send">
+      <h1 class="h1-p">Wie darf ich antworten?</h1>
+      <div class="answer">
+        <label>
+          <input type="checkbox" name="perPhone" id="perPhone" ngModel> Telefonisch
+        </label>
+        <label>
+          <input type="checkbox" name="perMail" id="perMail" ngModel> Per E-Mail
+        </label>
+      </div>
+      <app-button buttonType="submit" [primary]="true" buttonTitle="Abschicken"></app-button>
+    </article>
+  </form>
+</section>
+<section class="contact-without-form" [ngClass]="{'mobile-section':mobilePortrait}">
+  <h1 class="h1-p">So kannst du mich auch erreichen</h1>
+  <div class="classic-and-social">
+    <div class="classic">
+      <div class="classic-contact">
+        <figure>
+          <img src="../../../assets/interaction/call_24px_red.svg" alt="Sally anrufen">
+        </figure>
+        <a>0174 97 89 210</a>
+      </div>
+      <div class="classic-contact">
+        <figure>
+          <img src="../../../assets/interaction/email_24px_red.svg" alt="Sally mailen">
+        </figure>
+        <a>info@sallys-tiertraining.de</a>
+      </div>
+    </div>
+    <div class="social">
+      <figure class="social-icons">
+        <img src="../../../assets/icons/tiktok.png" alt="Sally's Tiktok">
+      </figure>
+      <figure class="social-icons">
+        <img src="../../../assets/icons/insta.svg" alt="Sally's Instagram">
+      </figure>
+      <figure class="social-icons">
+        <img src="../../../assets/icons/fb.png" alt="Sally's Facebook">
+      </figure>
+      <figure class="social-icons">
+        <img src="../../../assets/icons/yt.svg" alt="Sally's Youtube">
+      </figure>
+      <figure class="social-icons">
+        <img src="../../../assets/icons/whatsapp.svg" alt="Sally's Whatsapp">
+      </figure>
+    </div>
+  </div>
+</section>

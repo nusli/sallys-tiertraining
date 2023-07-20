@@ -1,0 +1,295 @@
+input{
+  margin: 0.31rem 0 2.81rem;
+  outline: none;
+  width: 40.21vw;
+  height: 3.3rem;
+  max-width: 579px;
+  max-height: 53px;
+  background-color: var(--grey20);
+  border: 2px solid #ffffff00;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 1px 1px 4px 0px #DDE1E5;
+  font-family: 'ubuntu';
+  font-size: 1.5rem;
+  color: black;
+}
+input:hover
+{
+  background-color: #eaeef1;
+}
+input::placeholder{
+  font-family: "ubuntu-italic";
+  font-size: 1rem;
+}
+input:focus{
+  box-shadow: 1px 1px 4px 0px #A93733;
+}
+input[type="checkbox"]
+{
+  margin: 0 1rem 0 0;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red20);
+}
+input[type="checkbox"]:hover
+{
+  background-color: var(--red40);
+}
+input[type="checkbox"]:checked
+{
+  background-color: var(--red100);
+}
+.error{
+  border: 2px solid var(--red100);
+  background-color: var(--red80);
+  color: white;
+  box-shadow: 1px 1px 4px 0px #A93733;
+}
+.personal-data, .interests, .messages{
+  margin-bottom: 5rem;
+
+}
+.personal-data-entry
+{
+  display: flex;
+  justify-content: space-between;
+}
+.column-data-entry
+{
+  display: flex;
+  flex-direction: column;
+
+}
+.interests-content
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.interest-column
+{
+  width: 24.93vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.interest-column label
+{
+  margin-bottom: 1rem;
+  font-family: 'ubuntu';
+  font-size: 1.5rem;
+  color: black;
+}
+textarea
+{
+  width: 100%;
+  height: 17.5rem;
+  margin: 0.31rem 0 2.81rem;
+  padding: 1rem;
+  outline: none;
+  background-color: var(--grey20);
+  border: 2px solid #ffffff00;
+  border-radius: 4px;
+  text-align: left;
+  box-shadow: 1px 1px 4px 0px #DDE1E5;
+  font-family: 'ubuntu';
+  font-size: 1.5rem;
+  color: black;
+  resize: none;
+}
+textarea:hover
+{
+  background-color: #eaeef1;
+}
+textarea:focus{
+  box-shadow: 1px 1px 4px 0px #A93733;
+}
+.answer label
+{
+  width: 24.93vw;
+  margin-right: 2rem;
+}
+.classic-and-social
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.classic
+{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.classic-contact
+{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.classic-contact figure
+{
+  margin-right: 2rem;
+  min-width: 30px;
+  min-height: 30px;
+  width: 3.06vw;
+  height: 3.06vw;
+  max-width: 2.75rem;
+  max-height: 2.75rem;
+}
+.classic-contact img
+{
+  min-width: 30px;
+  min-height: 30px;
+  width: 3.06vw;
+  height: 3.06vw;
+  max-width: 2.75rem;
+  max-height: 2.75rem;
+}
+.classic-contact a
+{
+  font-family: 'ubuntu';
+  font-size: 1.5rem;
+}
+.social
+{
+  display: flex;
+  flex-direction: row;
+}
+.social figure
+{
+  margin: 1vw;
+  width: 6.94vw;
+  height: 6.94vw;
+  max-width: 6.25rem;
+  max-height: 6.25rem;
+}
+.social img
+{
+  width: 6.94vw;
+  height: 6.94vw;
+  max-width: 6.25rem;
+  max-height: 6.25rem;
+}
+
+//Mobile Responsiveness
+
+.mobile-section h1
+{
+  font-size: 2rem;
+}
+.mobile-section .h1-p
+{
+  margin-bottom: 0.9rem;
+}
+
+.mobile-section h4, .mobile-section label
+{
+  font-size: 1.5rem;
+}
+.mobile-section .h3-p
+{
+  margin-bottom: 0.625rem;
+}
+.mobile-section input{
+  width: 100%;
+  height: 3.3rem;
+  font-size: 0.88rem;
+  margin: 0.1rem 0 1rem;
+}
+.mobile-section input[type="checkbox"]
+{
+  margin: 0 1rem 0 0;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red20);
+}
+.mobile-section input[type="checkbox"]:checked
+{
+  background-color: var(--red100);
+}
+.mobile-section .personal-data-entry
+{
+  flex-direction: column;
+}
+.mobile-section .interests-content
+{
+  flex-direction: column;
+}
+.mobile-section .interest-column
+{
+  width: 100%;
+}
+.mobile-section .interest-column label
+{
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+}
+.mobile-section textarea
+{
+  height: 9rem;
+  margin: 0.2rem 0 1rem;
+  padding: .5rem;
+  font-size: .88rem;
+}
+.mobile-section .answer
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.mobile-section .answer label
+{
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem;
+}
+.mobile-section .classic-and-social
+{
+  flex-direction: column;
+}
+.mobile-section .classic
+{
+  width: 100%;
+  align-items: center;
+}
+.mobile-section .classic-contact figure
+{
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+.mobile-section  .classic-contact img
+{
+  width: 1rem;
+  height: 1rem;
+}
+.mobile-section  .classic-contact a
+{
+  font-size: 1rem;
+}
+.mobile-section .social figure
+{
+  margin: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.social img
+{
+  width: 2.5rem;
+  height: 2.5rem;
+}
