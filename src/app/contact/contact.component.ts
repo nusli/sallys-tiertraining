@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   @Input() mobilePortrait = false;
+  @Output() ctaOn = false;
 
   contact = {
     lastName: '',

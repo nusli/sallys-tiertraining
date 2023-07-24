@@ -1,0 +1,49 @@
+.cookie-container
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0 1vw;
+  height: auto;
+  z-index: 300;
+  background-color: #a99998c5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+p
+{
+  width: 70%;
+  text-align: left;
+}
+a
+{
+  font-family: 'ubuntu-bolder';
+}
+app-button
+{
+  margin: 0.3rem 0;
+}
+
+.mobile-cookie-container
+{
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.mobile-cookie-container p
+{
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.mobile-cookie-container a
+{
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.mobile-cookie-container app-button
+{
+  margin:0;
+}

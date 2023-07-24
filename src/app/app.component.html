@@ -1,3 +1,4 @@
 <app-navigation [mobilePortrait]="mobilePortrait"></app-navigation>
 <router-outlet (activate)="onOutletLoaded($event)"></router-outlet>
 <app-footer [mobilePortrait]="mobilePortrait"></app-footer>
+<app-cookie-disclaimer *ngIf="!cookiesAccepted" [mobilePortrait]="mobilePortrait" (cookiesAcceptedChanged)="cookiesAccepted=$event"></app-cookie-disclaimer>

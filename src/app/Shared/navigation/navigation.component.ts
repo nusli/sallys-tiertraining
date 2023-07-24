@@ -1,22 +1,37 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, OnDestroy {
   @Input() mobilePortrait = false;
-  navBackgroundHeight = 32.39;
+  navBackgroundHeight = 18.28;
+  navBackgroundMaxHeight = 165;
+
   mobileNavOpen = false;
   groups_open = false;
   individual_open = false;
   horse_open = false;
+  openedPage = "home";
+
+  windowX = window.innerWidth;
+  windowY = window.innerHeight;
+  windowRatio = this.windowX/this.windowY;
+  resizeObservable$: Observable<Event> | undefined;
+  resizeSubscription$: Subscription | undefined;
 
   constructor() { }
 
-  ngOnInit(): void {
 
+  ngOnInit(): void {
+    this.changeNavBackgroundHeight()
+    this.resizeObservable$ = fromEvent(window, 'resize')
+    this.resizeSubscription$ = this.resizeObservable$.subscribe( evt => {
+      this.changeNavBackgroundHeight();
+    })
   }
   changeHamburgerMenu(){
     this.switchCategories("");
@@ -48,13 +63,45 @@ export class NavigationComponent implements OnInit {
 
   changeNavBackgroundHeight(): void
   {
-    this.navBackgroundHeight = 32.39;
+    this.navBackgroundHeight = 9.2;
+    this.navBackgroundMaxHeight = 165;
+
+    if(this.windowRatio >= 1.2){
+      this.navBackgroundHeight = 11;
+    }
+    if(this.windowRatio >= 1.4){
+      this.navBackgroundHeight = 12;
+    }
+    if(this.windowRatio >= 1.6){
+      this.navBackgroundHeight = 15;
+    }
+    if(this.windowRatio >= 2){
+      this.navBackgroundHeight = 22;
+      this.navBackgroundMaxHeight = 230;
+    }
+    if(this.windowRatio >= 2.6){
+      this.navBackgroundHeight = 29;
+      this.navBackgroundMaxHeight = 230;
+    }
+    if(this.windowRatio >= 3.6){
+      this.navBackgroundHeight = 40;
+      this.navBackgroundMaxHeight = 230;
+    }
+    if(this.mobilePortrait ){this.navBackgroundHeight = 18.28;}
     if(this.mobileNavOpen){
-      this.navBackgroundHeight = 51.39;
+      this.navBackgroundHeight = 29;
+      this.navBackgroundMaxHeight = 230;
       if(this.groups_open || this.individual_open || this.horse_open){
-        this.navBackgroundHeight = 71.39;
+        this.navBackgroundHeight = 40;
+        this.navBackgroundMaxHeight = 340;
       }
     }
+  }
+  ngOnDestroy(): void {
+    if(this.resizeSubscription$ != null){
+      this.resizeSubscription$.unsubscribe()
+    }
+
   }
 
 }

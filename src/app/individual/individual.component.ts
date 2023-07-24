@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-individual',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./individual.component.scss']
 })
 export class IndividualComponent {
-
+  @Input() mobilePortrait = false;
 }

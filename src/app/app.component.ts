@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  cookiesAccepted = false;
   title = 'sallys-tiertraining';
   mobilePortrait = false;
 
@@ -14,11 +15,16 @@ export class AppComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.responsive.observe(Breakpoints.XSmall)
+    this.responsive.observe([Breakpoints.XSmall, Breakpoints.Small])
     .subscribe(result => {
       if (result.matches){
         this.mobilePortrait = true;
-        console.log('responsive for XSmall: ' + window.innerWidth + ' x ' + window.innerHeight);
+      }
+    })
+    this.responsive.observe(Breakpoints.Large)
+    .subscribe(result => {
+      if (result.matches){
+        this.mobilePortrait = false;
       }
     })
   }

@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   @Input() mobilePortrait = false;
   @Input() newsAvailable = true;
+  @Input() ctaOn = true;
   lastNews = 4;
   actualNews = {
     index: 1,

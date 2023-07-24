@@ -1,4 +1,4 @@
-<section id="footer-cta" [ngClass]="{'mobile-section':mobilePortrait}">
+<section *ngIf="ctaOn" id="footer-cta" [ngClass]="{'mobile-section':mobilePortrait}">
   <h1 class="h1-p">Kontaktiere mich</h1>
   <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
   <div class="button-holder">
@@ -29,16 +29,16 @@
         <h4>Direktlinks</h4>
         <div class="directlinks">
           <ul>
-            <li routerLink="/Hundegruppentraining" routerLinkActive="active">Hundetraining (Gruppe)</li>
-            <li routerLink="/Hundeeinzeltraining" routerLinkActive="active">Hundetraining (einzeln)</li>
-            <li routerLink="/Reitunterricht" routerLinkActive="active">Reitunterricht</li>
-            <li routerLink="/DasBinIch" routerLinkActive="active">Das bin ich</li>
+            <li routerLink="/Hundegruppentraining" (click)="ctaOn = true">Hundetraining (Gruppe)</li>
+            <li routerLink="/Hundeeinzeltraining" (click)="ctaOn = true">Hundetraining (einzeln)</li>
+            <li routerLink="/Reitunterricht" (click)="ctaOn = true">Reitunterricht</li>
+            <li routerLink="/DasBinIch" (click)="ctaOn = true">Das bin ich</li>
           </ul>
           <ul>
-            <li routerLink="/Galerie" routerLinkActive="active">Galerie</li>
-            <li routerLink="/Glossar" routerLinkActive="active">Glossar</li>
-            <li routerLink="/Kontakt" routerLinkActive="active">Kontakt</li>
-            <li routerLink="/Impressum" routerLinkActive="active">Impressum & AGB</li>
+            <li routerLink="/Galerie" (click)="ctaOn = true">Galerie</li>
+            <li routerLink="/Glossar" (click)="ctaOn = true">Glossar</li>
+            <li routerLink="/Kontakt" (click)="ctaOn = false">Kontakt</li>
+            <li routerLink="/Impressum" (click)="ctaOn = false">Impressum & AGB</li>
 
           </ul>
         </div>

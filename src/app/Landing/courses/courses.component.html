@@ -9,7 +9,8 @@
     <div class="slider-wrapper">
       <div id="landing-courses-slides-container" class="slides-container">
         <app-card
-        *ngFor="let item of [].constructor(4); let i = index" [mobilePortrait]="mobilePortrait"></app-card>
+        *ngFor="let item of [].constructor(4); let i = index" [mobilePortrait]="mobilePortrait"
+        [ngStyle]="{'margin-left.px':cardMargin, 'margin-right.px':cardMargin}"></app-card>
       </div>
     </div>
     <figure [ngClass]="rightArrowActive ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="onClick('right')">

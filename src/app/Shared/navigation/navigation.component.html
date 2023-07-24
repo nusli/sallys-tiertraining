@@ -1,6 +1,6 @@
 <nav  [ngClass]="{'mobile-nav':mobilePortrait}">
-  <figure class="nav-bg-red" [ngStyle]="{'height.vw':navBackgroundHeight}"></figure>
-  <figure class="nav-bg-grey" [ngStyle]="{'height.vw':navBackgroundHeight}"></figure>
+  <figure class="nav-bg-red" [ngStyle]="{'height.vh':navBackgroundHeight, 'max-height.px': navBackgroundMaxHeight}"></figure>
+  <figure class="nav-bg-grey" [ngStyle]="{'height.vh':navBackgroundHeight, 'max-height.px': navBackgroundMaxHeight}"></figure>
   <div class="navbar">
     <figure routerLink="" class="nav-logo nav-entry">
       <img src="../../../assets/icons/sallys_logo.svg" alt="sallys logo">
@@ -8,7 +8,7 @@
     <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="groups_open? 'open' : ''">
       <div class="nav-entry-top">
         <!--Für größere Bildschirme: Hundetraining (Gruppe)?!-->
-        <a routerLink="/Hundegruppentraining"  (click)="switchCategories('')">HUNDEGRUPPE</a>
+        <a routerLink="/Hundegruppentraining"  routerLinkActive="active" (click)="switchCategories('')">HUNDEGRUPPE</a>
         <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
       </div>
       <ul *ngIf="groups_open">
@@ -48,7 +48,7 @@
       <ul *ngIf="mobileNavOpen" class="mobile-nav-entries">
         <li>
           <div class="nav-entry-top">
-            <a class="mobile-a" routerLink="/Hundegruppentraining"  (click)="switchCategories('')">Hundegruppen</a>
+            <a class="mobile-a" routerLink="/Hundegruppentraining"  routerLinkActive="active" (click)="switchCategories('')">Hundegruppen</a>
             <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('groups_open')"></figure>
           </div>
           <ul class="mobile-nav-group">
