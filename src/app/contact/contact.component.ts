@@ -1,5 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Hero } from '../Models/hero.model';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   @Input() mobilePortrait = false;
+  @Input() hero!: Hero;
   @Output() ctaOn = false;
 
   contact = {

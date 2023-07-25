@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Hero } from '../Models/hero.model';
 
 @Component({
   selector: 'app-glossar',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class GlossarComponent {
 @Input() mobilePortrait = false;
+@Input() hero!: Hero;
 }

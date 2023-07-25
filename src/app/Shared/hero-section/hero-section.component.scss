@@ -8,7 +8,7 @@
 .mobile-hero-container
 {
   padding-top: 10vh;
-  height: 58vh;
+  height: 40vh;
   margin-bottom: 6.25vh;
 
 }
@@ -36,8 +36,9 @@
 {
   width: 100vw;
   height: 50vh;
-  background-image: url(../../../assets/pictures/5.jpg);
-  background-size: 100%;
+  background-image: url(../../../assets/backgrounds/heroes/landing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 .mobile-hero-container .hero-image
@@ -50,9 +51,9 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
   position: absolute;
   left: 0;
-  top: 16vh;
+  top: 33vh;
   width: 100vw;
-  height: 35vh;
+  height: 18vh;
 }
 .mobile-hero-container .fader
 {
@@ -76,6 +77,8 @@
 .mobile-hero-container .hero-content
 {
   justify-content: flex-end;
+  bottom: 0;
+  height: auto;
 }
 
 #hero-article

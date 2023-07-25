@@ -1,4 +1,4 @@
-<app-hero-section [mobilePortrait]="mobilePortrait"></app-hero-section>
+<app-hero-section [mobilePortrait]="mobilePortrait" [hero]="hero"></app-hero-section>
 <section class="impressum-section" id="impressum" [ngClass]="{'mobile-section': mobilePortrait}">
   <h1>Impressum</h1>
   <article *ngFor="let text of impressumTexts">

@@ -1,12 +1,14 @@
 <div class="hero-container" [ngClass]="{'mobile-hero-container':mobilePortrait}">
-  <figure class="hero-image">
+  <figure *ngIf="mobilePortrait" class="hero-image" [ngStyle]="{'background-image': 'url(' + hero.pictureUrl + ')'}">
+  </figure>
+  <figure *ngIf="!mobilePortrait"class="hero-image" [ngStyle]="{'background-image': 'url(' + hero.pictureUrlDesk + ')'}">
   </figure>
   <figure class="fader"></figure>
   <div class="hero-content">
     <article id="hero-article">
-      <h1 class="h1-h2">UNTERSEITE</h1>
-      <h2 class="h1-p">Hilfe/Claim für die Unterseite</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+      <h1 class="h1-h2">{{ hero.title }}</h1>
+      <h2 class="h1-p">{{ hero.subtitle }}</h2>
+      <p>{{ hero.text }}</p>
     </article>
   </div>
 </div>

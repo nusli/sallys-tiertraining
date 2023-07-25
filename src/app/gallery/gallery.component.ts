@@ -1,4 +1,5 @@
 import { Component, HostListener, Input } from '@angular/core';
+import { Hero } from '../Models/hero.model';
 
 @Component({
   selector: 'app-gallery',
@@ -7,6 +8,7 @@ import { Component, HostListener, Input } from '@angular/core';
 })
 export class GalleryComponent {
   @Input() mobilePortrait = false;
+  @Input() hero!: Hero;
   articlesOpen = [false, false, false, false];
   chosenContent= [
     '../../assets/pictures/dummy1.JPG', '../../assets/pictures/dummy2.jpg', '../../assets/pictures/dummy3.jpg', '../../assets/pictures/dummy4.jpg', '../../assets/pictures/dummy5.jpg', '../../assets/pictures/dummy6.jpg'

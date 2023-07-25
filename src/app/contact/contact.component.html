@@ -1,4 +1,4 @@
-<app-hero-section [mobilePortrait]="mobilePortrait"></app-hero-section>
+<app-hero-section [mobilePortrait]="mobilePortrait" [hero]="hero"></app-hero-section>
 <section class="form-section" [ngClass]="{'mobile-section':mobilePortrait}">
   <form novalidate (ngSubmit)="sendCredentials(cta_form)" #cta_form="ngForm">
     <article class="personal-data">

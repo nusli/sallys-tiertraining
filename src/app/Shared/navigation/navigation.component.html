@@ -9,7 +9,7 @@
       <div class="nav-entry-top">
         <!--Für größere Bildschirme: Hundetraining (Gruppe)?!-->
         <a routerLink="/Hundegruppentraining"  routerLinkActive="active" (click)="switchCategories('')">HUNDEGRUPPE</a>
-        <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
+        <figure *ngIf="groupEntriesAvailable" [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
       </div>
       <ul *ngIf="groups_open">
         <li>Eintrag 1</li>
@@ -20,7 +20,7 @@
     <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="individual_open? 'open' : ''">
       <div class="nav-entry-top">
         <a  routerLink="/Hundeeinzeltraining" routerLinkActive="active" (click)="switchCategories('')">EINZELTRAINING</a>
-        <figure [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('individual_open')"></figure>
+        <figure *ngIf="individualEntriesAvailable" [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('individual_open')"></figure>
       </div>
       <ul *ngIf="individual_open">
         <li>Eintrag 1</li>
@@ -31,7 +31,7 @@
     <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="horse_open? 'open' : ''">
       <div class="nav-entry-top">
         <a routerLink="/Reitunterricht" routerLinkActive="active" (click)="switchCategories('')">REITUNTERRICHT</a>
-        <figure [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('horse_open')"></figure>
+        <figure *ngIf="horseEntriesAvailable" [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('horse_open')"></figure>
       </div>
       <ul *ngIf="horse_open">
         <li>Eintrag 1</li>
@@ -49,9 +49,9 @@
         <li>
           <div class="nav-entry-top">
             <a class="mobile-a" routerLink="/Hundegruppentraining"  routerLinkActive="active" (click)="switchCategories('')">Hundegruppen</a>
-            <figure [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('groups_open')"></figure>
+            <figure *ngIf="groupEntriesAvailable" [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('groups_open')"></figure>
           </div>
-          <ul class="mobile-nav-group">
+          <ul class="mobile-nav-group" [ngClass]="{'entry-only': !groupEntriesAvailable}">
             <ul *ngIf="groups_open">
               <li>Eintrag 1</li>
               <li>Eintrag 2</li>
@@ -60,9 +60,9 @@
           </ul>
         </li>
         <li>
-          <div class="nav-entry-top">
+          <div class="nav-entry-top" [ngClass]="{'entry-only': !individualEntriesAvailable}">
             <a class="mobile-a" routerLink="/Hundeeinzeltraining" routerLinkActive="active" (click)="switchCategories('')">Einzeltraining</a>
-            <figure [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('individual_open')"></figure>
+            <figure *ngIf="individualEntriesAvailable" [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('individual_open')"></figure>
           </div>
           <ul class="mobile-nav-group">
             <ul *ngIf="individual_open">
@@ -73,9 +73,9 @@
           </ul>
         </li>
         <li>
-          <div class="nav-entry-top">
+          <div class="nav-entry-top" [ngClass]="{'entry-only': !horseEntriesAvailable}">
             <a class="mobile-a" routerLink="/Reitunterricht" routerLinkActive="active" (click)="switchCategories('')">Reitunterricht</a>
-            <figure [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('horse_open')"></figure>
+            <figure *ngIf="horseEntriesAvailable" [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('horse_open')"></figure>
           </div>
           <ul class="mobile-nav-group">
             <ul *ngIf="horse_open">

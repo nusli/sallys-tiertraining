@@ -12,9 +12,16 @@ export class NavigationComponent implements OnInit, OnDestroy {
   navBackgroundMaxHeight = 165;
 
   mobileNavOpen = false;
+  //Gruppentraining
+  groupEntriesAvailable = true;
   groups_open = false;
+  //Einzeltraining
+  individualEntriesAvailable = false;
   individual_open = false;
+  //Pferdereiten
+  horseEntriesAvailable = false;
   horse_open = false;
+  //Me
   openedPage = "home";
 
   windowX = window.innerWidth;

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Hero } from '../Models/hero.model';
 
 @Component({
   selector: 'app-impressum',
@@ -7,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ImpressumComponent {
   @Input() mobilePortrait = false;
+  @Input() hero!: Hero;
   impressumTexts = [
     {
       subtitle: 'Kontakt',
