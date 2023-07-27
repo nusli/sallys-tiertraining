@@ -1,13 +1,11 @@
-<button type="{{ buttonType }}" [ngClass]="primary?'primary':'secondary'">
+<button type="{{ buttonType }}"  routerLink = "/DasBinIch" [ngClass]="primary?'primary':'secondary'">
   <div class="btn-top" [ngClass]="withContext? 'withContext' : 'withoutContext'">
-    <p [ngStyle]="{'font-size.rem': buttonFontSize}" (click)="clickOn('p')">{{buttonTitle}} </p>
+    <p [ngStyle]="{'font-size.rem': buttonFontSize}"  (click)="clickOn('p')">{{buttonTitle}} </p>
     <figure *ngIf="withContext&&!cookieButton" [ngClass]="context_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="context_open = !context_open"></figure>
     <figure *ngIf="withContext&&cookieButton" [ngClass]="context_open? 'nav-arrow-closed' : 'nav-arrow-open'" (click)="context_open = !context_open"></figure>
   </div>
   <ul *ngIf="context_open" class="open" [ngClass]="{'openUp': cookieButton}">
-    <li>Eintrag 1</li>
-    <li>Eintrag 2</li>
-    <li>Eintrag 3</li>
+    <li *ngFor="let item of buttonEntries; let i = index">{{ item.title}}</li>
   </ul>
 </button>
 

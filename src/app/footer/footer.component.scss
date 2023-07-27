@@ -27,9 +27,9 @@
 
 .footer-news
 {
-  background-image: url(../../assets/backgrounds/news-dummy.jpg);
+  //background-image: url();
   background-size: 100%;
-  background-position: center;
+  background-position: top;
 }
 .mobile-section
 {
@@ -51,6 +51,12 @@
   height: auto;
 }
 
+.visible-article{
+  display: block;
+}
+.invisible-article{
+  display: none;
+}
 .footer-credentials
 {
   width: 100vw;

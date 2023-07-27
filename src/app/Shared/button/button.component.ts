@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { ButtonEntry } from 'src/app/Models/button-entry.model';
 
 @Component({
   selector: 'app-button',
@@ -12,6 +14,21 @@ export class ButtonComponent implements OnInit {
   @Input() withContext = false;
   @Input() buttonTitle = "";
   @Input() mobilePortrait = false;
+  buttonEntries: ButtonEntry[]=[{title:"", link: ""}];
+  contactEntries: ButtonEntry[] = [
+    {
+      title: "Anrufen",
+      link: "",
+    },
+    {
+      title: "Mail",
+      link: "",
+    },
+    {
+      title: "Kontaktformular",
+      link: "",
+    },
+  ]
   cookiesAccepted = false;
 
   context_open = false;
@@ -20,14 +37,21 @@ export class ButtonComponent implements OnInit {
 
   @Output() cookiesAcceptedChanged = new EventEmitter<boolean>()
 
+  constructor(private router:Router){
+
+  }
   ngOnInit(): void {
     if (this.mobilePortrait){this.buttonFontSize = 0.88}
+    if (this.buttonTitle === "Kontakt"){
+      this.buttonEntries = this.contactEntries;
+    }
   }
 
   clickOn(tag:string){
     if (tag === "p"){
-      if (this.cookieButton){this.cookiesAccepted = true}
-      this.cookiesAcceptedChanged.emit(this.cookiesAccepted);
+      if (this.cookieButton){this.cookiesAccepted = true;
+        this.cookiesAcceptedChanged.emit(this.cookiesAccepted);
+      }
     }
   }
 }

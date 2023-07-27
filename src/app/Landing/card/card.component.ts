@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Card } from 'src/app/Models/card.model';
 
 @Component({
   selector: 'app-card',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 @Input() mobilePortrait = false;
+@Input() cardContent!: Card;
 }

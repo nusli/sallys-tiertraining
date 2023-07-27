@@ -1,48 +1,53 @@
-<app-picture-article [mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
-<app-picture-article [mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
-<section [ngClass]="{'mobile-section':mobilePortrait}">
+<app-picture-article *ngIf='introductionArticles.length > 0 && introductionArticles[0].id !="dummy"' [article]="introductionArticles[0]" [mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 1" [article]="introductionArticles[1]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 2" [article]="introductionArticles[2]" [mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
+
+<section *ngIf='introductionArticles.length > 0 && introductionArticles[0].id !="dummy"' [ngClass]="{'mobile-section':mobilePortrait}">
   <article>
     <h1 class="h1-p">Irgendwas zum Kursangebot</h1>
     <p class="h1-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
   </article>
 </section>
 
-<div  *ngIf="!mobilePortrait" class="desktop-picture-frames">
-  <div class="picture-frame-container">
-    <app-picture-frame [(contentOpen)]="contentsOpen[0]" [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)"></app-picture-frame>
-    <app-picture-frame [(contentOpen)]="contentsOpen[1]" [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)"></app-picture-frame>
-  </div>
-  <div *ngIf="contentsOpen[0] || contentsOpen[1]" class="picture-frame-description-content">
-    <article *ngFor="let article of chosenContent" class="picture-frame-article">
-      <h2>{{ article.header }}</h2>
-      <p>{{ article.text }}</p>
-    </article>
-    <figure class="nav-close" (click)="closeContents(0,1)"></figure>
-  </div>
-  <div class="picture-frame-container">
-    <app-picture-frame [(contentOpen)]="contentsOpen[2]" [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)"></app-picture-frame>
-    <app-picture-frame [(contentOpen)]="contentsOpen[3]" [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)"></app-picture-frame>
-  </div>
-  <div *ngIf="contentsOpen[2] || contentsOpen[3]" class="picture-frame-description-content">
-    <article *ngFor="let article of chosenContent" class="picture-frame-article">
-      <h2>{{ article.header }}</h2>
-      <p>{{ article.text }}</p>
-    </article>
-    <figure class="nav-close" (click)="closeContents(2,3)"></figure>
-  </div>
-</div>
-
-<div *ngIf="mobilePortrait" class="mobile-picture-frames">
-  <div *ngFor="let content of contentsOpen; let i = index" class="frames-and-content">
-    <app-picture-frame [mobilePortrait]="mobilePortrait" [(contentOpen)]="contentsOpen[i]" [articleOpen]="articlesOpen[i]" (articleOpenChange)="closeOthers(i, $event)"></app-picture-frame>
-    <div *ngIf="contentsOpen[i]" class="picture-frame-description-content">
+<div *ngIf="framesAvailable" class="all-picture-frames">
+  <div  *ngIf="!mobilePortrait" class="desktop-picture-frames">
+    <div class="picture-frame-container">
+      <app-picture-frame [(contentOpen)]="contentsOpen[0]" [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)" [article]="frameArticles[0]"></app-picture-frame>
+      <app-picture-frame [(contentOpen)]="contentsOpen[1]" [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)" [article]="frameArticles[1]"></app-picture-frame>
+    </div>
+    <div *ngIf="contentsOpen[0] || contentsOpen[1]" class="picture-frame-description-content">
       <article *ngFor="let article of chosenContent" class="picture-frame-article">
-        <h2>{{ article.header }}</h2>
+        <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
         <p>{{ article.text }}</p>
       </article>
       <figure class="nav-close" (click)="closeContents(0,1)"></figure>
     </div>
+    <div *ngIf="frameArticles.length > 2" class="picture-frame-container">
+      <app-picture-frame [(contentOpen)]="contentsOpen[2]" [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)" [article]="frameArticles[2]"></app-picture-frame>
+      <app-picture-frame *ngIf="frameArticles.length > 3" [(contentOpen)]="contentsOpen[3]" [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)" [article]="frameArticles[3]"></app-picture-frame>
+    </div>
+    <div *ngIf="contentsOpen[2] || contentsOpen[3]" class="picture-frame-description-content">
+      <article *ngFor="let article of chosenContent" class="picture-frame-article">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.text }}</p>
+      </article>
+      <figure class="nav-close" (click)="closeContents(2,3)"></figure>
+    </div>
   </div>
 
+  <div *ngIf="mobilePortrait" class="mobile-picture-frames">
+    <div *ngFor="let content of contentsOpen; let i = index" class="frames-and-content">
+      <app-picture-frame [mobilePortrait]="mobilePortrait" [(contentOpen)]="contentsOpen[i]" [articleOpen]="articlesOpen[i]" (articleOpenChange)="closeOthers(i, $event)" [article]="frameArticles[i]"></app-picture-frame>
+      <div *ngIf="contentsOpen[i]" class="picture-frame-description-content">
+        <article *ngFor="let article of chosenContent" class="picture-frame-article">
+          <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
+          <p>{{ article.text }}</p>
+        </article>
+        <figure class="nav-close" (click)="closeContents(0,1)"></figure>
+      </div>
+    </div>
+
+  </div>
 </div>
+
 

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Article } from 'src/app/Models/article.model';
 
 @Component({
   selector: 'app-trainings',
@@ -6,7 +7,26 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./trainings.component.scss']
 })
 export class TrainingsComponent {
+  @Input() framesAvailable = true;
   @Input() mobilePortrait = false;
+  @Input() introductionArticles: Article[] = [{
+    id: "dummy",
+    pictureUrl: "",
+    title: "",
+    subtitle: "",
+    text: "",
+    expendable: false,
+    expand: [
+      {
+        id: "",
+        title: "",
+        text: ``,
+      },
+    ]
+  },]
+
+  @Input() frameArticles!: Article[];
+
   articlesOpen = [false, false, false, false];
   contentsOpen = [false, false, false, false];
 
@@ -14,15 +34,15 @@ export class TrainingsComponent {
   descriptionOpen = false;
   chosenContent = [
     {
-      header: "Was ist eigentlich Fun Agility?",
+      title: "Was ist eigentlich Fun Agility?",
       text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     },
     {
-      header: "Warum Fun Agility?",
+      title: "Warum Fun Agility?",
       text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     },
     {
-      header: "Was muss ich beachten?",
+      title: "Was muss ich beachten?",
       text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     },
   ]
@@ -37,8 +57,8 @@ export class TrainingsComponent {
         this.articlesOpen[i] = false;
       }
       this.articlesOpen[openFrame] = true;
+      this.chosenContent = this.frameArticles[openFrame].expand;
     }
-    console.log(this.articlesOpen)
   }
   closeContents(frameOne: number, frameTwo: number){
     this.contentsOpen[frameOne] = false;

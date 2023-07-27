@@ -49,18 +49,20 @@
 
 .image-article-container .faderend
 {
+  width: 12vw;
+  height: 32.43vw;
   position: absolute;
   top: 0;
 }
 .left-image-article-container .faderend
 {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
-  right: 41.11vw;
+  right: 49.11vw;
 }
 .right-image-article-container .faderend
 {
   background: linear-gradient(-90deg, rgba(255, 255, 255, 0), white);
-  left: 41.11vw;
+  left: 49.11vw;
 }
 
 

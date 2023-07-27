@@ -9,7 +9,7 @@
     <div class="slider-wrapper">
       <div id="landing-courses-slides-container" class="slides-container">
         <app-card
-        *ngFor="let item of [].constructor(4); let i = index" [mobilePortrait]="mobilePortrait"
+        *ngFor="let card of cards; let i = index" [mobilePortrait]="mobilePortrait" [cardContent]="cards[i]"
         [ngStyle]="{'margin-left.px':cardMargin, 'margin-right.px':cardMargin}"></app-card>
       </div>
     </div>

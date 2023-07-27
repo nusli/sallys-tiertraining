@@ -2,18 +2,18 @@
   <h1 class="h1-p">Kontaktiere mich</h1>
   <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
   <div class="button-holder">
-    <app-button *ngIf="!mobilePortrait" [primary]="true" buttonTitle="Kontaktformular"></app-button>
+    <app-button *ngIf="!mobilePortrait" [primary]="true" buttonTitle="Kontaktformular" routerLink="/Kontakt" routerLinkActive="router-link-active" ></app-button>
     <app-button [primary]="false" [withContext]="true" buttonTitle="Kontakt"></app-button>
   </div>
 </section>
-<section class="footer-news" *ngIf="newsAvailable" [ngClass]="{'mobile-section':mobilePortrait}">
+<section class="footer-news" *ngIf="news[0]!=null" [ngClass]="{'mobile-section':mobilePortrait}" [ngStyle]="{'background-image': 'url(' + news[activeNews].pictureUrl + ')'}">
   <div class="news-holder">
-    <figure [ngClass]="actualNews.index !=0 ? 'nav-arrow-left' : 'nav-arrow-left-disabled'"></figure>
-    <article>
-      <h2 class="h1-p">{{ actualNews.title }}</h2>
-      <p> {{ actualNews.text }}</p>
+    <figure [ngClass]="activeNews !=0 ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="changeNews(-1)"></figure>
+    <article *ngFor="let newsEntry of news; let i = index" [ngClass]="activeNews === i?'visible-article' : 'invisible-article'">
+      <h2 class="h1-p">{{ newsEntry.title }}</h2>
+      <p> {{ newsEntry.text }}</p>
     </article>
-    <figure [ngClass]="actualNews.index != lastNews ? 'nav-arrow-right' : 'nav-arrow-right-disabled'"></figure>
+    <figure [ngClass]="activeNews != news.length-1 ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="changeNews(1)"></figure>
   </div>
 </section>
 <section class="footer-credentials" [ngClass]="{'mobile-section':mobilePortrait}">

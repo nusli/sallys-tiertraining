@@ -2,9 +2,9 @@
   <figure></figure>
   <article>
     <div class="content">
-      <h3 class="h1-h2">Fun Agility</h3>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <h3 class="h1-h2">{{ cardContent.title }}</h3>
+      <p>{{ cardContent.text }}</p>
     </div>
-    <a id="card-nav">mehr erfahren</a>
+    <a id="card-nav" [routerLink]="cardContent.link">mehr erfahren</a>
   </article>
 </div>
