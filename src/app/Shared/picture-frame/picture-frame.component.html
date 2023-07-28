@@ -4,7 +4,7 @@
     <div  class="border-fade" *ngIf="!articleOpen" [ngClass]="borderOn ? 'withBorder' : 'withoutBorder'" class="inner-frame-title" (click)="openArticle()">
       <h1 [ngStyle]="{'color': borderOn ? 'var(--red100)' : 'white'}">{{ article.title }}</h1>
     </div>
-    <div *ngIf="articleOpen" class="inner-frame">
+    <div *ngIf="articleOpen" class="inner-frame fade">
       <figure class="nav-close" (click)="openArticle()"></figure>
       <article>
         <div class="article-content" [ngClass]="{'centered-article-content': article.subtitle === '' && article.text === ''}">
