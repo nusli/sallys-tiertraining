@@ -1,19 +1,19 @@
 <div  class="outer-frame" [ngClass]="{'mobile-frame':mobilePortrait}" (mouseover)="borderOn = true" (mouseleave)="borderOn = false">
-  <figure [ngClass]="articleOpen ? 'outer-frame-open' : ''" class="outer-frame-background"></figure>
+  <figure [ngClass]="articleOpen ? 'outer-frame-open' : ''" class="outer-frame-background" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')'}"></figure>
   <div class="frame-content">
-    <div  *ngIf="!articleOpen" [ngClass]="borderOn ? 'withBorder' : 'withoutBorder'" class="inner-frame-title" (click)="openArticle()">
+    <div  class="border-fade" *ngIf="!articleOpen" [ngClass]="borderOn ? 'withBorder' : 'withoutBorder'" class="inner-frame-title" (click)="openArticle()">
       <h1 [ngStyle]="{'color': borderOn ? 'var(--red100)' : 'white'}">{{ article.title }}</h1>
     </div>
     <div *ngIf="articleOpen" class="inner-frame">
       <figure class="nav-close" (click)="openArticle()"></figure>
       <article>
-        <div class="article-content">
-          <h1 *ngIf="!mobilePortrait">{{ article.title }}</h1>
-          <h2>{{ article.subtitle }}</h2>
-          <!-- <p *ngIf="!mobilePortrait">{{ article.text }}</p> -->
-          <p>{{ article.text}}</p>
+        <div class="article-content" [ngClass]="{'centered-article-content': article.subtitle === '' && article.text === ''}">
+          <h1 *ngIf='!mobilePortrait || (mobilePortrait&&article.subtitle==="")'>{{ article.title }}</h1>
+          <h2 *ngIf='article.subtitle!=""' >{{ article.subtitle }}</h2>
+          <p *ngIf='mobilePortrait && article.text != ""'>{{ article.mobileText }}</p>
+          <p *ngIf='!mobilePortrait && article.text != ""'>{{ article.text }}</p>
         </div>
-        <a (click)="getContent()">Mehr erfahren</a>
+        <a *ngIf="article.expendable" (click)="getContent()">Mehr erfahren</a>
       </article>
     </div>
   </div>

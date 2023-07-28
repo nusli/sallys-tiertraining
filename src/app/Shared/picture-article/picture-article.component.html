@@ -1,6 +1,6 @@
 <div *ngIf="!mobilePortrait">
   <div class="image-article-container" [ngClass]="leftPicture ? 'left-image-article-container': 'right-image-article-container'">
-    <figure class="article-image">
+    <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')'}">
     </figure>
     <figure class="faderstart"></figure>
     <figure class="faderend"></figure>
@@ -17,7 +17,7 @@
 <div *ngIf="mobilePortrait">
   <div class="image-article-container mobile-article">
     <div class="image-content">
-      <figure class="article-image">
+      <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')'}">
       </figure>
       <figure class="fader"></figure>
     </div>
@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<div *ngIf="extendedContentOpen" class="extended-content" [ngClass]="{'mobile-extended-content':mobilePortrait}">
+<div *ngIf="extendedContentOpen" class="extended-content article-fade" [ngClass]="{'mobile-extended-content':mobilePortrait}" >
   <article *ngFor="let item of extend">
     <h2 *ngIf='item.title != ""'>{{ item.title }}</h2>
     <p>

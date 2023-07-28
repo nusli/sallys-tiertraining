@@ -3,16 +3,16 @@
 
 <div  *ngIf="!mobilePortrait" class="desktop-picture-frames">
   <div class="picture-frame-container">
-    <app-picture-frame [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)"></app-picture-frame>
-    <app-picture-frame [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)"></app-picture-frame>
+    <app-picture-frame [articleOpen]="articlesOpen[0]" (articleOpenChange)="closeOthers(0, $event)" [article]="frameArticles[0]"></app-picture-frame>
+    <app-picture-frame [articleOpen]="articlesOpen[1]" (articleOpenChange)="closeOthers(1, $event)" [article]="frameArticles[1]"></app-picture-frame>
   </div>
-  <div *ngIf="articlesOpen[0] || articlesOpen[1]" class="picture-frame-description-content">
+  <div *ngIf="articlesOpen[0] || articlesOpen[1]" class="picture-frame-description-content article-fade">
     <div class="slider-and-nav">
       <figure class="nav-arrow-left" (click)="onClick('left')">
       </figure>
 
       <div class="slider-wrapper">
-          <figure *ngFor="let picture of chosenContent; let i = index" [ngClass]="activeFrame===i?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
+          <figure class="fade" *ngFor="let picture of chosenContent; let i = index" [ngClass]="activeFrame===i?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
           </figure>
       </div>
 
@@ -25,16 +25,16 @@
     <figure class="nav-close" (click)="closeContents(0,1)"></figure>
   </div>
   <div class="picture-frame-container">
-    <app-picture-frame [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)"></app-picture-frame>
-    <app-picture-frame [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)"></app-picture-frame>
+    <app-picture-frame [articleOpen]="articlesOpen[2]" (articleOpenChange)="closeOthers(2, $event)" [article]="frameArticles[2]"></app-picture-frame>
+    <app-picture-frame [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)" [article]="frameArticles[3]"></app-picture-frame>
   </div>
-  <div *ngIf="articlesOpen[2] || articlesOpen[3]" class="picture-frame-description-content">
+  <div *ngIf="articlesOpen[2] || articlesOpen[3]" class="picture-frame-description-content article-fade">
     <div class="slider-and-nav">
       <figure class="nav-arrow-left" (click)="onClick('left')">
       </figure>
 
       <div class="slider-wrapper">
-          <figure *ngFor="let picture of chosenContent; let i = index" [ngClass]="activeFrame===i?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
+          <figure class="fade" *ngFor="let picture of chosenContent; let i = index" [ngClass]="activeFrame===i?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[i] +')'}">
           </figure>
       </div>
 
@@ -49,12 +49,12 @@
 </div>
 
 <div *ngIf="mobilePortrait" class="mobile-picture-frames">
-  <div *ngFor="let content of articlesOpen; let i = index" class="frames-and-content">
-    <app-picture-frame [mobilePortrait]="mobilePortrait" [articleOpen]="articlesOpen[i]" (articleOpenChange)="closeOthers(i, $event)"></app-picture-frame>
-    <div *ngIf="articlesOpen[i]" class="picture-frame-description-content">
+  <div *ngFor="let content of frameArticles; let i = index" class="frames-and-content">
+    <app-picture-frame [mobilePortrait]="mobilePortrait" [articleOpen]="articlesOpen[i]" (articleOpenChange)="closeOthers(i, $event)" [article]="content"></app-picture-frame>
+    <div *ngIf="articlesOpen[i]" class="picture-frame-description-content article-fade">
       <div class="slide-and-nav">
         <div class="slider-wrapper">
-          <figure class="slide" *ngFor="let picture of chosenContent; let j = index" [ngClass]="activeFrame===j?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[j] +')', 'height.vw': pictureHeight}"
+          <figure class="slide fade" *ngFor="let picture of chosenContent; let j = index" [ngClass]="activeFrame===j?'slideVisible':'slideHidden'" [ngStyle]="{'background-image': 'url('+ chosenContent[j] +')', 'height.vw': pictureHeight}"
           (touchstart)="onSwipe($event, 'start')" (touchend)="onSwipe($event, 'end')">
           </figure>
         </div>
@@ -62,7 +62,7 @@
           <figure *ngFor="let dot of chosenContent; let j = index" class="dot" [ngClass]="activeFrame===j?'active':'inactive'" (click)="currentSlide(j)"></figure>
         </div>
       </div>
-      <figure class="nav-close" (click)="closeContents(i,i)"></figure>
+      <figure class="nav-close" (click)="closeContentsMobile(i)"></figure>
     </div>
   </div>
 

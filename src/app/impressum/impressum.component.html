@@ -1,20 +1,21 @@
 <app-hero-section [mobilePortrait]="mobilePortrait" [hero]="hero"></app-hero-section>
 <section class="impressum-section" id="impressum" [ngClass]="{'mobile-section': mobilePortrait}">
-  <h1>Impressum</h1>
+  <h1 class="h1-h2">Datenschutzerklaerung</h1>
   <article *ngFor="let text of impressumTexts">
-    <h2>{{ text.subtitle }}</h2>
+    <h2 *ngIf='text.subtitle!=""' class="h1-p">{{ text.subtitle }}</h2>
     <p>{{ text.text }}</p>
   </article>
 </section>
 <section class="impressum-section" id="agb" [ngClass]="{'mobile-section': mobilePortrait}">
-  <h1>Allgemeine Geschäftsbedingungen</h1>
+  <h1>Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck von deren
+    Verwendung</h1>
   <article *ngFor="let text of agbTexts">
     <h2>{{ text.subtitle }}</h2>
     <p>{{ text.text }}</p>
   </article>
 </section>
 <section class="impressum-section" id="privacy" [ngClass]="{'mobile-section': mobilePortrait}">
-  <h1>Datenschutz und Cookies</h1>
+  <h1>Haftungsausschluss</h1>
   <article *ngFor="let text of privacyTexts">
     <h2>{{ text.subtitle }}</h2>
     <p>{{ text.text }}</p>

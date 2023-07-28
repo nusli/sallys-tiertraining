@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../Models/hero.model';
 import { Article } from '../Models/article.model';
 
@@ -7,14 +7,14 @@ import { Article } from '../Models/article.model';
   templateUrl: './horse.component.html',
   styleUrls: ['./horse.component.scss']
 })
-export class HorseComponent {
+export class HorseComponent implements OnInit{
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
 
   frameArticles: Article[] = [
     {
       id: "frame-dressur",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC02081.JPG",
       title: "Dressur",
       subtitle: "Anfänger und Fortgeschrittene",
       text: "Die Dressur, die feine gefühlvolle Kommunikation zwischen Reiter und Pferd, ist die Basis jeglicher Arbeit in allen Bereichen. Ich vermittle Ihnen die Grundlagen der Bahnfiguren von den Anfängen bis hin zu schwierigeren Lektionen.",
@@ -53,7 +53,7 @@ export class HorseComponent {
     },
     {
       id: "frame-freizeit",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC02853.JPG",
       title: "Freizeit",
       subtitle: "Genießt gemeinsame Zeit",
       text: "Du hast keine Turnierambitionen, möchtest dein Pferd aber trotzdem korrekt reiten, um seine Gesundheit zu erhalten? Und du wünscht dir eine harmonische Beziehung mit deinem Freizeitpartner, um die gemeinsame Zeit genießen zu können? Ich bin stolz darauf, individuell angepasstes Training anzubieten.",
@@ -96,7 +96,7 @@ export class HorseComponent {
     },
     {
       id: "frame-springen",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/10a.jpg",
       title: "Springen",
       subtitle: "Artgerechtes Auslasten",
       text: `Für mich ist Spring-Unterricht nicht einfach nur springen. Für mich gehört ebenso Gymnastik- und Basisarbeit dazu.
@@ -137,4 +137,7 @@ export class HorseComponent {
       ]
     },
   ]
+  ngOnInit(): void {
+    document.body.scrollTop = 0;
+  }
 }

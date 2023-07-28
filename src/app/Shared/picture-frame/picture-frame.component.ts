@@ -10,9 +10,18 @@ export class PictureFrameComponent{
   @Input() mobilePortrait = false;
   @Input() articleOpen = false;
   @Input() contentOpen = false;
-  @Input() article!: Article;
+  @Input() article: Article = {
+    id: "",
+    pictureUrl: "../../../assets/backgrounds/frame-pictures/einzel3.jpg",
+    title: "",
+    subtitle: "",
+    text: "",
+    mobileText: "",
+    expendable: true,
+    expand: [{id:"", title:"", text:""}]
+  }
   borderOn = false;
-  
+
   @Output() contentOpenChange = new EventEmitter<boolean>();
   @Output() articleOpenChange = new EventEmitter<boolean>();
 

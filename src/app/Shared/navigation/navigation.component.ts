@@ -40,11 +40,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       this.changeNavBackgroundHeight();
     })
   }
-  changeHamburgerMenu(){
-    this.switchCategories("");
-    this.mobileNavOpen = !this.mobileNavOpen;
-    this.changeNavBackgroundHeight();
-  }
+ 
 
   switchCategories(category:string){
 
@@ -60,10 +56,16 @@ export class NavigationComponent implements OnInit, OnDestroy {
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = !this.horse_open;
-    } else{
+    } else if (category === "open"){
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = false;
+      this.mobileNavOpen = true;
+    }else{
+      this.groups_open = false;
+      this.individual_open = false;
+      this.horse_open = false;
+      this.mobileNavOpen = false;
     }
     this.changeNavBackgroundHeight();
   }
@@ -99,7 +101,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       this.navBackgroundHeight = 29;
       this.navBackgroundMaxHeight = 230;
       if(this.groups_open || this.individual_open || this.horse_open){
-        this.navBackgroundHeight = 40;
+        this.navBackgroundHeight = 44;
         this.navBackgroundMaxHeight = 340;
       }
     }

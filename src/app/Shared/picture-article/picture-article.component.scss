@@ -12,9 +12,10 @@
   top:0;
   width: 50vw;
   height: 32.43vw;
-  background-image: url(../../../assets/backgrounds/heroes/landing.jpg);
-  background-size: 100%;
+  //background-image: url();
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .left-image-article-container .article-image
@@ -141,6 +142,7 @@
 .mobile-article h2
 {
   font-size: 2.5rem;
+  line-height: 2rem;
 }
 .mobile-article .h1-p
 {
@@ -150,6 +152,7 @@
 .mobile-article p, .mobile-article a
 {
   font-size: 0.88rem;
+  line-height: 1.17rem;
 }
 .mobile-article .image-content {
   position: relative;
@@ -193,10 +196,12 @@
 {
   font-size: 2.5rem;
   margin-bottom: 0.75rem;
+  line-height: 2rem;
 }
 
 .mobile-extended-content p
 {
   font-size: 0.88rem;
   margin-bottom: 1rem;
+  line-height: 1.17rem;
 }

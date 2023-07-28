@@ -14,21 +14,7 @@ export class ButtonComponent implements OnInit {
   @Input() withContext = false;
   @Input() buttonTitle = "";
   @Input() mobilePortrait = false;
-  buttonEntries: ButtonEntry[]=[{title:"", link: ""}];
-  contactEntries: ButtonEntry[] = [
-    {
-      title: "Anrufen",
-      link: "",
-    },
-    {
-      title: "Mail",
-      link: "",
-    },
-    {
-      title: "Kontaktformular",
-      link: "",
-    },
-  ]
+
   cookiesAccepted = false;
 
   context_open = false;
@@ -42,9 +28,6 @@ export class ButtonComponent implements OnInit {
   }
   ngOnInit(): void {
     if (this.mobilePortrait){this.buttonFontSize = 0.88}
-    if (this.buttonTitle === "Kontakt"){
-      this.buttonEntries = this.contactEntries;
-    }
   }
 
   clickOn(tag:string){

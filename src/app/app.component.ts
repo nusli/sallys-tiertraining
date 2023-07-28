@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { Hero } from './Models/hero.model';
 
 @Component({
@@ -18,17 +18,17 @@ export class AppComponent implements OnInit{
       id:"individual",
       pictureUrl: "../../../assets/backgrounds/heroes/einzel3.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/einzel3_desk.jpg",
-      title: "Einzeltraining für Hunde",
+      title: "Einzeltraining Hunde",
       subtitle: "CATCHPHRASE EINZELTRAINING",
-      text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING"
+      text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING "
     },
     {
       id:"group",
       pictureUrl: "../../../assets/backgrounds/heroes/group.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/group_desk.jpg",
-      title: "Gruppentraining für Hunde",
+      title: "Gruppentraining Hunde",
       subtitle: "CATCHPHRASE EINZELTRAINING",
-      text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING"
+      text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING "
     },
     {
       id:"me",
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/me_desk.jpg",
       title: "Das bin ich",
       subtitle: "CATCHPHRASE ME",
-      text: "EINLEITUNGSTEXT ME EINLEITUNGSTEXT ME EINLEITUNGSTEXT ME EINLEITUNGSTEXT ME EINLEITUNGSTEXT ME EINLEITUNGSTEXT ME"
+      text: "EINLEITUNGSTEXT ME EINLEITUNGSTEXT "
     },
     {
       id:"horse",
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/pferde_desk.JPG",
       title: "Pferdereiten",
       subtitle: "CATCHPHRASE PFERDEREITEN",
-      text: "EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN"
+      text: "EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN "
     },
     {
       id:"gallery",
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/gallery_desk.JPG",
       title: "Galerie",
       subtitle: "CATCHPHRASE Galerie",
-      text: "EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie"
+      text: "EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie"
     },
     {
       id:"glossar",
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/glossar_desk.JPG",
       title: "Glossar",
       subtitle: "CATCHPHRASE Glossar",
-      text: "EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar"
+      text: "EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar "
     },
     {
       id:"contact",
@@ -68,25 +68,26 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/contact_desk.JPG",
       title: "Kontakt",
       subtitle: "CATCHPHRASE Kontakt",
-      text: "EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt"
+      text: "EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt"
     },
     {
       id:"impressum",
       pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
       title: "Impressum",
-      subtitle: "CATCHPHRASE Impressum",
-      text: "EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum"
+      subtitle: "",
+      text: "EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum"
     },
 
   ]
   activeHero = this.heroes[0]
   heroUrl = "";
+  openArticles = [false, false, false, false]
 
 
 
 
-  constructor(private responsive: BreakpointObserver, private router: Router){
+  constructor(private responsive: BreakpointObserver, private router: Router, private route: ActivatedRoute){
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
           //do something on start activity
@@ -120,12 +121,36 @@ export class AppComponent implements OnInit{
         this.mobilePortrait = false;
       }
     })
+    this.route.queryParams.subscribe(params =>{
+      console.log(params['openArticle'])
+      switch(params['openArticle']){
+        case "0": {
+          this.openArticles = [true, false, false, false];
+          break;
+        }
+        case "1": {
+          this.openArticles = [false, true, false, false];
+          break;
+        }
+        case "2": {
+          this.openArticles = [false, false, true, false];
+          break;
+        }
+        case "3": {
+          this.openArticles = [false, false, false, true];
+          break;
+        }
+      }
+      console.log('oninint:',this.openArticles)
+    })
+
   }
 
   onOutletLoaded(component:any){
     component.mobilePortrait = this.mobilePortrait;
-    console.log("Outlet loaded");
     component.hero = this.activeHero;
+    component.openArticles = this.openArticles;
+    console.log('onlodaded:',this.openArticles)
   }
 
   setHeroToActiveRoute()

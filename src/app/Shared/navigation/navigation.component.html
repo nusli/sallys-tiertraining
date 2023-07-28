@@ -5,16 +5,17 @@
     <figure routerLink="" class="nav-logo nav-entry">
       <img src="../../../assets/icons/sallys_logo.svg" alt="sallys logo">
     </figure>
-    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="groups_open? 'open' : ''">
+    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="groups_open? 'open' : 'close'">
       <div class="nav-entry-top">
         <!--Für größere Bildschirme: Hundetraining (Gruppe)?!-->
         <a routerLink="/Hundegruppentraining"  routerLinkActive="active" (click)="switchCategories('')">HUNDEGRUPPE</a>
         <figure *ngIf="groupEntriesAvailable" [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('groups_open')"></figure>
       </div>
-      <ul *ngIf="groups_open">
-        <li>Eintrag 1</li>
-        <li>Eintrag 2</li>
-        <li>Eintrag 3</li>
+      <ul *ngIf="groups_open" class="nav-ul-fade">
+        <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Fun Agility</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 3}" (click)='switchCategories("close")'>Tricks & Parcours</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li>
       </ul>
     </div>
     <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="individual_open? 'open' : ''">
@@ -43,8 +44,8 @@
       <a routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
     </div>
     <div *ngIf="mobilePortrait" id="hamburger" class="nav-entry">
-      <figure *ngIf="!mobileNavOpen"  class="hamburger-menu default-hamburger" (click)="changeHamburgerMenu()"></figure>
-      <figure *ngIf="mobileNavOpen"  class="hamburger-menu open-hamburger" (click)="changeHamburgerMenu()"></figure>
+      <figure *ngIf="!mobileNavOpen"  class="hamburger-menu default-hamburger" (click)='switchCategories("open")'></figure>
+      <figure *ngIf="mobileNavOpen"  class="hamburger-menu open-hamburger" (click)='switchCategories("close")'></figure>
       <ul *ngIf="mobileNavOpen" class="mobile-nav-entries">
         <li>
           <div class="nav-entry-top">
@@ -53,9 +54,10 @@
           </div>
           <ul class="mobile-nav-group" [ngClass]="{'entry-only': !groupEntriesAvailable}">
             <ul *ngIf="groups_open">
-              <li>Eintrag 1</li>
-              <li>Eintrag 2</li>
-              <li>Eintrag 3</li>
+              <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Fun Agility</li>
+              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li>
+              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 3}" (click)='switchCategories("close")'>Tricks</li>
+              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li>
             </ul>
           </ul>
         </li>

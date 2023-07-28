@@ -4,7 +4,7 @@
       <h1>{{ glossarEntry.title }}</h1>
       <figure [ngClass]="articleOpen ? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="articleOpen = !articleOpen"></figure>
     </div>
-    <div *ngIf="articleOpen" class="glossar-content">
+    <div *ngIf="articleOpen" class="glossar-content article-fade">
       <article>
         <h2 class="h1-p">{{glossarEntry.subtitle1}}</h2>
         <p>{{ glossarEntry.text1 }}</p>

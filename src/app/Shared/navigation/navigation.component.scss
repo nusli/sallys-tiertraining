@@ -76,6 +76,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   list-style: none;
   padding-left: 0;
   font-family: "worstveld";
@@ -96,6 +97,8 @@
 
 .nav-entry a:hover{
   color: var(--red100);
+  animation-name: nav-hover-fade;
+  animation-duration: 1s;
 }
 
 .nav-logo{
@@ -107,6 +110,7 @@
   height: 6.94vw;
   max-width: 223px;
   max-height: 120px;
+  cursor: pointer;
 }
 
 .mobile-nav .nav-logo
@@ -130,7 +134,36 @@
 .open{
   background-color: #f5fbffe7;
   border: 1px solid var(--red100);
+  animation-name: open-fade;
+  animation-duration: 1.5s;
 
+}
+.close{
+  background-color: #ffffff00;
+    border: 2px solid #ffffff00;
+  animation-name: close-fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes open-fade {
+  from {
+    background-color: #ffffff00;
+    border: 2px solid #ffffff00;
+  }
+  to {
+    background-color: #f5fbffe7;
+    border: 1px solid var(--red100);
+  }
+}
+@keyframes close-fade {
+  from {
+    background-color: #f5fbffe7;
+    border: 1px solid var(--red100);
+  }
+  to {
+    background-color: #ffffff00;
+    border: 2px solid #ffffff00;
+  }
 }
 
 #hamburger
@@ -172,8 +205,30 @@
 {
   color: var(--red100);
   border-bottom: 2px solid var(--red100);
+  animation-name: nav-fade;
+  animation-duration: 1s;
 }
 .mobile-nav .active
 {
   border-bottom: 1px solid var(--red100);
+}
+
+@keyframes nav-fade {
+  from {
+    color: black;
+    border-bottom: 2px solid #ffffff00;
+  }
+  to {
+    color: var(--red100);
+    border-bottom: 2px solid var(--red100);
+  }
+}
+
+@keyframes nav-hover-fade {
+  from {
+    color: black;
+  }
+  to {
+    color: var(--red100);
+  }
 }

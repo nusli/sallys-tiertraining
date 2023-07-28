@@ -6,6 +6,7 @@ export class Article{
   title!: string;
   subtitle!: string;
   text!: string;
+  mobileText? = "";
   expendable!: boolean;
   expand!: Subarticle[];
 }

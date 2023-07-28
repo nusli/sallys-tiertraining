@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../Models/hero.model';
 import { Article } from '../Models/article.model';
 
@@ -7,14 +7,14 @@ import { Article } from '../Models/article.model';
   templateUrl: './individual.component.html',
   styleUrls: ['./individual.component.scss']
 })
-export class IndividualComponent {
+export class IndividualComponent implements OnInit{
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
 
   introductionArticles: Article[] = [
     {
       id: "individual-intro1",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/article-pictures/22.jpg",
       title: "Was bedeutet Einzeltraining?",
       subtitle: "",
       text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
@@ -35,7 +35,7 @@ export class IndividualComponent {
     },
     {
       id: "individual-intro2",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/article-pictures/DSC01790.JPG",
       title: "Mein Einzeltraining",
       subtitle: "",
       text: "Haben Sie Fragen, Sorgen, Probleme im Umgang mit Ihrem Hund oder suchen Sie eine neue Beschäftigungsmethode? Oder brauchen Sie einen Hundeführerschein mit Zertifikat sowie Vorbereitung für den Wesenstest? Sprechen Sie mich gern an, zusammen finden wir eine Lösung!",
@@ -56,7 +56,7 @@ export class IndividualComponent {
     },
     {
       id: "individual-intro3",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/article-pictures/DSC02455.JPG",
       title: "Wichtiger Hinweis für Tierheime und ähnliche Einrichtungen",
       subtitle: "",
       text: "Wenn Sie in Ihrer Einrichtungen einen oder mehrere Hunde haben, die sehr schwer zu vermitteln sind, bei denen Sie nicht weiterkommen oder die mit dem sogenannten Zwingerkoller beginnen, kann ich Ihnen mit meinem besten Wissen und meinen Ideen helfen, diese Hunde wieder zurück ins Leben zu bringen.",
@@ -70,4 +70,7 @@ export class IndividualComponent {
       ]
     },
   ]
+  ngOnInit(): void {
+    document.body.scrollTop = 0;
+  }
 }

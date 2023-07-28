@@ -1,5 +1,5 @@
 <div class="cookie-container" [ngClass]="{'mobile-cookie-container':mobilePortrait}">
   <p>Diese Internetseite verwendet Cookies zu unterschiedlichen Zwecken. Bitte stimme deren Verwendung zu, um die Seite vollumfänglich nutzen zu können.</p>
   <a>Mehr erfahren</a>
-  <app-button [mobilePortrait]="mobilePortrait" [primary]="false" [withContext]="true" buttonTitle="Zustimmen" [cookieButton]="true" (cookiesAcceptedChanged)="changeCookiesAccepted($event)"></app-button>
+  <app-button [mobilePortrait]="mobilePortrait" [primary]="false" buttonTitle="Zustimmen" [cookieButton]="true" (cookiesAcceptedChanged)="changeCookiesAccepted($event)"></app-button>
 </div>

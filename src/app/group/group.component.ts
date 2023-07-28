@@ -1,23 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../Models/hero.model';
 import { Article } from '../Models/article.model';
+import { TrainingsComponent } from '../Shared/trainings/trainings.component';
 
 @Component({
   selector: 'app-group',
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.scss']
 })
-export class GroupComponent {
+export class GroupComponent implements OnInit{
+
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
+  @Input() openArticles = [false, false, false, false];
 
   frameArticles: Article[] = [
     {
       id: "frame-funagility",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01827.JPG",
       title: "Fun Agility",
       subtitle: "Spaß und Auslastung",
       text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
+      mobileText: "Ein Hindernisparcours für Spaß und körperliche Auslastung",
       expendable: true,
       expand: [
         {
@@ -46,10 +50,11 @@ export class GroupComponent {
     },
     {
       id: "frame-locagility",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/einzel3.jpg",
       title: "Locagility",
       subtitle: "Auslastung für alle",
       text: "Locagility ist eine Mischung aus Longieren, Cavaletti-Trainung und Agility zur kognitiven und körperlichen Auslastung von Hunden aller Altersklassen.",
+      mobileText: "Eine Mischung verschiedener Trainings zur kognitiven und körperlichen Auslastung",
       expendable: true,
       expand: [
         {
@@ -111,10 +116,11 @@ export class GroupComponent {
     },
     {
       id: "frame-mantrailing",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC02071.JPG",
       title: "Mantrailing",
       subtitle: "Artgerechtes Auslasten",
       text: "Eine Möglichkeit, wie man Hunde artgerecht auslasten kann, ist das Mantrailing - die Suche nach einem Menschen anhand seines Individual-Geruchs.",
+      mobileText: "Die Suche nach einem Menschen anhand seines Individual-Geruchs",
       expendable: true,
       expand: [
         {
@@ -159,10 +165,11 @@ export class GroupComponent {
     },
     {
       id: "frame-tricks",
-      pictureUrl: "",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01907.JPG",
       title: "Tricks und Parcours",
       subtitle: `Mehr als "Sitz" und "Platz"`,
       text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge wie z. B. Zudecken, Handstand und Mülleinsortieren. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",
+      mobileText: "Mit dem Trickdoggin- und Parcorskurs zu mehr Geschicklichkeit, Vertrauen und Mut",
       expendable: true,
       expand: [
         {
@@ -199,4 +206,29 @@ export class GroupComponent {
       ]
     },
   ]
+
+  ngOnInit(): void {
+    document.body.scrollTop = 0;
+    if((this.openArticles[0]||this.openArticles[1])&&!this.mobilePortrait){
+      document.body.scrollTop = 500;
+    }
+    if((this.openArticles[2]||this.openArticles[3])&&!this.mobilePortrait){
+      document.body.scrollTop = 1000;
+    }
+    if(this.mobilePortrait){
+      if(this.openArticles[0]){
+        document.body.scrollTop = 200;
+      }
+      if(this.openArticles[1]){
+        document.body.scrollTop = 400;
+      }
+      if(this.openArticles[2]){
+        document.body.scrollTop = 600;
+      }
+      if(this.openArticles[3]){
+        document.body.scrollTop = 800;
+      }
+    }
+
+  }
 }

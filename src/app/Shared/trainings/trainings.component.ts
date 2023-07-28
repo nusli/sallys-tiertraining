@@ -27,8 +27,8 @@ export class TrainingsComponent {
 
   @Input() frameArticles!: Article[];
 
-  articlesOpen = [false, false, false, false];
-  contentsOpen = [false, false, false, false];
+  @Input() articlesOpen = [false, false, false, false];
+  @Input() contentsOpen = [false, false, false, false];
 
 
   descriptionOpen = false;

@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Hero } from '../Models/hero.model';
 
@@ -7,7 +7,7 @@ import { Hero } from '../Models/hero.model';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit{
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
   @Output() ctaOn = false;
@@ -56,5 +56,9 @@ export class ContactComponent {
     this.contact.usermessage = form.form.value.usermessage;
     console.log(this.contact)
     form.reset();
+  }
+
+  ngOnInit(): void {
+    document.body.scrollTop = 0;
   }
 }
