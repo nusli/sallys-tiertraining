@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { Article } from 'src/app/Models/article.model';
+import { Subarticle } from 'src/app/Models/subarticle.model';
 
 @Component({
   selector: 'app-picture-frame',
@@ -18,7 +19,7 @@ export class PictureFrameComponent{
     text: "",
     mobileText: "",
     expendable: true,
-    expand: [{id:"", title:"", text:""}]
+    expand: [{id:"", title:"", text:"", price:""}]
   }
   borderOn = false;
 

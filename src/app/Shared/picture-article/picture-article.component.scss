@@ -13,7 +13,7 @@
   width: 50vw;
   height: 32.43vw;
   //background-image: url();
-  background-size: cover;
+  //background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -102,6 +102,8 @@
 {
   margin-top: 2.5rem;
   font-family: 'ubuntu-bolder';
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 }
 .image-article-container a:hover
 {
@@ -154,6 +156,10 @@
   font-size: 0.88rem;
   line-height: 1.17rem;
 }
+.mobile-article a
+{
+  font-size: 1rem;
+}
 .mobile-article .image-content {
   position: relative;
   width: 100vw;
@@ -204,4 +210,35 @@
   font-size: 0.88rem;
   margin-bottom: 1rem;
   line-height: 1.17rem;
+}
+
+.prices
+{
+  display: flex;
+  flex-direction: column;
+}
+.prices h2, .prices p{
+  margin-bottom: 1rem;
+}
+.prices>p{
+  font-family: "Ubuntu-italic";
+  font-size: 0.8rem;
+}
+.price-entries
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-extended-content .price-entries
+{
+  flex-direction: column;
+}
+.price-entry
+{
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

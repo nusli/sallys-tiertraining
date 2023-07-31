@@ -1,7 +1,8 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Hero } from './Models/hero.model';
+import { DeviceDetectorService, DeviceInfo } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit{
   title = 'sallys-tiertraining';
   mobilePortrait = false;
   activeRoute = "/";
+  browserWithoutA = false;
   heroes: Hero[] = [
     {
       id:"individual",
@@ -78,16 +80,33 @@ export class AppComponent implements OnInit{
       subtitle: "",
       text: "EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum"
     },
+    {
+      id:"partner",
+      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
+      title: "Partner und Sponsoren",
+      subtitle: "",
+      text: "EINLEITUNGSTEXT Partner EINLEITUNGSTEXT Partner EINLEITUNGSTEXT Partner"
+    },
+    {
+      id:"qualis",
+      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
+      title: "Qualifikationen",
+      subtitle: "",
+      text: "EINLEITUNGSTEXT Qualifikationen EINLEITUNGSTEXT Qualifikationen EINLEITUNGSTEXT Qualifikationen"
+    },
 
   ]
   activeHero = this.heroes[0]
   heroUrl = "";
   openArticles = [false, false, false, false]
+  deviceInfo!: DeviceInfo;
+  focussedArticle = "";
 
 
 
-
-  constructor(private responsive: BreakpointObserver, private router: Router, private route: ActivatedRoute){
+  constructor(private responsive: BreakpointObserver, private router: Router, private route: ActivatedRoute, private deviceDetectorService: DeviceDetectorService){
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
           //do something on start activity
@@ -103,12 +122,16 @@ export class AppComponent implements OnInit{
 
       if (event instanceof NavigationEnd) {
           //do something on end activity
-
-          console.log("Ende")
       }
   });
   }
   ngOnInit(): void {
+    this.deviceInfo = this.deviceDetectorService.getDeviceInfo();
+    if(this.deviceInfo['browser']==="MS-Edge-Chromium" || this.deviceInfo['browser']==="Chrome"){
+      this.browserWithoutA = true;
+    }
+
+
     this.responsive.observe([Breakpoints.XSmall, Breakpoints.Small])
     .subscribe(result => {
       if (result.matches){
@@ -122,7 +145,6 @@ export class AppComponent implements OnInit{
       }
     })
     this.route.queryParams.subscribe(params =>{
-      console.log(params['openArticle'])
       switch(params['openArticle']){
         case "0": {
           this.openArticles = [true, false, false, false];
@@ -141,7 +163,7 @@ export class AppComponent implements OnInit{
           break;
         }
       }
-      console.log('oninint:',this.openArticles)
+      this.focussedArticle = params['article'];
     })
 
   }
@@ -150,7 +172,7 @@ export class AppComponent implements OnInit{
     component.mobilePortrait = this.mobilePortrait;
     component.hero = this.activeHero;
     component.openArticles = this.openArticles;
-    console.log('onlodaded:',this.openArticles)
+    component.article = this.focussedArticle;
   }
 
   setHeroToActiveRoute()
@@ -186,6 +208,14 @@ export class AppComponent implements OnInit{
       }
       case "/Impressum": {
         this.activeHero = this.heroes[7];
+        break;
+      }
+      case "/PartnerUndSponsoren": {
+        this.activeHero = this.heroes[8];
+        break;
+      }
+      case "/Qualifikationen": {
+        this.activeHero = this.heroes[9];
         break;
       }
     }

@@ -15,9 +15,10 @@ export class IndividualComponent implements OnInit{
     {
       id: "individual-intro1",
       pictureUrl: "../../../assets/backgrounds/article-pictures/22.jpg",
+      sizeing: "cover",
       title: "Was bedeutet Einzeltraining?",
       subtitle: "",
-      text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
+      text: `Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.`,
       expendable: true,
       expand: [
         {
@@ -36,6 +37,7 @@ export class IndividualComponent implements OnInit{
     {
       id: "individual-intro2",
       pictureUrl: "../../../assets/backgrounds/article-pictures/DSC01790.JPG",
+      sizeing: "cover",
       title: "Mein Einzeltraining",
       subtitle: "",
       text: "Haben Sie Fragen, Sorgen, Probleme im Umgang mit Ihrem Hund oder suchen Sie eine neue Beschäftigungsmethode? Oder brauchen Sie einen Hundeführerschein mit Zertifikat sowie Vorbereitung für den Wesenstest? Sprechen Sie mich gern an, zusammen finden wir eine Lösung!",
@@ -51,12 +53,16 @@ export class IndividualComponent implements OnInit{
           Hier ist ein Einzeltraining absolut sinnvoll. Wir erstellen einen individuell auf Ihre häusliche Situation abgestimmten Trainingsplan, der alle Bedürfnisse Ihres Hundes berücksichtigt.
           Vor Ort im häuslichen Bereich steigern wir dann beständig durch strukturierte Übungen das Trainingslevel und verbessern somit die Situation Schritt für Schritt. Sie werden sehen: Es wird einfacher mit Ihrem Hund zusammenzuleben.
           `,
+          price: "70 Euro",
+          price6: "400 Euro",
+          price10: "630 Euro",
         },
       ]
     },
     {
       id: "individual-intro3",
       pictureUrl: "../../../assets/backgrounds/article-pictures/DSC02455.JPG",
+      sizeing: "cover",
       title: "Wichtiger Hinweis für Tierheime und ähnliche Einrichtungen",
       subtitle: "",
       text: "Wenn Sie in Ihrer Einrichtungen einen oder mehrere Hunde haben, die sehr schwer zu vermitteln sind, bei denen Sie nicht weiterkommen oder die mit dem sogenannten Zwingerkoller beginnen, kann ich Ihnen mit meinem besten Wissen und meinen Ideen helfen, diese Hunde wieder zurück ins Leben zu bringen.",

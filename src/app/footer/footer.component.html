@@ -2,8 +2,8 @@
   <h1 class="h1-p">Kontaktiere mich</h1>
   <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
   <div class="button-holder">
-    <app-button *ngIf="!mobilePortrait" [primary]="true" buttonTitle="Kontaktformular" routerLink="/Kontakt" ></app-button>
-    <app-button [primary]="false" [withContext]="true" buttonTitle="Kontakt"></app-button>
+    <app-button *ngIf="!mobilePortrait" [mobilePortrait]="mobilePortrait" [primary]="true" buttonTitle="Kontaktformular" routerLink="/Kontakt" ></app-button>
+    <app-button [primary]="false" [mobilePortrait]="mobilePortrait" [withContext]="true" buttonTitle="Kontakt"></app-button>
   </div>
 </section>
 <section class="footer-news" *ngIf="news[0]!=null" [ngClass]="{'mobile-section':mobilePortrait}" [ngStyle]="{'background-image': 'url(' + news[activeNews].pictureUrl + ')'}">
@@ -33,12 +33,14 @@
             <li routerLink="/Hundeeinzeltraining" (click)="ctaOn = true">Hundetraining (einzeln)</li>
             <li routerLink="/Reitunterricht" (click)="ctaOn = true">Reitunterricht</li>
             <li routerLink="/DasBinIch" (click)="ctaOn = true">Das bin ich</li>
+            <li routerLink="/Qualifikationen" (click)="ctaOn = true">Qualifikationen</li>
           </ul>
           <ul>
             <li routerLink="/Galerie" (click)="ctaOn = true">Galerie</li>
             <li routerLink="/Glossar" (click)="ctaOn = true">Glossar</li>
             <li routerLink="/Kontakt" (click)="ctaOn = false">Kontakt</li>
-            <li routerLink="/Impressum" (click)="ctaOn = false">Impressum & AGB</li>
+            <li routerLink="/Impressum" (click)="ctaOn = false">Impressum</li>
+            <li routerLink="/PartnerUndSponsoren" (click)="ctaOn = true">Partner</li>
 
           </ul>
         </div>
@@ -84,18 +86,29 @@
     </div>
     <div id="footer-qualification">
       <div class="qualification-container">
-        <figure *ngIf="!dosbOpen" class="qualification" (click)="dosbOpen = !dosbOpen" >
+        <figure class="qualification"  routerLink="/Qualifikationen"  [queryParams]='{article: "dosb"}' >
           <img src="../../../assets/icons/dosb.png" alt="DOSB">
         </figure>
-        <figure *ngIf="dosbOpen" class="qualification-large" (click)="dosbOpen = !dosbOpen">
-          <img src="../../../assets/qualis/dosb.jpg" alt="Lizenz des DOSB">
-        </figure>
 
-        <figure *ngIf="!zeugnisOpen"class="qualification" (click)="zeugnisOpen = !zeugnisOpen">
+        <figure class="qualification" routerLink="/Qualifikationen"  [queryParams]='{article: "zeugnis"}'>
           <img src="../../../assets/icons/sa.svg" alt="Sachsen-Anhalt">
         </figure>
-        <figure *ngIf="zeugnisOpen"class="qualification-large" (click)="zeugnisOpen = !zeugnisOpen">
-          <img src="../../../assets/qualis/zeugnis.jpg" alt="Zeugnis im Land Sachsen-Anhalt">
+
+        <figure class="qualification" routerLink="/Qualifikationen"  [queryParams]='{article: "ziemer"}'>
+          <img src="../../../assets/icons/ziemer.png" alt="Ziemer und Falke">
+        </figure>
+      </div>
+      <div class="qualification-container">
+        <figure class="qualification"  routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "hsvkw"}' >
+          <img src="../../../assets/icons/hundesportvereinKleinWanzleben.jpg" alt="Hundesportverein Klein Wanzleben">
+        </figure>
+
+        <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "pauvi"}'>
+          <img src="../../../assets/icons/pauvi.png" alt="PauVi DiscDogs">
+        </figure>
+
+        <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "schlubeck"}'>
+          <img src="../../../assets/icons/schlubeck.png" alt="Reiterhof Schlubeck">
         </figure>
       </div>
     </div>

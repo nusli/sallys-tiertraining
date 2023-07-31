@@ -15,6 +15,7 @@ export class MeComponent implements OnInit{
     {
       id: "me-intro1",
       pictureUrl: "../../../assets/backgrounds/article-pictures/me-article.jpg",
+      sizeing: "cover",
       title: "Das bin ich",
       subtitle: "",
       text: `Hallo, mein Name ist Sally Davidson. Ich wurde 1989 geboren. Aufgewachsen bin ich in der Nähe von Edinburgh.`,
@@ -53,6 +54,7 @@ export class MeComponent implements OnInit{
     {
       id: "me-intro2",
       pictureUrl: "../../../assets/backgrounds/heroes/landing.jpg",
+      sizeing: "cover",
       title: "Und so kam ich auf den Hund",
       subtitle: "",
       text: `Mit Hunden bin ich zwar nicht aufgewachsen, habe aber dafür viel Zeit mit dem Hund der Nachbarn verbracht. Ich habe oft auf ihn aufgepasst und bin mit ihm spazieren gegangen.
@@ -69,6 +71,7 @@ export class MeComponent implements OnInit{
     {
       id: "me-intro3",
       pictureUrl: "../../../assets/backgrounds/article-pictures/me-article2.jpg",
+      sizeing: "cover",
       title: "So begann meine Zeit in Deutschland",
       subtitle: "",
       text: `2010 kam ich als Bereiterin und Stallmanagerin nach Deutschland und arbeitete unter anderem für deutschlandweit bekannte und erfolgreiche Ställe,
@@ -100,6 +103,7 @@ export class MeComponent implements OnInit{
     {
       id: "me-intro4",
       pictureUrl: "../../../assets/backgrounds/article-pictures/DSC02719.JPG",
+      sizeing: "cover",
       title: "Nach dem Unfall habe ich mich neu erfunden",
       subtitle: "",
       text: `So kam ich auf die Idee anderen Menschen zu helfen, damit sie entspannt und ohne Komplikation mit ihren Hunden im Alltag leben können.

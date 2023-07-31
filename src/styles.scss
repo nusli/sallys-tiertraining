@@ -54,6 +54,11 @@ h1{
   font-size: 2rem;
   line-height: 2rem;
 }
+.browser-without-a h1{
+  text-transform: none;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
 h2{
   user-select: none;
   font-family: "worstveld";
@@ -100,6 +105,7 @@ a{
   color: black;
   line-height: 1.13rem;
 }
+
 .mobile-a
 {
   font-size: 0.88rem;
@@ -138,6 +144,8 @@ nav{
   margin-left: 5px;
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/arrow_up_24px_black.svg);
   background-position: center;
   background-size: 100%;
@@ -147,6 +155,8 @@ nav{
   margin-left: 5px;
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/arrow_down_24px_red.svg);
   background-position: center;
   background-size: 100%;
@@ -161,6 +171,8 @@ nav{
 .nav-arrow-left{
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/arrow_back_24px_red.svg);
   background-position: center;
   background-size: 100%;
@@ -171,6 +183,8 @@ nav{
 .nav-arrow-right{
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/arrow_forward_24px_red.svg);
   background-position: center;
   background-size: 100%;
@@ -181,6 +195,8 @@ nav{
 .nav-arrow-left-disabled{
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/arrow_back_24px_lightgrey.svg);
   background-position: center;
   background-size: 100%;
@@ -188,6 +204,8 @@ nav{
 .nav-arrow-right-disabled{
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/arrow_forward_24px_lightgrey.svg);
   background-position: center;
   background-size: 100%;
@@ -195,6 +213,8 @@ nav{
 .nav-close{
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/close_24px_red.svg);
   background-position: center;
   background-size: 100%;
@@ -202,6 +222,8 @@ nav{
 .nav-close:hover{
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-image: url(./assets/interaction/close_24px_black.svg);
   background-position: center;
   background-size: 100%;

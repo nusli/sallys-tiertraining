@@ -48,6 +48,8 @@ export class HorseComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Dressur-Unterricht geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen. Bei mehreren Anmeldungen können wir eine Gruppe bilden.
           `,
+          price: "50 Euro",
+          horse4: "40 Euro"
         },
       ]
     },
@@ -91,6 +93,8 @@ export class HorseComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Freizeitreiten geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen. Bei mehreren Anmeldungen können wir eine Gruppe bilden.
           `,
+          price: "50 Euro",
+          horse4: "40 Euro"
         },
       ]
     },
@@ -133,6 +137,8 @@ export class HorseComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Spring-Unterricht geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen. Bei mehreren Anmeldungen können wir eine Gruppe bilden.
           `,
+          price: "50 Euro",
+          horse4: "40 Euro"
         },
       ]
     },

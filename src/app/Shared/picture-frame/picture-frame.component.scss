@@ -96,15 +96,17 @@ article
   justify-content: center;
   align-items: center;
 }
-.article-content h2
+.article-content h3
 {
-  margin: 4rem 0 0.5rem;
+  margin: 1rem 0 0.5rem;
 }
 
 article a
 {
   font-family: "ubuntu-bolder";
   color: black;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 }
 article a:hover
 {
@@ -133,14 +135,18 @@ article a:hover
 {
   font-size: 2.5rem;
 }
-.mobile-frame h2
+.mobile-frame h3
 {
   margin: 0 0 0.3rem;
   font-size: 2rem;
 }
-.mobile-frame p, .mobile-frame a
+.mobile-frame p
 {
   font-size: 0.88rem;
+}
+.mobile-frame a
+{
+  font-size: 1rem;
 }
 
 @keyframes border-fadeIn {

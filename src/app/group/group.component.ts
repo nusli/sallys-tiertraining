@@ -18,7 +18,7 @@ export class GroupComponent implements OnInit{
     {
       id: "frame-funagility",
       pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01827.JPG",
-      title: "Fun Agility",
+      title: "Funagility",
       subtitle: "Spaß und Auslastung",
       text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
       mobileText: "Ein Hindernisparcours für Spaß und körperliche Auslastung",
@@ -26,8 +26,8 @@ export class GroupComponent implements OnInit{
       expand: [
         {
           id: "frame-funagility1",
-          title: "Was ist Fun Agility?",
-          text: `Beim ursprünglich aus England stammenden Agility, geht es um die fehlerfreie Bewältigung eines Parcours in kürzester Zeit. Beim Fun-Agility steht jedoch nicht die Bestzeit, sondern der Spaß mit dem besten Freund im Vordergrund.
+          title: "Was ist Funagility?",
+          text: `Beim ursprünglich aus England stammenden Agility, geht es um die fehlerfreie Bewältigung eines Parcours in kürzester Zeit. Beim Funagility steht jedoch nicht die Bestzeit, sondern der Spaß mit dem besten Freund im Vordergrund.
           Dazu werden die Hindernisse individuell dem Hund, seiner Größe, der Konstitution und dem Alter angepasst.
           Euer Hund überwindet ohne Leine unter anderem Hürden, durchquert Tunnel, bewältigt die A-Wand und muss die Wippe meistern. Wichtig ist hierfür eine gesunde Hund-Mensch-Beziehung, um den Hund nur mittels Hörzeichen und Körpersprache durch den Parcours zu lenken.
           `,
@@ -45,6 +45,8 @@ export class GroupComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Fun-Agility geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
           `,
+          price: "20 Euro",
+          price10: "185 Euro",
         },
       ]
     },
@@ -111,6 +113,8 @@ export class GroupComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Locagility geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
           `,
+          price: "20 Euro",
+          price10: "185 Euro",
         },
       ]
     },
@@ -160,15 +164,19 @@ export class GroupComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Mantrailing geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
           `,
+
+          price: "20 Euro",
+          price6: "115 Euro",
+          price10: "185 Euro",
         },
       ]
     },
     {
       id: "frame-tricks",
       pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01907.JPG",
-      title: "Tricks und Parcours",
-      subtitle: `Mehr als "Sitz" und "Platz"`,
-      text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge wie z. B. Zudecken, Handstand und Mülleinsortieren. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",
+      title: "Tricks & Parcours",
+      subtitle: `Mehr als "Sitz" & "Platz"`,
+      text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",
       mobileText: "Mit dem Trickdoggin- und Parcorskurs zu mehr Geschicklichkeit, Vertrauen und Mut",
       expendable: true,
       expand: [
@@ -202,6 +210,9 @@ export class GroupComponent implements OnInit{
           title: "Melde dich jetzt an!",
           text: `Falls euer Interesse am Trick- und Parcours-Kurs geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
           `,
+
+          price: "20 Euro",
+          price10: "185 Euro",
         },
       ]
     },

@@ -23,6 +23,7 @@ export class PictureArticleComponent implements OnInit {
       id: "",
       title: "",
       text: "",
+      price: "",
     },
   ]
 

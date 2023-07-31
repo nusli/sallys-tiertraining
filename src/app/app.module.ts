@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GlossarComponent } from './glossar/glossar.component';
 import { GlossarArticleComponent } from './glossar/glossar-article/glossar-article.component';
+import { QualisComponent } from './qualis/qualis.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { GlossarArticleComponent } from './glossar/glossar-article/glossar-artic
     GalleryComponent,
     GlossarComponent,
     GlossarArticleComponent,
+    QualisComponent,
+    PartnersComponent,
   ],
   imports: [
     BrowserModule,

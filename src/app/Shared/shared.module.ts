@@ -6,13 +6,14 @@ import { ButtonComponent } from './button/button.component';
 import { PictureFrameComponent } from './picture-frame/picture-frame.component';
 import { TrainingsComponent } from './trainings/trainings.component';
 import { PictureArticleComponent } from './picture-article/picture-article.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [CookieDisclaimerComponent, HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent],
   imports: [
-    CommonModule
+    CommonModule, RouterModule
   ],
   exports: [CookieDisclaimerComponent, HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent]
 })

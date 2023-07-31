@@ -81,3 +81,35 @@
   margin-bottom: 0.9rem;
   line-height: 1.17rem;
 }
+
+.prices
+{
+  display: flex;
+  flex-direction: column;
+}
+.prices h2, .prices p{
+  margin-bottom: 1rem;
+}
+.prices>p{
+  font-family: "Ubuntu-italic";
+  font-size: 0.8rem;
+}
+.price-entries
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-picture-frames .price-entries
+{
+  flex-direction: column;
+}
+.price-entry
+{
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

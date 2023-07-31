@@ -41,7 +41,7 @@
       </ul>
     </div>
     <div *ngIf="!mobilePortrait" class="nav-entry">
-      <a routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
+      <a class="nav-entry-base" routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
     </div>
     <div *ngIf="mobilePortrait" id="hamburger" class="nav-entry">
       <figure *ngIf="!mobileNavOpen"  class="hamburger-menu default-hamburger" (click)='switchCategories("open")'></figure>

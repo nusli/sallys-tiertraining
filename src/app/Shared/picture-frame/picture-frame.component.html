@@ -9,7 +9,7 @@
       <article>
         <div class="article-content" [ngClass]="{'centered-article-content': article.subtitle === '' && article.text === ''}">
           <h1 *ngIf='!mobilePortrait || (mobilePortrait&&article.subtitle==="")'>{{ article.title }}</h1>
-          <h2 *ngIf='article.subtitle!=""' >{{ article.subtitle }}</h2>
+          <h3 *ngIf='article.subtitle!=""' >{{ article.subtitle }}</h3>
           <p *ngIf='mobilePortrait && article.text != ""'>{{ article.mobileText }}</p>
           <p *ngIf='!mobilePortrait && article.text != ""'>{{ article.text }}</p>
         </div>

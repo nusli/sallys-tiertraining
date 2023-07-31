@@ -2,6 +2,8 @@
 <app-picture-article *ngIf="introductionArticles.length > 1" [article]="introductionArticles[1]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
 <app-picture-article *ngIf="introductionArticles.length > 2" [article]="introductionArticles[2]" [mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
 <app-picture-article *ngIf="introductionArticles.length > 3" [article]="introductionArticles[3]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 4" [article]="introductionArticles[4]"[mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 5" [article]="introductionArticles[5]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
 
 <section *ngIf='framesAvailable && introductionArticles.length > 0 && introductionArticles[0].id !="dummy"' [ngClass]="{'mobile-section':mobilePortrait}">
   <article>
@@ -20,6 +22,24 @@
       <article *ngFor="let article of chosenContent" class="picture-frame-article">
         <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
         <p>{{ article.text }}</p>
+        <div class="prices" *ngIf='article.price !="" && article.price != null'>
+          <h2>Meine Preise</h2>
+          <div class="price-entries">
+            <div class="price-entry">
+              <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+            </div>
+            <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+              <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
+            </div>
+            <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+              <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
+            </div>
+            <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
+              <p><b>ab der 4. Reitstunde</b></p><p>{{ article.horse4}}</p>
+            </div>
+          </div>
+          <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+        </div>
       </article>
       <figure class="nav-close" (click)="closeContents(0,1)"></figure>
     </div>
@@ -31,6 +51,24 @@
       <article *ngFor="let article of chosenContent" class="picture-frame-article">
         <h2>{{ article.title }}</h2>
         <p>{{ article.text }}</p>
+        <div class="prices" *ngIf='article.price !="" && article.price != null'>
+          <h2>Meine Preise</h2>
+          <div class="price-entries">
+            <div class="price-entry">
+              <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+            </div>
+            <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+              <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
+            </div>
+            <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+              <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
+            </div>
+            <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
+              <p><b>ab der 4. Reitstunde</b></p><p>{{ article.horse4}}</p>
+            </div>
+          </div>
+          <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+        </div>
       </article>
       <figure class="nav-close" (click)="closeContents(2,3)"></figure>
     </div>
@@ -43,6 +81,24 @@
         <article *ngFor="let article of chosenContent" class="picture-frame-article">
           <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
           <p>{{ article.text }}</p>
+          <div class="prices" *ngIf='article.price !="" && article.price != null'>
+            <h2>Meine Preise</h2>
+            <div class="price-entries">
+              <div class="price-entry">
+                <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+              </div>
+              <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
+              </div>
+              <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+                <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
+              </div>
+              <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
+                <p><b>ab der 4. Reitstunde</b></p><p>{{ article.horse4}}</p>
+              </div>
+            </div>
+            <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+          </div>
         </article>
         <figure class="nav-close" (click)="closeContents(0,1)"></figure>
       </div>

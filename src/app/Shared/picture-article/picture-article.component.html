@@ -1,6 +1,6 @@
 <div *ngIf="!mobilePortrait">
   <div class="image-article-container" [ngClass]="leftPicture ? 'left-image-article-container': 'right-image-article-container'">
-    <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')'}">
+    <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')' , 'background-size': article.sizeing}">
     </figure>
     <figure class="faderstart"></figure>
     <figure class="faderend"></figure>
@@ -17,7 +17,7 @@
 <div *ngIf="mobilePortrait">
   <div class="image-article-container mobile-article">
     <div class="image-content">
-      <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')'}">
+      <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')', 'background-size': article.sizeing}">
       </figure>
       <figure class="fader"></figure>
     </div>
@@ -38,6 +38,22 @@
     <p>
       {{ item.text }}
     </p>
+    <div class="prices" *ngIf='item.price !=""&& item.price != null'>
+      <h2>Meine Preise</h2>
+      <div class="price-entries">
+        <div class="price-entry">
+          <p><b>Eine Stunde</b></p><p>{{ item.price}}</p>
+        </div>
+        <div  *ngIf='item.price6 !="" && item.price6 != null' class="price-entry">
+          <p><b>6er-Karte</b></p><p>{{ item.price6}}</p>
+        </div>
+        <div  *ngIf='item.price10 !="" && item.price10 != null' class="price-entry">
+          <p><b>10er-Karte</b></p><p>{{ item.price10}}</p>
+        </div>
+      </div>
+      <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+    </div>
+
   </article>
   <figure class="nav-close" (click)="extendedContentOpen = false"></figure>
 </div>

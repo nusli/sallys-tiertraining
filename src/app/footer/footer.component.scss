@@ -173,6 +173,7 @@ figure.footer-entry
   font-family: "ubuntu";
   font-size: 1rem;
   color: black;
+  min-width: 163px;
 }
 .mobile-section .directlinks ul{
   font-size: 0.75rem;
@@ -188,6 +189,7 @@ figure.footer-entry
 {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .mobile-section .contact{
@@ -201,6 +203,8 @@ figure.footer-entry
   align-items: center;
   margin: 0.3rem;
   font-size: 1rem;
+
+  min-width: 192px;
 }
 .contact-icon
 { display: flex;
