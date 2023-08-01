@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "sallys-tiertraining",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

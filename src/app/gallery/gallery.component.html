@@ -20,7 +20,8 @@
       </figure>
     </div>
     <div class="dots">
-      <figure *ngFor="let dot of chosenContent; let i = index" class="dot" [ngClass]="activeFrame===i?'active':'inactive'" (click)="currentSlide(i)"></figure>
+      <figure *ngFor="let dot of chosenContent; let i = index" class="dot" [ngClass]="activeFrame===i?'active':'inactive'" (click)="currentSlide(i)">
+      </figure>
     </div>
     <figure class="nav-close" (click)="closeContents(0,1)"></figure>
   </div>

@@ -18,23 +18,23 @@ export class AppComponent implements OnInit{
   heroes: Hero[] = [
     {
       id:"individual",
-      pictureUrl: "../../../assets/backgrounds/heroes/einzel3.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/einzel3_desk.jpg",
+      pictureUrl: "../../../assets/backgrounds/heroes/einzel_mobile.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/einzel_desk.jpg",
       title: "Einzeltraining Hunde",
       subtitle: "CATCHPHRASE EINZELTRAINING",
       text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING "
     },
     {
       id:"group",
-      pictureUrl: "../../../assets/backgrounds/heroes/group.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/group_desk.jpg",
+      pictureUrl: "../../../assets/backgrounds/heroes/gruppe_mobile.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/gruppe_desk.JPG",
       title: "Gruppentraining Hunde",
       subtitle: "CATCHPHRASE EINZELTRAINING",
       text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING "
     },
     {
       id:"me",
-      pictureUrl: "../../../assets/backgrounds/heroes/me.jpg",
+      pictureUrl: "../../../assets/backgrounds/heroes/me_mobile.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/me_desk.jpg",
       title: "Das bin ich",
       subtitle: "CATCHPHRASE ME",
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit{
     },
     {
       id:"horse",
-      pictureUrl: "../../../assets/backgrounds/heroes/pferde.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/pferde_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/pferde_desk.JPG",
       title: "Pferdereiten",
       subtitle: "CATCHPHRASE PFERDEREITEN",
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit{
     },
     {
       id:"gallery",
-      pictureUrl: "../../../assets/backgrounds/heroes/gallery.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/gallery_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/gallery_desk.JPG",
       title: "Galerie",
       subtitle: "CATCHPHRASE Galerie",
@@ -58,23 +58,23 @@ export class AppComponent implements OnInit{
     },
     {
       id:"glossar",
-      pictureUrl: "../../../assets/backgrounds/heroes/glossar.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/glossar_desk.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/glossar_mobile.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/glossar_desk.jpg",
       title: "Glossar",
       subtitle: "CATCHPHRASE Glossar",
       text: "EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar "
     },
     {
       id:"contact",
-      pictureUrl: "../../../assets/backgrounds/heroes/contact.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/contact_desk.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/kontakt_mobile.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/kontakt_desk.jpg",
       title: "Kontakt",
       subtitle: "CATCHPHRASE Kontakt",
       text: "EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt"
     },
     {
       id:"impressum",
-      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/impressum_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
       title: "Impressum",
       subtitle: "",
@@ -82,16 +82,16 @@ export class AppComponent implements OnInit{
     },
     {
       id:"partner",
-      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/partner_mobile.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/partner_desk.JPG",
       title: "Partner und Sponsoren",
       subtitle: "",
       text: "EINLEITUNGSTEXT Partner EINLEITUNGSTEXT Partner EINLEITUNGSTEXT Partner"
     },
     {
       id:"qualis",
-      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/quali_mobile.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/quali_desk.JPG",
       title: "Qualifikationen",
       subtitle: "",
       text: "EINLEITUNGSTEXT Qualifikationen EINLEITUNGSTEXT Qualifikationen EINLEITUNGSTEXT Qualifikationen"

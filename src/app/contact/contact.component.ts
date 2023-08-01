@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Hero } from '../Models/hero.model';
+import { HttpClient } from '@angular/common/http';
+import { Contact } from '../Models/contact.model';
 
 @Component({
   selector: 'app-contact',
@@ -12,27 +14,9 @@ export class ContactComponent implements OnInit{
   @Input() hero!: Hero;
   @Output() ctaOn = false;
 
-  contact = {
-    lastName: '',
-    firstName: '',
-    email: '',
-    phone: '',
-    interests: {
-      ridingHorse: false,
-      horseInfo: false,
-      individual1: false,
-      individual2: false,
-      funagility: false,
-      locagility: false,
-      mantrailing: false,
-      tricks: false,
-      puppies: false,
-    },
-    usermessage: '',
-    answer: {
-      perPhone: false,
-      perMail: false,
-    },
+  contact = new Contact;
+  constructor(private http: HttpClient){
+
   }
 
   sendCredentials(form: NgForm){
@@ -56,6 +40,11 @@ export class ContactComponent implements OnInit{
     this.contact.usermessage = form.form.value.usermessage;
     console.log(this.contact)
     form.reset();
+
+    this.http.post('https://sallys-tiertraining-default-rtdb.europe-west1.firebasedatabase.app/contacts.json', this.contact)
+    .subscribe(responseData =>{
+      console.log(responseData);
+    })
   }
 
   ngOnInit(): void {

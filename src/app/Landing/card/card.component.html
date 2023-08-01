@@ -1,5 +1,5 @@
 <div class="card" [ngClass]="{'mobile-card': mobilePortrait}">
-  <figure></figure>
+  <figure [ngStyle]="{'background-image': 'url(' + cardContent.pictureUrl +')'}"></figure>
   <article>
     <div class="content">
       <h3 class="h1-h2">{{ cardContent.title }}</h3>

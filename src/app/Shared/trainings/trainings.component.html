@@ -1,9 +1,9 @@
-<app-picture-article *ngIf='introductionArticles.length > 0 && introductionArticles[0].id !="dummy"' [article]="introductionArticles[0]" [mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
-<app-picture-article *ngIf="introductionArticles.length > 1" [article]="introductionArticles[1]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
-<app-picture-article *ngIf="introductionArticles.length > 2" [article]="introductionArticles[2]" [mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
-<app-picture-article *ngIf="introductionArticles.length > 3" [article]="introductionArticles[3]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
-<app-picture-article *ngIf="introductionArticles.length > 4" [article]="introductionArticles[4]"[mobilePortrait]="mobilePortrait" [leftPicture]="true"></app-picture-article>
-<app-picture-article *ngIf="introductionArticles.length > 5" [article]="introductionArticles[5]"[mobilePortrait]="mobilePortrait" [leftPicture]="false"></app-picture-article>
+<app-picture-article *ngIf='introductionArticles.length > 0 && introductionArticles[0].id !="dummy"' [article]="introductionArticles[0]" [mobilePortrait]="mobilePortrait" [leftPicture]="true" [fadeOn]="fadeOn"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 1" [article]="introductionArticles[1]"[mobilePortrait]="mobilePortrait" [leftPicture]="false" [fadeOn]="fadeOn"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 2" [article]="introductionArticles[2]" [mobilePortrait]="mobilePortrait" [leftPicture]="true" [fadeOn]="fadeOn"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 3" [article]="introductionArticles[3]"[mobilePortrait]="mobilePortrait" [leftPicture]="false" [fadeOn]="fadeOn"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 4" [article]="introductionArticles[4]"[mobilePortrait]="mobilePortrait" [leftPicture]="true" [fadeOn]="fadeOn"></app-picture-article>
+<app-picture-article *ngIf="introductionArticles.length > 5" [article]="introductionArticles[5]"[mobilePortrait]="mobilePortrait" [leftPicture]="false" [fadeOn]="fadeOn"></app-picture-article>
 
 <section *ngIf='framesAvailable && introductionArticles.length > 0 && introductionArticles[0].id !="dummy"' [ngClass]="{'mobile-section':mobilePortrait}">
   <article>

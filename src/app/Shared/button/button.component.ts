@@ -14,6 +14,7 @@ export class ButtonComponent implements OnInit {
   @Input() withContext = false;
   @Input() buttonTitle = "";
   @Input() mobilePortrait = false;
+  @Input() disabled = false;
 
   cookiesAccepted = false;
 

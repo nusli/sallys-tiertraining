@@ -16,8 +16,8 @@ export class CoursesComponent implements OnInit {
   cards: Card[] = [
     {
       id: "funagility",
-      pictureUrl: "",
-      pictureUrlDesk: "",
+      pictureUrl: "../../../assets/backgrounds/cards-pictures/fun.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/fun.JPG",
       title: "Fun Agility",
       text: "Mit einem Hindernisparcours zu Spaß und Auslastung",
       link: "/Hundegruppentraining",
@@ -25,8 +25,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "locagility",
-      pictureUrl: "",
-      pictureUrlDesk: "",
+      pictureUrl: "../../../assets/backgrounds/cards-pictures/local.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/local.jpg",
       title: "Locagility",
       text: "Kognitive & körperlichen Auslastung für Hunde aller Altersklassen",
       link: "/Hundegruppentraining",
@@ -34,8 +34,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "tricks",
-      pictureUrl: "",
-      pictureUrlDesk: "",
+      pictureUrl: "../../../assets/backgrounds/cards-pictures/tricks.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/tricks.jpg",
       title: "Tricks und Parcours",
       text: `Mehr als "Sitz" und "Platz"`,
       link: "/Hundegruppentraining",
@@ -43,8 +43,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "mantrailing",
-      pictureUrl: "",
-      pictureUrlDesk: "",
+      pictureUrl: "../../../assets/backgrounds/cards-pictures/mantrailing.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/mantrailing.jpg",
       title: "Mantrailing",
       text: "Artgerechtes Auslasten für Hunde",
       link: "/Hundegruppentraining",

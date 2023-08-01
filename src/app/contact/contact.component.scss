@@ -45,8 +45,15 @@ input[type="checkbox"]:checked
 .error{
   border: 2px solid var(--red100);
   background-color: var(--red80);
+  margin-bottom: 0.31rem;
   color: white;
   box-shadow: 1px 1px 4px 0px #A93733;
+}
+.error-p{
+  font-family: ubuntu-italic;
+  font-size: 0.88rem;
+  color: #A93733;
+  margin-bottom: 2rem;
 }
 .personal-data, .interests, .messages{
   margin-bottom: 5rem;

@@ -14,29 +14,29 @@ export class GalleryComponent implements OnInit{
   contentsOpen = [false, false, false, false];
 
   horses = [
-    '../../assets/gallery/Pferde/DSC02054.JPG', '../../assets/gallery/Pferde/DSC02095.JPG', '../../assets/gallery/Pferde/DSC02176.JPG', '../../assets/gallery/Pferde/DSC02206.JPG', '../../assets/gallery/Pferde/DSC02755.JPG'
+    '../../assets/gallery/Pferde/10a.jpg', '../../assets/gallery/Pferde/DSC02054.JPG', '../../assets/gallery/Pferde/DSC02060.JPG', '../../assets/gallery/Pferde/DSC02155.JPG', '../../assets/gallery/Pferde/DSC02532.JPG', '../../assets/gallery/Pferde/DSC02635.JPG', '../../assets/gallery/Pferde/DSC02721.JPG'
   ]
   ratiosHorses= [
-    'p', 'p', 'l', 'p', 'l'
+    "l","p","p","l","p","l","l","p"
   ]
   maya = [
-    '../../assets/gallery/Maya/1.jpg','../../assets/gallery/Maya/4.jpg','../../assets/gallery/Maya/19.jpg', '../../assets/gallery/Maya/DSC02846.JPG','../../assets/gallery/Maya/DSC02854.JPG',
+    '../../assets/gallery/Maya/1.jpg','../../assets/gallery/Maya/11.jpg','../../assets/gallery/Maya/DSC02103.JPG','../../assets/gallery/Maya/DSC02969.JPG','../../assets/gallery/Maya/DSC02993.JPG','../../assets/gallery/Maya/DSC03055.JPG',
   ]
   ratiosMaya= [
-    'l', 'p', 'l', 'l', 'p'
+    "l", "l", "p", "l", "l", "l"
   ]
 
   me = [
-    '../../assets/gallery/Ich/4.jpg','../../assets/gallery/Ich/5.jpg','../../assets/gallery/Ich/6.jpg', '../../assets/gallery/Ich/7.jpg','../../assets/gallery/Ich/8.jpg','../../assets/gallery/Ich/9.jpg','../../assets/gallery/Ich/10.jpg',
+    '../../assets/gallery/Ich/1.jpg','../../assets/gallery/Ich/2.jpg','../../assets/gallery/Ich/5.jpg', '../../assets/gallery/Ich/6.jpg','../../assets/gallery/Ich/7.jpg','../../assets/gallery/Ich/8.jpg','../../assets/gallery/Ich/9.jpg','../../assets/gallery/Ich/10.jpg','../../assets/gallery/Ich/11.jpg',
   ]
   ratiosMe= [
-    'p', 'p', 'l', 'l', 'l', 'p', 'p', 'p'
+    'p', 'p', 'p', 'l', 'l', 'l', 'p', 'p', 'p'
   ]
   dogs = [
-    '../../assets/gallery/Hunde/11.jpg','../../assets/gallery/Hunde/19.jpg','../../assets/gallery/Hunde/20.jpg', '../../assets/gallery/Hunde/35.jpg','../../assets/gallery/Hunde/DSC02449.JPG'
+    '../../assets/gallery/Hunde/1.jpg','../../assets/gallery/Hunde/8.jpg','../../assets/gallery/Hunde/12.jpg', '../../assets/gallery/Hunde/16.jpg','../../assets/gallery/Hunde/22.jpg', '../../assets/gallery/Hunde/36.jpg','../../assets/gallery/Hunde/DSC01809.JPG','../../assets/gallery/Hunde/DSC01983.JPG','../../assets/gallery/Hunde/DSC02065.JPG','../../assets/gallery/Hunde/DSC02071.JPG'
   ]
   ratiosDogs= [
-    'l', 'l', 'l', 'l', 'l'
+    "p", "p", "p", "p", "l", "p", "p", "p", "l", "p"
   ]
 
   chosenContent= [
@@ -64,7 +64,7 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-me",
-      pictureUrl: "../../../assets/gallery/5.jpg",
+      pictureUrl: "../../../assets/gallery/Ich/5.jpg",
       title: "Sally",
       subtitle: "",
       text: "",
@@ -79,7 +79,7 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-maya",
-      pictureUrl: "../../../assets/gallery/DSC02101.JPG",
+      pictureUrl: "../../../assets/gallery/DSC03053.JPG",
       title: "Maya",
       subtitle: "",
       text: "",
@@ -94,7 +94,7 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-horses",
-      pictureUrl: "../../../assets/gallery/DSC02176.JPG",
+      pictureUrl: "../../../assets/gallery/DSC02704.JPG",
       title: "Pferde",
       subtitle: "",
       text: "",

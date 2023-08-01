@@ -86,7 +86,18 @@ export class PartnersComponent implements OnInit, AfterViewInit {
       }
     }else{
       switch(this.article){
-
+        case "hsvkw": {
+          document.body.scrollTop = 200;
+          break;
+        }
+        case "pauvi": {
+          document.body.scrollTop = 500;
+          break;
+        }
+        case "schlubeck": {
+          document.body.scrollTop = 800;
+          break;
+        }
       }
     }
   }

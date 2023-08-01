@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sallys-tiertraining": {
+      "hosting": {
+        "sallys-tiertraining": [
+          "sallys-tiertraining"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sallys-tiertraining"
+  }
+}

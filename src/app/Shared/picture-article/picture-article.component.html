@@ -2,8 +2,8 @@
   <div class="image-article-container" [ngClass]="leftPicture ? 'left-image-article-container': 'right-image-article-container'">
     <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')' , 'background-size': article.sizeing}">
     </figure>
-    <figure class="faderstart"></figure>
-    <figure class="faderend"></figure>
+    <figure *ngIf="fadeOn" class="faderstart"></figure>
+    <figure *ngIf="fadeOn" class="faderend"></figure>
     <div class="article-content">
       <article class="picture-article-article">
         <h2 class="h1-p">{{ article.title }}</h2>
@@ -19,7 +19,7 @@
     <div class="image-content">
       <figure class="article-image" [ngStyle]="{'background-image': 'url(' + article.pictureUrl +')', 'background-size': article.sizeing}">
       </figure>
-      <figure class="fader"></figure>
+      <figure *ngIf="fadeOn" class="fader"></figure>
     </div>
 
     <div class="article-content">

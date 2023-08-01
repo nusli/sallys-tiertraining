@@ -134,7 +134,18 @@ export class QualisComponent implements OnInit, AfterViewInit{
       }
     }else{
       switch(this.article){
-
+        case "zeugnis": {
+          document.body.scrollTop = 200;
+          break;
+        }
+        case "dosb": {
+          document.body.scrollTop = 500;
+          break;
+        }
+        case "ziemer": {
+          document.body.scrollTop = 800;
+          break;
+        }
       }
     }
   }

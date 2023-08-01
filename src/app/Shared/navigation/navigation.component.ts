@@ -40,7 +40,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       this.changeNavBackgroundHeight();
     })
   }
- 
+
 
   switchCategories(category:string){
 
@@ -72,38 +72,47 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   changeNavBackgroundHeight(): void
   {
-    this.navBackgroundHeight = 9.2;
-    this.navBackgroundMaxHeight = 165;
-
-    if(this.windowRatio >= 1.2){
-      this.navBackgroundHeight = 11;
-    }
-    if(this.windowRatio >= 1.4){
-      this.navBackgroundHeight = 12;
-    }
-    if(this.windowRatio >= 1.6){
-      this.navBackgroundHeight = 15;
-    }
-    if(this.windowRatio >= 2){
-      this.navBackgroundHeight = 22;
-      this.navBackgroundMaxHeight = 230;
-    }
-    if(this.windowRatio >= 2.6){
-      this.navBackgroundHeight = 29;
-      this.navBackgroundMaxHeight = 230;
-    }
-    if(this.windowRatio >= 3.6){
-      this.navBackgroundHeight = 40;
-      this.navBackgroundMaxHeight = 230;
-    }
-    if(this.mobilePortrait ){this.navBackgroundHeight = 18.28;}
-    if(this.mobileNavOpen){
-      this.navBackgroundHeight = 29;
-      this.navBackgroundMaxHeight = 230;
-      if(this.groups_open || this.individual_open || this.horse_open){
-        this.navBackgroundHeight = 44;
-        this.navBackgroundMaxHeight = 340;
+    if(!this.mobilePortrait){
+      this.navBackgroundHeight = 9.2;
+      this.navBackgroundMaxHeight = 165;
+      if(this.windowRatio >= 1.2){
+        this.navBackgroundHeight = 11;
       }
+      if(this.windowRatio >= 1.4){
+        this.navBackgroundHeight = 12;
+      }
+      if(this.windowRatio >= 1.6){
+        this.navBackgroundHeight = 15;
+      }
+      if(this.windowRatio >= 2){
+        this.navBackgroundHeight = 22;
+        this.navBackgroundMaxHeight = 230;
+      }
+      if(this.windowRatio >= 2.6){
+        this.navBackgroundHeight = 29;
+        this.navBackgroundMaxHeight = 230;
+      }
+      if(this.windowRatio >= 3.6){
+        this.navBackgroundHeight = 40;
+        this.navBackgroundMaxHeight = 230;
+      }
+    }else{
+      this.navBackgroundHeight = 18.28;
+      if(this.windowRatio <= 0.5){
+       this.navBackgroundHeight = 15.5;
+      }
+      if(this.windowRatio <= 0.43){
+        this.navBackgroundHeight = 14.5;
+       }
+      if(this.mobileNavOpen){
+        this.navBackgroundHeight = 29;
+        this.navBackgroundMaxHeight = 230;
+        if(this.groups_open || this.individual_open || this.horse_open){
+          this.navBackgroundHeight = 44;
+          this.navBackgroundMaxHeight = 340;
+        }
+      }
+
     }
   }
   ngOnDestroy(): void {

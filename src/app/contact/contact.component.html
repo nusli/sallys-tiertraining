@@ -6,17 +6,20 @@
       <div class="personal-data-entry">
         <div class="column-data-entry">
           <label for="lastName">Nachname</label>
-          <input id="lastName" type="text" placeholder="Dein Nachname" ngModel name="lastName" required #lastName="ngModel">
+          <input [ngClass]="{'error': !lastName.valid && lastName.touched}" id="lastName" type="text" placeholder="Dein Nachname" ngModel name="lastName" required #lastName="ngModel">
+          <p *ngIf="!lastName.valid && lastName.touched" class="error-p"> Gib bitte einen Nachnamen an. </p>
         </div>
         <div class="column-data-entry">
           <label for="firstName">Vorame</label>
-          <input id="firstName" type="text" placeholder="Dein Vorname" ngModel name="firstName" required #firstName="ngModel">
+          <input [ngClass]="{'error': !firstName.valid && firstName.touched}" id="firstName" type="text" placeholder="Dein Vorname" ngModel name="firstName" required #firstName="ngModel">
+          <p *ngIf="!firstName.valid && firstName.touched" class="error-p"> Gib bitte einen Vornamen an. </p>
         </div>
       </div>
       <div class="personal-data-entry">
         <div class="column-data-entry">
           <label for="email">E-Mail</label>
-          <input id="email" type="email" placeholder="deine-mail@mail.com" ngModel name="usermail" required email #usermail="ngModel">
+          <input [ngClass]="{'error': !usermail.valid && usermail.touched}" id="email" type="email" placeholder="deine-mail@mail.com" ngModel name="usermail" required email #usermail="ngModel">
+          <p *ngIf="!usermail.valid && usermail.touched" class="error-p"> Gib bitte eine gültige E-Mail-Adresse an. </p>
         </div>
         <div class="column-data-entry">
           <label for="phone">Telefonnummer </label>
@@ -33,7 +36,7 @@
             <input type="checkbox" name="ridingLessons" id="ridingLessons" ngModel> Reitunterricht
           </label>
           <label>
-            <input type="checkbox" name="horseInfo" id="horseInfo" ngModel> Allgemeine Informationen
+            <input type="checkbox" name="horseInfo" id="horseInfo" ngModel> Allgemeines
           </label>
         </div>
         <div class="interest-column">
@@ -69,12 +72,12 @@
     <article class="messages">
       <h1 class="h1-p">Schreib mir doch ein paar Zeilen</h1>
       <div class="message">
-        <textarea id="message" placeholder="Dein Text" ngModel name="usermessage" required text #usermessage="ngModel"></textarea>
+        <textarea id="message" placeholder="Dein Text" ngModel name="usermessage" text #usermessage="ngModel"></textarea>
       </div>
     </article>
     <article class="send">
       <h1 class="h1-p">Wie darf ich antworten?</h1>
-      <div class="answer">
+      <div class="answer h1-p">
         <label>
           <input type="checkbox" name="perPhone" id="perPhone" ngModel> Telefonisch
         </label>
@@ -82,7 +85,7 @@
           <input type="checkbox" name="perMail" id="perMail" ngModel> Per E-Mail
         </label>
       </div>
-      <app-button buttonType="submit" [primary]="true" buttonTitle="Abschicken"></app-button>
+      <app-button buttonType="submit" [primary]="true" buttonTitle="Abschicken" [disabled]="!cta_form.valid"></app-button>
     </article>
   </form>
 </section>

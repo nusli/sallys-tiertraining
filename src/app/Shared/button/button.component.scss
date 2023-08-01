@@ -16,6 +16,12 @@ button{
 {
   background-color: var(--red80);
 }
+.primary:disabled
+{
+  opacity: 0.4;
+  background-color: var(--red20);
+
+}
 
 .secondary
 {
@@ -30,7 +36,14 @@ button{
   animation-name: button-primary-hover-fade;
   animation-duration: 1s;
 }
+.primary:disabled:hover
+{
+  border-color: #ffffff00;
+  background-color: var(--red20);
+  box-shadow: none;
+  animation-name: none;
 
+}
 .secondary:hover
 {
   box-shadow: 0.14vw 0.14vw 0.42vw 0 #a9585581;

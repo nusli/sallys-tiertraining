@@ -10,6 +10,7 @@ import { Subarticle } from 'src/app/Models/subarticle.model';
 export class TrainingsComponent {
   @Input() framesAvailable = true;
   @Input() mobilePortrait = false;
+  @Input() fadeOn = true;
   @Input() introductionArticles: Article[] = [{
     id: "dummy",
     pictureUrl: "",

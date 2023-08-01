@@ -14,6 +14,7 @@ export class PictureArticleComponent implements OnInit {
   @Input() mobilePortrait = false;
   @Input() leftPicture = true;
   @Input() article!:Article;
+  @Input() fadeOn = true;
 
   extendedContentAvailable = true;
   extendedContentOpen = false;

@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../Models/hero.model';
 import { Article } from '../Models/article.model';
-import { TrainingsComponent } from '../Shared/trainings/trainings.component';
 
 @Component({
   selector: 'app-group',
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.scss']
 })
-export class GroupComponent implements OnInit{
+export class GroupComponent implements OnInit, AfterViewInit{
+
 
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
@@ -17,7 +17,7 @@ export class GroupComponent implements OnInit{
   frameArticles: Article[] = [
     {
       id: "frame-funagility",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01827.JPG",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/8a.jpg",
       title: "Funagility",
       subtitle: "Spaß und Auslastung",
       text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
@@ -52,7 +52,7 @@ export class GroupComponent implements OnInit{
     },
     {
       id: "frame-locagility",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/einzel3.jpg",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/locagility.jpg",
       title: "Locagility",
       subtitle: "Auslastung für alle",
       text: "Locagility ist eine Mischung aus Longieren, Cavaletti-Trainung und Agility zur kognitiven und körperlichen Auslastung von Hunden aller Altersklassen.",
@@ -120,7 +120,7 @@ export class GroupComponent implements OnInit{
     },
     {
       id: "frame-mantrailing",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC02071.JPG",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/22.jpg",
       title: "Mantrailing",
       subtitle: "Artgerechtes Auslasten",
       text: "Eine Möglichkeit, wie man Hunde artgerecht auslasten kann, ist das Mantrailing - die Suche nach einem Menschen anhand seines Individual-Geruchs.",
@@ -173,7 +173,7 @@ export class GroupComponent implements OnInit{
     },
     {
       id: "frame-tricks",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01907.JPG",
+      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01782.JPG",
       title: "Tricks & Parcours",
       subtitle: `Mehr als "Sitz" & "Platz"`,
       text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",
@@ -220,6 +220,9 @@ export class GroupComponent implements OnInit{
 
   ngOnInit(): void {
     document.body.scrollTop = 0;
+  }
+
+  ngAfterViewInit(): void {
     if((this.openArticles[0]||this.openArticles[1])&&!this.mobilePortrait){
       document.body.scrollTop = 500;
     }
@@ -240,6 +243,5 @@ export class GroupComponent implements OnInit{
         document.body.scrollTop = 800;
       }
     }
-
   }
 }

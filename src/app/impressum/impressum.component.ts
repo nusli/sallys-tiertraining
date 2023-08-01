@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../Models/hero.model';
 
 @Component({
@@ -6,9 +6,11 @@ import { Hero } from '../Models/hero.model';
   templateUrl: './impressum.component.html',
   styleUrls: ['./impressum.component.scss']
 })
-export class ImpressumComponent implements OnInit{
+export class ImpressumComponent implements OnInit, AfterViewInit{
+
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
+  @Input() article = "";
   impressumTexts = [
     {
       subtitle: 'Name und Kontaktdaten des für die Verarbeitung Verantwortlichen',
@@ -319,5 +321,22 @@ export class ImpressumComponent implements OnInit{
   ]
   ngOnInit(): void {
     document.body.scrollTop = 0;
+  }
+  ngAfterViewInit(): void {
+    if(!this.mobilePortrait){
+      switch(this.article){
+        case "cookies": {
+          document.body.scrollTop = 3000;
+          break;
+        }
+      }
+    }else{
+      switch(this.article){
+        case "cookies": {
+          document.body.scrollTop = 3100;
+          break;
+        }
+      }
+    }
   }
 }
