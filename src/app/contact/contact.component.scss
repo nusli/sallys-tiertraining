@@ -32,6 +32,8 @@ input[type="checkbox"]
   appearance: none;
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   background-color: var(--red20);
 }
 input[type="checkbox"]:hover
@@ -179,16 +181,37 @@ textarea:focus{
   margin: 1vw;
   width: 6.94vw;
   height: 6.94vw;
-  max-width: 6.25rem;
-  max-height: 6.25rem;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
 }
 .social img
 {
   width: 6.94vw;
   height: 6.94vw;
-  max-width: 6.25rem;
-  max-height: 6.25rem;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
 }
+
+.dsgvo label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "ubuntu-italic";
+  font-size: 1rem;
+  color: black;
+}
+.success{
+  margin-top: .2rem;
+  font-family: "ubuntu-italic";
+  color: green;
+}
+.dsgvo label a{
+  margin: 0 .2rem;
+  font-family: "ubuntu-italic";
+  font-size: 1rem;
+  color: var(--red100);
+}
+
 
 //Mobile Responsiveness
 
@@ -307,8 +330,14 @@ textarea:focus{
   width: 2.5rem;
   height: 2.5rem;
 }
-.social img
+.mobile-section .social img
 {
   width: 2.5rem;
   height: 2.5rem;
+}
+.mobile-section .dsgvo label{
+  font-size: 0.8rem;
+}.mobile-section .dsgvo label a{
+  margin: 0 .2rem;
+  font-size: .8rem;
 }

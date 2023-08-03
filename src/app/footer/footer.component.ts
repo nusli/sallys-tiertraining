@@ -25,7 +25,7 @@ export class FooterComponent implements OnInit {
       id: "dummy",
       pictureUrl: "../../assets/backgrounds/news/news-dummy.jpg",
       title: "Aktuell findet nix Spannendes statt",
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
     },
   ];
 

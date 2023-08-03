@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ButtonComponent } from './button/button.component';
 import { PictureFrameComponent } from './picture-frame/picture-frame.component';
@@ -11,11 +10,11 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [CookieDisclaimerComponent, HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent],
+  declarations: [HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent],
   imports: [
-    CommonModule, RouterModule
+    CommonModule, RouterModule,
   ],
-  exports: [CookieDisclaimerComponent, HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent]
+  exports: [HeroSectionComponent, ButtonComponent, PictureFrameComponent, TrainingsComponent, PictureArticleComponent]
 })
 
 export class SharedModule { }

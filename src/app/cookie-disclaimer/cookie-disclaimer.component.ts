@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AuthService } from 'src/app/Services/auth.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-cookie-disclaimer',
@@ -8,18 +8,36 @@ import { AuthService } from 'src/app/Services/auth.service';
 })
 export class CookieDisclaimerComponent implements OnInit {
   @Input() mobilePortrait = false;
-  constructor(public authService: AuthService) { }
+  private cookie_name='';
+  private all_cookies:any='';
+
+  constructor(private cookieService:CookieService) { }
 
   cookiesAccepted = false;
+
   @Output() cookiesAcceptedChanged = new EventEmitter<boolean>();
 
   ngOnInit(): void {
   }
 
 
+  setCookie(){
+    this.cookieService.set('name','sallys-tiertraining');
+    console.log(this.cookieService.get('name'))
+  }
+
+ /*  deleteCookie(){
+    this.cookieService.delete('name');
+  }
+
+  deleteAll(){
+    this.cookieService.deleteAll();
+  } */
+
   changeCookiesAccepted(value: boolean){
     this.cookiesAccepted = value;
+    this.setCookie();
     this.cookiesAcceptedChanged.emit(this.cookiesAccepted);
-    this.authService.SignIn;
+    //Cookie-Service->Login
   }
 }

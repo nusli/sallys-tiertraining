@@ -2,7 +2,8 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Hero } from '../Models/hero.model';
 import { HttpClient } from '@angular/common/http';
-import { Contact } from '../Models/contact.model';
+import { Contact, FBContact } from '../Models/contact.model';
+import { ContactService } from '../Services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,9 +14,10 @@ export class ContactComponent implements OnInit{
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
   @Output() ctaOn = false;
+  success = false;
 
-  contact = new Contact;
-  constructor(private http: HttpClient){
+  contact = new FBContact;
+  constructor(private http: HttpClient, private contactservice: ContactService){
 
   }
 
@@ -26,25 +28,42 @@ export class ContactComponent implements OnInit{
     this.contact.firstName = form.form.value.firstName;
     this.contact.email = form.form.value.usermail;
     this.contact.phone = form.form.value.userphone;
-    this.contact.interests.ridingHorse = form.form.value.ridingLessons;
-    this.contact.interests.horseInfo = form.form.value.horseInfo;
-    this.contact.interests.individual1 = form.form.value.individual1
-    this.contact.interests.individual2 = form.form.value.individual2
-    this.contact.interests.funagility = form.form.value.funagility;
-    this.contact.interests.locagility = form.form.value.locagility;
-    this.contact.interests.mantrailing = form.form.value.mantrailing;
-    this.contact.interests.tricks = form.form.value.tricks;
-    this.contact.interests.puppies = form.form.value.puppies;
-    this.contact.answer.perMail = form.form.value.perMail;
-    this.contact.answer.perPhone = form.form.value.perPhone;
+    let interests = "Interessen: "
+    if(form.form.value.funagility==true){
+      interests += "Funagility, "
+    }
+    if(form.form.value.locagility==true){
+      interests += "Locagility, "
+    }
+    if(form.form.value.mantrailing==true){
+      interests += "Mantrailing, "
+    }
+    if(form.form.value.tricks==true){
+      interests += "Tricks & Parcours, "
+    }
+    if(form.form.value.puppies==true){
+      interests += "Welpen, "
+    }
+    if(form.form.value.ridingLessons==true){
+      interests += "Pferdereiten, "
+    }
+    if(form.form.value.horseInfo==true){
+      interests += "allgemeine Infos zu Pferden"
+    }
+    this.contact.interests = interests;
+    let answer = "Antwort bitte per: "
+    if(form.form.value.perMail==true){answer+="Mail, "}
+    if(form.form.value.perPhone==true){answer+="Telefon "}
+
+    this.contact.answer = answer;
     this.contact.usermessage = form.form.value.usermessage;
-    console.log(this.contact)
     form.reset();
 
-    this.http.post('https://sallys-tiertraining-default-rtdb.europe-west1.firebasedatabase.app/contacts.json', this.contact)
-    .subscribe(responseData =>{
-      console.log(responseData);
-    })
+    // this.http.post('https://sallys-tiertraining-default-rtdb.europe-west1.firebasedatabase.app/contacts.json', this.contact)
+    // .subscribe(responseData =>{
+    //   console.log(responseData);
+    // })
+    this.success = this.contactservice.sendContactform(this.contact);
   }
 
   ngOnInit(): void {

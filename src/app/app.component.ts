@@ -1,8 +1,9 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Hero } from './Models/hero.model';
 import { DeviceDetectorService, DeviceInfo } from 'ngx-device-detector';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { DeviceDetectorService, DeviceInfo } from 'ngx-device-detector';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  cookiesAccepted = false;
+  cookiesAccepted!:boolean;
   title = 'sallys-tiertraining';
   mobilePortrait = false;
   activeRoute = "/";
@@ -106,7 +107,8 @@ export class AppComponent implements OnInit{
 
 
 
-  constructor(private responsive: BreakpointObserver, private router: Router, private route: ActivatedRoute, private deviceDetectorService: DeviceDetectorService){
+  constructor(private cookieService: CookieService, private responsive: BreakpointObserver, private router: Router, private route: ActivatedRoute, private deviceDetectorService: DeviceDetectorService){
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
           //do something on start activity
@@ -126,6 +128,10 @@ export class AppComponent implements OnInit{
   });
   }
   ngOnInit(): void {
+    if(this.cookieService.get('name')==="sallys-tiertraining"){
+      console.log(this.cookieService.get('name'));
+      this.cookiesAccepted = true;
+    }
     this.deviceInfo = this.deviceDetectorService.getDeviceInfo();
     if(this.deviceInfo['browser']==="MS-Edge-Chromium" || this.deviceInfo['browser']==="Chrome"){
       this.browserWithoutA = true;

@@ -27,3 +27,14 @@ export class Answer
   perPhone? = false;
   perMail? = false;
 }
+
+export class FBContact
+{
+  lastName? = "";
+  firstName? = "";
+  email? = "";
+  phone? = "";
+  interests? = "";
+  usermessage? = "";
+  answer? = "";
+}

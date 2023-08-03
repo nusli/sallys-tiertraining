@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     GlossarArticleComponent,
     QualisComponent,
     PartnersComponent,
+    CookieDisclaimerComponent
   ],
   imports: [
     BrowserModule,
