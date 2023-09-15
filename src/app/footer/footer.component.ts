@@ -15,18 +15,6 @@ export class FooterComponent implements OnInit {
   activeRoute = "/";
 
   news: News[] = [
-/*     {
-      id: "20230727",
-      pictureUrl: "../../assets/backgrounds/news/mantrailing_news2.jpg",
-      title: "Mantrailing ab August",
-      text: "Ab dem 10. August findet jeweils donnerstags 19Uhr Mantrailing statt."
-    },
-    {
-      id: "dummy",
-      pictureUrl: "../../assets/backgrounds/news/news-dummy.jpg",
-      title: "Aktuell findet nix Spannendes statt",
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
-    }, */
   ];
 
   dosbOpen = false;

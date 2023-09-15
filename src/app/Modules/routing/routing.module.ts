@@ -9,11 +9,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LandingModule } from 'src/app/Landing/landing.module';
 import { GalleryComponent } from 'src/app/gallery/gallery.component';
-import { GlossarComponent } from 'src/app/glossar/glossar.component';
 import { SharedModule } from 'src/app/Shared/shared.module';
 import { ContactComponent } from 'src/app/contact/contact.component';
 import { QualisComponent } from 'src/app/qualis/qualis.component';
-import { PartnersComponent } from 'src/app/partners/partners.component';
 
 
 export const routes: Routes = [
@@ -23,10 +21,8 @@ export const routes: Routes = [
   {path: 'Hundeeinzeltraining', component: IndividualComponent},
   {path: 'Impressum', component: ImpressumComponent},
   {path: 'Galerie', component: GalleryComponent},
-  {path: 'Glossar', component: GlossarComponent},
   {path: 'Kontakt', component: ContactComponent},
   {path: 'Qualifikationen', component: QualisComponent},
-  {path: 'PartnerUndSponsoren', component: PartnersComponent},
 ];
 
 @NgModule({

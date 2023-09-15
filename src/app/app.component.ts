@@ -118,11 +118,6 @@ export class AppComponent implements OnInit{
           this.setHeroToActiveRoute();
 
       }
-/*
-      if (event instanceof NavigationError) {
-          // Handle error
-          console.error(event.error);
-      } */
 
       if (event instanceof NavigationEnd) {
           //do something on end activity

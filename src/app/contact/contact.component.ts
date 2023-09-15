@@ -73,11 +73,7 @@ export class ContactComponent implements OnInit{
     this.contact.answer = answer;
     this.contact.usermessage = form.form.value.usermessage;
     form.reset();
-
-    // this.http.post('https://sallys-tiertraining-default-rtdb.europe-west1.firebasedatabase.app/contacts.json', this.contact)
-    // .subscribe(responseData =>{
-    //   console.log(responseData);
-    // })
+    
     this.success = this.contactservice.sendContactform(this.contact);
   }
 

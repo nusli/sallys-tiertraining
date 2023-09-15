@@ -9,10 +9,7 @@ import { SharedModule } from './Shared/shared.module';
 import { NavigationComponent } from './Shared/navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { GlossarComponent } from './glossar/glossar.component';
-import { GlossarArticleComponent } from './glossar/glossar-article/glossar-article.component';
 import { QualisComponent } from './qualis/qualis.component';
-import { PartnersComponent } from './partners/partners.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FirestoreModule, provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -28,10 +25,7 @@ import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer
     NavigationComponent,
     FooterComponent,
     GalleryComponent,
-    GlossarComponent,
-    GlossarArticleComponent,
     QualisComponent,
-    PartnersComponent,
     CookieDisclaimerComponent
   ],
   imports: [

@@ -26,18 +26,9 @@ export class CookieDisclaimerComponent implements OnInit {
     console.log(this.cookieService.get('name'))
   }
 
- /*  deleteCookie(){
-    this.cookieService.delete('name');
-  }
-
-  deleteAll(){
-    this.cookieService.deleteAll();
-  } */
-
   changeCookiesAccepted(value: boolean){
     this.cookiesAccepted = value;
     this.setCookie();
     this.cookiesAcceptedChanged.emit(this.cookiesAccepted);
-    //Cookie-Service->Login
   }
 }
