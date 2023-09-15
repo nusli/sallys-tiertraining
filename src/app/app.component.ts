@@ -22,32 +22,34 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/einzel_mobile.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/einzel_desk.jpg",
       title: "Einzeltraining Hunde",
-      subtitle: "CATCHPHRASE EINZELTRAINING",
-      text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING "
+      subtitle: "Aller Anfang ist schwer – oder doch nicht?!",
+      text: `Einzigartige Hunde brauchen individuelle Lösungen. In meinem Einzeltraining können wir ihre „Baustellen“ gezielt analysieren und finden gemeinsam Lösungen für ein entspannteres Zusammenleben.`
     },
     {
       id:"group",
       pictureUrl: "../../../assets/backgrounds/heroes/gruppe_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/gruppe_desk.JPG",
       title: "Gruppentraining Hunde",
-      subtitle: "CATCHPHRASE EINZELTRAINING",
-      text: "EINLEITUNGSTEXT EINZELTRAINING EINLEITUNGSTEXT EINZELTRAINING "
+      subtitle: "Vom Tollpatsch zum wahren Akrobaten (oder einfach nur Spaß in der Gruppe)",
+      text: `Du willst deinem Hund eine Aufgabe oder Beschäftigung geben? Dafür habe ich in meinem Gruppentraining verschiedene Wege, nicht nur deinem vierbeinigen Freund körperlich und kognitiv gerecht zu werden, sondern auch für viel gemeinsamen Spaß zu sorgen.
+      Bitte beachte, dass die Voraussetzung für eine Gruppenstunde mindestens eine Einzelstunde ist.
+      `
     },
     {
       id:"me",
       pictureUrl: "../../../assets/backgrounds/heroes/me_mobile.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/me_desk.jpg",
       title: "Das bin ich",
-      subtitle: "CATCHPHRASE ME",
-      text: "EINLEITUNGSTEXT ME EINLEITUNGSTEXT "
+      subtitle: "Sally Davidson (mit meinem Hund Maya)",
+      text: "Ich bin einfach tierverrückt. Mehr ist eigentlich nicht zu sagen."
     },
     {
       id:"horse",
-      pictureUrl: "../../../assets/backgrounds/heroes/pferde_mobile.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/pferde_desk.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/pferde_hero.jpg",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/pferde_hero.jpg",
       title: "Pferdereiten",
-      subtitle: "CATCHPHRASE PFERDEREITEN",
-      text: "EINLEITUNGSTEXT PFERDEREITEN EINLEITUNGSTEXT PFERDEREITEN "
+      subtitle: "Glück auf vier Hufen",
+      text: "Was lange aufgebaut wird, bleibt lange gut. Ich helfe dir sowohl deine Fähigkeiten als auch die deines Pferdes langfristig zu verbessern. Egal ob du ein Turnierziel verfolgst, dein Pferd gesund halten willst oder ihr einfach zusammen Spaß haben wollt, einer meiner Trainings ist das Richtige für dich, um dich in der nötigen Arbeit mit deinem Pferd zu unterstützen."
     },
     {
       id:"gallery",
@@ -70,8 +72,8 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/kontakt_mobile.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/kontakt_desk.jpg",
       title: "Kontakt",
-      subtitle: "CATCHPHRASE Kontakt",
-      text: "EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt EINLEITUNGSTEXT Kontakt"
+      subtitle: "Wie kann ich dir helfen?",
+      text: "Wenn du fragen hast, melde dich gerne."
     },
     {
       id:"impressum",
@@ -79,7 +81,7 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
       title: "Impressum",
       subtitle: "",
-      text: "EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum EINLEITUNGSTEXT Impressum"
+      text: ""
     },
     {
       id:"partner",

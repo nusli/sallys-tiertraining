@@ -44,8 +44,23 @@ export class ContactComponent implements OnInit{
     if(form.form.value.puppies==true){
       interests += "Welpen, "
     }
-    if(form.form.value.ridingLessons==true){
-      interests += "Pferdereiten, "
+    if(form.form.value.horseInfo==true){
+      interests += "Allgemeines zu Pferden, "
+    }
+    if(form.form.value.ridingLessons1==true){
+      interests += "Springunterricht, "
+    }
+    if(form.form.value.ridingLessons2==true){
+      interests += "Dressurunterricht, "
+    }
+    if(form.form.value.ridingLessons3==true){
+      interests += "Freizeitunterricht, "
+    }
+    if(form.form.value.individual==true) {
+      interests += "Allgemeines zu Hunden, "
+    }
+    if(form.form.value.individual1==true) {
+      interests += "Einzeltraining, "
     }
     if(form.form.value.horseInfo==true){
       interests += "allgemeine Infos zu Pferden"

@@ -16,8 +16,8 @@ export class CoursesComponent implements OnInit {
   cards: Card[] = [
     {
       id: "funagility",
-      pictureUrl: "../../../assets/backgrounds/cards-pictures/fun.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/fun.JPG",
+      pictureUrl: "../../../assets/pictures/card_funagility.JPG",
+      pictureUrlDesk: "../../../assets/pictures/card_funagility.JPG",
       title: "Fun Agility",
       text: "Mit einem Hindernisparcours zu Spaß und Auslastung",
       link: "/Hundegruppentraining",
@@ -25,8 +25,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "locagility",
-      pictureUrl: "../../../assets/backgrounds/cards-pictures/local.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/local.jpg",
+      pictureUrl: "../../../assets/pictures/card_locagility.jpg",
+      pictureUrlDesk: "../../../assets/pictures/card_locagility.jpg",
       title: "Locagility",
       text: "Kognitive & körperlichen Auslastung für Hunde aller Altersklassen",
       link: "/Hundegruppentraining",
@@ -34,8 +34,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "tricks",
-      pictureUrl: "../../../assets/backgrounds/cards-pictures/tricks.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/tricks.jpg",
+      pictureUrl: "../../../assets/pictures/card_tricks.jpg",
+      pictureUrlDesk: "../../../assets/pictures/card_tricks.jpg",
       title: "Tricks und Parcours",
       text: `Mehr als "Sitz" und "Platz"`,
       link: "/Hundegruppentraining",
@@ -43,8 +43,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "mantrailing",
-      pictureUrl: "../../../assets/backgrounds/cards-pictures/mantrailing.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/cards-pictures/mantrailing.jpg",
+      pictureUrl: "../../../assets/pictures/card_mantrailing.JPG",
+      pictureUrlDesk: "../../../assets/pictures/card_mantrailing.JPG",
       title: "Mantrailing",
       text: "Artgerechtes Auslasten für Hunde",
       link: "/Hundegruppentraining",

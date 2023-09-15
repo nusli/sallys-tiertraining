@@ -86,20 +86,23 @@ export class NavigationComponent implements OnInit, OnDestroy {
       }
       if(this.windowRatio >= 2){
         this.navBackgroundHeight = 22;
-        this.navBackgroundMaxHeight = 230;
+        this.navBackgroundMaxHeight = 210;
       }
       if(this.windowRatio >= 2.6){
         this.navBackgroundHeight = 29;
-        this.navBackgroundMaxHeight = 230;
+        this.navBackgroundMaxHeight = 250;
       }
       if(this.windowRatio >= 3.6){
         this.navBackgroundHeight = 40;
         this.navBackgroundMaxHeight = 230;
       }
     }else{
-      this.navBackgroundHeight = 18.28;
+      this.navBackgroundHeight = 14.5;
+      if(this.windowRatio <= 0.65){
+        this.navBackgroundHeight = 12;
+       }
       if(this.windowRatio <= 0.5){
-       this.navBackgroundHeight = 15.5;
+       this.navBackgroundHeight = 10;
       }
       if(this.windowRatio <= 0.43){
         this.navBackgroundHeight = 14.5;

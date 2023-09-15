@@ -14,29 +14,24 @@ export class IndividualComponent implements OnInit{
   introductionArticles: Article[] = [
     {
       id: "individual-intro1",
-      pictureUrl: "../../../assets/backgrounds/article-pictures/22.jpg",
+      pictureUrl: "../../../assets/pictures/individual1.JPG",
       sizeing: "cover",
       title: "Was bedeutet Einzeltraining?",
       subtitle: "",
-      text: `Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.`,
+      text: `Seit vielen Jahren schule und unterstütze ich Menschen langfristig und nachhaltig im fachgerechten Umgang mit Hunden. Das Ziel meiner Arbeit ist eine bessere Erziehung, denn diese führt zu einer tieferen Bindung und mehr Entspanntheit im Zusammenleben von Mensch und Hund. `,
       expendable: true,
       expand: [
         {
           id: "individual-intro1-1",
           title: "",
-          text: `Seit vielen Jahren schule und unterstütze ich Menschen langfristig und nachhaltig im fachgerechten Umgang mit Hunden.
-          Das Ziel meiner Arbeit ist eine bessere Erziehung, denn diese führt zu einer tieferen Bindung und mehr Entspanntheit im Zusammenleben von Mensch und Hund.
-          Ich möchte mit meinem Wissen Menschen und Hunden helfen, genau das zu erreichen, was sie sich wünschen.
-          Mein Schwerpunkt liegt demzufolge in der Vermittlung von Wissen im Hinblick auf das Verhalten und die Lernvorgänge bei Hunden sowie der praktischen Anwendung dieses Wissens.
-          Während meiner Arbeit mit Hunden und deren Begleitern habe ich dies festgestellt: Vieles in der Hund-Kommunikation läuft unbewusst. Hier möchte ich unterstützen und anleiten.
-          Gemeinsam finden wir einen Weg, um mehr Bewusstsein für die Körpersprache und Stimme zu erlangen. In meinen Kursen werden alltagstaugliche, moderne und lösungsorientierte Trainings angeboten.
+          text: `Ich möchte mit meinem Wissen Menschen und Hunden helfen, genau das zu erreichen, was sie sich wünschen. Mein Schwerpunkt liegt demzufolge in der Vermittlung von Wissen im Hinblick auf das Verhalten und die Lernvorgänge bei Hunden sowie der praktischen Anwendung dieses Wissens. Während meiner Arbeit mit Hunden und deren Begleitern habe ich dies festgestellt: Vieles in der Hund-Kommunikation läuft unbewusst. Hier möchte ich unterstützen und anleiten. Gemeinsam finden wir einen Weg, um mehr Bewusstsein für die Körpersprache und Stimme zu erlangen. In meinen Kursen werden alltagstaugliche, moderne und lösungsorientierte Trainings angeboten.
           `,
         },
       ]
     },
     {
       id: "individual-intro2",
-      pictureUrl: "../../../assets/backgrounds/article-pictures/DSC01790.JPG",
+      pictureUrl: "../../../assets/pictures/individual2.JPG",
       sizeing: "cover",
       title: "Mein Einzeltraining",
       subtitle: "",
@@ -61,7 +56,7 @@ export class IndividualComponent implements OnInit{
     },
     {
       id: "individual-intro3",
-      pictureUrl: "../../../assets/backgrounds/article-pictures/DSC02455.JPG",
+      pictureUrl: "../../../assets/pictures/individual3.JPG",
       sizeing: "cover",
       title: "Wichtiger Hinweis für Tierheime und ähnliche Einrichtungen",
       subtitle: "",

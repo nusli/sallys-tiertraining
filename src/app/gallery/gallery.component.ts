@@ -49,7 +49,7 @@ export class GalleryComponent implements OnInit{
   frameArticles: Article[] = [
     {
       id: "frame-gallery-dogs",
-      pictureUrl: "../../../assets/gallery/DSC02448.JPG",
+      pictureUrl: "../../../assets/pictures/frame_dogs.JPG",
       title: "Hunde",
       subtitle: "",
       text: "",
@@ -64,7 +64,7 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-me",
-      pictureUrl: "../../../assets/gallery/Ich/5.jpg",
+      pictureUrl: "../../../assets/pictures/frame_me.jpg",
       title: "Sally",
       subtitle: "",
       text: "",
@@ -79,7 +79,7 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-maya",
-      pictureUrl: "../../../assets/gallery/DSC03053.JPG",
+      pictureUrl: "../../../assets/pictures/frame_maya.JPG",
       title: "Maya",
       subtitle: "",
       text: "",
@@ -94,7 +94,7 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-horses",
-      pictureUrl: "../../../assets/gallery/DSC02704.JPG",
+      pictureUrl: "../../../assets/pictures/frame_horse.JPG",
       title: "Pferde",
       subtitle: "",
       text: "",

@@ -14,7 +14,7 @@ export class MeComponent implements OnInit{
   introductionArticles: Article[] = [
     {
       id: "me-intro1",
-      pictureUrl: "../../../assets/backgrounds/article-pictures/me-article.jpg",
+      pictureUrl: "../../../assets/pictures/me1.jpg",
       sizeing: "cover",
       title: "Das bin ich",
       subtitle: "",
@@ -70,9 +70,9 @@ export class MeComponent implements OnInit{
     },
     {
       id: "me-intro3",
-      pictureUrl: "../../../assets/backgrounds/article-pictures/me-article2.jpg",
+      pictureUrl: "../../../assets/pictures/me2.jpg",
       sizeing: "cover",
-      title: "So begann meine Zeit in Deutschland",
+      title: "Start in Deutschland",
       subtitle: "",
       text: `2010 kam ich als Bereiterin und Stallmanagerin nach Deutschland und arbeitete unter anderem für deutschlandweit bekannte und erfolgreiche Ställe,
       wie Paul Schockemöhle (4x Gold bei Europameisterschaften, 6x Gold bei Deutschen Meisterschaften), Lars Nieberg (Gold, Olympische Mannschaft, Gold bei Mannschaftsweltmeisterschaften und Gold bei
@@ -102,7 +102,7 @@ export class MeComponent implements OnInit{
     },
     {
       id: "me-intro4",
-      pictureUrl: "../../../assets/backgrounds/article-pictures/DSC02719.JPG",
+      pictureUrl: "../../../assets/pictures/me4.jpg",
       sizeing: "cover",
       title: "Nach dem Unfall habe ich mich neu erfunden",
       subtitle: "",

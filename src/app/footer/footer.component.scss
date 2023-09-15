@@ -149,6 +149,7 @@ figure.footer-entry
 .footer-entry img
 {
   width: 80%;
+  max-width: 350px;
   height: auto;
   cursor: pointer;
 }
@@ -221,7 +222,9 @@ figure.footer-entry
   justify-content: center;
   align-items: center;
 }
-
+.social a{
+  width: 100%;
+}
 .social-icons
 {
   margin-top: 0.3rem;

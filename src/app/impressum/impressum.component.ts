@@ -93,7 +93,7 @@ export class ImpressumComponent implements OnInit, AfterViewInit{
       text: `Die Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. Unser berechtigtes
       Interesse folgt aus oben aufgelisteten Zwecken zur Datenerhebung. In keinem Fall verwenden wir die
       erhobenen Daten zu dem Zweck, Rückschlüsse auf Ihre Person zu ziehen.` +
-      //`Darüber hinaus setzen wir beim Besuch unserer Website Cookies sowie Analysedienste ein.`
+      `Darüber hinaus setzen wir beim Besuch unserer Website Cookies sowie Analysedienste ein.`+
       `Nähere Erläuterungen dazu erhalten Sie unter den Ziff. 3 und 4 dieser Datenschutzerklärung.`,
     },
     {
@@ -132,7 +132,7 @@ export class ImpressumComponent implements OnInit, AfterViewInit{
       text: `dies gesetzlich zulässig und nach Art. 6 Abs. 1 S. 1 lit. b DSGVO für die Abwicklung von
       Vertragsverhältnissen mit Ihnen erforderlich ist.`,
     },
-    /* {
+    {
       subtitle: 'Cookies',
       text: `Wir setzen auf unserer Seite Cookies ein. Hierbei handelt es sich um kleine Dateien, die Ihr Browser
       automatisch erstellt und die auf Ihrem Endgerät (Laptop, Tablet, Smartphone o.ä.) gespeichert
@@ -181,7 +181,7 @@ export class ImpressumComponent implements OnInit, AfterViewInit{
       genutzt. Weitere Informationen zu Font Awesome finden Sie
       unter https://fontawesome.com/help und in der Datenschutzerklärung von Fonticons,
       Inc.: https://fontawesome.com/privacy.`,
-    }, */
+    },
     {
       subtitle: 'Betroffenenrechte',
       text: `Sie haben das Recht:`,

@@ -17,7 +17,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
   frameArticles: Article[] = [
     {
       id: "frame-funagility",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/8a.jpg",
+      pictureUrl: "../../../assets/pictures/frame_funagility.jpg",
       title: "Funagility",
       subtitle: "Spaß und Auslastung",
       text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
@@ -52,7 +52,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
     },
     {
       id: "frame-locagility",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/locagility.jpg",
+      pictureUrl: "../../../assets/pictures/card_locagility.jpg",
       title: "Locagility",
       subtitle: "Auslastung für alle",
       text: "Locagility ist eine Mischung aus Longieren, Cavaletti-Trainung und Agility zur kognitiven und körperlichen Auslastung von Hunden aller Altersklassen.",
@@ -120,7 +120,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
     },
     {
       id: "frame-mantrailing",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/22.jpg",
+      pictureUrl: "../../../assets/pictures/card_mantrailing.JPG",
       title: "Mantrailing",
       subtitle: "Artgerechtes Auslasten",
       text: "Eine Möglichkeit, wie man Hunde artgerecht auslasten kann, ist das Mantrailing - die Suche nach einem Menschen anhand seines Individual-Geruchs.",
@@ -173,7 +173,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
     },
     {
       id: "frame-tricks",
-      pictureUrl: "../../../assets/backgrounds/frame-pictures/DSC01782.JPG",
+      pictureUrl: "../../../assets/pictures/card_tricks.jpg",
       title: "Tricks & Parcours",
       subtitle: `Mehr als "Sitz" & "Platz"`,
       text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",

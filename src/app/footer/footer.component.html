@@ -1,6 +1,6 @@
 <section *ngIf="ctaOn" id="footer-cta" [ngClass]="{'mobile-section':mobilePortrait}">
   <h1 class="h1-p">Kontaktiere mich</h1>
-  <p class="p-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+  <p class="p-content">Hast du Anregungen, Fragen oder benötigst Hilfe, hab keine Scheu, mich zu kontaktieren. Ich beiße nicht!</p>
   <div class="button-holder">
     <app-button *ngIf="!mobilePortrait" [mobilePortrait]="mobilePortrait" [primary]="true" buttonTitle="Kontaktformular" routerLink="/Kontakt" ></app-button>
     <app-button [primary]="false" [mobilePortrait]="mobilePortrait" [withContext]="true" buttonTitle="Kontakt"></app-button>
@@ -33,14 +33,14 @@
             <li routerLink="/Hundeeinzeltraining" (click)="ctaOn = true">Hundetraining (einzeln)</li>
             <li routerLink="/Reitunterricht" (click)="ctaOn = true">Reitunterricht</li>
             <li routerLink="/DasBinIch" (click)="ctaOn = true">Das bin ich</li>
-            <li routerLink="/Qualifikationen" (click)="ctaOn = true">Qualifikationen</li>
           </ul>
           <ul>
             <li routerLink="/Galerie" (click)="ctaOn = true">Galerie</li>
-            <li routerLink="/Glossar" (click)="ctaOn = true">Glossar</li>
+            <!-- <li routerLink="/Glossar" (click)="ctaOn = true">Glossar</li> -->
             <li routerLink="/Kontakt" (click)="ctaOn = false">Kontakt</li>
             <li routerLink="/Impressum" (click)="ctaOn = false">Impressum</li>
-            <li routerLink="/PartnerUndSponsoren" (click)="ctaOn = true">Partner</li>
+            <!-- <li routerLink="/PartnerUndSponsoren" (click)="ctaOn = true">Partner</li> -->
+            <li routerLink="/Qualifikationen" (click)="ctaOn = true">Qualifikationen</li>
 
           </ul>
         </div>
@@ -63,19 +63,19 @@
         </div>
         <div class="social">
           <figure class="social-icons">
-            <img src="../../../assets/icons/tiktok.png" alt="Sally's Tiktok">
+            <a href="https://www.tiktok.com/@sallys_tiertraining"><img src="../../../assets/icons/tiktok.png" alt="Sally's Tiktok"></a>
           </figure>
           <figure class="social-icons">
-            <img src="../../../assets/icons/insta.svg" alt="Sally's Instagram">
+            <a href="https://www.instagram.com/sallystiertraining/"><img src="../../../assets/icons/insta.svg" alt="Sally's Instagram"></a>
           </figure>
           <figure class="social-icons">
-            <img src="../../../assets/icons/fb.png" alt="Sally's Facebook">
+            <a href="https://www.facebook.com/people/Sallys-Tiertraining/pfbid0F2wkUo3mEM8aJJtev13V53tHaeyvvoDSNY5QmcgYNcWKW8yeEx27qf8KPhmTAuBLl/"><img src="../../../assets/icons/fb.png" alt="Sally's Facebook"></a>
           </figure>
           <figure class="social-icons">
-            <img src="../../../assets/icons/yt.svg" alt="Sally's Youtube">
+            <a href="https://www.youtube.com/@sallys-tiertraining"><img src="../../../assets/icons/yt.svg" alt="Sally's Youtube"></a>
           </figure>
           <figure class="social-icons">
-            <img src="../../../assets/icons/whatsapp.svg" alt="Sally's Whatsapp">
+            <a href="https://wa.me/491749789210"><img src="../../../assets/icons/whatsapp.svg" alt="Sally's Whatsapp"></a>
           </figure>
         </div>
       </div>
@@ -85,30 +85,40 @@
       <a href="">sedra<span>neo</span>.</a>
     </div>
     <div id="footer-qualification">
-      <div class="qualification-container">
+      <!-- <div class="qualification-container">
         <figure class="qualification"  routerLink="/Qualifikationen"  [queryParams]='{article: "dosb"}' >
           <img src="../../../assets/icons/dosb.png" alt="DOSB">
         </figure>
 
         <figure class="qualification" routerLink="/Qualifikationen"  [queryParams]='{article: "zeugnis"}'>
-          <img src="../../../assets/icons/sa.svg" alt="Sachsen-Anhalt">
+          <img src="../../../assets/icons/sa_neu.jpg" alt="Sachsen-Anhalt">
         </figure>
 
         <figure class="qualification" routerLink="/Qualifikationen"  [queryParams]='{article: "ziemer"}'>
           <img src="../../../assets/icons/ziemer.png" alt="Ziemer und Falke">
         </figure>
-      </div>
+      </div> -->
       <div class="qualification-container">
-        <figure class="qualification"  routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "hsvkw"}' >
+        <!-- <figure class="qualification"  routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "hsvkw"}' >
           <img src="../../../assets/icons/hundesportvereinKleinWanzleben.jpg" alt="Hundesportverein Klein Wanzleben">
+        </figure> -->
+
+        <figure class="qualification">
+          <a href="https://www.instagram.com/hsv_klein_wanzleben/"><img src="../../../assets/icons/hundesportvereinKleinWanzleben.jpg" alt="Hundesportverein Klein Wanzleben"></a>
         </figure>
 
-        <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "pauvi"}'>
+        <!-- <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "pauvi"}'>
           <img src="../../../assets/icons/pauvi.png" alt="PauVi DiscDogs">
+        </figure> -->
+        <figure class="qualification">
+          <a href="https://de-de.facebook.com/pauvidiscdogs/"><img src="../../../assets/icons/pauvi.png" alt="PauVi DiscDogs"></a>
         </figure>
 
-        <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "schlubeck"}'>
+        <!-- <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "schlubeck"}'>
           <img src="../../../assets/icons/schlubeck.png" alt="Reiterhof Schlubeck">
+        </figure> -->
+        <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "schlubeck"}'>
+          <a href="https://reiterhof-schlubeck.de/"><img src="../../../assets/icons/schlubeck.png" alt="Reiterhof Schlubeck"></a>
         </figure>
       </div>
     </div>
