@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/einzel_mobile.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/einzel_desk.jpg",
       title: "Einzeltraining Hunde",
-      subtitle: "Aller Anfang ist schwer – oder doch nicht?!",
+      subtitle: "Aller Anfang ist schwer?!",
       text: `Einzigartige Hunde brauchen individuelle Lösungen. In meinem Einzeltraining können wir ihre „Baustellen“ gezielt analysieren und finden gemeinsam Lösungen für ein entspannteres Zusammenleben.`
     },
     {
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/gruppe_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/gruppe_desk.JPG",
       title: "Gruppentraining Hunde",
-      subtitle: "Vom Tollpatsch zum wahren Akrobaten (oder einfach nur Spaß in der Gruppe)",
+      subtitle: "Vom Tollpatsch zumAkrobaten",
       text: `Du willst deinem Hund eine Aufgabe oder Beschäftigung geben? Dafür habe ich in meinem Gruppentraining verschiedene Wege, nicht nur deinem vierbeinigen Freund körperlich und kognitiv gerecht zu werden, sondern auch für viel gemeinsamen Spaß zu sorgen.
       Bitte beachte, dass die Voraussetzung für eine Gruppenstunde mindestens eine Einzelstunde ist.
       `
@@ -56,16 +56,8 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/gallery_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/gallery_desk.JPG",
       title: "Galerie",
-      subtitle: "CATCHPHRASE Galerie",
-      text: "EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie EINLEITUNGSTEXT Galerie"
-    },
-    {
-      id:"glossar",
-      pictureUrl: "../../../assets/backgrounds/heroes/glossar_mobile.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/glossar_desk.jpg",
-      title: "Glossar",
-      subtitle: "CATCHPHRASE Glossar",
-      text: "EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar EINLEITUNGSTEXT Glossar "
+      subtitle: "Einige Eindrücke",
+      text: "Hier kannst du dir selbst ein Bild von Maya, mir und meiner Arbeit machen."
     },
     {
       id:"contact",
@@ -77,19 +69,11 @@ export class AppComponent implements OnInit{
     },
     {
       id:"impressum",
-      pictureUrl: "../../../assets/backgrounds/heroes/impressum_mobile.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum_desk.JPG",
+      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum.JPG",
       title: "Impressum",
       subtitle: "",
       text: ""
-    },
-    {
-      id:"partner",
-      pictureUrl: "../../../assets/backgrounds/heroes/partner_mobile.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/partner_desk.JPG",
-      title: "Partner und Sponsoren",
-      subtitle: "",
-      text: "EINLEITUNGSTEXT Partner EINLEITUNGSTEXT Partner EINLEITUNGSTEXT Partner"
     },
     {
       id:"qualis",
@@ -97,7 +81,7 @@ export class AppComponent implements OnInit{
       pictureUrlDesk: "../../../assets/backgrounds/heroes/quali_desk.JPG",
       title: "Qualifikationen",
       subtitle: "",
-      text: "EINLEITUNGSTEXT Qualifikationen EINLEITUNGSTEXT Qualifikationen EINLEITUNGSTEXT Qualifikationen"
+      text: "Hier findest du meine Qualifikationen"
     },
 
   ]
@@ -201,24 +185,16 @@ export class AppComponent implements OnInit{
         this.activeHero = this.heroes[4];
         break;
       }
-      case "/Glossar": {
+      case "/Kontakt": {
         this.activeHero = this.heroes[5];
         break;
       }
-      case "/Kontakt": {
+      case "/Impressum": {
         this.activeHero = this.heroes[6];
         break;
       }
-      case "/Impressum": {
-        this.activeHero = this.heroes[7];
-        break;
-      }
-      case "/PartnerUndSponsoren": {
-        this.activeHero = this.heroes[8];
-        break;
-      }
       case "/Qualifikationen": {
-        this.activeHero = this.heroes[9];
+        this.activeHero = this.heroes[7];
         break;
       }
     }

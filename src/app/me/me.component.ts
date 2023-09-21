@@ -42,11 +42,7 @@ export class MeComponent implements OnInit{
         {
           id: "me-intro1-3",
           title: "Immer schnell wieder aufsteigen!",
-          text: `Eines Tages, als ich wieder dort zu Besuch war, wartete dort eine Überraschung auf mich.
-          Im Stall stand ein Pferd mit Trense und Sattel und sie hat mich gefragt, ob ich reiten wollen würde. Meine Antwort kam wie aus der Pistole geschossen: Jaaaaaaa!!!
-          Nun saß ich also auf dem Pferd mit Namen Billy - was für ein Gefühl! Dann wurde die Longe gelöst und ich bin einfach auf dem Hof hin und her geritten.
-          Und dann die große Überraschung: Nach einigen Wochen durfte ich Billy mein Eigen nennen. Ich konnte es nicht glauben.
-          Ein Stallplatz war schnell gefunden und ich lernte mittels Learning by doing Billy zu reiten und zu traben. Meine Mutter sagte mir nur, dass ich auch aufstehen müsse, im Trab hoch und runter.
+          text: `Ein paar Wochen später habe ich meinen ersten Reitunterricht besucht, in einer Gruppe - das werde ich nie vergessen. Ich bin schon in der ersten halben Stunde 7mal runtergefallen. Ooops! Irgendwie bin ich aber immer wieder aufgestiegen und habe weiter gemacht. Seit damals bin ich pferdeverrückt, könnte man sagen. Einige Zeit später, als ich 12 war, hatte ich dann meine ersten Beritt-Ponys. So hat die Reiterei bei mir angefangen. Vom Lernen durch Schauen und Helfen, wo immer ich konnte, bis hin zu Bemühungen in Richtung Turnieren, bei denen ich dann auch erfolgreiche Ponys hatte.
           `,
         },
       ]
