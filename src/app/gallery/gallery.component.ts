@@ -20,10 +20,11 @@ export class GalleryComponent implements OnInit{
     "l","p","p","l","p","l","l","p"
   ]
   maya = [
+    '../../assets/gallery/Maya/240201.jpg','../../assets/gallery/Maya/240202.jpg','../../assets/gallery/Maya/240203.jpg','../../assets/gallery/Maya/240204.jpg','../../assets/gallery/Maya/240205.jpg','../../assets/gallery/Maya/240206.jpg','../../assets/gallery/Maya/240207.jpg','../../assets/gallery/Maya/240208.jpg','../../assets/gallery/Maya/240209.jpg','../../assets/gallery/Maya/240210.jpg','../../assets/gallery/Maya/240211.jpg',
     '../../assets/gallery/Maya/1.jpg','../../assets/gallery/Maya/11.jpg','../../assets/gallery/Maya/DSC02103.JPG','../../assets/gallery/Maya/DSC02969.JPG','../../assets/gallery/Maya/DSC02993.JPG','../../assets/gallery/Maya/DSC03055.JPG',
   ]
   ratiosMaya= [
-    "l", "l", "p", "l", "l", "l"
+    "p", "p", "p", "l", "l", "p", "l", "l", "p", "l", "l", "l", "l", "p", "l", "l", "l"
   ]
 
   me = [
@@ -79,8 +80,8 @@ export class GalleryComponent implements OnInit{
     },
     {
       id: "frame-gallery-maya",
-      pictureUrl: "../../../assets/pictures/frame_maya.JPG",
-      title: "Maya",
+      pictureUrl: "../../../assets/gallery/Maya/240204.jpg",
+      title: "Maya und Biene",
       subtitle: "",
       text: "",
       expendable: false,

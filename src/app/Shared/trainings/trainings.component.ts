@@ -31,6 +31,7 @@ export class TrainingsComponent {
 
   @Input() articlesOpen = [false, false, false, false];
   @Input() contentsOpen = [false, false, false, false];
+  @Input() group = false;
 
 
   descriptionOpen = false;

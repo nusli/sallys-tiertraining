@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/gruppe_mobile.JPG",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/gruppe_desk.JPG",
       title: "Gruppentraining Hunde",
-      subtitle: "Vom Tollpatsch zumAkrobaten",
+      subtitle: "Vom Tollpatsch zum Akrobaten",
       text: `Du willst deinem Hund eine Aufgabe oder Beschäftigung geben? Dafür habe ich in meinem Gruppentraining verschiedene Wege, nicht nur deinem vierbeinigen Freund körperlich und kognitiv gerecht zu werden, sondern auch für viel gemeinsamen Spaß zu sorgen.
       Bitte beachte, dass die Voraussetzung für eine Gruppenstunde mindestens eine Einzelstunde ist.
       `
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit{
       pictureUrl: "../../../assets/backgrounds/heroes/me_mobile.jpg",
       pictureUrlDesk: "../../../assets/backgrounds/heroes/me_desk.jpg",
       title: "Das bin ich",
-      subtitle: "Sally Davidson (mit meinem Hund Maya)",
+      subtitle: "Sally Davidson (mit meinen Hunden Maya und Biene)",
       text: "Ich bin einfach tierverrückt. Mehr ist eigentlich nicht zu sagen."
     },
     {

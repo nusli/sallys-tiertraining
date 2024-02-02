@@ -15,6 +15,13 @@ export class FooterComponent implements OnInit {
   activeRoute = "/";
 
   news: News[] = [
+    //Rowdygruppe
+    {
+      id: "rowdy",
+    pictureUrl: "../../../assets/pictures/rowdy_news.jpg",
+    title: "Rowdy-Gruppe",
+    text: "Du möchtest gerne zusammen mit deinem Hund in einer kleinen Gruppe etwas unternehmen und an der Alltagstauglichkeit arbeiten? Ab dem 26. Februar 2024 biete ich einen dreiteiligen Rowdy-Kurs an. Jeder der drei Teile wird sechs Trainingsstunden umfassen. Schreib dich schnell ein, denn die Plätze sind aufgrund des intensiven Trainings sehr begrenzt."
+  }
   ];
 
   dosbOpen = false;

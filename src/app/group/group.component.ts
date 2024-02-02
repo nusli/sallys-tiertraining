@@ -15,6 +15,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
   @Input() openArticles = [false, false, false, false];
 
   frameArticles: Article[] = [
+    
     {
       id: "frame-funagility",
       pictureUrl: "../../../assets/pictures/frame_funagility.jpg",
@@ -118,7 +119,81 @@ export class GroupComponent implements OnInit, AfterViewInit{
         },
       ]
     },
+    //Rowdy
     {
+      id: "frame-mantrailing",
+      pictureUrl: "../../../assets/pictures/rowdy.jpg",
+      title: "Rowdy-Gruppe",
+      subtitle: "Bereit für den Alltag",
+      text: "Wir arbeiten gemeinsam an eurem harmonischen Alltag. Hier steht vor allem eine gute Kommunikation mit eurem Vierbeiner im Vordergrund.",
+      mobileText: "Wir arbeiten gemeinsam an eurem harmonischen Alltag.",
+      expendable: true,
+      expand: [
+        {
+          id: "frame-rowdy1",
+          title: "Rowdy-Gruppe",
+          text: `Du möchtest gerne zusammen mit deinem Hund in einer kleinen Gruppe etwas unternehmen und an der Alltagstauglichkeit arbeiten?
+          Dann bist du hier genau richtig. In dieser Gruppe sind alle Hunde willkommen, egal ob klein oder groß, jung oder alt und auch mit Schwierigkeiten im Alltag.
+          Ich arbeite mit euch zusammen an der Kommunikation und Beziehung zwischen euch und eurem Hund, für ein harmonischeres zusammenleben. Dieser Kurs biete außerdem viel Abwechselung und besteht aus 3 aufeinander aufbauenden Kursen. 
+          Die Teilnehmerzahl ist begrenzt. Achtung: Bitte für sehr aggressive Hunde oder solche, die ihr nicht halten könnt, vorab eine Ansicht buchen. 
+          
+          `,
+        },
+        {
+          id: "frame-rowdy2",
+          title: "Kurs 1",
+          text: `Der erste Kurs umfasst sechs Stunden, in denen folgende Punkte bearbeitet werden:
+          Mensch-Hund/Hund-Hund Kommunikation, Lerntheorie, Aufmerksamkeit, Leinführigkeit und Spielen. 
+          Die sechs Stunden finden an folgenden Terminen statt:
+          26.2. 18.30 Uhr, 
+          4.3. 18.30 Uhr, 
+          11.3 18.30 Uhr, 
+          16.3.   9 Uhr,
+          25.3. 18.30 Uhr und
+          1.4. 18.30 Uhr.
+          `,
+          
+        },
+        {
+          id: "frame-rowdy3",
+          title: "Kurs 2",
+          text: `Der zweite Kurs umfasst sechs Stunden, in denen folgende Punkte bearbeitet werden: 
+          Orientierung, Leinführigkeit Next Level, Schleppleine Arbeit, Beschäftigung und Spazieren. 
+          Die sechs Stunden finden an folgenden Terminen statt:
+          29.4. 18.30 Uhr,
+          6.5. 18.30 Uhr,
+          20.5. 18.30 Uhr,
+          27.5. 18.30 Uhr,
+          3.6. 18.30 Uhr und
+          10.6. 18.30 Uhr. 
+          `,
+        },
+        {
+          id: "frame-rowdy4",
+          title: "Kurs 3",
+          text: `Der dritte Kurs umfasst ebenfalls sechs Stunden, dabei werden folgende Punkte bearbeitet: 
+          Spazieren Next Level, Beschäftigung unterwegs, kognitive Auslastung (Kopf-Konzentration), eine kleine Überraschung und ein individuelles Abschlussgespräch mit allen.
+          Die sechs Stunden finden an folgenden Terminen statt:
+          8.7. 18.30 Uhr,
+          15.7. 18.30 Uhr,
+          22.7. 18.30 Uhr,
+          29.7. 18.30 Uhr,
+          2.8. 15.30 Uhr und
+          3.8. 10 Uhr. 
+          `,
+        },
+        {id: "special",
+        title: "",
+        text: ``,
+          price: "200 Euro",
+          price6: "170 Euro",
+          price10: "490 Euro",
+        },
+      ]
+    },
+
+    //Mantrailing
+    /* {
       id: "frame-mantrailing",
       pictureUrl: "../../../assets/pictures/card_mantrailing.JPG",
       title: "Mantrailing",
@@ -170,7 +245,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
           price10: "185 Euro",
         },
       ]
-    },
+    }, */
     {
       id: "frame-tricks",
       pictureUrl: "../../../assets/pictures/card_tricks.jpg",

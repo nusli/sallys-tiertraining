@@ -38,7 +38,7 @@
               <p><b>Vier Stunden und mehr</b></p><p>{{ article.horse4}}</p>
             </div>
           </div>
-          <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+          <p *ngIf = "!group">zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
         </div>
       </article>
       <figure class="nav-close" (click)="closeContents(0,1)"></figure>
@@ -54,20 +54,34 @@
         <div class="prices" *ngIf='article.price !="" && article.price != null'>
           <h2>Meine Preise</h2>
           <div class="price-entries">
-            <div class="price-entry">
-              <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+            <div *ngIf="article.id != 'special'">
+              <div class="price-entry">
+                <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+              </div>
+              <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
+              </div>
+              <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+                <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
+              </div>
+              <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
+                <p><b>Vier Stunden und mehr</b></p><p>{{ article.horse4}}</p>
+              </div>
             </div>
-            <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
-              <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
-            </div>
-            <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
-              <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
-            </div>
-            <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
-              <p><b>Vier Stunden und mehr</b></p><p>{{ article.horse4}}</p>
+            <div *ngIf="article.id == 'special'">
+              <div class="price-entry">
+                <p><b>Kurs 1</b></p><p>{{ article.price}}</p>
+              </div>
+              <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                <p><b>Kurs 2 und 3 (jeweils)</b></p><p>{{ article.price6}}</p>
+              </div>
+              <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+                <p><b>Alle Kurse als Paket</b></p><p>{{ article.price10}}</p>
+              </div>
             </div>
           </div>
-          <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+            
+          <p *ngIf = "!group">zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
         </div>
       </article>
       <figure class="nav-close" (click)="closeContents(2,3)"></figure>
@@ -84,20 +98,34 @@
           <div class="prices" *ngIf='article.price !="" && article.price != null'>
             <h2>Meine Preise</h2>
             <div class="price-entries">
-              <div class="price-entry">
-                <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+              <div *ngIf="article.id != 'special'">
+                <div class="price-entry">
+                  <p><b>Eine Stunde</b></p><p>{{ article.price}}</p>
+                </div>
+                <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                  <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
+                </div>
+                <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+                  <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
+                </div>
+                <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
+                  <p><b>ab der 4. Reitstunde</b></p><p>{{ article.horse4}}</p>
+                </div>
               </div>
-              <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
-                <p><b>6er-Karte</b></p><p>{{ article.price6}}</p>
+              <div *ngIf="article.id == 'special'">
+                <div class="price-entry">
+                  <p><b>Kurs 1</b></p><p>{{ article.price}}</p>
+                </div>
+                <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                  <p><b>Kurs 2 und 3 (jeweils)</b></p><p>{{ article.price6}}</p>
+                </div>
+                <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+                  <p><b>Alle Kurse als Paket</b></p><p>{{ article.price10}}</p>
+                </div>
               </div>
-              <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
-                <p><b>10er-Karte</b></p><p>{{ article.price10}}</p>
-              </div>
-              <div  *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
-                <p><b>ab der 4. Reitstunde</b></p><p>{{ article.horse4}}</p>
-              </div>
+              
             </div>
-            <p>zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+            <p *ngIf = "!group">zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
           </div>
         </article>
         <figure class="nav-close" (click)="closeContents(0,1)"></figure>

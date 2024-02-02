@@ -66,7 +66,7 @@ export class MeComponent implements OnInit{
     },
     {
       id: "me-intro3",
-      pictureUrl: "../../../assets/pictures/me2.jpg",
+      pictureUrl: "../../../assets/gallery/Maya/240210.jpg",
       sizeing: "cover",
       title: "Start in Deutschland",
       subtitle: "",
@@ -85,7 +85,8 @@ export class MeComponent implements OnInit{
           title: "Maya und ich",
           text: `Inzwischen konnte ich meinen Traum vom eigenen Hund verwirklichen. 2017 zog Maya, eine wundervolle schwarz-weiße Border Collie Hündin bei mir ein.
           Sie begleitet mich seither auf Schritt und Tritt überall hin und gemeinsam haben wir schon sehr viel erreicht.
-          Sie ist meine Seele geworden, und auch Sie werden sie bei unserem gemeinsamen Training kennen lernen. `,
+          Sie ist meine Seele geworden, und auch Sie werden sie bei unserem gemeinsamen Training kennen lernen. 
+          Im letzten Jahr hat meine kleine Familie Zuwachs bekommen: Biene ist eine Hündin der Rasse X Herder und hat sowohl mein Herz als auch Mayas im Sturm erobert. Auch sie wird in der Regel bei einem gemeinsamen Training dabei sein.`,
         },
         {
           id: "me-intro3-3",
