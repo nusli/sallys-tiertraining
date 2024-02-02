@@ -41,12 +41,21 @@ export class CoursesComponent implements OnInit {
       link: "/Hundegruppentraining",
       fragment: "tricks",
     },
-    {
+    /* {
       id: "mantrailing",
       pictureUrl: "../../../assets/pictures/card_mantrailing.JPG",
       pictureUrlDesk: "../../../assets/pictures/card_mantrailing.JPG",
       title: "Mantrailing",
       text: "Artgerechtes Auslasten für Hunde",
+      link: "/Hundegruppentraining",
+      fragment: "mantrailing",
+    }, */
+    {
+      id: "rowdy",
+      pictureUrl: "../../../assets/pictures/rowdy_card.jpg",
+      pictureUrlDesk: "../../../assets/pictures/card_mantrailing.JPG",
+      title: "Rowdy-Gruppe",
+      text: "Bereit für den Alltag",
       link: "/Hundegruppentraining",
       fragment: "mantrailing",
     },
