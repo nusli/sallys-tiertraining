@@ -6,7 +6,7 @@
     <app-button [primary]="false" [mobilePortrait]="mobilePortrait" [withContext]="true" buttonTitle="Kontakt"></app-button>
   </div>
 </section>
-<section class="footer-news" *ngIf="news[0]!=null" [ngClass]="{'mobile-section':mobilePortrait}" [ngStyle]="{'background-image': 'url(' + news[0].pictureUrl + ')'}">
+<section id="fNews" class="footer-news" *ngIf="news[0]!=null" [ngClass]="{'mobile-section':mobilePortrait}" [ngStyle]="{'background-image': 'url(' + news[0].pictureUrl + ')'}">
   <div class="news-holder">
     <figure [ngClass]="activeNews !=0 ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="changeNews(-1)"></figure>
     <article class="fade"  *ngFor="let newsEntry of news; let i = index" [ngClass]="activeNews === i?'visible-article' : 'invisible-article'">
@@ -94,6 +94,9 @@
         </figure>
         <figure class="qualification" routerLink="/PartnerUndSponsoren"  [queryParams]='{article: "schlubeck"}'>
           <a href="https://reiterhof-schlubeck.de/"><img src="../../../assets/icons/schlubeck.png" alt="Reiterhof Schlubeck"></a>
+        </figure>
+        <figure class="qualification">
+          <a href=""><img src="../../../assets/icons/esi.png" alt="Förderung durch den ESI-Fonds in Sachsen-Anhalt"></a>
         </figure>
       </div>
     </div>

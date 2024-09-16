@@ -282,7 +282,6 @@ figure.footer-entry
 #footer-qualification
 {
   margin-top: 2.2vw;
-  padding: 0 8.33vw;
 }
 
 .qualification-container
@@ -294,13 +293,23 @@ figure.footer-entry
 }
 .qualification
 {
-  margin: 0.63rem 3vw;
+  margin: 0.63rem 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120px;
   width: 120px;
 }
+.qualification:last-of-type
+{
+  margin: 0.63rem 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 500px;
+}
+
 .mobile-section .qualification
 {
   height: 60px;
@@ -310,6 +319,12 @@ figure.footer-entry
 {
   max-height: 120px;
   max-width: 120px;
+  cursor: pointer;
+}
+.qualification img:last-of-type
+{
+  max-height: 120px;
+  max-width: 480px;
   cursor: pointer;
 }
 .mobile-section .qualification img

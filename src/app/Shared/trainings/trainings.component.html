@@ -70,14 +70,14 @@
             </div>
             <div *ngIf="article.id == 'special'">
               <div class="price-entry">
-                <p><b>Kurs 1</b></p><p>{{ article.price}}</p>
+                <p><b>Beide Kurse als Paket</b></p><p>{{ article.price}}</p>
               </div>
-              <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+              <!-- <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
                 <p><b>Kurs 2 und 3 (jeweils)</b></p><p>{{ article.price6}}</p>
               </div>
               <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
                 <p><b>Alle Kurse als Paket</b></p><p>{{ article.price10}}</p>
-              </div>
+              </div> -->
             </div>
           </div>
             
@@ -114,18 +114,18 @@
               </div>
               <div *ngIf="article.id == 'special'">
                 <div class="price-entry">
-                  <p><b>Kurs 1</b></p><p>{{ article.price}}</p>
+                  <p><b>Beide Kurse als Paket</b></p><p>{{ article.price }}</p>
                 </div>
-                <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                <!-- <div  *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
                   <p><b>Kurs 2 und 3 (jeweils)</b></p><p>{{ article.price6}}</p>
                 </div>
                 <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
                   <p><b>Alle Kurse als Paket</b></p><p>{{ article.price10}}</p>
-                </div>
+                </div> -->
               </div>
               
             </div>
-            <p *ngIf = "!group">zzgl. Fahrtkosten: außerhalb Bottmersdorf bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
+            <p *ngIf = "!group">zzgl. Fahrtkosten: außerhalb Emersleben bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je Kilometer</p>
           </div>
         </article>
         <figure class="nav-close" (click)="closeContents(0,1)"></figure>
