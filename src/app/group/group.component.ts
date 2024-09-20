@@ -7,7 +7,7 @@ import { Article } from '../Models/article.model';
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.scss']
 })
-export class GroupComponent implements OnInit, AfterViewInit{
+export class GroupComponent implements OnInit, AfterViewInit {
 
 
   @Input() mobilePortrait = false;
@@ -15,8 +15,8 @@ export class GroupComponent implements OnInit, AfterViewInit{
   @Input() openArticles = [false, false, false, false];
 
   frameArticles: Article[] = [
-    
-    {
+
+    /* {
       id: "frame-funagility",
       pictureUrl: "../../../assets/pictures/frame_funagility.jpg",
       title: "Funagility",
@@ -48,6 +48,98 @@ export class GroupComponent implements OnInit, AfterViewInit{
           `,
           price: "20 Euro",
           price10: "185 Euro",
+        },
+      ]
+    }, */
+    {
+      id: "frame-silvester",
+      pictureUrl: "../../../assets/pictures/silvester.jpg",
+      title: "Silvester",
+      subtitle: "Silvester ohne Stress für deinen Hund",
+      text: `Silvester ist für viele Hunde eine stressige Zeit. Die lauten
+Geräusche und das ungewohnte Licht können Angst und Unruhe auslösen. In
+unserem speziellen Silvester-Training lernen Sie, wie Sie Ihren Hund optimal auf
+
+diese Herausforderung vorbereiten können.`,
+      mobileText: "Lernen Sie, wie Sie Ihren Hund optimal auf die stressige Zeit vorbereiten.",
+      expendable: true,
+      expand: [
+        {
+          id: "frame-silvester1",
+          title: "Kursinhalte",
+          text: `
+
+1. Verstehen der Geräuschangst: Wir erklären, warum Hunde auf laute
+Geräusche wie Feuerwerk reagieren und wie sich diese Angst äußert.`,
+        },
+        {
+          id: "frame-silvester2",
+          title: "",
+          text: `
+2. Desensibilisierung: Schritt-für-Schritt-Anleitung zur Desensibilisierung Ihres
+Hundes gegenüber lauten Geräuschen.
+`,
+        },
+        {
+          id: "frame-silvester3",
+          title: "",
+          text: `
+
+3. Entspannungstechniken: Einführung in Techniken wie Tellington Touch und
+Aromaöltherapie, um Ihrem Hund zu helfen, sich zu entspannen.`,
+        },
+        {
+          id: "frame-silvester4",
+          title: "",
+          text: `
+4. Sicherheitsmaßnahmen: Tipps und Tricks, um Ihren Hund während der
+
+Silvesternacht sicher und ruhig zu halten.`,
+        },
+        {
+          id: "frame-silvester5",
+          title: "",
+          text: `
+5. Praktische Übungen: Live-Trainings und Übungen, die Sie zu Hause
+durchführen können, um Ihren Hund auf Silvester vorzubereiten.`,
+        },
+        {
+          id: "frame-silvester6",
+          title: "Ziele des Kurses:",
+          text: `Reduzierung der Angst und des Stresses Ihres Hundes während Silvester.
+          `,
+        },
+
+        {
+          id: "frame-silvester7",
+          title: "",
+          text: `Aufbau eines sicheren und beruhigenden Umfelds für Ihren Hund.
+          `,
+        },
+
+        {
+          id: "frame-silvester8",
+          title: "",
+          text: `Vermittlung von Techniken, die auch bei anderen lauten Ereignissen wie Gewittern angewendet werden können.
+          `,
+        },
+        {
+          id: "frame-silvester9",
+          title: "Termine",
+          text: `13.10-17 Uhr Theorie, 3.11- 18 Uhr Praxis, 10.11- 18 Uhr Praxis, 8.12-17 Uhr
+
+Theorie, 12.12- 19 Uhr Praxis. Dauer: 5 Einheiten`,
+          price: "150 Euro",
+        },
+        {
+          id: "frame-silvester10",
+          title: "Anmeldung",
+          text: `Melden Sie sich jetzt an und sorgen Sie dafür, dass Ihr Hund Silvester entspannt und
+stressfrei erlebt. Für weitere Informationen und zur Anmeldung besuchen Sie meine
+Webseite oder kontaktieren Sie mich telefonisch unter 0174 978 9210.
+Ich hoffe, dieser Text hilft Ihnen weiter! Wenn Sie noch Anpassungen oder
+zusätzliche Informationen benötigen, lassen Sie es mich wissen.
+          `,
         },
       ]
     },
@@ -158,7 +250,7 @@ export class GroupComponent implements OnInit, AfterViewInit{
           14.11. 19.00 Uhr und
           28.11. 19.00 Uhr.
           `,
-          
+
         },
         {
           id: "frame-rowdy3",
@@ -173,9 +265,10 @@ export class GroupComponent implements OnInit, AfterViewInit{
           26.1. 12.0 Uhr.
           `,
         },
-        {id: "special",
-        title: "",
-        text: ``,
+        {
+          id: "special",
+          title: "",
+          text: ``,
           price: "360 Euro",
         },
       ]
@@ -287,23 +380,23 @@ export class GroupComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    if((this.openArticles[0]||this.openArticles[1])&&!this.mobilePortrait){
+    if ((this.openArticles[0] || this.openArticles[1]) && !this.mobilePortrait) {
       document.body.scrollTop = 500;
     }
-    if((this.openArticles[2]||this.openArticles[3])&&!this.mobilePortrait){
+    if ((this.openArticles[2] || this.openArticles[3]) && !this.mobilePortrait) {
       document.body.scrollTop = 1000;
     }
-    if(this.mobilePortrait){
-      if(this.openArticles[0]){
+    if (this.mobilePortrait) {
+      if (this.openArticles[0]) {
         document.body.scrollTop = 200;
       }
-      if(this.openArticles[1]){
+      if (this.openArticles[1]) {
         document.body.scrollTop = 400;
       }
-      if(this.openArticles[2]){
+      if (this.openArticles[2]) {
         document.body.scrollTop = 600;
       }
-      if(this.openArticles[3]){
+      if (this.openArticles[3]) {
         document.body.scrollTop = 800;
       }
     }
