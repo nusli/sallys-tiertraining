@@ -83,6 +83,22 @@ export class AppComponent implements OnInit{
       subtitle: "",
       text: "Hier findest du meine Qualifikationen"
     },
+    {
+      id:"stable",
+      pictureUrl: "../../../assets/backgrounds/heroes/anlage.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/anlage.JPG",
+      title: "Unser Reitstall",
+      subtitle: "",
+      text: "Willkommen in unserem Reitstall, wo sowohl Pferde als auch Reiter im Mittelpunkt stehen. Unser Stall zeichnet sich durch eine freundliche und professionelle Atmosphäre aus, die von unseren engagierten Mitarbeiterinnen geprägt wird."
+    },
+    {
+      id:"pension",
+      pictureUrl: "../../../assets/backgrounds/heroes/stall_boxen.JPG",
+      pictureUrlDesk: "../../../assets/backgrounds/heroes/stall_boxen.JPG",
+      title: "Pension",
+      subtitle: "",
+      text: "Die Pferdepension ist der ideale Ort für dein Pferd, um in einer sicheren und liebevollen Umgebung zu leben. Wir freuen uns darauf, dich und dein Pferd bei uns willkommen zu heißen."
+      }
 
   ]
   activeHero = this.heroes[0]
@@ -195,6 +211,14 @@ export class AppComponent implements OnInit{
       }
       case "/Qualifikationen": {
         this.activeHero = this.heroes[7];
+        break;
+      }
+      case "/Reitstall": {
+        this.activeHero = this.heroes[8];
+        break;
+      }
+      case "/Pension": {
+        this.activeHero = this.heroes[9];
         break;
       }
     }

@@ -18,6 +18,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer.component';
+import { StableComponent } from './stable/stable.component';
+import { PensionComponent } from './pension/pension.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer
     FooterComponent,
     GalleryComponent,
     QualisComponent,
-    CookieDisclaimerComponent
+    CookieDisclaimerComponent,
+    StableComponent,
+    PensionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,41 @@
+<app-hero-section [mobilePortrait]="mobilePortrait" [hero]="hero"></app-hero-section>
+<app-trainings [mobilePortrait]="mobilePortrait" [framesAvailable] = "false" [introductionArticles]="introductionArticles"></app-trainings>
+<section class="no-padding-y">
+  <h4 class="h1-p">Die Pferdepension ist der ideale Ort für dein Pferd, um in einer sicheren und liebevollen
+    Umgebung zu leben. Wir freuen uns darauf, dich und dein Pferd bei uns willkommen zu
+    heißen.</h4>
+  <p class="h1-p">Solltest du einmal verhindert sein, kümmern wir uns nach Absprache selbstverständlich
+    auch um die Bewegung deines Pferdes. Sprich uns einfach an!</p>
+  <app-button buttonType="submit" [buttonDesign]="'secondary'" buttonTitle="Berittpreise" (click)="pricesOpen=true"></app-button>
+  <div *ngIf="pricesOpen" class="picture-frame-description-content article-fade">
+    <article class="picture-frame-article">
+         <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Wöchentlicher Beritt</th>
+              <th>Preis pro Monat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1X</td>
+              <td>110€</td>
+            </tr>
+            <tr>
+              <td>2X</td>
+              <td>220€</td>
+            </tr>
+            <tr>
+              <td>3X</td>
+              <td>320€</td>
+            </tr>
+            <tr>
+              <td>4X</td>
+              <td>420€</td>
+            </tr>
+          </tbody>
+        </table>
+    </article>
+    <figure class="nav-close" (click)="pricesOpen=false"></figure>
+  </div>
+</section>

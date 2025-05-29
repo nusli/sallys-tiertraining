@@ -10,7 +10,7 @@ import { ButtonEntry } from 'src/app/Models/button-entry.model';
 export class ButtonComponent implements OnInit {
   @Input() buttonType = "button";
   @Input() cookieButton = false;
-  @Input() primary = true;
+  @Input() buttonDesign = "primary";
   @Input() withContext = false;
   @Input() buttonTitle = "";
   @Input() mobilePortrait = false;

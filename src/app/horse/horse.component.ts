@@ -120,7 +120,7 @@ export class HorseComponent implements OnInit{
         {
           id: "frame-springen2",
           title: "Was ich anbiete und was ich erwarte",
-          text: `Mein Training ist steht artgereicht ausgerichtet. Mir ist es besonders wichtig, die Gesunderhaltung deines Pferdes zu gewährleiten. Daher verwende ich sanfte, aber effektive Übungen, um die Muskulatur deines Pferdes aufzubauen und zu verbessern.  Mein Ziel ist es, ein harmonisches Zusammenspiel zwischen uns zu erreichen, bei dem wir beide unsere volle Leistungsfähigkeit entfalten können. Ich glaube fest daran, dass Freude und Motivation der Schlüssel zum Erfolg sind.
+          text: `Mein Training ist stets artgerecht ausgerichtet. Mir ist es besonders wichtig, die Gesunderhaltung deines Pferdes zu gewährleisten. Daher verwende ich sanfte, aber effektive Übungen, um die Muskulatur deines Pferdes aufzubauen und zu verbessern.  Mein Ziel ist es, ein harmonisches Zusammenspiel zwischen uns zu erreichen, bei dem wir beide unsere volle Leistungsfähigkeit entfalten können. Ich glaube fest daran, dass Freude und Motivation der Schlüssel zum Erfolg sind.
           Ich lege großen Wert auf die vermeintlichen Kleinigkeiten, denn genau diese sind enorm wichtig und sollten beachtet werden.
           Für die Bewältigung eines Parcours ist ein gutes gleichmäßiges Galopptempo sehr wichtig. Aber das Tempo muss auch auf den Punkt geändert werden können, z.B. kürzere oder längere Galoppsprünge. Und das enge Wendungen geritten werden können.
           Kaufberatung, sowie Begleitung zu Turnieren auf Anfrage.

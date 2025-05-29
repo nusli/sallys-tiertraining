@@ -60,7 +60,7 @@ export class IndividualComponent implements OnInit{
       sizeing: "cover",
       title: "Wichtiger Hinweis für Tierheime und ähnliche Einrichtungen",
       subtitle: "",
-      text: "Wenn Sie in Ihrer Einrichtungen einen oder mehrere Hunde haben, die sehr schwer zu vermitteln sind, bei denen Sie nicht weiterkommen oder die mit dem sogenannten Zwingerkoller beginnen, kann ich Ihnen mit meinem besten Wissen und meinen Ideen helfen, diese Hunde wieder zurück ins Leben zu bringen.",
+      text: "Wenn Sie in Ihrer Einrichtung einen oder mehrere Hunde haben, die sehr schwer zu vermitteln sind, bei denen Sie nicht weiterkommen oder die mit dem sogenannten Zwingerkoller beginnen, kann ich Ihnen mit meinem besten Wissen und meinen Ideen helfen, diese Hunde wieder zurück ins Leben zu bringen.",
       expendable: false,
       expand: [
         {

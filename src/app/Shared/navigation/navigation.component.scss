@@ -102,7 +102,8 @@
   min-height: 24px;
 }
 .mobile-nav .nav-entry-top{
-  justify-content: flex-end;
+  justify-content: flex-start;
+  //justify-content: flex-end;
 }
 
 .nav-entry a:hover{
@@ -141,11 +142,11 @@
   height: 16.51vw;
 }
 
-.open{
+.nav-sub-menu-bg{
   background-color: #f5fbffe7;
   border: 1px solid var(--red100);
   animation-name: open-fade;
-  animation-duration: 1.5s;
+  animation-duration: 0.25s;
 
 }
 .close{
@@ -205,7 +206,7 @@
   margin-right: 1.3rem;
 }
 .mobile-nav-group li{
-  margin: 0.1rem 1.3rem 0.1rem 0;
+  margin: 0.1rem 1.3rem 0.1rem 0.25rem;
   font-family: "worstveld";
   font-size: 1.2rem;
   color: var(--red100);

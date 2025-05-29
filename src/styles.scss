@@ -127,6 +127,9 @@ nav{
   padding: 0px;
 }
 
+button:hover{
+  cursor: pointer;
+}
 .h1-p{
   margin-bottom: 1.8rem;
 }
@@ -138,6 +141,10 @@ nav{
 }
 .h3-p{
   margin-bottom: 1.25rem;
+}
+.no-padding-y{
+  padding-bottom: 0;
+  padding-top: 0
 }
 
 .nav-arrow-open{
@@ -285,4 +292,90 @@ li, a{
   to {
     color: var(--red100);
   }
+}
+
+.picture-frame-description-content
+{
+  margin: 1.39vw 8.33vw;
+  padding: 2.5rem;
+  background-color: #f5fbffe7;
+  border: 1px solid var(--red100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.picture-frame-description-content .nav-close
+{
+  align-self: flex-end;
+}
+
+.picture-frame-description-content h2, .picture-frame-description-content p
+{
+  margin-bottom: 2.5rem;
+}
+//Mobile Responsiveness
+.mobile-picture-frames{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-picture-frames .frames-and-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-picture-frames .picture-frame-description-content
+{
+  display: block;
+  position: relative;
+  width: 83.34vw;
+  padding: 0;
+  margin: 0 0 6.25vh;
+}
+.mobile-picture-frames .dots
+{
+  position: absolute;
+  left: 0;
+  bottom: 1.88rem;
+  height: 1rem;
+}
+.mobile-picture-frames .active
+{
+  animation-name: dot-fade-mobile;
+  animation-duration: 1s;
+
+}
+.mobile-picture-frames .inactive
+{
+  animation-name: dot-fade-out-mobile;
+  animation-duration: 1s;
+  background-color: #a9585580;
+}
+.mobile-picture-frames .slider-wrapper
+{
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+.mobile-picture-frames .slide
+{
+  background-size: cover;
+  width: 100%;
+  height: 110.84vw;
+}
+.landscape
+{
+  height: 62.5vw;
+}
+.mobile-picture-frames .nav-close{
+  position: absolute;
+  right:0.88rem;
+  bottom: 0.88rem;
+}
+.margin-x1 {
+  margin-right: 1rem;
+  margin-left: 1rem;
 }

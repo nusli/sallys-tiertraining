@@ -11,6 +11,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   navBackgroundHeight = 18.28;
   navBackgroundMaxHeight = 165;
 
+  // navbar control
   mobileNavOpen = false;
   //Gruppentraining
   groupEntriesAvailable = true;
@@ -23,6 +24,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   horse_open = false;
   //Me
   openedPage = "home";
+  stable_open = false
 
   windowX = window.innerWidth;
   windowY = window.innerHeight;
@@ -42,30 +44,42 @@ export class NavigationComponent implements OnInit, OnDestroy {
   }
 
 
+  // switches view of the navbar
   switchCategories(category:string){
 
     if(category === "groups_open"){
       this.individual_open = false;
       this.horse_open = false;
       this.groups_open = !this.groups_open;
+      this.stable_open = false;
     } else if(category === "individual_open"){
       this.groups_open = false;
       this.individual_open = !this.individual_open;
       this.horse_open = false;
+      this.stable_open = false;
     } else if(category === "horse_open"){
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = !this.horse_open;
-    } else if (category === "open"){
+      this.stable_open = false;
+    } else if(category === "stable_open"){
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = false;
+      this.stable_open = !this.stable_open;
+    }else if (category === "open"){
+      this.groups_open = false;
+      this.individual_open = false;
+      this.horse_open = false;
+      this.stable_open = false;
       this.mobileNavOpen = true;
     }else{
+      // close all nav dropdowns
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = false;
       this.mobileNavOpen = false;
+      this.stable_open = false;
     }
     this.changeNavBackgroundHeight();
   }
@@ -110,7 +124,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       if(this.mobileNavOpen){
         this.navBackgroundHeight = 29;
         this.navBackgroundMaxHeight = 230;
-        if(this.groups_open || this.individual_open || this.horse_open){
+        if(this.groups_open || this.individual_open || this.horse_open || this.stable_open){
           this.navBackgroundHeight = 44;
           this.navBackgroundMaxHeight = 340;
         }

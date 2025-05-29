@@ -1,0 +1,34 @@
+.pricing-table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collaps;  /* Changed from collapse to separate */
+    border-spacing: 0 0;       /* This allows us to control spacing */
+    margin-bottom: 20px;
+    table-layout: fixed;
+  }
+
+.pricing-table th,
+.pricing-table td {
+  width: 50%;  /* This makes each column take up exactly half the table width */
+}
+
+  /* Add this new style to create space between columns */
+.pricing-table td:first-child,
+.pricing-table th:first-child {
+  //padding-right: 40px;  /* Adjust this value to increase/decrease spacing */
+  border-right: 1px solid #444;
+}
+
+
+th {
+    vertical-align: top;
+    border-bottom: 1px solid #444;;
+}
+@media (max-width: 600px) {
+    th{
+        font-size: .9rem;
+    } 
+    .picture-frame-description-content {
+      padding: 1rem;
+    }
+  }

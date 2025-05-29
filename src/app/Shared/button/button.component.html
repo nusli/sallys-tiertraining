@@ -1,4 +1,4 @@
-<button [type]="buttonType" [ngClass]="primary?'primary':'secondary'" [attr.disabled]="disabled ?true: null">
+<button [type]="buttonType" [ngClass]="buttonDesign" [attr.disabled]="disabled ?true: null">
   <div class="btn-top" [ngClass]="withContext? 'withContext' : 'withoutContext'">
     <p [ngStyle]="{'font-size.rem': buttonFontSize}"  (click)="clickOn('p')">{{buttonTitle}} </p>
     <figure *ngIf="withContext" [ngClass]="context_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="context_open = !context_open"></figure>

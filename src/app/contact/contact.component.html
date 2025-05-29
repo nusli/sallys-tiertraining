@@ -100,7 +100,7 @@
          <p>Ich habe die <a routerLink="/Impressum">Datenschutzerklärung </a> gelesen und erkläre mich dieser und der Übermittlung meiner Daten einverstanden.</p>
         </label>
       </div>
-      <app-button buttonType="submit" [primary]="true" buttonTitle="Abschicken" [disabled]="!cta_form.valid"></app-button>
+      <app-button buttonType="submit" [buttonDesign]="'primary'" buttonTitle="Abschicken" [disabled]="!cta_form.valid"></app-button>
       <p *ngIf="success" class="success">Deine Daten wurden erfolgreich weitergeleitet.</p>
     </article>
   </form>
