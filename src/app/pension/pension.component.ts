@@ -63,8 +63,9 @@ export class PensionComponent implements OnInit {
       sizeing: "cover",
       title: "Auslauf und Weide",
       subtitle: "",
-      text: `Die Pferde genießen täglichen Weidegang, die regelmäßig gepflegt werden inklusive
-      Wasserversorgung von mindestens 5 Stunden in Kleingruppen oder bei Bedarf auch in
+      text: `Die Pferde genießen täglichen Weidegang auch am Wochenende und and Feiertagen inklusive
+      Wasserversorgung von mindestens 5 Stunden auf Koppeln, die regelmäßig gepflegt werden. 
+      Die Pferde stehen in Kleingruppen oder bei Bedarf auch in
       Einzelhaltung. Sie werden geführt raus- und reingebracht. Auch im Winter gibt es die
       Möglichkeit auf Freigang: Hierfür werden demnächst moderne Winterpaddocks ohne
       Matsch errichtet. Um die Sicherheit der Pferde zu gewährleisten, gehen wir immer
