@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   horse_open = false;
   //Me
   openedPage = "home";
-  stable_open = false
+  stable_open = false;
 
   windowX = window.innerWidth;
   windowY = window.innerHeight;

@@ -82,7 +82,6 @@
   padding-left: 0;
   font-family: "worstveld";
   font-size: 1.5rem;
-  color: var(--red100);
 }
 .nav-entry-top{
   width: 100%;
@@ -109,7 +108,7 @@
 .nav-entry a:hover{
   color: var(--red100);
   animation-name: nav-hover-fade;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 .nav-logo{
@@ -209,15 +208,15 @@
   margin: 0.1rem 1.3rem 0.1rem 0.25rem;
   font-family: "worstveld";
   font-size: 1.2rem;
-  color: var(--red100);
   text-align: right;
 }
 .active
 {
-  color: var(--red100);
-  border-bottom: 2px solid var(--red100);
+  // using important to override the hover behavior
+  color: var(--red100) !important; 
+  border-bottom: 2px solid var(--red100) !important;
   animation-name: nav-fade;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 .mobile-nav .active
 {
@@ -242,4 +241,15 @@
   to {
     color: var(--red100);
   }
+}
+
+.nav-entry ul, .nav-entry li{
+  width: 100%;
+}
+.nav-entry li:hover{
+  color: var(--red100);
+  text-decoration-line: underline;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  animation-name: nav-hover-fade;
+  animation-duration: 0.5s;
 }
