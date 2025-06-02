@@ -121,6 +121,12 @@
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 1400px) {
+  .extended-content {
+    margin: 1.39vw auto;
+    max-width: 1200px;
+  }
+}
 
 .extended-content figure
 {

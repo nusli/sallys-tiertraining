@@ -305,6 +305,14 @@ li, a{
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 1400px) {
+  .picture-frame-description-content {
+    margin: 1.39vw auto;
+    max-width: 1200px;
+  }
+}
+
 .picture-frame-description-content .nav-close
 {
   align-self: flex-end;
