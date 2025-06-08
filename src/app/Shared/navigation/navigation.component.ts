@@ -137,7 +137,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       if(this.mobileNavOpen){
         this.navBackgroundHeight = 29;
         this.navBackgroundMaxHeight = 230;
-        if(this.groups_open || this.individual_open || this.horse_open || this.stable_open){
+        if(this.groups_open || this.individual_open || this.horse_open || this.stable_open || this.personal_open){
           this.navBackgroundHeight = 44;
           this.navBackgroundMaxHeight = 340;
         }
