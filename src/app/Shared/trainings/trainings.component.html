@@ -63,9 +63,9 @@
 
     <div *ngIf="frameArticles.length > 2" class="picture-frame-container">
       <app-picture-frame [(contentOpen)]="contentsOpen[2]" [articleOpen]="articlesOpen[2]"
-        (articleOpenChange)="closeOthers(2, $event)" [article]="frameArticles[2]"></app-picture-frame>
+        (articleOpenChange)="closeOthers(2, $event)" [article]="frameArticles[2]" (contentOpenChange)="chosenContent=frameArticles[2].expand"></app-picture-frame>
       <app-picture-frame *ngIf="frameArticles.length > 3" [(contentOpen)]="contentsOpen[3]"
-        [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)"
+        [articleOpen]="articlesOpen[3]" (articleOpenChange)="closeOthers(3, $event)" (contentOpenChange)="chosenContent=frameArticles[3].expand"
         [article]="frameArticles[3]"></app-picture-frame>
     </div>
     <div *ngIf="contentsOpen[2] || contentsOpen[3]" class="picture-frame-description-content article-fade">
