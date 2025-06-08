@@ -26,9 +26,9 @@
   <div *ngIf="!mobilePortrait" class="desktop-picture-frames">
     <div class="picture-frame-container">
       <app-picture-frame [(contentOpen)]="contentsOpen[0]" [articleOpen]="articlesOpen[0]"
-        (articleOpenChange)="closeOthers(0, $event)" [article]="frameArticles[0]"></app-picture-frame>
+        (articleOpenChange)="closeOthers(0, $event)" (contentOpenChange)="chosenContent=frameArticles[0].expand" [article]="frameArticles[0]"></app-picture-frame>
       <app-picture-frame [(contentOpen)]="contentsOpen[1]" [articleOpen]="articlesOpen[1]"
-        (articleOpenChange)="closeOthers(1, $event)" [article]="frameArticles[1]"></app-picture-frame>
+        (articleOpenChange)="closeOthers(1, $event)" (contentOpenChange)="chosenContent=frameArticles[1].expand" [article]="frameArticles[1]"></app-picture-frame>
     </div>
     <div *ngIf="contentsOpen[0] || contentsOpen[1]" class="picture-frame-description-content article-fade">
       <article *ngFor="let article of chosenContent" class="picture-frame-article">
@@ -60,6 +60,7 @@
       </article>
       <figure class="nav-close" (click)="closeContents(0,1)"></figure>
     </div>
+
     <div *ngIf="frameArticles.length > 2" class="picture-frame-container">
       <app-picture-frame [(contentOpen)]="contentsOpen[2]" [articleOpen]="articlesOpen[2]"
         (articleOpenChange)="closeOthers(2, $event)" [article]="frameArticles[2]"></app-picture-frame>
