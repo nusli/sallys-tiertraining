@@ -12,11 +12,11 @@
         <figure *ngIf="groupEntriesAvailable" [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'"></figure>
       </div>
       <ul *ngIf="groups_open" class="nav-ul-fade">
-        <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Fun Agility</li>
+        <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: '0'}" (click)='switchCategories("close")'>Fun Agility</li>
         <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li> -->
         <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> -->
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 3}" (click)='switchCategories("close")'>Tricks & Parcours</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '1'}" (click)='switchCategories("close")'>Tricks & Parcours</li>
+        <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
       </ul>
     </div>
     <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="individual_open? 'nav-sub-menu-bg' : ''">

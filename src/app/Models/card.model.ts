@@ -6,4 +6,5 @@ export class Card{
   text!: string;
   link!: string;
   fragment!: string;
+  query!: object;
 }

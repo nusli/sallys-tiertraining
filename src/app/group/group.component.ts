@@ -218,8 +218,9 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     },
     */
     //Rowdy
+    /*
     {
-      id: "frame-mantrailing",
+      id: "frame-rowdy",
       pictureUrl: "../../../assets/pictures/rowdy.jpg",
       title: "Rowdy-Gruppe",
       subtitle: "Bereit für den Alltag",
@@ -279,7 +280,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
         },
       ]
     },
-
+    */
     //Mantrailing
     /* {
       id: "frame-mantrailing",

@@ -1,19 +1,39 @@
 <section [ngClass]="{'mobile-section': mobilePortrait}">
   <article>
+    <h1 class="h1-p">Aktuelle Angebote</h1>
+    <p class="h1-p">Auf unserer Anlage ist immer etwas Spannendes los. Folgende besonderen Angebote sind demnächst geplant:</p>
+  </article>
+  <div class="slider-and-nav">
+    <figure [ngClass]="leftArrowActive ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="moveCarousel('left', 'landing-special-slides-container', specialCards)">
+    </figure>
+    <div class="slider-wrapper">
+      <div id="landing-special-slides-container" class="slides-container">
+        <app-card
+        *ngFor="let card of specialCards; let i = index" [mobilePortrait]="mobilePortrait" [cardContent]="specialCards[i]"
+        [ngStyle]="{'margin-left.px':cardMargin, 'margin-right.px':cardMargin}"></app-card>
+      </div>
+    </div>
+    <figure [ngClass]="rightArrowActive ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="moveCarousel('right', 'landing-special-slides-container', specialCards)">
+    </figure>
+  </div>
+</section>
+
+<section [ngClass]="{'mobile-section': mobilePortrait}">
+  <article>
     <h1 class="h1-p">Meine spannenden Angebote</h1>
     <p class="h1-p">Hier findest du aktuelle Angebote für Kurse und Wissenswertes zu meinen wöchentlich stattfinden Gruppentrainings. Einzeltrainings finden darüber hinaus immer statt.</p>
   </article>
   <div class="slider-and-nav">
-    <figure [ngClass]="leftArrowActive ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="onClick('left')">
+    <figure [ngClass]="leftArrowActive ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="moveCarousel('left', 'landing-courses-slides-container', courseCards)">
     </figure>
     <div class="slider-wrapper">
       <div id="landing-courses-slides-container" class="slides-container">
         <app-card
-        *ngFor="let card of cards; let i = index" [mobilePortrait]="mobilePortrait" [cardContent]="cards[i]"
+        *ngFor="let card of courseCards; let i = index" [mobilePortrait]="mobilePortrait" [cardContent]="courseCards[i]"
         [ngStyle]="{'margin-left.px':cardMargin, 'margin-right.px':cardMargin}"></app-card>
       </div>
     </div>
-    <figure [ngClass]="rightArrowActive ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="onClick('right')">
+    <figure [ngClass]="rightArrowActive ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="moveCarousel('right', 'landing-courses-slides-container', courseCards)">
     </figure>
   </div>
 </section>

@@ -45,7 +45,7 @@ export class StableComponent implements OnInit {
     },
     {
       id: "stable-intro2",
-      pictureUrl: "../../../assets/pictures/individual2.JPG",
+      pictureUrl: "../../../assets/gallery/placeholder-icon.pngG",
       sizeing: "cover",
       title: "Unsere Mitarbeiterinnen",
       subtitle: "",
