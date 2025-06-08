@@ -51,6 +51,8 @@ export class GroupComponent implements OnInit, AfterViewInit {
         },
       ]
     }, */
+    // Silvester
+    /*
     {
       id: "frame-silvester",
       pictureUrl: "../../../assets/pictures/silvester.jpg",
@@ -143,6 +145,9 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
         },
       ]
     },
+    */
+    // Locagility
+    /*
     {
       id: "frame-locagility",
       pictureUrl: "../../../assets/pictures/card_locagility.jpg",
@@ -211,6 +216,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
         },
       ]
     },
+    */
     //Rowdy
     {
       id: "frame-mantrailing",

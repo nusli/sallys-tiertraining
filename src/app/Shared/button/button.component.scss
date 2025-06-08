@@ -54,6 +54,18 @@ button{
 .wide{
   width: 20rem;
 }
+.context-button {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+  background: #e9e9ed;
+  opacity: 0.8;
+  border-color: var(--red100);
+  box-shadow: 1px 1px 4px 0 #703b3a81;
+}
+.context-container-mobile {
+  margin-top: 5px;
+}
 .btn-top
 {
   width: 100%;

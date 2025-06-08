@@ -3,10 +3,16 @@
     <p [ngStyle]="{'font-size.rem': buttonFontSize}"  (click)="clickOn('p')">{{buttonTitle}} </p>
     <figure *ngIf="withContext" [ngClass]="context_open? 'nav-arrow-open' : 'nav-arrow-closed'"></figure>
   </div>
-  <ul *ngIf="context_open" class="open">
+  <ul *ngIf="context_open && !mobilePortrait" class="open context-container">
     <li><a href="tel:+491749789210">Tel: +49 174978 9210</a></li>
     <li><a href="mailto:info@sallys-tiertraining.de">Mail: info@sallys-tiertraining.de</a></li>
     <li *ngIf="mobilePortrait"><a routerLink="/Kontakt">Kontaktformular</a></li>
   </ul>
+  <!-- mobile vie-->
+  <div *ngIf="context_open && mobilePortrait" class="context-container-mobile">
+    <button class="context-button"><a href="tel:+491749789210">Tel: +49 174978 9210</a></button>
+    <button class="context-button"><a href="mailto:info@sallys-tiertraining.de">Mail: info@sallys-tiertraining.de</a></button>
+    <button class="context-button"><a routerLink="/Kontakt">Kontaktformular</a></button>
+  </div>
 </button>
 
