@@ -51,6 +51,9 @@ button{
   animation-name: button-secondary-hover-fade;
   animation-duration: 1s;
 }
+.wide{
+  width: 20rem;
+}
 .btn-top
 {
   width: 100%;
@@ -73,12 +76,24 @@ ul, a{
   justify-content: center;
   list-style: none;
   padding-left: 0;
-  font-family: "worstveld";
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-family: "ubuntu";
+  font-size: 1rem;
+  line-height: 1rem;
   color: var(--red100);
 }
 
+ul li {
+  padding: 2px;
+  margin-bottom: 3px;
+}
+
+ul li:hover{
+  color: var(--red100);
+  text-decoration-line: underline;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  animation-name: nav-hover-fade;
+  animation-duration: 0.5s;
+}
 .open{
   margin-top: 0.3rem;
   padding: 0.5rem;

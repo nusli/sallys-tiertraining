@@ -25,6 +25,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   //Me
   openedPage = "home";
   stable_open = false;
+  personal_open = false;
 
   windowX = window.innerWidth;
   windowY = window.innerHeight;
@@ -52,26 +53,37 @@ export class NavigationComponent implements OnInit, OnDestroy {
       this.horse_open = false;
       this.groups_open = !this.groups_open;
       this.stable_open = false;
+      this.personal_open = false;
     } else if(category === "individual_open"){
       this.groups_open = false;
       this.individual_open = !this.individual_open;
       this.horse_open = false;
       this.stable_open = false;
+      this.personal_open = false;
     } else if(category === "horse_open"){
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = !this.horse_open;
       this.stable_open = false;
+      this.personal_open = false;
     } else if(category === "stable_open"){
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = false;
       this.stable_open = !this.stable_open;
-    }else if (category === "open"){
+      this.personal_open = false;
+    } else if(category === "personal_open"){
       this.groups_open = false;
       this.individual_open = false;
       this.horse_open = false;
       this.stable_open = false;
+      this.personal_open = !this.personal_open;
+    } else if (category === "open"){
+      this.groups_open = false;
+      this.individual_open = false;
+      this.horse_open = false;
+      this.stable_open = false;
+      this.personal_open = false;
       this.mobileNavOpen = true;
     }else{
       // close all nav dropdowns
@@ -80,6 +92,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       this.horse_open = false;
       this.mobileNavOpen = false;
       this.stable_open = false;
+      this.personal_open = false;
     }
     this.changeNavBackgroundHeight();
   }

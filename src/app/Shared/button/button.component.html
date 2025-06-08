@@ -1,12 +1,12 @@
-<button [type]="buttonType" [ngClass]="buttonDesign" [attr.disabled]="disabled ?true: null">
+<button [type]="buttonType" [ngClass]="buttonDesign" [attr.disabled]="disabled ?true: null" (click)="toggleContext()">
   <div class="btn-top" [ngClass]="withContext? 'withContext' : 'withoutContext'">
     <p [ngStyle]="{'font-size.rem': buttonFontSize}"  (click)="clickOn('p')">{{buttonTitle}} </p>
-    <figure *ngIf="withContext" [ngClass]="context_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="context_open = !context_open"></figure>
+    <figure *ngIf="withContext" [ngClass]="context_open? 'nav-arrow-open' : 'nav-arrow-closed'"></figure>
   </div>
   <ul *ngIf="context_open" class="open">
-    <li (click)="context_open = false"><a href="tel:+491749789210">Anrufen</a></li>
-    <li><a href="mailto:info@sallys-tiertraining.de" (click)="context_open = false">Mail</a></li>
-    <li *ngIf="mobilePortrait"><a routerLink="/Kontakt" (click)="context_open = false">Kontaktformular</a></li>
+    <li><a href="tel:+491749789210">Tel: +49 174978 9210</a></li>
+    <li><a href="mailto:info@sallys-tiertraining.de">Mail: info@sallys-tiertraining.de</a></li>
+    <li *ngIf="mobilePortrait"><a routerLink="/Kontakt">Kontaktformular</a></li>
   </ul>
 </button>
 

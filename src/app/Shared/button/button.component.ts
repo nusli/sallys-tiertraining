@@ -38,4 +38,9 @@ export class ButtonComponent implements OnInit {
       }
     }
   }
+  toggleContext(){
+    if (this.withContext){
+      this.context_open = !this.context_open;
+    }
+  }
 }

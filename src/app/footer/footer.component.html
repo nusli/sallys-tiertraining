@@ -2,8 +2,9 @@
   <h1 class="h1-p">Kontaktiere mich</h1>
   <p class="p-content">Habe ich dein Interesse geweckt, hast du Anregungen, Fragen oder benötigst Hilfe, hab keine Scheu, mich zu kontaktieren. Ich beiße nicht!</p>
   <div class="button-holder">
-    <app-button *ngIf="!mobilePortrait" [mobilePortrait]="mobilePortrait" [buttonDesign]="'primary'" buttonTitle="Kontaktformular" routerLink="/Kontakt" ></app-button>
-    <app-button [buttonDesign]="'secondary'" [mobilePortrait]="mobilePortrait" [withContext]="true" buttonTitle="Kontakt"></app-button>
+    <!-- app button styles need to be set in button.component.scss -->
+    <app-button *ngIf="!mobilePortrait" [mobilePortrait]="mobilePortrait" [buttonDesign]="'primary wide'" buttonTitle="Kontaktformular" routerLink="/Kontakt"></app-button>
+    <app-button [buttonDesign]="'secondary wide'" [mobilePortrait]="mobilePortrait" [withContext]="true" buttonTitle="Kontakt"></app-button>
   </div>
 </section>
 <section id="fNews" class="footer-news" *ngIf="news[0]!=null" [ngClass]="{'mobile-section':mobilePortrait}" [ngStyle]="{'background-image': 'url(' + news[0].pictureUrl + ')'}">

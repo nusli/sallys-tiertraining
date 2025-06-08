@@ -51,9 +51,19 @@
         <li routerLink="/Pension" >Pensionsstall</li>
       </ul>
     </div>
-    <div *ngIf="!mobilePortrait" class="nav-entry">
-      <a class="nav-entry-base" routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
+    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="personal_open? 'nav-sub-menu-bg' : ''" (mouseenter) ="switchCategories('personal_open')"  (mouseleave) ="switchCategories('close')">
+      <div class="nav-entry-top" >
+        <a routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
+        <figure [ngClass]="personal_open? 'nav-arrow-open' : 'nav-arrow-closed'" ></figure>
+      </div>
+      <ul *ngIf="personal_open" class="nav-ul-fade">
+        <li routerLink="/DasBinIch" >Über mich</li>
+        <li routerLink="/Kontakt" >Kontakt</li>
+      </ul>
     </div>
+    <!-- <div *ngIf="!mobilePortrait" class="nav-entry">
+      <a class="nav-entry-base" routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
+    </div> -->
 
     <!-- mobile navbar here -->
     <div *ngIf="mobilePortrait" id="hamburger" class="nav-entry">
@@ -113,11 +123,24 @@
             </ul>
           </ul>
         </li>
+
         <li>
+          <div class="nav-entry-top" (click)="switchCategories('personal_open')">
+            <a class="mobile-a">Das bin ich</a>
+            <figure [ngClass]="personal_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" ></figure>
+          </div>
+          <ul class="mobile-nav-group">
+            <ul *ngIf="personal_open">
+              <li routerLink="/DasBinIch" (click)='switchCategories("close")'>Über mich</li>
+              <li routerLink="/Kontakt" (click)='switchCategories("close")'>Kontakt</li>
+            </ul>
+          </ul>
+        </li>
+        <!-- <li>
           <div class="nav-entry-top entry-only">
             <a class="mobile-a" routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">Das bin ich</a>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
