@@ -15,8 +15,8 @@ export class GroupComponent implements OnInit, AfterViewInit {
   @Input() openArticles = [false, false, false, false];
 
   frameArticles: Article[] = [
-
-    /* {
+    // agility
+    {
       id: "frame-funagility",
       pictureUrl: "../../../assets/pictures/frame_funagility.jpg",
       title: "Funagility",
@@ -50,7 +50,7 @@ export class GroupComponent implements OnInit, AfterViewInit {
           price10: "185 Euro",
         },
       ]
-    }, */
+    }, 
     // Silvester
     /*
     {
