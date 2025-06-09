@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Deploying to github pages
+Install github pages cli for angular
+```npm install -g angular-cli-ghpages```
+
+Build the code for production
+```ng build --configuration production --base-href https://<username>.github.io/<reponame>/```
+
+Deploy to GitHub
+```angular-cli-ghpages -d dist/<project-name>/ --no-silent```
+This command will create a new branch gh-pages in your repository and automatically push the dist build in that branch. Afterwards you can navigate to https://<username>.github.io/<reponame>/
+
+You might have to navigate to repository settings and manually set the gh-pages branch to be used with github pages.
