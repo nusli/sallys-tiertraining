@@ -13,6 +13,8 @@ export class CoursesComponent implements OnInit {
   direction = "right";
   xWidth = window.innerWidth;
   cardMargin = 20;
+  // if link == "", there is no button on the card
+  // text 2 only displays if no link is given (for space and layout constraints)
   specialCards: Card[] = [
     {
       id: "jumping",
@@ -20,7 +22,8 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
       title: "Freispringen",
       text: "28. Juni bei uns in der Halle",
-      link: "/",
+      text2: "",
+      link: "",
       fragment: "jumping",
       query: {},
     },
@@ -30,7 +33,8 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
       title: "Kinderferienwoche",
       text: "10. Juli - 14. Juli",
-      link: "/",
+      text2: "",
+      link: "",
       fragment: "holidayweek",
       query: {},
     },
@@ -40,7 +44,8 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
       title: "Longenlehrgang",
       text: "18. Juli - 19. Juli",
-      link: "/",
+      text2: "Lehrgang zur Arbeit mit der Longe und Doppellonge, durchgeführt vom Friesenverband.",
+      link: "",
       fragment: "longe",
       query: {},
     },
@@ -50,7 +55,8 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
       title: "Reitabzeichen",
       text: "5. Oktober - 7. Oktober, Prüfung am 23. Oktober",
-      link: "/",
+      text2: "",
+      link: "",
       fragment: "longe",
       query: {},
     },
@@ -62,6 +68,7 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/pictures/card_funagility.JPG",
       title: "Fun Agility",
       text: "Mit einem Hindernisparcours zu Spaß und Auslastung",
+      text2: "",
       link: "/Hundegruppentraining",
       fragment: "funagility",
       query: {openArticle: "0"},
@@ -73,6 +80,7 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/pictures/card_locagility.jpg",
       title: "Locagility",
       text: "Kognitive & körperlichen Auslastung für Hunde aller Altersklassen",
+      text2: "",
       link: "/Hundegruppentraining",
       fragment: "locagility",
     query: {openArticle: "1"},
@@ -84,6 +92,7 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/pictures/card_tricks.jpg",
       title: "Tricks und Parcours",
       text: `Mehr als "Sitz" und "Platz"`,
+      text2: "",
       link: "/Hundegruppentraining",
       fragment: "tricks",
       query: {openArticle: "1"},
@@ -95,6 +104,7 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/pictures/card_mantrailing.JPG",
       title: "Mantrailing",
       text: "Artgerechtes Auslasten für Hunde",
+      text2: "",
       link: "/Hundegruppentraining",
       fragment: "mantrailing",
       query: {openArticle: "1"},
@@ -107,6 +117,7 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/pictures/rowdy_card.JPG",
       title: "Rowdy-Gruppe",
       text: "Bereit für den Alltag",
+      text2: "",
       link: "/Hundegruppentraining",
       fragment: "rowdy",
       query: {openArticle: "1"},

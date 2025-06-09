@@ -1,4 +1,4 @@
-<section [ngClass]="{'mobile-section': mobilePortrait}">
+<section [ngClass]="{'mobile-section': mobilePortrait}" *ngIf="specialCards.length">
   <article>
     <h1 class="h1-p">Aktuelle Angebote</h1>
     <p class="h1-p">Auf unserer Anlage ist immer etwas Spannendes los. Folgende besonderen Angebote sind demnächst geplant:</p>
@@ -18,7 +18,7 @@
   </div>
 </section>
 
-<section [ngClass]="{'mobile-section': mobilePortrait}">
+<section [ngClass]="{'mobile-section': mobilePortrait}" *ngIf="courseCards.length">
   <article>
     <h1 class="h1-p">Meine spannenden Angebote</h1>
     <p class="h1-p">Hier findest du aktuelle Angebote für Kurse und Wissenswertes zu meinen wöchentlich stattfinden Gruppentrainings. Einzeltrainings finden darüber hinaus immer statt.</p>
