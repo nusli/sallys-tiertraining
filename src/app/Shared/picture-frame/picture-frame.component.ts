@@ -13,7 +13,7 @@ export class PictureFrameComponent{
   @Input() contentOpen = false;
   @Input() article: Article = {
     id: "",
-    pictureUrl: "../../../assets/backgrounds/frame-pictures/einzel3.jpg",
+    pictureUrl: "./assets/backgrounds/frame-pictures/einzel3.jpg",
     title: "",
     subtitle: "",
     text: "",

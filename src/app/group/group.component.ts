@@ -18,7 +18,7 @@ export class GroupComponent implements OnInit, AfterViewInit {
     // agility
     {
       id: "frame-funagility",
-      pictureUrl: "../../../assets/pictures/frame_funagility.jpg",
+      pictureUrl: "./assets/pictures/frame_funagility.jpg",
       title: "Funagility",
       subtitle: "Spaß und Auslastung",
       text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
@@ -55,7 +55,7 @@ export class GroupComponent implements OnInit, AfterViewInit {
     /*
     {
       id: "frame-silvester",
-      pictureUrl: "../../../assets/pictures/silvester.jpg",
+      pictureUrl: "./assets/pictures/silvester.jpg",
       title: "Silvester",
       subtitle: "Silvester ohne Stress für deinen Hund",
       text: `Silvester ist für viele Hunde eine stressige Zeit. Die lauten
@@ -150,7 +150,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     /*
     {
       id: "frame-locagility",
-      pictureUrl: "../../../assets/pictures/card_locagility.jpg",
+      pictureUrl: "./assets/pictures/card_locagility.jpg",
       title: "Locagility",
       subtitle: "Auslastung für alle",
       text: "Locagility ist eine Mischung aus Longieren, Cavaletti-Trainung und Agility zur kognitiven und körperlichen Auslastung von Hunden aller Altersklassen.",
@@ -221,7 +221,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     /*
     {
       id: "frame-rowdy",
-      pictureUrl: "../../../assets/pictures/rowdy.jpg",
+      pictureUrl: "./assets/pictures/rowdy.jpg",
       title: "Rowdy-Gruppe",
       subtitle: "Bereit für den Alltag",
       text: "Wir arbeiten gemeinsam an eurem harmonischen Alltag. Hier steht vor allem eine gute Kommunikation mit eurem Vierbeiner im Vordergrund.",
@@ -284,7 +284,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     //Mantrailing
     /* {
       id: "frame-mantrailing",
-      pictureUrl: "../../../assets/pictures/card_mantrailing.JPG",
+      pictureUrl: "./assets/pictures/card_mantrailing.JPG",
       title: "Mantrailing",
       subtitle: "Artgerechtes Auslasten",
       text: "Eine Möglichkeit, wie man Hunde artgerecht auslasten kann, ist das Mantrailing - die Suche nach einem Menschen anhand seines Individual-Geruchs.",
@@ -337,7 +337,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     }, */
     {
       id: "frame-tricks",
-      pictureUrl: "../../../assets/pictures/card_tricks.jpg",
+      pictureUrl: "./assets/pictures/card_tricks.jpg",
       title: "Tricks & Parcours",
       subtitle: `Mehr als "Sitz" & "Platz"`,
       text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",

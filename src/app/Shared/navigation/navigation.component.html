@@ -3,7 +3,7 @@
   <figure class="nav-bg-grey" [ngStyle]="{'height.vh':navBackgroundHeight, 'max-height.px': navBackgroundMaxHeight}"></figure>
   <div class="navbar">
     <figure routerLink="" class="nav-logo nav-entry">
-      <img src="../../../assets/icons/sallys_logo.svg" alt="sallys logo">
+      <img src="./assets/icons/sallys_logo.svg" alt="sallys logo">
     </figure>
     <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="groups_open? 'nav-sub-menu-bg' : 'close'" (mouseenter) ="switchCategories('groups_open')"  (mouseleave) ="switchCategories('close')">
       <div class="nav-entry-top">

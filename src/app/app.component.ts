@@ -19,16 +19,16 @@ export class AppComponent implements OnInit{
   heroes: Hero[] = [
     {
       id:"individual",
-      pictureUrl: "../../../assets/backgrounds/heroes/einzel_mobile.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/einzel_desk.jpg",
+      pictureUrl: "./assets/backgrounds/heroes/einzel_mobile.jpg",
+      pictureUrlDesk: "./assets/backgrounds/heroes/einzel_desk.jpg",
       title: "Einzeltraining Hunde",
       subtitle: "Aller Anfang ist schwer?!",
       text: `Einzigartige Hunde brauchen individuelle Lösungen. In meinem Einzeltraining können wir ihre „Baustellen“ gezielt analysieren und finden gemeinsam Lösungen für ein entspannteres Zusammenleben.`
     },
     {
       id:"group",
-      pictureUrl: "../../../assets/backgrounds/heroes/gruppe_mobile.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/gruppe_desk.JPG",
+      pictureUrl: "./assets/backgrounds/heroes/gruppe_mobile.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/gruppe_desk.JPG",
       title: "Gruppentraining Hunde",
       subtitle: "Vom Tollpatsch zum Akrobaten",
       text: `Du willst deinem Hund eine Aufgabe oder Beschäftigung geben? Dafür habe ich in meinem Gruppentraining verschiedene Wege, nicht nur deinem vierbeinigen Freund körperlich und kognitiv gerecht zu werden, sondern auch für viel gemeinsamen Spaß zu sorgen.
@@ -37,64 +37,64 @@ export class AppComponent implements OnInit{
     },
     {
       id:"me",
-      pictureUrl: "../../../assets/backgrounds/heroes/me_mobile.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/me_desk.jpg",
+      pictureUrl: "./assets/backgrounds/heroes/me_mobile.jpg",
+      pictureUrlDesk: "./assets/backgrounds/heroes/me_desk.jpg",
       title: "Das bin ich",
       subtitle: "Sally Davidson (mit meinen Hunden Maya und Biene)",
       text: "Ich bin einfach tierverrückt. Mehr ist eigentlich nicht zu sagen."
     },
     {
       id:"horse",
-      pictureUrl: "../../../assets/backgrounds/heroes/pferde_hero.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/pferde_hero.jpg",
+      pictureUrl: "./assets/backgrounds/heroes/pferde_hero.jpg",
+      pictureUrlDesk: "./assets/backgrounds/heroes/pferde_hero.jpg",
       title: "Pferdereiten",
       subtitle: "Glück auf vier Hufen",
       text: "Was lange aufgebaut wird, bleibt lange gut. Ich helfe dir sowohl deine Fähigkeiten als auch die deines Pferdes langfristig zu verbessern. Egal ob du ein Turnierziel verfolgst, dein Pferd gesund halten willst oder ihr einfach zusammen Spaß haben wollt, einer meiner Trainings ist das Richtige für dich, um dich in der nötigen Arbeit mit deinem Pferd zu unterstützen."
     },
     {
       id:"gallery",
-      pictureUrl: "../../../assets/backgrounds/heroes/gallery_mobile.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/gallery_desk.JPG",
+      pictureUrl: "./assets/backgrounds/heroes/gallery_mobile.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/gallery_desk.JPG",
       title: "Galerie",
       subtitle: "Einige Eindrücke",
       text: "Hier kannst du dir selbst ein Bild von Maya, mir und meiner Arbeit machen."
     },
     {
       id:"contact",
-      pictureUrl: "../../../assets/backgrounds/heroes/kontakt_mobile.jpg",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/kontakt_desk.jpg",
+      pictureUrl: "./assets/backgrounds/heroes/kontakt_mobile.jpg",
+      pictureUrlDesk: "./assets/backgrounds/heroes/kontakt_desk.jpg",
       title: "Kontakt",
       subtitle: "Wie kann ich dir helfen?",
       text: "Wenn du fragen hast, melde dich gerne."
     },
     {
       id:"impressum",
-      pictureUrl: "../../../assets/backgrounds/heroes/impressum.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/impressum.JPG",
+      pictureUrl: "./assets/backgrounds/heroes/impressum.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/impressum.JPG",
       title: "Impressum",
       subtitle: "",
       text: ""
     },
     {
       id:"qualis",
-      pictureUrl: "../../../assets/backgrounds/heroes/quali_mobile.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/quali_desk.JPG",
+      pictureUrl: "./assets/backgrounds/heroes/quali_mobile.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/quali_desk.JPG",
       title: "Qualifikationen",
       subtitle: "",
       text: "Hier findest du meine Qualifikationen"
     },
     {
       id:"stable",
-      pictureUrl: "../../../assets/backgrounds/heroes/anlage.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/anlage.JPG",
+      pictureUrl: "./assets/backgrounds/heroes/anlage.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/anlage.JPG",
       title: "Unser Reitstall",
       subtitle: "",
       text: "Willkommen in unserem Reitstall, wo sowohl Pferde als auch Reiter im Mittelpunkt stehen. Unser Stall zeichnet sich durch eine freundliche und professionelle Atmosphäre aus, die von unseren engagierten Mitarbeiterinnen geprägt wird."
     },
     {
       id:"pension",
-      pictureUrl: "../../../assets/backgrounds/heroes/stall_boxen.JPG",
-      pictureUrlDesk: "../../../assets/backgrounds/heroes/stall_boxen.JPG",
+      pictureUrl: "./assets/backgrounds/heroes/stall_boxen.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/stall_boxen.JPG",
       title: "Pension",
       subtitle: "",
       text: "Die Pferdepension ist der ideale Ort für dein Pferd, um in einer sicheren und liebevollen Umgebung zu leben. Wir freuen uns darauf, dich und dein Pferd bei uns willkommen zu heißen."

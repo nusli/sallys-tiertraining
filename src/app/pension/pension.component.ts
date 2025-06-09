@@ -19,7 +19,7 @@ export class PensionComponent implements OnInit {
   introductionArticles: Article[] = [
     {
       id: "pension-intro1",
-      pictureUrl: "../../../assets/gallery/Pension/Box.JPG",
+      pictureUrl: "./assets/gallery/Pension/Box.JPG",
       sizeing: "cover",
       title: "Die Boxen",
       subtitle: "",
@@ -38,7 +38,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro2",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
       sizeing: "cover",
       title: "Fütterung und Stallpflege",
       subtitle: "",
@@ -59,7 +59,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro3",
-      pictureUrl: "../../../assets/gallery/Pension/Weide.JPG",
+      pictureUrl: "./assets/gallery/Pension/Weide.JPG",
       sizeing: "cover",
       title: "Auslauf und Weide",
       subtitle: "",
@@ -81,7 +81,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro4",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
       sizeing: "cover",
       title: "Gemeinschaft",
       subtitle: "",
@@ -99,7 +99,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro5",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
       sizeing: "cover",
       title: "Preiswert",
       subtitle: "",

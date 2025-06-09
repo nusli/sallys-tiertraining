@@ -18,8 +18,9 @@ export class CoursesComponent implements OnInit {
   specialCards: Card[] = [
     {
       id: "jumping",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
-      pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
+      //pictureUrl: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
       title: "Freispringen",
       text: "28. Juni bei uns in der Halle",
       text2: "",
@@ -29,8 +30,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "kinderferienwoche",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
-      pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
       title: "Kinderferienwoche",
       text: "10. Juli - 14. Juli",
       text2: "",
@@ -40,8 +41,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "longe",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
-      pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
       title: "Longenlehrgang",
       text: "18. Juli - 19. Juli",
       text2: "Lehrgang zur Arbeit mit der Longe und Doppellonge.",
@@ -51,8 +52,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "abzeichen",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.png",
-      pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
       title: "Reitabzeichen",
       text: "5. Oktober - 7. Oktober, Prüfung am 23. Oktober",
       text2: "",
@@ -64,8 +65,8 @@ export class CoursesComponent implements OnInit {
   courseCards: Card[] = [
     {
       id: "funagility",
-      pictureUrl: "../../../assets/pictures/card_funagility.JPG",
-      pictureUrlDesk: "../../../assets/pictures/card_funagility.JPG",
+      pictureUrl: "./assets/pictures/card_funagility.JPG",
+      pictureUrlDesk: "./assets/pictures/card_funagility.JPG",
       title: "Fun Agility",
       text: "Mit einem Hindernisparcours zu Spaß und Auslastung",
       text2: "",
@@ -88,8 +89,8 @@ export class CoursesComponent implements OnInit {
     */
     {
       id: "tricks",
-      pictureUrl: "../../../assets/pictures/card_tricks.jpg",
-      pictureUrlDesk: "../../../assets/pictures/card_tricks.jpg",
+      pictureUrl: "assets/pictures/card_tricks.jpg",
+      pictureUrlDesk: "assets/pictures/card_tricks.jpg",
       title: "Tricks und Parcours",
       text: `Mehr als "Sitz" und "Platz"`,
       text2: "",

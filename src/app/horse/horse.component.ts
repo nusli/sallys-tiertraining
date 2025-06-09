@@ -14,7 +14,8 @@ export class HorseComponent implements OnInit{
   frameArticles: Article[] = [
     {
       id: "frame-dressur",
-      pictureUrl: "../../../assets/pictures/frame_dressur.jpg",
+      pictureUrl: "./assets/pictures/frame_dressur.jpg",
+      // pictureUrl: "../../../assets/pictures/frame_dressur.jpg",
       title: "Dressur",
       subtitle: "Anfänger und Fortgeschrittene",
       text: "Die Dressur, die feine gefühlvolle Kommunikation zwischen Reiter und Pferd, ist die Basis jeglicher Arbeit in allen Bereichen. Ich vermittle Ihnen die Grundlagen der Bahnfiguren von den Anfängen bis hin zu schwierigeren Lektionen.",
@@ -55,7 +56,7 @@ export class HorseComponent implements OnInit{
     },
     {
       id: "frame-freizeit",
-      pictureUrl: "../../../assets/pictures/frame_freizeit.JPG",
+      pictureUrl: "./assets/pictures/frame_freizeit.JPG",
       title: "Freizeit",
       subtitle: "Genießt gemeinsame Zeit",
       text: "Du hast keine Turnierambitionen, möchtest dein Pferd aber trotzdem korrekt reiten, um seine Gesundheit zu erhalten? Und du wünscht dir eine harmonische Beziehung mit deinem Freizeitpartner, um die gemeinsame Zeit genießen zu können? Ich bin stolz darauf, individuell angepasstes Training anzubieten.",
@@ -100,7 +101,7 @@ export class HorseComponent implements OnInit{
     },
     {
       id: "frame-springen",
-      pictureUrl: "../../../assets/pictures/frame_springen.jpg",
+      pictureUrl: "./assets/pictures/frame_springen.jpg",
       title: "Springen",
       subtitle: "Artgerechtes Auslasten",
       text: `Für mich ist Spring-Unterricht nicht einfach nur springen. Für mich gehört ebenso Gymnastik- und Basisarbeit dazu.

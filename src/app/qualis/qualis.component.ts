@@ -17,7 +17,7 @@ export class QualisComponent implements OnInit, AfterViewInit{
   introductionArticles: Article[] = [
     {
       id: "qualis-zeugnis",
-      pictureUrl: "../../../assets/qualis/zeugnis.jpg",
+      pictureUrl: "./assets/qualis/zeugnis.jpg",
       sizeing: "60%",
       title: "Abschlusszeugnis zur Pferdewirtin",
       subtitle: "",
@@ -33,7 +33,7 @@ export class QualisComponent implements OnInit, AfterViewInit{
     },
     {
       id: "qualis-dosb",
-      pictureUrl: "../../../assets/qualis/dosb.jpg",
+      pictureUrl: "./assets/qualis/dosb.jpg",
       sizeing: "60%",
       title: "DOSB-Reitsportlizenz",
       subtitle: "",
@@ -49,7 +49,7 @@ export class QualisComponent implements OnInit, AfterViewInit{
     },
     {
       id: "qualis-ziemer",
-      pictureUrl: "../../../assets/icons/ziemer.png",
+      pictureUrl: "./assets/icons/ziemer.png",
       sizeing: "60%",
       title: "Ausbildung Hundetrainerin",
       subtitle: "",
@@ -65,7 +65,7 @@ export class QualisComponent implements OnInit, AfterViewInit{
     },
     {
       id: "qualis-wegberg",
-      pictureUrl: "../../../assets/qualis/wegberg.jpg",
+      pictureUrl: "./assets/qualis/wegberg.jpg",
       sizeing: "contain",
       title: "Fortbildung Locagility",
       subtitle: "",
@@ -81,7 +81,7 @@ export class QualisComponent implements OnInit, AfterViewInit{
     },
     {
       id: "qualis-baumann",
-      pictureUrl: "../../../assets/qualis/baumann.jpg",
+      pictureUrl: "./assets/qualis/baumann.jpg",
       sizeing: "contain",
       title: "Praktikum Problemhunde",
       subtitle: "",
@@ -97,7 +97,7 @@ export class QualisComponent implements OnInit, AfterViewInit{
     },
     {
       id: "qualis-baumann",
-      pictureUrl: "../../../assets/qualis/baumann2.jpg",
+      pictureUrl: "./assets/qualis/baumann2.jpg",
       sizeing: "contain",
       title: "Workshop aggressive Hunde",
       subtitle: "",

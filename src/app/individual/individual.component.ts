@@ -14,7 +14,7 @@ export class IndividualComponent implements OnInit{
   introductionArticles: Article[] = [
     {
       id: "individual-intro1",
-      pictureUrl: "../../../assets/pictures/individual1.JPG",
+      pictureUrl: "./assets/pictures/individual1.JPG",
       sizeing: "cover",
       title: "Was bedeutet Einzeltraining?",
       subtitle: "",
@@ -31,7 +31,7 @@ export class IndividualComponent implements OnInit{
     },
     {
       id: "individual-intro2",
-      pictureUrl: "../../../assets/pictures/individual2.JPG",
+      pictureUrl: "./assets/pictures/individual2.JPG",
       sizeing: "cover",
       title: "Mein Einzeltraining",
       subtitle: "",
@@ -56,7 +56,7 @@ export class IndividualComponent implements OnInit{
     },
     {
       id: "individual-intro3",
-      pictureUrl: "../../../assets/pictures/individual3.JPG",
+      pictureUrl: "./assets/pictures/individual3.JPG",
       sizeing: "cover",
       title: "Wichtiger Hinweis für Tierheime und ähnliche Einrichtungen",
       subtitle: "",

@@ -14,7 +14,7 @@ export class MeComponent implements OnInit{
   introductionArticles: Article[] = [
     {
       id: "me-intro1",
-      pictureUrl: "../../../assets/pictures/me1.jpg",
+      pictureUrl: "./assets/pictures/me1.jpg",
       sizeing: "cover",
       title: "Das bin ich",
       subtitle: "",
@@ -49,7 +49,7 @@ export class MeComponent implements OnInit{
     },
     {
       id: "me-intro2",
-      pictureUrl: "../../../assets/backgrounds/heroes/landing.jpg",
+      pictureUrl: "./assets/backgrounds/heroes/landing.jpg",
       sizeing: "cover",
       title: "Und so kam ich auf den Hund",
       subtitle: "",
@@ -66,7 +66,7 @@ export class MeComponent implements OnInit{
     },
     {
       id: "me-intro3",
-      pictureUrl: "../../../assets/gallery/Maya/240210.jpg",
+      pictureUrl: "./assets/gallery/Maya/240210.jpg",
       sizeing: "cover",
       title: "Start in Deutschland",
       subtitle: "",
@@ -99,7 +99,7 @@ export class MeComponent implements OnInit{
     },
     {
       id: "me-intro4",
-      pictureUrl: "../../../assets/pictures/me4.jpg",
+      pictureUrl: "./assets/pictures/me4.jpg",
       sizeing: "cover",
       title: "Nach dem Unfall habe ich mich neu erfunden",
       subtitle: "",

@@ -17,7 +17,7 @@ export class StableComponent implements OnInit {
   introductionArticles: Article[] = [
     {
       id: "stable-intro1",
-      pictureUrl: "../../../assets/gallery/Stall/Anlage.JPG",
+      pictureUrl: "./assets/gallery/Stall/Anlage.JPG",
       sizeing: "cover",
       title: "Reitanlage in Eimersleben",
       subtitle: "",
@@ -45,7 +45,7 @@ export class StableComponent implements OnInit {
     },
     {
       id: "stable-intro2",
-      pictureUrl: "../../../assets/gallery/placeholder-icon.pngG",
+      pictureUrl: "./assets/gallery/placeholder-icon.pngG",
       sizeing: "cover",
       title: "Unsere Mitarbeiterinnen",
       subtitle: "",
