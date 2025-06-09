@@ -28,7 +28,7 @@ export class CoursesComponent implements OnInit {
       query: {},
     },
     {
-      id: "Kinderferienwoche",
+      id: "kinderferienwoche",
       pictureUrl: "../../../assets/gallery/placeholder-icon.png",
       pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
       title: "Kinderferienwoche",
@@ -44,7 +44,7 @@ export class CoursesComponent implements OnInit {
       pictureUrlDesk: "../../../assets/gallery/placeholder-icon.png",
       title: "Longenlehrgang",
       text: "18. Juli - 19. Juli",
-      text2: "Lehrgang zur Arbeit mit der Longe und Doppellonge, durchgeführt vom Friesenverband.",
+      text2: "Lehrgang zur Arbeit mit der Longe und Doppellonge.",
       link: "",
       fragment: "longe",
       query: {},

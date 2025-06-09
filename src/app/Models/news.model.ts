@@ -3,4 +3,5 @@ export class News{
   pictureUrl!: string;
   title!: string;
   text!: string;
+  date!: string;
 }

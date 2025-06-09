@@ -11,8 +11,12 @@
   <div class="news-holder">
     <figure [ngClass]="activeNews !=0 ? 'nav-arrow-left' : 'nav-arrow-left-disabled'" (click)="changeNews(-1)"></figure>
     <article class="fade"  *ngFor="let newsEntry of news; let i = index" [ngClass]="activeNews === i?'visible-article' : 'invisible-article'">
-      <h2 class="h1-p">{{ newsEntry.title }}</h2>
-      <p> {{ newsEntry.text }}</p>
+      <div class="footer-container">
+        <h2 class="h1-p">{{ newsEntry.title }}</h2>
+        <p *ngIf="newsEntry.date!==''" class="bold"> {{ newsEntry.date }}</p>
+        <p> {{ newsEntry.text }}</p>
+      </div>
+      
     </article>
     <figure [ngClass]="activeNews != news.length-1 ? 'nav-arrow-right' : 'nav-arrow-right-disabled'" (click)="changeNews(1)"></figure>
   </div>
