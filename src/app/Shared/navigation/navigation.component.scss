@@ -12,7 +12,7 @@
 }
 
 .nav-bg-red{
-  background-image: url(./assets/backgrounds/red_top.svg);
+  background-image: url(../../../assets/backgrounds/red_top.svg);
   background-size: 105vw;
   background-position: bottom;
   position: absolute;
@@ -26,13 +26,13 @@
 
 .mobile-nav .nav-bg-red
 {
-  background-image: url(./assets/backgrounds/red_top_mobile.svg);
+  background-image: url(../../../assets/backgrounds/red_top_mobile.svg);
   height: 35.39vw;
   max-height: 360px;
 }
 
 .nav-bg-grey{
-  background-image: url(./assets/backgrounds/grey_top.svg);
+  background-image: url(../../../assets/backgrounds/grey_top.svg);
   background-size: 105vw;
   background-position: bottom;
   position: absolute;
@@ -46,7 +46,7 @@
 
 .mobile-nav .nav-bg-grey
 {
-  background-image: url(./assets/backgrounds/grey_top_mobile.svg);
+  background-image: url(../../../assets/backgrounds/grey_top_mobile.svg);
   height: 35.39vw;
   max-height: 360px;
   top: -0.8vw;
@@ -187,11 +187,11 @@
 }
 .default-hamburger
 {
-  background-image: url(./assets/interaction/hamburger_menu_24px_red.svg);
+  background-image: url(../../../assets/interaction/hamburger_menu_24px_red.svg);
 }
 .open-hamburger
 {
-  background-image: url(./assets/interaction/close_24px_red.svg);
+  background-image: url(../../../assets/interaction/close_24px_red.svg);
 }
 .hamburger-menu figure{
   width: 1rem;
