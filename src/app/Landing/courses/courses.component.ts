@@ -29,17 +29,6 @@ export class CoursesComponent implements OnInit {
       query: {},
     },
     {
-      id: "kinderferienwoche",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
-      pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
-      title: "Kinderferienwoche",
-      text: "10. Juli - 14. Juli",
-      text2: "",
-      link: "",
-      fragment: "holidayweek",
-      query: {},
-    },
-    {
       id: "longe",
       pictureUrl: "./assets/gallery/placeholder-icon.png",
       pictureUrlDesk: "./assets/gallery/placeholder-icon.png",

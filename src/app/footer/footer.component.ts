@@ -41,13 +41,6 @@ export class FooterComponent implements OnInit {
       text: "Lass dein Pferd bei uns in der Halle freispringen oder komm einfach vorbei und schau zu."
     },
     {
-      id: "kinderferienwoche",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
-      title: "Kinderferienwoche",
-      date: "10. Juli - 14. Juli",
-      text: ""
-    },
-    {
       id: "longe",
       pictureUrl: "./assets/gallery/placeholder-icon.png",
       title: "Longenlehrgang",
