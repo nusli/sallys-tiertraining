@@ -38,7 +38,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro2",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/pictures/stable_horses.jpg",
       sizeing: "cover",
       title: "Fütterung und Stallpflege",
       subtitle: "",
@@ -81,7 +81,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro4",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/pictures/coffee.jpg",
       sizeing: "cover",
       title: "Gemeinschaft",
       subtitle: "",
@@ -99,7 +99,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro5",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/pictures/wiese_1.jpg",
       sizeing: "cover",
       title: "Preiswert",
       subtitle: "",

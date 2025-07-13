@@ -33,12 +33,20 @@ export class FooterComponent implements OnInit {
       text:`Silvester ist für viele Hunde eine stressige Zeit. Die lauten Geräusche und das ungewohnte Licht können Angst und Unruhe auslösen. In unserem speziellen Silvester-Training ab dem 13. Oktober lernst du an insgesamt fünf Terminen, wie du deinen Hund optimal auf diese Herausforderung vorbereiten können. Schreib dich schnell ein, denn die Plätze sind aufgrund des intensiven Trainings sehr begrenzt.`
     }
       */
+     /*
     {
       id: "jumping",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/pictures/freispringen.png",
       title: "Freispringen",
       date:"28. Juni",
       text: "Lass dein Pferd bei uns in der Halle freispringen oder komm einfach vorbei und schau zu."
+    },*/
+    {
+      id: "kinderferienwoche",
+      pictureUrl: "./assets/pictures/child_jumping.jpg",
+      title: "Kinderferienwoche",
+      date: "14. Juli - 18. Juli",
+      text: ""
     },
     {
       id: "longe",
@@ -49,7 +57,7 @@ export class FooterComponent implements OnInit {
     },
     {
       id: "abzeichen",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/pictures/training_setup.jpg",
       title: "Reitabzeichenlehrgang",
       date: "5. Oktober - 7. Oktober",
       text: `Ihr wollt die Prüfung für ein Reitabzeichen absolvieren? Dieser Lehrgang bereitet euch optimal darauf vor. Im Lehrgang lernt ihr das theoretische Wissen und die

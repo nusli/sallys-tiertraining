@@ -16,6 +16,7 @@ export class CoursesComponent implements OnInit {
   // if link == "", there is no button on the card
   // text 2 only displays if no link is given (for space and layout constraints)
   specialCards: Card[] = [
+    /*
     {
       id: "jumping",
       //pictureUrl: "../../../assets/gallery/placeholder-icon.png",
@@ -26,6 +27,18 @@ export class CoursesComponent implements OnInit {
       text2: "",
       link: "",
       fragment: "jumping",
+      query: {},
+    },
+    */
+    {
+      id: "kinderferienwoche",
+      pictureUrl: "./assets/pictures/child_jumping.jpg",
+      pictureUrlDesk: "./assets/pictures/child_jumping.jpg",
+      title: "Kinderferienwoche",
+      text: "14. Juli - 18. Juli",
+      text2: "",
+      link: "",
+      fragment: "holidayweek",
       query: {},
     },
     {
@@ -41,8 +54,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "abzeichen",
-      pictureUrl: "./assets/gallery/placeholder-icon.png",
-      pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
+      pictureUrl: "./assets/pictures/training_setup.jpg",
+      pictureUrlDesk: "./assets/pictures/training_setup.jpg",
       title: "Reitabzeichen",
       text: "5. Oktober - 7. Oktober, Prüfung am 23. Oktober",
       text2: "",
