@@ -16,29 +16,17 @@ export class CoursesComponent implements OnInit {
   // if link == "", there is no button on the card
   // text 2 only displays if no link is given (for space and layout constraints)
   specialCards: Card[] = [
-    /*
+    
     {
       id: "jumping",
       //pictureUrl: "../../../assets/gallery/placeholder-icon.png",
       pictureUrl: "./assets/gallery/placeholder-icon.png",
       pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
       title: "Freispringen",
-      text: "28. Juni bei uns in der Halle",
+      text: "19.07., 13.08. bei uns in der Halle",
       text2: "",
       link: "",
       fragment: "jumping",
-      query: {},
-    },
-    */
-    {
-      id: "kinderferienwoche",
-      pictureUrl: "./assets/pictures/child_jumping.jpg",
-      pictureUrlDesk: "./assets/pictures/child_jumping.jpg",
-      title: "Kinderferienwoche",
-      text: "14. Juli - 18. Juli",
-      text2: "",
-      link: "",
-      fragment: "holidayweek",
       query: {},
     },
     {
@@ -50,6 +38,28 @@ export class CoursesComponent implements OnInit {
       text2: "Lehrgang zur Arbeit mit der Longe und Doppellonge.",
       link: "",
       fragment: "longe",
+      query: {},
+    },
+    {
+      id: "englisch_lehrgang",
+      pictureUrl: "./assets/pictures/sally.jpg",
+      pictureUrlDesk: "./assets/pictures/sally.jpg",
+      title: "Reitlehrgang auf Englisch",
+      text: "23. August",
+      text2: "Verbessere dein Englisch beim Reiten.",
+      link: "",
+      fragment: "english",
+      query: {},
+    },
+    {
+      id: "trainingswochenende",
+      pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
+      pictureUrlDesk: "./assets/pictures/hunde_mit_pferd.jpg",
+      title: "Trainingswochenende für Hunde",
+      text: "29. August - 31. August",
+      text2: "dreitägiges Intensivtraining für Hunde",
+      link: "",
+      fragment: "trainingswochenende",
       query: {},
     },
     {

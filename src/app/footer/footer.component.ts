@@ -33,20 +33,13 @@ export class FooterComponent implements OnInit {
       text:`Silvester ist für viele Hunde eine stressige Zeit. Die lauten Geräusche und das ungewohnte Licht können Angst und Unruhe auslösen. In unserem speziellen Silvester-Training ab dem 13. Oktober lernst du an insgesamt fünf Terminen, wie du deinen Hund optimal auf diese Herausforderung vorbereiten können. Schreib dich schnell ein, denn die Plätze sind aufgrund des intensiven Trainings sehr begrenzt.`
     }
       */
-     /*
+     
     {
       id: "jumping",
-      pictureUrl: "./assets/pictures/freispringen.png",
+      pictureUrl: "./assets/pictures/none.jpg",
       title: "Freispringen",
-      date:"28. Juni",
+      date:"19.07./13.08",
       text: "Lass dein Pferd bei uns in der Halle freispringen oder komm einfach vorbei und schau zu."
-    },*/
-    {
-      id: "kinderferienwoche",
-      pictureUrl: "./assets/pictures/child_jumping.jpg",
-      title: "Kinderferienwoche",
-      date: "14. Juli - 18. Juli",
-      text: ""
     },
     {
       id: "longe",
@@ -54,6 +47,22 @@ export class FooterComponent implements OnInit {
       title: "Longenlehrgang",
       date: "18. Juli - 19. Juli",
       text: "Erlerne die richtige Arbeit mit der Longe und Doppellonge. Durchgeführt vom Friesenverband."
+    },
+    {
+      id: "englisch_lehrgang",
+      pictureUrl: "./assets/pictures/sally.jpg",
+      title: "Reitlehrgang auf Englisch",
+      date: "23. August",
+      text: "Verbessere dein Englisch beim Reiten mit mir als Muttersprachlerin. Egal ob Dressur, Freizeit oder Springen, bei jedem Leistungsniveau."
+    },
+    {
+      id: "hunde_wochenende",
+      pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
+      title: "Intensives Trainingswochenende für Hunde",
+      date: "29. August - 31. August",
+      text: `Ein intensives Trainingswochenende für Hunde ist mehr als nur ein kurzer Ausflug in die
+      Welt der Erziehung – es ist eine tiefgehende Erfahrung für Mensch und Tier, geprägt von
+      Lernen, Vertrauen und gemeinsamer Entwicklung.`
     },
     {
       id: "abzeichen",
