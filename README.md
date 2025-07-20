@@ -38,3 +38,30 @@ Deploy to GitHub
 This command will create a new branch gh-pages in your repository and automatically push the dist build in that branch. Afterwards you can navigate to https://<username>.github.io/<reponame>/
 
 You might have to navigate to repository settings and manually set the gh-pages branch to be used with github pages.
+
+## Code Doku
+### Special Folder
+This folder contains all sites that advertise special events, like 1 time courses. These sites don't get a link in the navbar. Instead add them to the footer
+**footer.component.ts** "*News*" array and **courses.component.ts** "*specialCards*" array.
+
+### adding a new component
+First, run `ng g c path-to-component\componentname`. Then add that component to *src\app\Modules\routing\routing.module.ts* with the desired url path.
+
+Then add the following code to the newly generated *component.html* file:
+```
+<app-hero-section [mobilePortrait]="mobilePortrait" [hero]="hero"></app-hero-section>
+```
+This will generate a hero section that sets a good layout.
+
+Add the following code to the newly generated *component.ts* file and add the corresponding imports:
+```
+  @Input() mobilePortrait = false;
+  @Input() hero!: Hero;
+
+  // Scroll to the top on load because Scrollrestoration does not work for some reason.
+  ngAfterViewInit(): void {
+    document.body.scrollTop = 0;
+  }
+```
+
+To change the image and text of that hero, add a new Object to the **heroes** array in *src\app\app.component.ts* and link the hero to the route in the function **setHeroToActiveRoute**

@@ -14,6 +14,7 @@ import { ContactComponent } from 'src/app/contact/contact.component';
 import { QualisComponent } from 'src/app/qualis/qualis.component';
 import { StableComponent } from 'src/app/stable/stable.component';
 import { PensionComponent } from 'src/app/pension/pension.component';
+import { StangenlehrgangComponent } from 'src/app/special/stangenlehrgang/stangenlehrgang.component';
 
 
 export const routes: Routes = [
@@ -27,6 +28,7 @@ export const routes: Routes = [
   {path: 'Galerie', component: GalleryComponent},
   {path: 'Kontakt', component: ContactComponent},
   {path: 'Qualifikationen', component: QualisComponent},
+  {path: 'special/stangenlehrgang', component: StangenlehrgangComponent},
 ];
 
 @NgModule({

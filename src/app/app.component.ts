@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
     {
       id:"individual",
       pictureUrl: "./assets/backgrounds/heroes/einzel_mobile.jpg",
-      pictureUrlDesk: "./assets/backgrounds/heroes/einzel_desk.jpg",
+      pictureUrlDesk: "./assets/backgrounds/heroes/einzel_desk.JPG",
       title: "Einzeltraining Hunde",
       subtitle: "Aller Anfang ist schwer?!",
       text: `Einzigartige Hunde brauchen individuelle Lösungen. In meinem Einzeltraining können wir ihre „Baustellen“ gezielt analysieren und finden gemeinsam Lösungen für ein entspannteres Zusammenleben.`
@@ -98,7 +98,15 @@ export class AppComponent implements OnInit{
       title: "Pension",
       subtitle: "",
       text: "Die Pferdepension ist der ideale Ort für dein Pferd, um in einer sicheren und liebevollen Umgebung zu leben. Wir freuen uns darauf, dich und dein Pferd bei uns willkommen zu heißen."
-      }
+      },
+    {
+      id:"stangenlehrgang",
+      pictureUrl: "./assets/pictures/training_setup.jpg",
+      pictureUrlDesk: "./assets/pictures/training_setup.jpg",
+      title: "Stangenlehrgang",
+      subtitle: "Am 16.08.2025 und 17.08.2025",
+      text: "Mit Sally Davidson (Trainer A-Lizenz)"
+    },
 
   ]
   activeHero = this.heroes[0]
@@ -219,6 +227,10 @@ export class AppComponent implements OnInit{
       }
       case "/Pension": {
         this.activeHero = this.heroes[9];
+        break;
+      }
+      case "/special/stangenlehrgang": {
+        this.activeHero = this.heroes[10];
         break;
       }
     }

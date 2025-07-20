@@ -56,6 +56,14 @@ export class FooterComponent implements OnInit {
       text: "Verbessere dein Englisch beim Reiten mit mir als Muttersprachlerin. Egal ob Dressur, Freizeit oder Springen, bei jedem Leistungsniveau."
     },
     {
+      id: "stangen_lehrgang",
+      pictureUrl: "./assets/pictures/sally.jpg",
+      title: "Stangenlehrgang",
+      date: "16. und 17. August",
+      text: `Ein Lehrgang  für alle Reiter ab E-Niveau mit dem Fokus auf Stangenarbeit. 
+      Durch das Traning mit Stangen wird das Pferd gymnastiziert und der Sitz des Reiters verbessert.`
+    },
+    {
       id: "hunde_wochenende",
       pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
       title: "Intensives Trainingswochenende für Hunde",

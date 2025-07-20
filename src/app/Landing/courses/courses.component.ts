@@ -52,6 +52,17 @@ export class CoursesComponent implements OnInit {
       query: {},
     },
     {
+      id: "stangenlehrgang",
+      pictureUrl: "./assets/pictures/training_setup.jpg",
+      pictureUrlDesk: "./assets/pictures/training_setup.jpg",
+      title: "Stangenlehrgang",
+      text: "16. und 17. August",
+      text2: `Ein Lehrgang  für alle Reiter ab E-Niveau mit dem Fokus auf Stangenarbeit.`,
+      link: "special/stangenlehrgang",
+      fragment: "stangenlehrgang",
+      query: {},
+    },
+    {
       id: "trainingswochenende",
       pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
       pictureUrlDesk: "./assets/pictures/hunde_mit_pferd.jpg",

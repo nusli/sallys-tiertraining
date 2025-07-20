@@ -20,6 +20,9 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CookieDisclaimerComponent } from './cookie-disclaimer/cookie-disclaimer.component';
 import { StableComponent } from './stable/stable.component';
 import { PensionComponent } from './pension/pension.component';
+import { EnglischLehrgangComponent } from './special/englisch-lehrgang/englisch-lehrgang.component';
+import { TrainingswochenendeComponent } from './special/trainingswochenende/trainingswochenende.component';
+import { StangenlehrgangComponent } from './special/stangenlehrgang/stangenlehrgang.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { PensionComponent } from './pension/pension.component';
     QualisComponent,
     CookieDisclaimerComponent,
     StableComponent,
-    PensionComponent
+    PensionComponent,
+    EnglischLehrgangComponent,
+    TrainingswochenendeComponent,
+    StangenlehrgangComponent,
   ],
   imports: [
     BrowserModule,
