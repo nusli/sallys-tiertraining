@@ -15,6 +15,8 @@ import { QualisComponent } from 'src/app/qualis/qualis.component';
 import { StableComponent } from 'src/app/stable/stable.component';
 import { PensionComponent } from 'src/app/pension/pension.component';
 import { StangenlehrgangComponent } from 'src/app/special/stangenlehrgang/stangenlehrgang.component';
+import { TrainingswochenendeComponent } from 'src/app/special/trainingswochenende/trainingswochenende.component';
+import { EnglischLehrgangComponent } from 'src/app/special/englisch-lehrgang/englisch-lehrgang.component';
 
 
 export const routes: Routes = [
@@ -29,6 +31,8 @@ export const routes: Routes = [
   {path: 'Kontakt', component: ContactComponent},
   {path: 'Qualifikationen', component: QualisComponent},
   {path: 'special/stangenlehrgang', component: StangenlehrgangComponent},
+  {path: 'special/trainingswochenende', component: TrainingswochenendeComponent},
+  {path: 'special/englischlehrgang', component: EnglischLehrgangComponent},
 ];
 
 @NgModule({

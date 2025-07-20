@@ -53,6 +53,9 @@ Then add the following code to the newly generated *component.html* file:
 ```
 This will generate a hero section that sets a good layout.
 
+To change the image and text of that hero, add a new Object to the **heroes** array in *src\app\app.component.ts* and link the hero to the route in the function **setHeroToActiveRoute**
+
+
 Add the following code to the newly generated *component.ts* file and add the corresponding imports:
 ```
   @Input() mobilePortrait = false;
@@ -64,4 +67,4 @@ Add the following code to the newly generated *component.ts* file and add the co
   }
 ```
 
-To change the image and text of that hero, add a new Object to the **heroes** array in *src\app\app.component.ts* and link the hero to the route in the function **setHeroToActiveRoute**
+

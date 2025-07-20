@@ -107,6 +107,22 @@ export class AppComponent implements OnInit{
       subtitle: "Am 16.08.2025 und 17.08.2025",
       text: "Mit Sally Davidson (Trainer A-Lizenz)"
     },
+    {
+      id:"trainingswochenende",
+      pictureUrl: "./assets/backgrounds/heroes/hundegruppe.jpg",
+      pictureUrlDesk: "./assets/backgrounds/heroes/hundegruppe.jpg",
+      title: "Intensives Trainingswochenende für Hunde",
+      subtitle: "",
+      text: ""
+    },
+    {
+      id:"englischlehrgang",
+      pictureUrl: "./assets/backgrounds/heroes/pferde_mobile.JPG",
+      pictureUrlDesk: "./assets/backgrounds/heroes/pferde_desk.JPG",
+      title: "Unterricht in englischer Sprache",
+      subtitle: "Eine einzigartige Gelegenheit!",
+      text: "mit Sally Davidson"
+    },
 
   ]
   activeHero = this.heroes[0]
@@ -231,6 +247,14 @@ export class AppComponent implements OnInit{
       }
       case "/special/stangenlehrgang": {
         this.activeHero = this.heroes[10];
+        break;
+      }
+      case "/special/trainingswochenende": {
+        this.activeHero = this.heroes[11];
+        break;
+      }
+      case "/special/englischlehrgang": {
+        this.activeHero = this.heroes[12];
         break;
       }
     }

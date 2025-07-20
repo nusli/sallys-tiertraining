@@ -15,6 +15,7 @@
         <h2 class="h1-p">{{ newsEntry.title }}</h2>
         <p *ngIf="newsEntry.date!==''" class="bold"> {{ newsEntry.date }}</p>
         <p> {{ newsEntry.text }}</p>
+        <a *ngIf="newsEntry.link" [routerLink]="newsEntry.link" >Mehr erfahren</a>
       </div>
       
     </article>

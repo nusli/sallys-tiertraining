@@ -53,7 +53,8 @@ export class FooterComponent implements OnInit {
       pictureUrl: "./assets/pictures/sally.jpg",
       title: "Reitlehrgang auf Englisch",
       date: "23. August",
-      text: "Verbessere dein Englisch beim Reiten mit mir als Muttersprachlerin. Egal ob Dressur, Freizeit oder Springen, bei jedem Leistungsniveau."
+      text: "Verbessere dein Englisch beim Reiten mit mir als Muttersprachlerin. Egal ob Dressur, Freizeit oder Springen, bei jedem Leistungsniveau.",
+      link: "/special/englischlehrgang",
     },
     {
       id: "stangen_lehrgang",
@@ -61,7 +62,8 @@ export class FooterComponent implements OnInit {
       title: "Stangenlehrgang",
       date: "16. und 17. August",
       text: `Ein Lehrgang  für alle Reiter ab E-Niveau mit dem Fokus auf Stangenarbeit. 
-      Durch das Traning mit Stangen wird das Pferd gymnastiziert und der Sitz des Reiters verbessert.`
+      Durch das Traning mit Stangen wird das Pferd gymnastiziert und der Sitz des Reiters verbessert.`,
+      link: "/special/stangenlehrgang"
     },
     {
       id: "hunde_wochenende",
@@ -70,7 +72,8 @@ export class FooterComponent implements OnInit {
       date: "29. August - 31. August",
       text: `Ein intensives Trainingswochenende für Hunde ist mehr als nur ein kurzer Ausflug in die
       Welt der Erziehung – es ist eine tiefgehende Erfahrung für Mensch und Tier, geprägt von
-      Lernen, Vertrauen und gemeinsamer Entwicklung.`
+      Lernen, Vertrauen und gemeinsamer Entwicklung.`,
+      link: "/special/trainingswochenende"
     },
     {
       id: "abzeichen",
