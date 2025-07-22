@@ -123,6 +123,14 @@ export class AppComponent implements OnInit{
       subtitle: "Eine einzigartige Gelegenheit!",
       text: "mit Sally Davidson"
     },
+    {
+      id:"abzeichenlehrgang",
+      pictureUrl: "./assets/pictures/reitergruppe.jpg",
+      pictureUrlDesk: "./assets/pictures/reitergruppe.jpg",
+      title: "Abzeichenlehrgang",
+      subtitle: "Vorbereitung und Prüfung für das Reitabzeichen oder Pferdeführerschein",
+      text: "Wichtige Etappen auf dem Weg zur reiterlichen Qualifikation"
+    },
 
   ]
   activeHero = this.heroes[0]
@@ -255,6 +263,10 @@ export class AppComponent implements OnInit{
       }
       case "/special/englischlehrgang": {
         this.activeHero = this.heroes[12];
+        break;
+      }
+      case "/special/abzeichen": {
+        this.activeHero = this.heroes[13];
         break;
       }
     }

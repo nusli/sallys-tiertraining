@@ -23,6 +23,7 @@ import { PensionComponent } from './pension/pension.component';
 import { EnglischLehrgangComponent } from './special/englisch-lehrgang/englisch-lehrgang.component';
 import { TrainingswochenendeComponent } from './special/trainingswochenende/trainingswochenende.component';
 import { StangenlehrgangComponent } from './special/stangenlehrgang/stangenlehrgang.component';
+import { AbzeichenComponent } from './special/abzeichen/abzeichen.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { StangenlehrgangComponent } from './special/stangenlehrgang/stangenlehrg
     EnglischLehrgangComponent,
     TrainingswochenendeComponent,
     StangenlehrgangComponent,
+    AbzeichenComponent,
   ],
   imports: [
     BrowserModule,

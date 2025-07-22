@@ -81,7 +81,8 @@ export class FooterComponent implements OnInit {
       title: "Reitabzeichenlehrgang",
       date: "5. Oktober - 7. Oktober",
       text: `Ihr wollt die Prüfung für ein Reitabzeichen absolvieren? Dieser Lehrgang bereitet euch optimal darauf vor. Im Lehrgang lernt ihr das theoretische Wissen und die
-      praktischen Fähigkeiten um euch ein neues Reitabzeichen zu verdienen. Die Prüfung findet am 23. Oktober hier auf der Anlage statt.`
+      praktischen Fähigkeiten um euch ein neues Reitabzeichen zu verdienen. Die Prüfung findet am 23. Oktober hier auf der Anlage statt.`,
+      link: "special/abzeichen"
     },
   ];
 

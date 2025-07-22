@@ -17,6 +17,7 @@ import { PensionComponent } from 'src/app/pension/pension.component';
 import { StangenlehrgangComponent } from 'src/app/special/stangenlehrgang/stangenlehrgang.component';
 import { TrainingswochenendeComponent } from 'src/app/special/trainingswochenende/trainingswochenende.component';
 import { EnglischLehrgangComponent } from 'src/app/special/englisch-lehrgang/englisch-lehrgang.component';
+import { AbzeichenComponent } from 'src/app/special/abzeichen/abzeichen.component';
 
 
 export const routes: Routes = [
@@ -33,6 +34,7 @@ export const routes: Routes = [
   {path: 'special/stangenlehrgang', component: StangenlehrgangComponent},
   {path: 'special/trainingswochenende', component: TrainingswochenendeComponent},
   {path: 'special/englischlehrgang', component: EnglischLehrgangComponent},
+  {path: 'special/abzeichen', component: AbzeichenComponent},
 ];
 
 @NgModule({
