@@ -45,7 +45,7 @@ export class FooterComponent implements OnInit {
       id: "longe",
       pictureUrl: "./assets/gallery/placeholder-icon.png",
       title: "Longenlehrgang",
-      date: "18. Juli - 19. Juli",
+      date: "17. Oktober - 19. Oktober",
       text: "Erlerne die richtige Arbeit mit der Longe und Doppellonge. Durchgeführt vom Friesenverband."
     },
     {
@@ -79,7 +79,7 @@ export class FooterComponent implements OnInit {
       id: "abzeichen",
       pictureUrl: "./assets/pictures/training_setup.jpg",
       title: "Reitabzeichenlehrgang",
-      date: "5. Oktober - 7. Oktober",
+      date: "13. - 15. und 20. - 22. Oktober",
       text: `Ihr wollt die Prüfung für ein Reitabzeichen absolvieren? Dieser Lehrgang bereitet euch optimal darauf vor. Im Lehrgang lernt ihr das theoretische Wissen und die
       praktischen Fähigkeiten um euch ein neues Reitabzeichen zu verdienen. Die Prüfung findet am 23. Oktober hier auf der Anlage statt.`,
       link: "special/abzeichen"
