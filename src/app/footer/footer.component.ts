@@ -79,7 +79,7 @@ export class FooterComponent implements OnInit {
       id: "abzeichen",
       pictureUrl: "./assets/pictures/training_setup.jpg",
       title: "Reitabzeichenlehrgang",
-      date: "13. - 15. und 20. - 22. Oktober",
+      date: "13. - 15. und 20. - 22. Oktober; Prüfung am 23. Oktober",
       text: `Ihr wollt die Prüfung für ein Reitabzeichen absolvieren? Dieser Lehrgang bereitet euch optimal darauf vor. Im Lehrgang lernt ihr das theoretische Wissen und die
       praktischen Fähigkeiten um euch ein neues Reitabzeichen zu verdienen. Die Prüfung findet am 23. Oktober hier auf der Anlage statt.`,
       link: "special/abzeichen"
