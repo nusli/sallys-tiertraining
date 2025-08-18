@@ -12,7 +12,8 @@ export class GroupComponent implements OnInit, AfterViewInit {
 
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
-  @Input() openArticles = [false, false, false, false];
+  // -1: no article open
+  @Input() openArticles = -1;
 
   frameArticles: Article[] = [
     // agility
@@ -387,24 +388,15 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
   }
 
   ngAfterViewInit(): void {
-    if ((this.openArticles[0] || this.openArticles[1]) && !this.mobilePortrait) {
-      document.body.scrollTop = 500;
+    const openArticleNumber = Number(this.openArticles);
+    if (!this.mobilePortrait) {
+      if (openArticleNumber !== -1) {
+        document.body.scrollTop = openArticleNumber * 500;
+      }
     }
-    if ((this.openArticles[2] || this.openArticles[3]) && !this.mobilePortrait) {
-      document.body.scrollTop = 1000;
-    }
-    if (this.mobilePortrait) {
-      if (this.openArticles[0]) {
-        document.body.scrollTop = 200;
-      }
-      if (this.openArticles[1]) {
-        document.body.scrollTop = 400;
-      }
-      if (this.openArticles[2]) {
-        document.body.scrollTop = 600;
-      }
-      if (this.openArticles[3]) {
-        document.body.scrollTop = 800;
+    else if (this.mobilePortrait) {
+      if (openArticleNumber !== -1) {
+        document.body.scrollTop = openArticleNumber * 200;
       }
     }
   }

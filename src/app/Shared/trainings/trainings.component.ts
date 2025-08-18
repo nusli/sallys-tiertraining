@@ -29,7 +29,7 @@ export class TrainingsComponent {
 
   @Input() frameArticles!: Article[];
 
-  @Input() articlesOpen = [false, false, false, false];
+  @Input() articlesOpen = -1;
   @Input() contentsOpen = [false, false, false, false];
   @Input() group = false;
 
@@ -59,10 +59,10 @@ export class TrainingsComponent {
       this.contentsOpen[i] = false;
     }
     if(open){
-      for (let i = 0; i<this.articlesOpen.length; i++){
-        this.articlesOpen[i] = false;
-      }
-      this.articlesOpen[openFrame] = true;
+      // for (let i = 0; i<this.articlesOpen.length; i++){
+      //   this.articlesOpen[i] = false;
+      // }
+      // this.articlesOpen[openFrame] = true;
       this.chosenContent = this.frameArticles[openFrame].expand;
     }
   }

@@ -135,7 +135,8 @@ export class AppComponent implements OnInit{
   ]
   activeHero = this.heroes[0]
   heroUrl = "";
-  openArticles = [false, false, false, false]
+  // -1: no article open
+  openArticles = -1;
   deviceInfo!: DeviceInfo;
   focussedArticle = "";
 
@@ -180,24 +181,7 @@ export class AppComponent implements OnInit{
       }
     })
     this.route.queryParams.subscribe(params =>{
-      switch(params['openArticle']){
-        case "0": {
-          this.openArticles = [true, false, false, false];
-          break;
-        }
-        case "1": {
-          this.openArticles = [false, true, false, false];
-          break;
-        }
-        case "2": {
-          this.openArticles = [false, false, true, false];
-          break;
-        }
-        case "3": {
-          this.openArticles = [false, false, false, true];
-          break;
-        }
-      }
+      this.openArticles = Number(params['openArticle']);
       this.focussedArticle = params['article'];
     })
 
