@@ -196,7 +196,9 @@ export class AppComponent implements OnInit{
 
   setHeroToActiveRoute()
   {
-    switch(this.activeRoute){
+    // we cut off the query parameters to get the actual route
+    const route = this.activeRoute.split('?')[0];
+    switch(route){
       case "/Hundegruppentraining": {
         this.activeHero = this.heroes[1];
         break;
