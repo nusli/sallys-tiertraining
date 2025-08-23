@@ -381,6 +381,58 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
         },
       ]
     },
+    // Hallentraining
+    {
+      id: "frame-indoor-training",
+      pictureUrl: "./assets/pictures/card_tricks.jpg",
+      title: "Indoor Reithallentraining",
+      subtitle: `Ganzjähriges Hundetraining bei jeder Witterung`,
+      text: `Unser Indoor-Reithallen-Training bietet ganzjährig zuverlässige und wetterunabhängige
+          Trainingsbedingungen für Hunde aller Altersklassen. In der großzügigen, geschützten
+          Reithalle können sowohl grundlegende Übungen als auch weiterführende
+          Trainingsinhalte in ruhiger Atmosphäre durchgeführt werden.
+          Das Training findet in kleinen Gruppen unter Anleitung erfahrener Hundetrainerinnen
+          und wird individuell an den Ausbildungsstand von Hund und Halter angepasst.`,
+      mobileText: `ganzjährig zuverlässige und wetterunabhängige
+          Trainingsbedingungen für Hunde aller Altersklassen`,
+      expendable: true,
+      expand: [
+        {
+          id: "frame-indoor-training1",
+          title: "Trainingsschwerpunkte:",
+          text: `Das Training eignet sich sowohl für Anfänger als auch für Fortgeschrittene und ist durch
+                  die Indoor-Umgebung ganzjährig planbar - unabhängig von Wetter oder Jahreszeit.
+          `,
+          bulletPoints: [
+            "Grundgehorsam (Sitz, Platz, Rückruf, Leinenführigkeit)",
+            "Orientierung am Menschen und Alltagstauglichkeit",
+            "Soziales Verhalten im Umgang mit Artgenossen",
+            "Beschäftigung und Auslastung (z. B. Longieren, Apportieren, kleine Parcours, Tricks)",
+            "Förderung von Aufmerksamkeit und Impulskontrolle",
+            "Umweltreize und sicheres Verhalten in neuen Situationen",
+          ]
+        },
+        {
+          id: "frame-indoor-training2",
+          title: "Hinweise zur Teilnahme:",
+          text: ``,
+          bulletPoints: [
+            "Teilnahme nur mit vorheriger Anmeldung",
+            "Gültiger Impfschutz des Hundes erforderlich",
+            "Eigene Leine, Belohnungen und wettergerechte Kleidung bitte mitbringen.",
+          ]
+        },
+        {
+          id: "frame-indoor-training3",
+          title: "Jeden Freitag 17 Uhr",
+          text: `Eimersleben 39343, Magdeburger Str.79.
+          `,
+
+          price: "20 Euro",
+          price10: "185 Euro",
+        },
+      ]
+    },
   ]
 
   ngOnInit(): void {

@@ -6,6 +6,11 @@
   padding: 1.39vw 5vw;
 }
 
+h2 {
+  margin-top: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
 
 //Mobile Responsiveness
 .mobile-section
@@ -36,30 +41,33 @@
   justify-content: center;
   align-items: center;
 }
-.frames-and-content
+// this class is only used on mobile
+.mobile-frames-and-content
 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.frames-and-content .picture-frame-description-content{
+.mobile-frames-and-content .picture-frame-description-content{
   padding: 0.75rem;
 }
-.frames-and-content article{
+.mobile-frames-and-content article{
   padding: 0;
   margin: 0;
 }
-.frames-and-content h2
+
+.mobile-frames-and-content h2
 {
   font-size: 2.5rem;
   margin-bottom: 0.45rem;
+  margin-top: 0.45rem;
   line-height: 2rem;
 }
-.frames-and-content p
+.mobile-frames-and-content p
 {
   font-size: 0.88rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.4rem;
   line-height: 1.17rem;
 }
 
@@ -92,5 +100,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+ul {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mobile-bullet-points {
+  margin: 0 20px 0 20px;
+  font-size: 0.88rem;
+  line-height: 1.17rem;
 }
 

@@ -12,15 +12,6 @@
 <app-picture-article *ngIf="introductionArticles.length > 5" [article]="introductionArticles[5]"
   [mobilePortrait]="mobilePortrait" [leftPicture]="false" [fadeOn]="fadeOn"></app-picture-article>
 
-<section *ngIf='framesAvailable && introductionArticles.length > 0 && introductionArticles[0].id !="dummy"'
-  [ngClass]="{'mobile-section':mobilePortrait}">
-  <article>
-    <h1 class="h1-p">Irgendwas zum Kursangebot</h1>
-    <p class="h1-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-      labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren.</p>
-  </article>
-</section>
 
 <div *ngIf="framesAvailable" class="all-picture-frames">
   <div *ngIf="!mobilePortrait" class="desktop-picture-frames">
@@ -70,8 +61,11 @@
     </div>
     <div *ngIf="contentsOpen[2] || contentsOpen[3]" class="picture-frame-description-content article-fade">
       <article *ngFor="let article of chosenContent" class="picture-frame-article">
-        <h2>{{ article.title }}</h2>
-        <p>{{ article.text }}</p>
+        <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
+        <p *ngIf="article.text != ''">{{ article.text }}</p>
+        <ul *ngIf="article.bulletPoints">
+          <li *ngFor="let bulletPoint of article.bulletPoints">{{ bulletPoint }}</li>
+        </ul>
         <div class="prices" *ngIf='article.price !="" && article.price != null'>
           <h2>Meine Preise</h2>
           <div class="price-entries">
@@ -116,14 +110,17 @@
   </div>
 
   <div *ngIf="mobilePortrait" class="mobile-picture-frames">
-    <div *ngFor="let content of frameArticles; let i = index" class="frames-and-content">
+    <div *ngFor="let content of frameArticles; let i = index" class="mobile-frames-and-content">
       <app-picture-frame [mobilePortrait]="mobilePortrait" [(contentOpen)]="contentsOpen[i]"
         [articleOpen]="articlesOpen==i" (articleOpenChange)="closeOthers(i, $event)"
         [article]="frameArticles[i]"></app-picture-frame>
       <div *ngIf="contentsOpen[i]" class="picture-frame-description-content article-fade">
         <article *ngFor="let article of chosenContent" class="picture-frame-article">
           <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
-          <p>{{ article.text }}</p>
+          <p *ngIf="article.text">{{ article.text }}</p>
+          <ul *ngIf="article.bulletPoints" class="mobile-bullet-points">
+            <li *ngFor="let bulletPoint of article.bulletPoints">{{ bulletPoint }}</li>
+          </ul>
           <div class="prices" *ngIf='article.price !="" && article.price != null'>
             <h2>Meine Preise</h2>
             <div class="price-entries">

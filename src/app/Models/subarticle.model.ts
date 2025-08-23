@@ -2,6 +2,7 @@ export class Subarticle{
   id!: string;
   title!: string;
   text!: string;
+  bulletPoints?: string[];
   price?: string = "";
   price6?: string = "";
   price10?: string = "";
