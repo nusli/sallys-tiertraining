@@ -14,6 +14,50 @@
 
 
 <div *ngIf="framesAvailable" class="all-picture-frames">
+
+  <div *ngIf="!mobilePortrait" class="desktop-picture-frames" >
+    <!--We use frameArticlesLoop to iterate over frameArticles in pairs-->
+    <div *ngFor="let index of frameArticlesLoop">
+      <div class="picture-frame-container" >
+        <app-picture-frame [id]="'app-picture-frame' + index" [(contentOpen)]="contentsOpen[index]" [articleOpen]="articlesOpen==index"
+          (articleOpenChange)="closeOthers(index, $event)" (contentOpenChange)="chosenContent=frameArticles[index].expand" [article]="frameArticles[index]"></app-picture-frame>
+        <app-picture-frame [id]="'app-picture-frame' + (index + 1)" *ngIf="frameArticles[index+1] != undefined" [(contentOpen)]="contentsOpen[index+1]" [articleOpen]="articlesOpen==index+1"
+          (articleOpenChange)="closeOthers(index+1, $event)" (contentOpenChange)="chosenContent=frameArticles[index+1].expand" [article]="frameArticles[index+1]"></app-picture-frame>
+      </div>
+      <div *ngIf="contentsOpen[index] || contentsOpen[index+1]" class="picture-frame-description-content article-fade">
+        <article *ngFor="let article of chosenContent" class="picture-frame-article">
+          <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
+          <p>{{ article.text }}</p>
+          <div class="prices" *ngIf='article.price !="" && article.price != null'>
+            <h2>Meine Preise</h2>
+            <div class="price-entries">
+              <div class="price-entry">
+                <p><b>Eine Stunde</b></p>
+                <p>{{ article.price}}</p>
+              </div>
+              <div *ngIf='article.price6 !="" && article.price6 != null' class="price-entry">
+                <p><b>6er-Karte</b></p>
+                <p>{{ article.price6}}</p>
+              </div>
+              <div *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
+                <p><b>10er-Karte</b></p>
+                <p>{{ article.price10}}</p>
+              </div>
+              <div *ngIf='article.horse4 !="" && article.horse4 != null' class="price-entry">
+                <p><b>Vier Stunden und mehr</b></p>
+                <p>{{ article.horse4}}</p>
+              </div>
+            </div>
+            <p *ngIf="!group">zzgl. Fahrtkosten: außerhalb Eimersleben bis 10 km 5 Euro, ab 10 km zzgl. 0,45 Cent je
+              Kilometer</p>
+          </div>
+        </article>
+        <figure class="nav-close" (click)="closeContents(index,index+1)"></figure>
+      </div>
+    </div>
+  </div>
+  
+  <!--
   <div *ngIf="!mobilePortrait" class="desktop-picture-frames">
     <div class="picture-frame-container">
       <app-picture-frame [(contentOpen)]="contentsOpen[0]" [articleOpen]="articlesOpen==0"
@@ -98,6 +142,7 @@
               <div  *ngIf='article.price10 !="" && article.price10 != null' class="price-entry">
                 <p><b>Alle Kurse als Paket</b></p><p>{{ article.price10}}</p>
               </div> -->
+              <!--
             </div>
           </div>
 
@@ -108,7 +153,8 @@
       <figure class="nav-close" (click)="closeContents(2,3)"></figure>
     </div>
   </div>
-
+-->
+ 
   <div *ngIf="mobilePortrait" class="mobile-picture-frames">
     <div *ngFor="let content of frameArticles; let i = index" class="mobile-frames-and-content">
       <app-picture-frame [mobilePortrait]="mobilePortrait" [(contentOpen)]="contentsOpen[i]"

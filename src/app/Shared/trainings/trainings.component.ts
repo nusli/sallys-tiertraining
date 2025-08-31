@@ -33,6 +33,17 @@ export class TrainingsComponent {
   @Input() contentsOpen = [false, false, false, false];
   @Input() group = false;
 
+  // we need to iterate over frameArticles in pairs.
+  // we use this variable to control the loop
+  frameArticlesLoop: number[] = [];
+
+  ngOnInit() {
+    for (let index = 0; index < this.frameArticles.length; index+=2) {
+      this.frameArticlesLoop.push(index)
+    }
+    console.log("framearticlesloop", this.frameArticlesLoop)
+  }
+
 
   descriptionOpen = false;
   chosenContent: Subarticle[] = [

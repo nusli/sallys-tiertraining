@@ -384,7 +384,7 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     // Hallentraining
     {
       id: "frame-indoor-training",
-      pictureUrl: "./assets/pictures/card_tricks.jpg",
+      pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
       title: "Indoor Reithallentraining",
       subtitle: `Ganzjähriges Hundetraining bei jeder Witterung`,
       text: `Unser Indoor-Reithallen-Training bietet ganzjährig zuverlässige und wetterunabhängige
@@ -433,6 +433,197 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
         },
       ]
     },
+    // Rally Obedience
+    {
+      id: "frame-rally-obedience",
+      pictureUrl: "./assets/backgrounds/heroes/quali_desk.JPG",
+      title: "Rally Obedience",
+      subtitle: `Präzision trifft Teamarbeit`,
+      text: `Rally Obedience ist eine abwechslungsreiche Hundesportart, bei der Präzision,
+          Kommunikation und Freude an gemeinsamer Arbeit im Mittelpunkt stehen. Einmal
+          wöchentlich bieten wir diesen Kurs für Teams an, die Spaß am strukturierten Training
+          und an der Weiterentwicklung ihrer Bindung haben.`,
+      mobileText: `Eine abwechslungsreiche Hundesportart, bei der Präzision,
+          Kommunikation und Freude an gemeinsamer Arbeit im Mittelpunkt stehen.`,
+      expendable: true,
+      expand: [
+        {
+          id: "frame-rally-obedience1",
+          title: "Trainingsschwerpunkte:",
+          text: `In einem Parcours aus verschiedenen Schilderstationen werden Gehorsamsübungen
+                wie Sitz, Platz, Bleib, Wendungen oder Tempowechsel miteinander kombiniert. Der
+                Mensch führt den Hund überwiegend in der Fußarbeit durch die Stationen - mit
+                Sichtzeichen, Körpersprache und motivierendem Lob.
+          `,
+        },
+        {
+          id: "frame-rally-obedience2",
+          title: "Trainingsinhalte",
+          text: `Rally Obedience ist für Hunde jeder Rasse und jeden Alters geeignet, sofern ein
+              grundlegender Gehorsam vorhanden ist. Der Sport stärkt die Bindung, fördert die
+              geistige Auslastung und ist auch für ältere Hunde oder körperlich eingeschränkte Halter
+              gut umsetzbar.`,
+          bulletPoints: [
+            "Aufbau und Training der einzelnen Schilderübungen",
+            "Fußarbeit mit Blickkontakt und präzisem Timing",
+            "Koordination und Kommunikation im Team",
+            "Arbeit mit Distanzsignalen, Tempowechseln und Richtungsänderungen",
+            "Konzentration trotz Ablenkung",
+            "Vorbereitung auf Turniere (optional)"
+          ]
+        },
+        {
+          id: "frame-rally-obedience3",
+          title: "Organisatorisches",
+          text: `Jeden Freitag 15 Uhr
+          `,
+          bulletPoints: [
+            "Voraussetzung: Grundgehorsam und gute soziale Verträglichkeit",
+            "Trainingsort: je nach Wetterlage Indoor oder Outdoor"
+          ],
+          price: "20 Euro",
+          price10: "185 Euro",
+        },
+      ]
+    },
+    // Unterordnung
+    {
+      id: "frame-unterordnung",
+      pictureUrl: "./assets/backgrounds/heroes/hundegruppe.jpg",
+      title: "Unterordnung",
+      subtitle: `Struktur & Präzision im Mensch-Hund-Team`,
+      text: `Stärkung des Teams Mensch-Hund durch kontrollierte Arbeit und anspruchsvolle Übungen.`,
+      mobileText: `Stärkung des Teams Mensch-Hund durch kontrollierte Arbeit und anspruchsvolle Übungen.`,
+      expendable: true,
+      expand: [
+        {
+          id: "frame-rally-unterordnung1",
+          title: "Kursbeschreibung:",
+          text: `Im Kurs „Unterordnung“ liegt der Fokus auf einer präzisen, freudigen und harmonischen
+            Zusammenarbeit zwischen Mensch und Hund. Ziel ist es, das Hund-Mensch-Team in
+            kontrollierter Arbeitsweise zu stärken und die bereits gelernten Grundsignale unter
+            höherer Ablenkung und in anspruchsvolleren Übungen zu festigen und auszubauen.
+                    
+            Geeignet ist dieser Kurs für ambitionierte Freizeit-Teams sowie für alle, die an
+            weiterführenden Hundesportarten interessiert sind (z. B. Begleithundeprüfung,
+            Obedience, Rally Obedience)..
+          `,
+        },
+        {
+          id: "frame-rally-obedience2",
+          title: "Trainingsinhalte",
+          text: `Rally Obedience ist für Hunde jeder Rasse und jeden Alters geeignet, sofern ein
+              grundlegender Gehorsam vorhanden ist. Der Sport stärkt die Bindung, fördert die
+              geistige Auslastung und ist auch für ältere Hunde oder körperlich eingeschränkte Halter
+              gut umsetzbar.`,
+          bulletPoints: [
+            "Aufbau und Training der einzelnen Schilderübungen",
+            "Fußarbeit mit Blickkontakt und präzisem Timing",
+            "Koordination und Kommunikation im Team",
+            "Arbeit mit Distanzsignalen, Tempowechseln und Richtungsänderungen",
+            "Konzentration trotz Ablenkung",
+            "Vorbereitung auf Turniere (optional)"
+          ]
+        },
+        {
+          id: "frame-rally-obedience3",
+          title: "Organisatorisches",
+          text: `Jeden Freitag 15 Uhr
+          `,
+          bulletPoints: [
+            "Voraussetzung: Grundgehorsam und gute soziale Verträglichkeit",
+            "Trainingsort: je nach Wetterlage Indoor oder Outdoor"
+          ],
+          price: "20 Euro",
+          price10: "185 Euro",
+        },
+      ]
+    },
+    // Social Walk
+    {
+      id: "frame-social-walk",
+      pictureUrl: "./assets/pictures/frame_dogs.JPG",
+      title: "Social Walk",
+      subtitle: `Kontrollierte Begegnungen mit anderen Hunden`,
+      text: `In unserem Social Walk bieten wir eine geführte Spaziergangsgruppe an, in der Hunde
+            unter kontrollierten Bedingungen in Kontakt mit Artgenossen und Umweltreizen
+            kommen. Ziel ist nicht das freie Spielen, sondern das soziale Lernen in der Bewegung -
+            mit dem Menschen als sicherem Begleiter.`,
+      mobileText: `Eine geführte Spaziergangsgruppe an, in der Hunde
+            unter kontrollierten Bedingungen in Kontakt mit Artgenossen und Umweltreizen
+            kommen.`,
+      expendable: true,
+      expand: [
+        {
+          id: "frame-social-walk1",
+          title: "Ziele des Social Walks:",
+          text: `
+          Entspannung statt Eskalation
+          `,
+          bulletPoints: [
+            "Aufbau von gelassener Leinenführigkeit in Anwesenheit anderer Hunde",
+            "Verbesserung der sozialen Kommunikation zwischen Hunden",
+            "Förderung von Impulskontrolle und Orientierung am Menschen",
+            "Alltagsnahe Übung von Hundebegegnungen ohne Stress"
+          ]
+        },
+        {
+          id: "frame-social-walk2",
+          title: "Für wen ist der Social Walk geeignet?",
+          text: ``,
+          bulletPoints: [
+            
+            "Sie wollen Ihren Hund unterwegs beschäftigen, wissen aber nicht Wie und Was?",
+            "Für Hunde, die unsicher oder schnell aufgeregt auf andere Hunde reagieren",
+            "Für Hunde, die bisher wenig soziale Erfahrung gesammelt haben",
+            "Für Halter: innen, die mehr Sicherheit im Umgang mit Hundebegegnungen gewinnen möchten",
+            "Nicht(!) geeignet für stark unverträgliche Hunde ohne vorheriges Einzeltraining",
+          ]
+        },
+        {
+          id: "frame-social-walk3",
+          title: "Ablauf",
+          text: `
+          Der Social Walk bietet Raum zum Lernen, ohne Überforderung. Hund und Mensch
+          sammeln wertvolle Erfahrungen, die sich direkt in den Alltag übertragen lassen.
+          `,
+          bulletPoints: [
+            "Wöchentliche Termine, Dauer ca. 60 Minuten",
+            "Treffpunkt an wechselnden, reizarmen Orten",
+            "Kleine Gruppen (4-8 Mensch-Hund-Teams)",
+            "Abstand wird individuell angepasst",
+            "Übungen in Bewegung, kleine Impulse zur Aufmerksamkeit & Entspannung",
+            "Begleitet von einer erfahrenen Trainerin"
+          ],
+        },
+        {
+          id: "frame-social-walk4",
+          title: "Teilnahmevoraussetzungen",
+          text: `
+          `,
+          bulletPoints: [
+            "Mindestalter: ca. 6 Monate",
+            "Sicheres Tragen von Halsband Und Brustgeschirr",
+            "Sozialverträglichkeit des Hundes auf Basis eines kurzen Vorgesprächs einschätzbar",
+            "Kein Freilauf, kein Spielkontakt - Fokus liegt auf Ruhe und Orientierung",
+          ],
+        },
+        {
+          id: "frame-social-walk6",
+          title: "Termine & Anmeldung",
+          text: `
+          `,
+          bulletPoints: [
+            "Mindestalter: ca. 6 Monate",
+            "Sicheres Tragen von Halsband Und Brustgeschirr",
+            "Sozialverträglichkeit des Hundes auf Basis eines kurzen Vorgesprächs einschätzbar",
+            "Kein Freilauf, kein Spielkontakt - Fokus liegt auf Ruhe und Orientierung",
+          ],
+          price: "15 Euro",
+          price10: "140 Euro",
+        },
+      ]
+    },
   ]
 
   ngOnInit(): void {
@@ -443,7 +634,8 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     const openArticleNumber = Number(this.openArticles);
     if (!this.mobilePortrait) {
       if (openArticleNumber !== -1) {
-        document.body.scrollTop = openArticleNumber * 500;
+        const chosenPictureFrame = document.getElementById("app-picture-frame" + openArticleNumber)
+        chosenPictureFrame?.scrollIntoView(false)
       }
     }
     else if (this.mobilePortrait) {
