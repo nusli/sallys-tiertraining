@@ -81,10 +81,14 @@
           </div>
           <ul class="mobile-nav-group" [ngClass]="{'entry-only': !groupEntriesAvailable}">
             <ul *ngIf="groups_open">
-              <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Fun Agility</li>
+              <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: '0'}" (click)='switchCategories("close")'>Fun Agility</li>
               <!-- <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li>
               <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> -->
-              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 3}" (click)='switchCategories("close")'>Tricks</li>
+              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '1'}" (click)='switchCategories("close")'>Tricks & Parcours</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '2'}" (click)='switchCategories("close")'>Hallentraining</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '3'}" (click)='switchCategories("close")'>Rally Obedience</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '4'}" (click)='switchCategories("close")'>Unterordnung</li>
+        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '5'}" (click)='switchCategories("close")'>Social Walk</li>
               <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
             </ul>
           </ul>
