@@ -62,8 +62,13 @@ Add the following code to the newly generated *component.ts* file and add the co
   @Input() hero!: Hero;
 
   // Scroll to the top on load because Scrollrestoration does not work for some reason.
-  ngAfterViewInit(): void {
-    document.body.scrollTop = 0;
+  ngAfterViewInit() {
+    // scroll to top of page
+    // other methods of scrolling do not work because angular overrides the viewport body
+    const component = document.querySelector("app-hero-section");
+    if (component) {
+      component.scrollIntoView({behavior: "instant"})
+    }
   }
 ```
 
