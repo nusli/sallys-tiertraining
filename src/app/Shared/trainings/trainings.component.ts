@@ -38,10 +38,11 @@ export class TrainingsComponent {
   frameArticlesLoop: number[] = [];
 
   ngOnInit() {
-    for (let index = 0; index < this.frameArticles.length; index+=2) {
-      this.frameArticlesLoop.push(index)
+    if (this.frameArticles) {
+      for (let index = 0; index < this.frameArticles.length; index+=2) {
+        this.frameArticlesLoop.push(index)
+      }
     }
-    console.log("framearticlesloop", this.frameArticlesLoop)
   }
 
 

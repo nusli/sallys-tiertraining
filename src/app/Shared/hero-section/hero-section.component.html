@@ -1,7 +1,7 @@
 <div class="hero-container" [ngClass]="{'mobile-hero-container':mobilePortrait}">
-  <figure *ngIf="mobilePortrait" class="hero-image" [ngStyle]="{'background-image': 'url(' + hero.pictureUrl + ')'}">
+  <figure *ngIf="mobilePortrait" class="hero-image" id="hero-image" [ngStyle]="{'background-image': 'url(' + hero.pictureUrl + ')'}">
   </figure>
-  <figure *ngIf="!mobilePortrait"class="hero-image" [ngStyle]="{'background-image': 'url(' + hero.pictureUrlDesk + ')'}">
+  <figure *ngIf="!mobilePortrait"class="hero-image" id="hero-image" [ngStyle]="{'background-image': 'url(' + hero.pictureUrlDesk + ')'}">
   </figure>
   <figure class="fader"></figure>
   <div class="hero-content">

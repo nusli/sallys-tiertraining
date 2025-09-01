@@ -13,7 +13,15 @@ export class PensionComponent implements OnInit {
   @Input() hero!: Hero;
 
   ngOnInit(): void {
-    document.body.scrollTop = 0;
+    
+  }
+
+  ngAfterViewInit() {
+    // scroll to top of page
+    const component = document.querySelector("app-hero-section");
+    if (component) {
+      component.scrollIntoView({behavior: "instant"})
+    }
   }
 
   introductionArticles: Article[] = [
