@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sallys-tiertraining:build:production"
+              "buildTarget": "sallys-tiertraining:build:production"
             },
             "development": {
-              "browserTarget": "sallys-tiertraining:build:development"
+              "buildTarget": "sallys-tiertraining:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sallys-tiertraining:build"
+            "buildTarget": "sallys-tiertraining:build"
           }
         },
         "test": {
