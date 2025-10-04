@@ -28,10 +28,14 @@
         <article *ngFor="let article of chosenContent" class="picture-frame-article">
           <h2 *ngIf='article.title !=""'>{{ article.title }}</h2>
           <p>{{ article.text }}</p>
-          <div class="prices" *ngIf='article.price !="" && article.price != null'>
+            <ul class="" *ngIf="article.bulletPoints">
+              <li *ngFor="let bulletPoint of article.bulletPoints">{{ bulletPoint }}</li>
+            </ul>
+          
+          <div class="prices" *ngIf='article.price || article.price6 || article.price10 || article.horse4'>
             <h2>Meine Preise</h2>
             <div class="price-entries">
-              <div class="price-entry">
+              <div *ngIf='article.price !="" && article.price != null' class="price-entry">
                 <p><b>Eine Stunde</b></p>
                 <p>{{ article.price}}</p>
               </div>

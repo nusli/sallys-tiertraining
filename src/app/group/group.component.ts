@@ -5,11 +5,9 @@ import { Article } from '../Models/article.model';
 @Component({
   selector: 'app-group',
   templateUrl: './group.component.html',
-  styleUrls: ['./group.component.scss']
+  styleUrls: ['./group.component.scss'],
 })
 export class GroupComponent implements OnInit, AfterViewInit {
-
-
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
   // -1: no article open
@@ -18,40 +16,41 @@ export class GroupComponent implements OnInit, AfterViewInit {
   frameArticles: Article[] = [
     // agility
     {
-      id: "frame-funagility",
-      pictureUrl: "./assets/pictures/frame_funagility.jpg",
-      title: "Funagility",
-      subtitle: "Spaß und Auslastung",
-      text: "Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.",
-      mobileText: "Ein Hindernisparcours für Spaß und körperliche Auslastung",
+      id: 'frame-funagility',
+      pictureUrl: './assets/pictures/frame_funagility.jpg',
+      title: 'Funagility',
+      subtitle: 'Spaß und Auslastung',
+      text: 'Gemeinsam mit eurem vierbeinigen Freund meistert ihr hierbei einen Hindernisparcours, mit den unterschiedlichsten Geräten. Neben der körperlichen Auslastung steht bei mir der Spaß im Vordergrund.',
+      mobileText: 'Ein Hindernisparcours für Spaß und körperliche Auslastung',
       expendable: true,
       expand: [
         {
-          id: "frame-funagility1",
-          title: "Was ist Funagility?",
+          id: 'frame-funagility1',
+          title: 'Was ist Funagility?',
           text: `Beim ursprünglich aus England stammenden Agility, geht es um die fehlerfreie Bewältigung eines Parcours in kürzester Zeit. Beim Funagility steht jedoch nicht die Bestzeit, sondern der Spaß mit dem besten Freund im Vordergrund.
           Dazu werden die Hindernisse individuell dem Hund, seiner Größe, der Konstitution und dem Alter angepasst.
           Euer Hund überwindet ohne Leine unter anderem Hürden, durchquert Tunnel, bewältigt die A-Wand und muss die Wippe meistern. Wichtig ist hierfür eine gesunde Hund-Mensch-Beziehung, um den Hund nur mittels Hörzeichen und Körpersprache durch den Parcours zu lenken.
           `,
         },
         {
-          id: "frame-funagility2",
-          title: "Welche Voraussetzungen sollten erfüllt werden?",
+          id: 'frame-funagility2',
+          title: 'Welche Voraussetzungen sollten erfüllt werden?',
           text: `Damit Frauchen/Herrchen und natürlich auch der Vierbeiner dabei Spaß haben, ist ein gewisser Grundgehorsam erforderlich.
           Auch junge Hunde können an diesem Kurs teilnehmen und können so von Beginn an lernen, ihren Körper richtig einzusetzen und gemeinsam mit ihrem Besitzer neue Aufgaben zu lösen.
           Natürlich wird darauf geachtet, dass sie keine Sprünge ausüben und die Geräte an das Alter angepasst sind.
           `,
         },
         {
-          id: "frame-funagility2",
-          title: "Melde dich jetzt an!",
-          text: `Falls euer Interesse am Fun-Agility geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
+          id: 'frame-funagility4',
+          title: 'Melde dich jetzt an!',
+          text: `Falls euer Interesse am Fun-Agility geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen. 
+          Das Training findet immer Freitags, 19.30 Uhr statt.
           `,
-          price: "20 Euro",
-          price10: "185 Euro",
+          price: '20 Euro',
+          price10: '185 Euro',
         },
-      ]
-    }, 
+      ],
+    },
     // Silvester
     /*
     {
@@ -148,19 +147,20 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     },
     */
     // Locagility
-    /*
+
     {
-      id: "frame-locagility",
-      pictureUrl: "./assets/pictures/card_locagility.jpg",
-      title: "Locagility",
-      subtitle: "Auslastung für alle",
-      text: "Locagility ist eine Mischung aus Longieren, Cavaletti-Trainung und Agility zur kognitiven und körperlichen Auslastung von Hunden aller Altersklassen.",
-      mobileText: "Eine Mischung verschiedener Trainings zur kognitiven und körperlichen Auslastung",
+      id: 'frame-locagility',
+      pictureUrl: './assets/pictures/card_locagility.jpg',
+      title: 'Locagility',
+      subtitle: 'Auslastung für alle',
+      text: 'Locagility ist eine Mischung aus Longieren, Cavaletti-Trainung und Agility zur kognitiven und körperlichen Auslastung von Hunden aller Altersklassen.',
+      mobileText:
+        'Eine Mischung verschiedener Trainings zur kognitiven und körperlichen Auslastung',
       expendable: true,
       expand: [
         {
-          id: "frame-locagility1",
-          title: "Was ist Locagility?",
+          id: 'frame-locagility1',
+          title: 'Was ist Locagility?',
           text: ` Locagility ist eine Sportart, die kognitiven Anspruch stellt, die Spaß macht und in die man Hunde aller Altersklassen integrieren kann.
           Vor allen Dingen für Hunde, welche aus dem physiotherapeutischen, bzw. medizinischen Bereich kommen und sich z.B. nach einer OP in einer Rekonvaleszenszeit befinden, ist diese Sportart sehr gut geeignet.
           Durch Teamwork und Vertrauen bei der Arbeit mit Hindernissen. wird an der Lösung von Problemen gearbeitet. So werden Konflikte gemeinsam gelöst.
@@ -168,39 +168,39 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "frame-locagility2",
-          title: "Welche Schwierigkeitsstufen gibt es?",
+          id: 'frame-locagility2',
+          title: 'Welche Schwierigkeitsstufen gibt es?',
           text: `Im Hindernisbereich gibt es 5 Schwierigkeitsgrade.
           `,
         },
         {
-          id: "",
-          title: "",
+          id: '',
+          title: '',
           text: ` Bodenebene Hindernisse: Matten - Koordinationsleitern - Stangen`,
         },
         {
-          id: "",
-          title: "",
+          id: '',
+          title: '',
           text: `Bodennahe Hindernisse: Markierungsteller oder Pylonen mit Stangen`,
         },
         {
-          id: "",
-          title: "",
+          id: '',
+          title: '',
           text: `Begehbare Hindernisse: Kisten - Podeste - Brettleitern - Brücken`,
         },
         {
-          id: "",
-          title: "",
+          id: '',
+          title: '',
           text: `Begrenzende Hindernisse: Ringe - Engpässe - Tunnel - Zaungänge`,
         },
         {
-          id: "",
-          title: "",
+          id: '',
+          title: '',
           text: `Balance Hindernisse: Luftkissen - Wackelebene - Hängematte`,
         },
         {
-          id: "frame-locagility3",
-          title: "Wie läuft ein Training ab und wer kann mitmachen?",
+          id: 'frame-locagility3',
+          title: 'Wie läuft ein Training ab und wer kann mitmachen?',
           text: `Die Hindernisse werden alle nach Schwierigkeitsgrad in Einzelübungen außerhalb des Longierkreises erarbeitet.
           Danach werden verschiedene Einzelübungen zusammengeführt, bis hin zum zusammenhängenden Parcours.
           Es gibt 1 bis 3 Laufbahnen, durch die der Hund läuft. Hierbei geht es nicht um das Tempo.
@@ -208,30 +208,31 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "frame-locagility4",
-          title: "Melde dich jetzt an!",
+          id: 'frame-locagility4',
+          title: 'Melde dich jetzt an!',
           text: `Falls euer Interesse am Locagility geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
+          Das Training findet immer Sonntag, 10.30 Uhr statt.
           `,
-          price: "20 Euro",
-          price10: "185 Euro",
+          price: '20 Euro',
+          price10: '185 Euro',
         },
-      ]
+      ],
     },
-    */
+
     //Rowdy
-    /*
+
     {
-      id: "frame-rowdy",
-      pictureUrl: "./assets/pictures/rowdy.jpg",
-      title: "Rowdy-Gruppe",
-      subtitle: "Bereit für den Alltag",
-      text: "Wir arbeiten gemeinsam an eurem harmonischen Alltag. Hier steht vor allem eine gute Kommunikation mit eurem Vierbeiner im Vordergrund.",
-      mobileText: "Wir arbeiten gemeinsam an eurem harmonischen Alltag.",
+      id: 'frame-rowdy',
+      pictureUrl: './assets/pictures/rowdy.jpg',
+      title: 'Rowdy-Gruppe',
+      subtitle: 'Bereit für den Alltag',
+      text: 'Wir arbeiten gemeinsam an eurem harmonischen Alltag. Hier steht vor allem eine gute Kommunikation mit eurem Vierbeiner im Vordergrund.',
+      mobileText: 'Wir arbeiten gemeinsam an eurem harmonischen Alltag.',
       expendable: true,
       expand: [
         {
-          id: "frame-rowdy1",
-          title: "Rowdy-Gruppe",
+          id: 'frame-rowdy1',
+          title: 'Rowdy-Gruppe',
           text: `Du möchtest gerne zusammen mit deinem Hund in einer kleinen Gruppe etwas unternehmen und an der Alltagstauglichkeit arbeiten?
 
                   Dann bist du hier genau richtig. In dieser Gruppe sind alle Hunde willkommen, egal
@@ -246,23 +247,22 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "frame-rowdy2",
-          title: "Kurs 1 (Sechs Stunden)",
+          id: 'frame-rowdy2',
+          title: 'Kurs 1 (Sechs Stunden)',
           text: `Der erste Kurs umfasst sechs Stunden, in denen folgende Punkte bearbeitet werden:
           Mensch-Hund/Hund-Hund Kommunikation, Lerntheorie, Aufmerksamkeit, Leinführigkeit und Spielen. 
           Die sechs Stunden finden an folgenden Terminen statt:
-          13.10. 18.30 Uhr, 
+          13.10. 19.30 Uhr, 
           20.10. 12.00 Uhr, 
           31.10. 19.00 Uhr, 
-          7.11.   19.00 Uhr,
+          7.11. 19.00 Uhr,
           14.11. 19.00 Uhr und
           28.11. 19.00 Uhr.
           `,
-
         },
         {
-          id: "frame-rowdy3",
-          title: "Kurs 2 (Fünf Stunden)",
+          id: 'frame-rowdy3',
+          title: 'Kurs 2 (Fünf Stunden)',
           text: `Der zweite Kurs umfasst sechs Stunden, in denen folgende Punkte bearbeitet werden: 
           Orientierung, Leinführigkeit Next Level, Schleppleine Arbeit, Beschäftigung, Spazierengehen Next Level, kognitive Auslastung, Beschäftigung unterwegs und ein individuelles Abschlussgespräch mit allen. 
           Die sechs Stunden finden an folgenden Terminen statt:
@@ -274,14 +274,14 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "special",
-          title: "",
+          id: 'special',
+          title: '',
           text: ``,
-          price: "360 Euro",
+          price: '360 Euro',
         },
-      ]
+      ],
     },
-    */
+
     //Mantrailing
     /* {
       id: "frame-mantrailing",
@@ -337,32 +337,33 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
       ]
     }, */
     {
-      id: "frame-tricks",
-      pictureUrl: "./assets/pictures/card_tricks.jpg",
-      title: "Tricks & Parcours",
+      id: 'frame-tricks',
+      pictureUrl: './assets/pictures/card_tricks.jpg',
+      title: 'Tricks & Parcours',
       subtitle: `Mehr als "Sitz" & "Platz"`,
-      text: "Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ",
-      mobileText: "Mit dem Trickdoggin- und Parcorskurs zu mehr Geschicklichkeit, Vertrauen und Mut",
+      text: 'Dein Hund soll mehr als Sitz, Platz und Co. können? In meinem Trickdogging- und Parcours-Kurs lernt dein Vierbeiner lustige und nützliche Dinge. Beim Parcours geht es um Geschicklichkeit, Vertrauen und Mut, um ganz neue Hindernisse und Untergründe zu bewältigen. ',
+      mobileText:
+        'Mit dem Trickdoggin- und Parcorskurs zu mehr Geschicklichkeit, Vertrauen und Mut',
       expendable: true,
       expand: [
         {
-          id: "frame-tricks1",
-          title: "Was ist Trickdogging?",
+          id: 'frame-tricks1',
+          title: 'Was ist Trickdogging?',
           text: ` Du suchst nach einer geistigen Auslastung für deinen Hund? Dann bist du beim Trickdogging genau richtig.
           Ich erkläre dir die Grundlagen der Arbeit mit dem Clicker und wir erarbeiten gemeinsam und individuell die unterschiedlichsten Tricks.
           Das Repertoire reicht von einfachen Tricks wie Pfote geben und Rolle, bis hin zu komplexen Handlungsketten wie beispielsweise Müll einsortieren.
           `,
         },
         {
-          id: "frame-tricks2",
-          title: "Was ist Parcours?",
+          id: 'frame-tricks2',
+          title: 'Was ist Parcours?',
           text: `Als Ergänzung  zum Tricksen habt ihr hier die Möglichkeit die neue Beschäftigungsart Parcours kennenzulernen.
           Euer Hund muss hier verschieden Untergründe, Stege und Geschicklichkeits- und Balancehindernisse, die speziell dafür angefertigt wurden, überwinden.
           `,
         },
         {
-          id: "frame-tricks3",
-          title: "Was bringen Trick- und Parcourskurse?",
+          id: 'frame-tricks3',
+          title: 'Was bringen Trick- und Parcourskurse?',
           text: `Diese gemeinsame Beschäftigung stärkt die Bindung zwischen deinem Vierbeiner und dir enorm.
           Gerade für ängstliche und scheue Hunde bietet mein Kurs sehr viel Potenzial aus sich herauszukommen, Neues kennenzulernen und stärkt das Selbstbewusstsein und Vertrauen auf spielerische Art und Weise.
           Auch ungeduldige und sehr aktive Hunde lernen gerade beim Parcours sich zu konzentrieren und ruhig mit Ihrem Besitzer gemeinsam zu arbeiten.
@@ -371,21 +372,21 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "frame-tricks4",
-          title: "Melde dich jetzt an!",
+          id: 'frame-tricks4',
+          title: 'Melde dich jetzt an!',
           text: `Falls euer Interesse am Trick- und Parcours-Kurs geweckt ist, meldet euch gerne bei mir und wir vereinbaren ein persönliches Kennenlernen.
           `,
 
-          price: "20 Euro",
-          price10: "185 Euro",
+          price: '20 Euro',
+          price10: '185 Euro',
         },
-      ]
+      ],
     },
     // Hallentraining
     {
-      id: "frame-indoor-training",
-      pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
-      title: "Indoor Reithallentraining",
+      id: 'frame-indoor-training',
+      pictureUrl: './assets/pictures/hunde_mit_pferd.jpg',
+      title: 'Indoor Hallen-training',
       subtitle: `Ganzjähriges Hundetraining bei jeder Witterung`,
       text: `Unser Indoor-Reithallen-Training bietet ganzjährig zuverlässige und wetterunabhängige
           Trainingsbedingungen für Hunde aller Altersklassen. In der großzügigen, geschützten
@@ -398,46 +399,46 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
       expendable: true,
       expand: [
         {
-          id: "frame-indoor-training1",
-          title: "Trainingsschwerpunkte:",
+          id: 'frame-indoor-training1',
+          title: 'Trainingsschwerpunkte:',
           text: `Das Training eignet sich sowohl für Anfänger als auch für Fortgeschrittene und ist durch
                   die Indoor-Umgebung ganzjährig planbar - unabhängig von Wetter oder Jahreszeit.
           `,
           bulletPoints: [
-            "Grundgehorsam (Sitz, Platz, Rückruf, Leinenführigkeit)",
-            "Orientierung am Menschen und Alltagstauglichkeit",
-            "Soziales Verhalten im Umgang mit Artgenossen",
-            "Beschäftigung und Auslastung (z. B. Longieren, Apportieren, kleine Parcours, Tricks)",
-            "Förderung von Aufmerksamkeit und Impulskontrolle",
-            "Umweltreize und sicheres Verhalten in neuen Situationen",
-          ]
+            'Grundgehorsam (Sitz, Platz, Rückruf, Leinenführigkeit)',
+            'Orientierung am Menschen und Alltagstauglichkeit',
+            'Soziales Verhalten im Umgang mit Artgenossen',
+            'Beschäftigung und Auslastung (z. B. Longieren, Apportieren, kleine Parcours, Tricks)',
+            'Förderung von Aufmerksamkeit und Impulskontrolle',
+            'Umweltreize und sicheres Verhalten in neuen Situationen',
+          ],
         },
         {
-          id: "frame-indoor-training2",
-          title: "Hinweise zur Teilnahme:",
+          id: 'frame-indoor-training2',
+          title: 'Hinweise zur Teilnahme:',
           text: ``,
           bulletPoints: [
-            "Teilnahme nur mit vorheriger Anmeldung",
-            "Gültiger Impfschutz des Hundes erforderlich",
-            "Eigene Leine, Belohnungen und wettergerechte Kleidung bitte mitbringen.",
-          ]
+            'Teilnahme nur mit vorheriger Anmeldung',
+            'Gültiger Impfschutz des Hundes erforderlich',
+            'Eigene Leine, Belohnungen und wettergerechte Kleidung bitte mitbringen.',
+          ],
         },
         {
-          id: "frame-indoor-training3",
-          title: "Jeden Freitag 17 Uhr",
+          id: 'frame-indoor-training3',
+          title: 'Jeden Freitag 17 Uhr',
           text: `Eimersleben 39343, Magdeburger Str.79.
           `,
 
-          price: "20 Euro",
-          price10: "185 Euro",
+          price: '20 Euro',
+          price10: '185 Euro',
         },
-      ]
+      ],
     },
     // Rally Obedience
     {
-      id: "frame-rally-obedience",
-      pictureUrl: "./assets/backgrounds/heroes/quali_desk.JPG",
-      title: "Rally Obedience",
+      id: 'frame-rally-obedience',
+      pictureUrl: './assets/backgrounds/heroes/quali_desk.JPG',
+      title: 'Rally Obedience',
       subtitle: `Präzision trifft Teamarbeit`,
       text: `Rally Obedience ist eine abwechslungsreiche Hundesportart, bei der Präzision,
           Kommunikation und Freude an gemeinsamer Arbeit im Mittelpunkt stehen. Einmal
@@ -448,8 +449,8 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
       expendable: true,
       expand: [
         {
-          id: "frame-rally-obedience1",
-          title: "Trainingsschwerpunkte:",
+          id: 'frame-rally-obedience1',
+          title: 'Trainingsschwerpunkte:',
           text: `In einem Parcours aus verschiedenen Schilderstationen werden Gehorsamsübungen
                 wie Sitz, Platz, Bleib, Wendungen oder Tempowechsel miteinander kombiniert. Der
                 Mensch führt den Hund überwiegend in der Fußarbeit durch die Stationen - mit
@@ -457,48 +458,48 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "frame-rally-obedience2",
-          title: "Trainingsinhalte",
+          id: 'frame-rally-obedience2',
+          title: 'Trainingsinhalte',
           text: `Rally Obedience ist für Hunde jeder Rasse und jeden Alters geeignet, sofern ein
               grundlegender Gehorsam vorhanden ist. Der Sport stärkt die Bindung, fördert die
               geistige Auslastung und ist auch für ältere Hunde oder körperlich eingeschränkte Halter
               gut umsetzbar.`,
           bulletPoints: [
-            "Aufbau und Training der einzelnen Schilderübungen",
-            "Fußarbeit mit Blickkontakt und präzisem Timing",
-            "Koordination und Kommunikation im Team",
-            "Arbeit mit Distanzsignalen, Tempowechseln und Richtungsänderungen",
-            "Konzentration trotz Ablenkung",
-            "Vorbereitung auf Turniere (optional)"
-          ]
+            'Aufbau und Training der einzelnen Schilderübungen',
+            'Fußarbeit mit Blickkontakt und präzisem Timing',
+            'Koordination und Kommunikation im Team',
+            'Arbeit mit Distanzsignalen, Tempowechseln und Richtungsänderungen',
+            'Konzentration trotz Ablenkung',
+            'Vorbereitung auf Turniere (optional)',
+          ],
         },
         {
-          id: "frame-rally-obedience3",
-          title: "Organisatorisches",
-          text: `Jeden Freitag 15 Uhr
+          id: 'frame-rally-obedience3',
+          title: 'Organisatorisches',
+          text: `Jeden Freitag 15 Uhr und Sonntags 12:00
           `,
           bulletPoints: [
-            "Voraussetzung: Grundgehorsam und gute soziale Verträglichkeit",
-            "Trainingsort: je nach Wetterlage Indoor oder Outdoor"
+            'Voraussetzung: Grundgehorsam und gute soziale Verträglichkeit',
+            'Trainingsort: je nach Wetterlage Indoor oder Outdoor',
           ],
-          price: "20 Euro",
-          price10: "185 Euro",
+          price: '20 Euro',
+          price10: '185 Euro',
         },
-      ]
+      ],
     },
     // Unterordnung
     {
-      id: "frame-unterordnung",
-      pictureUrl: "./assets/backgrounds/heroes/hundegruppe.jpg",
-      title: "Unterordnung",
+      id: 'frame-unterordnung',
+      pictureUrl: './assets/backgrounds/heroes/hundegruppe.jpg',
+      title: 'Unterordnung',
       subtitle: `Struktur & Präzision im Mensch-Hund-Team`,
       text: `Stärkung des Teams Mensch-Hund durch kontrollierte Arbeit und anspruchsvolle Übungen.`,
       mobileText: `Stärkung des Teams Mensch-Hund durch kontrollierte Arbeit und anspruchsvolle Übungen.`,
       expendable: true,
       expand: [
         {
-          id: "frame-rally-unterordnung1",
-          title: "Kursbeschreibung:",
+          id: 'frame-rally-unterordnung1',
+          title: 'Kursbeschreibung:',
           text: `Im Kurs „Unterordnung“ liegt der Fokus auf einer präzisen, freudigen und harmonischen
             Zusammenarbeit zwischen Mensch und Hund. Ziel ist es, das Hund-Mensch-Team in
             kontrollierter Arbeitsweise zu stärken und die bereits gelernten Grundsignale unter
@@ -510,40 +511,40 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
           `,
         },
         {
-          id: "frame-rally-obedience2",
-          title: "Trainingsinhalte",
+          id: 'frame-rally-obedience2',
+          title: 'Trainingsinhalte',
           text: `Rally Obedience ist für Hunde jeder Rasse und jeden Alters geeignet, sofern ein
               grundlegender Gehorsam vorhanden ist. Der Sport stärkt die Bindung, fördert die
               geistige Auslastung und ist auch für ältere Hunde oder körperlich eingeschränkte Halter
               gut umsetzbar.`,
           bulletPoints: [
-            "Aufbau und Training der einzelnen Schilderübungen",
-            "Fußarbeit mit Blickkontakt und präzisem Timing",
-            "Koordination und Kommunikation im Team",
-            "Arbeit mit Distanzsignalen, Tempowechseln und Richtungsänderungen",
-            "Konzentration trotz Ablenkung",
-            "Vorbereitung auf Turniere (optional)"
-          ]
+            'Aufbau und Training der einzelnen Schilderübungen',
+            'Fußarbeit mit Blickkontakt und präzisem Timing',
+            'Koordination und Kommunikation im Team',
+            'Arbeit mit Distanzsignalen, Tempowechseln und Richtungsänderungen',
+            'Konzentration trotz Ablenkung',
+            'Vorbereitung auf Turniere (optional)',
+          ],
         },
         {
-          id: "frame-rally-obedience3",
-          title: "Organisatorisches",
-          text: `Jeden Freitag 15 Uhr
+          id: 'frame-rally-obedience3',
+          title: 'Organisatorisches',
+          text: `Sonntags 12 Uhr
           `,
           bulletPoints: [
-            "Voraussetzung: Grundgehorsam und gute soziale Verträglichkeit",
-            "Trainingsort: je nach Wetterlage Indoor oder Outdoor"
+            'Voraussetzung: Grundgehorsam und gute soziale Verträglichkeit',
+            'Trainingsort: je nach Wetterlage Indoor oder Outdoor',
           ],
-          price: "20 Euro",
-          price10: "185 Euro",
+          price: '20 Euro',
+          price10: '185 Euro',
         },
-      ]
+      ],
     },
     // Social Walk
     {
-      id: "frame-social-walk",
-      pictureUrl: "./assets/pictures/frame_dogs.JPG",
-      title: "Social Walk",
+      id: 'frame-social-walk',
+      pictureUrl: './assets/pictures/frame_dogs.JPG',
+      title: 'Social Walk',
       subtitle: `Kontrollierte Begegnungen mit anderen Hunden`,
       text: `In unserem Social Walk bieten wir eine geführte Spaziergangsgruppe an, in der Hunde
             unter kontrollierten Bedingungen in Kontakt mit Artgenossen und Umweltreizen
@@ -555,76 +556,250 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
       expendable: true,
       expand: [
         {
-          id: "frame-social-walk1",
-          title: "Ziele des Social Walks:",
+          id: 'frame-social-walk1',
+          title: 'Ziele des Social Walks:',
           text: `
           Entspannung statt Eskalation
           `,
           bulletPoints: [
-            "Aufbau von gelassener Leinenführigkeit in Anwesenheit anderer Hunde",
-            "Verbesserung der sozialen Kommunikation zwischen Hunden",
-            "Förderung von Impulskontrolle und Orientierung am Menschen",
-            "Alltagsnahe Übung von Hundebegegnungen ohne Stress"
-          ]
+            'Aufbau von gelassener Leinenführigkeit in Anwesenheit anderer Hunde',
+            'Verbesserung der sozialen Kommunikation zwischen Hunden',
+            'Förderung von Impulskontrolle und Orientierung am Menschen',
+            'Alltagsnahe Übung von Hundebegegnungen ohne Stress',
+          ],
         },
         {
-          id: "frame-social-walk2",
-          title: "Für wen ist der Social Walk geeignet?",
+          id: 'frame-social-walk2',
+          title: 'Für wen ist der Social Walk geeignet?',
           text: ``,
           bulletPoints: [
-            
-            "Sie wollen Ihren Hund unterwegs beschäftigen, wissen aber nicht Wie und Was?",
-            "Für Hunde, die unsicher oder schnell aufgeregt auf andere Hunde reagieren",
-            "Für Hunde, die bisher wenig soziale Erfahrung gesammelt haben",
-            "Für Halter: innen, die mehr Sicherheit im Umgang mit Hundebegegnungen gewinnen möchten",
-            "Nicht(!) geeignet für stark unverträgliche Hunde ohne vorheriges Einzeltraining",
-          ]
+            'Sie wollen Ihren Hund unterwegs beschäftigen, wissen aber nicht Wie und Was?',
+            'Für Hunde, die unsicher oder schnell aufgeregt auf andere Hunde reagieren',
+            'Für Hunde, die bisher wenig soziale Erfahrung gesammelt haben',
+            'Für Halter: innen, die mehr Sicherheit im Umgang mit Hundebegegnungen gewinnen möchten',
+            'Nicht(!) geeignet für stark unverträgliche Hunde ohne vorheriges Einzeltraining',
+          ],
         },
         {
-          id: "frame-social-walk3",
-          title: "Ablauf",
+          id: 'frame-social-walk3',
+          title: 'Ablauf',
           text: `
           Der Social Walk bietet Raum zum Lernen, ohne Überforderung. Hund und Mensch
           sammeln wertvolle Erfahrungen, die sich direkt in den Alltag übertragen lassen.
           `,
           bulletPoints: [
-            "Wöchentliche Termine, Dauer ca. 60 Minuten",
-            "Treffpunkt an wechselnden, reizarmen Orten",
-            "Kleine Gruppen (4-8 Mensch-Hund-Teams)",
-            "Abstand wird individuell angepasst",
-            "Übungen in Bewegung, kleine Impulse zur Aufmerksamkeit & Entspannung",
-            "Begleitet von einer erfahrenen Trainerin"
+            'Immer Donnerstags, 17.00 Uhr, Dauer ca. 60 Minuten',
+            'Treffpunkt an wechselnden, reizarmen Orten',
+            'Kleine Gruppen (4-8 Mensch-Hund-Teams)',
+            'Abstand wird individuell angepasst',
+            'Übungen in Bewegung, kleine Impulse zur Aufmerksamkeit & Entspannung',
+            'Begleitet von einer erfahrenen Trainerin',
           ],
         },
         {
-          id: "frame-social-walk4",
-          title: "Teilnahmevoraussetzungen",
+          id: 'frame-social-walk4',
+          title: 'Teilnahmevoraussetzungen',
           text: `
           `,
           bulletPoints: [
-            "Mindestalter: ca. 6 Monate",
-            "Sicheres Tragen von Halsband Und Brustgeschirr",
-            "Sozialverträglichkeit des Hundes auf Basis eines kurzen Vorgesprächs einschätzbar",
-            "Kein Freilauf, kein Spielkontakt - Fokus liegt auf Ruhe und Orientierung",
+            'Mindestalter: ca. 6 Monate',
+            'Sicheres Tragen von Halsband Und Brustgeschirr',
+            'Sozialverträglichkeit des Hundes auf Basis eines kurzen Vorgesprächs einschätzbar',
+            'Kein Freilauf, kein Spielkontakt - Fokus liegt auf Ruhe und Orientierung',
           ],
         },
         {
-          id: "frame-social-walk6",
-          title: "Termine & Anmeldung",
+          id: 'frame-social-walk6',
+          title: 'Termine & Anmeldung',
           text: `
           `,
           bulletPoints: [
-            "Mindestalter: ca. 6 Monate",
-            "Sicheres Tragen von Halsband Und Brustgeschirr",
-            "Sozialverträglichkeit des Hundes auf Basis eines kurzen Vorgesprächs einschätzbar",
-            "Kein Freilauf, kein Spielkontakt - Fokus liegt auf Ruhe und Orientierung",
+            'Mindestalter: ca. 6 Monate',
+            'Sicheres Tragen von Halsband Und Brustgeschirr',
+            'Sozialverträglichkeit des Hundes auf Basis eines kurzen Vorgesprächs einschätzbar',
+            'Kein Freilauf, kein Spielkontakt - Fokus liegt auf Ruhe und Orientierung',
           ],
-          price: "15 Euro",
-          price10: "140 Euro",
+          price: '15 Euro',
+          price10: '140 Euro',
         },
-      ]
+      ],
     },
-  ]
+    // Junge Hunde
+    {
+      id: 'frame-young-dogs',
+      pictureUrl: './assets/gallery/Maya/240205.jpg',
+      title: 'Junghunde-Training',
+      subtitle: `Kontrollierte Begegnungen mit anderen Hunden`,
+      text: `Suchen Sie nach einer professionellen und liebevollen Trainingsmöglichkeit für Ihren
+      jungen Hund? Dann sind Sie bei unserem wöchentlichen Hundetraining genau richtig!`,
+      mobileText: `Suchen Sie nach einer professionellen und liebevollen Trainingsmöglichkeit für Ihren
+jungen Hund? Dann sind Sie bei unserem wöchentlichen Hundetraining genau richtig!`,
+      expendable: true,
+      expand: [
+        {
+          id: 'frame-young-dogs1',
+          title: 'Was wir bieten:',
+          text: `
+          Wir bieten ein speziell abgestimmtes Training für Junghunde an, das auf die Bedürfnisse
+          junger Tiere und ihrer Bezugspersonen zugeschnitten ist. Unser Ziel ist es, die Bindung
+          zwischen Ihnen und Ihrem Hund zu stärken, Alltagsgehorsam zu fördern und spielerisch
+          neue Kommandos zu erlernen.
+          `,
+        },
+        {
+          id: 'frame-young-dogs2',
+          title: 'Kosten, wann und wo?',
+          text: ``,
+          bulletPoints: [
+            'Trainingstag: Jeden Sonntag',
+            'Uhrzeit: 13:00 Uhr',
+            'Ort: Eimersleben 39343, Magdeburger Str. 79',
+          ],
+          price10: '190 Euro',
+        },
+        {
+          id: 'frame-young-dogs3',
+          title: 'Für wen ist das Training geeignet?',
+          text: `
+          Unser Angebot richtet sich an alle Personen mit jungen Hunden, egal ob es sich um den
+          ersten Hund handelt oder bereits Erfahrung vorhanden ist.
+          `,
+        },
+        {
+          id: 'frame-young-dogs4',
+          title: 'Trainingsinhalte:',
+          text: `
+          `,
+          bulletPoints: [
+            'Grundkommandos (Sitz, Platz, Hier, Bleib)',
+            'Sozialisierung mit anderen Hunden',
+            'Leinenführigkeit',
+            'Rückruftraining',
+            'Alltagssituationen meistern',
+            'Fragen und individuelle Anliegen der Teilnehmer*innen',
+          ],
+        },
+        {
+          id: 'frame-young-dogs5',
+          title: 'Warum unser Training?',
+          text: `
+          `,
+          bulletPoints: [
+            'Kleine Gruppen für individuelles Eingehen auf jedes Mensch-Hund-Team',
+            'Gewaltfreie, moderne Trainingsmethoden',
+            'Freundliche Atmosphäre und viel Spaß!',
+          ],
+        },
+        {
+          id: 'frame-young-dogs6',
+          title: 'Anmeldung und Kontakt',
+          text: `Bei Interesse oder Fragen melden Sie sich gerne per E-Mail oder Telefon. Die Plätze sind
+begrenzt, daher empfehlen wir eine frühzeitige Anmeldung. Wir freuen uns auf
+motivierte Hunde und engagierte Begleiter*innen – lassen Sie uns gemeinsam starten!
+          `,
+        },
+      ],
+    },
+    // Welpen
+    {
+      id: 'frame-puppies',
+      pictureUrl: './assets/gallery/Maya/240211.jpg',
+      title: 'Welpen-Training',
+      subtitle: `Kontrollierte Begegnungen mit anderen Hunden`,
+      text: `Für alle, die ihrem Welpen den besten Start ins Leben ermöglichen möchten, biete ich
+ein umfassendes Welpentraining an. Die Stunden eignen sich ideal, um gemeinsam und
+mit Freude die ersten wichtigen Erziehungsschritte zu gehen. Mit gezielten Übungen und
+der richtigen Mischung aus Geduld und Konsequenz lernen Sie und Ihr Hund alles
+Wichtige für ein harmonisches Miteinander.`,
+      mobileText: `Mit gezielten Übungen und
+der richtigen Mischung aus Geduld und Konsequenz lernen Sie und Ihr Hund alles
+Wichtige für ein harmonisches Miteinander.`,
+      expendable: true,
+      expand: [
+        {
+          id: 'frame-puppies1',
+          title: 'Der Grundstein für ein glückliches Hundeleben',
+          text: `
+          Ein Welpe bringt Freude, Leben und oftmals auch ein wenig Chaos in das Zuhause.
+Damit aus dem kleinen Fellknäuel ein freundlicher, ausgeglichener und gut erzogener
+Hund wird, ist ein durchdachtes Welpentraining unerlässlich. Die ersten Lebensmonate
+sind dabei entscheidend, denn in dieser Zeit lernt der Hund besonders schnell und prägt
+sich Erfahrungen tief ein. Ein harmonisches Zusammenleben basiert auf Vertrauen,
+Geduld und einer liebevollen, aber konsequenten Erziehung.
+          `,
+        },
+        {
+          id: 'frame-puppies2',
+          title: 'Sozialisierung - der Schlüssel zu einem alltagstauglichen Hund',
+          text: `Zwischen der 8. und 16. Lebenswoche befindet sich der Welpe in einer besonders
+prägenden Phase. Jetzt sollte er möglichst viele positive Erfahrungen mit Menschen,
+anderen Tieren, Geräuschen und Umgebungen machen. Wichtig ist, Überforderung zu vermeiden und auf die Signale des Hundes zu achten.`,
+          bulletPoints: [
+            'Kontakte zu anderen Hunden: Spielerische Treffn fördern Sozialverhalten und Kommunikation.',
+            'Alltagsgeräusche: Staubsauger, Klingel oder Straßenlärm sollten behutsam eingeführt werden.',
+            'Menschliche Begegnungen: Unterschiedliche Personen - Kinder, ältere Menschen, Menschen mit Gehhilfen - kennenlernen.',
+            'Verschiedene Umgebungen: Spaziergänge in der Stadt, im Wald oder im Park machen den Welpen sicher für den Alltag.'
+          ],
+        },
+        {
+          id: 'frame-puppies3',
+          title: 'Grundkommandos und erste Erziehungsübungen',
+          text: `
+          Die wichtigsten Signale wie „Sitz“, „Platz“, „Komm“ und „Nein“ bilden die Basis für ein
+entspanntes Zusammenleben.
+          `,
+          bulletPoints: [
+            'Kurz und klar: Kommandos sollten stets gleich und in ruhigem Ton gegeben werden.',
+            'Positive Verstärkung: Lob und kleine Leckerli motivieren den Welpen zum Mitmachen.',
+            'Kurz und spielerisch üben: Die Aufmerksamkeitsspanne ist noch gering - lieber mehrere kurze Einheiten als eine lange.',
+            'Konsistenz: Alle in der Familie sollten die gleichen Regeln und Kommandos verwenden.'
+          ]
+        },
+        {
+          id: 'frame-puppies4',
+          title: 'An der Leine laufen',
+          text: `
+          Das Gehen an der Leine muss erst gelernt werden und ist für viele Welpen ungewohnt.
+          `,
+          bulletPoints: [
+            'Sanfte Gewöhnung: Zuerst kann die Leine in der Wohnung angelegt werden.',
+            'Schritt für Schritt: Anfangs nur kurze Spaziergänge, um Überforderung zu vermeiden: Welpenkurse und Hundeschule',
+          ],
+        },
+        {
+          id: 'frame-puppies5',
+          title: '',
+          text: `
+          Der Besuch einer Welpenschule ist sehr zu empfehlen. Dort lernt der Welpe den
+Umgang mit Gleichaltrigen, und Hundebesitzer*innen werden fachkundig bei
+Erziehungsfragen unterstützt. Die Kurse sind meist spielerisch aufgebaut und stärken
+die Bindung zwischen Mensch und Hund.
+          `,
+        },
+        {
+          id: 'frame-puppies6',
+          title: 'Geduld, Liebe und gemeinsame Zeit',
+          text: `Welpen zu erziehen erfordert Zeit und Geduld. Fehler gehören dazu, und nicht jeder Tag
+läuft perfekt. Wichtig ist eine liebevolle, aber konsequente Haltung. Positive Erlebnisse
+und gemeinsames Spiel stärken die Beziehung und machen das Training zu einer Freude
+für beide Seiten.
+          `,
+        },
+        {
+          id: 'frame-puppies7',
+          title: 'Kosten & Termin',
+          text: `
+          Bla
+          `,
+          bulletPoints: [
+            'Kurszeit: immer sonntags um 10:30 Uhr',
+            'Ort Eimersleben 39343, Magdeburger Str. 79'
+          ],
+          price10: '165 Euro'
+        },
+      ],
+    },
+  ];
 
   ngOnInit(): void {
     document.body.scrollTop = 0;
@@ -634,11 +809,12 @@ zusätzliche Informationen benötigen, lassen Sie es mich wissen.
     const openArticleNumber = Number(this.openArticles);
     if (!this.mobilePortrait) {
       if (openArticleNumber !== -1) {
-        const chosenPictureFrame = document.getElementById("app-picture-frame" + openArticleNumber)
-        chosenPictureFrame?.scrollIntoView(false)
+        const chosenPictureFrame = document.getElementById(
+          'app-picture-frame' + openArticleNumber
+        );
+        chosenPictureFrame?.scrollIntoView(false);
       }
-    }
-    else if (this.mobilePortrait) {
+    } else if (this.mobilePortrait) {
       if (openArticleNumber !== -1) {
         document.body.scrollTop = openArticleNumber * 200;
       }

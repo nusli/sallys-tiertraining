@@ -1,32 +1,107 @@
-<nav  [ngClass]="{'mobile-nav':mobilePortrait}">
-  <figure class="nav-bg-red" [ngStyle]="{'height.vh':navBackgroundHeight, 'max-height.px': navBackgroundMaxHeight}"></figure>
-  <figure class="nav-bg-grey" [ngStyle]="{'height.vh':navBackgroundHeight, 'max-height.px': navBackgroundMaxHeight}"></figure>
+<nav [ngClass]="{ 'mobile-nav': mobilePortrait }">
+  <figure
+    class="nav-bg-red"
+    [ngStyle]="{
+      'height.vh': navBackgroundHeight,
+      'max-height.px': navBackgroundMaxHeight
+    }"
+  ></figure>
+  <figure
+    class="nav-bg-grey"
+    [ngStyle]="{
+      'height.vh': navBackgroundHeight,
+      'max-height.px': navBackgroundMaxHeight
+    }"
+  ></figure>
   <div class="navbar">
     <figure routerLink="" class="nav-logo nav-entry">
-      <img src="./assets/icons/sallys_logo.svg" alt="sallys logo">
+      <img src="./assets/icons/sallys_logo.svg" alt="sallys logo" />
     </figure>
-    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="groups_open? 'nav-sub-menu-bg' : 'close'" (mouseenter) ="switchCategories('groups_open')"  (mouseleave) ="switchCategories('close')">
+    <div
+      *ngIf="!mobilePortrait"
+      class="nav-entry"
+      [ngClass]="groups_open ? 'nav-sub-menu-bg' : 'close'"
+      (mouseenter)="switchCategories('groups_open')"
+      (mouseleave)="switchCategories('close')"
+    >
       <div class="nav-entry-top">
         <!--Für größere Bildschirme: Hundetraining (Gruppe)?!-->
-        <a routerLink="/Hundegruppentraining"  routerLinkActive="active" (click)="switchCategories('')">HUNDEGRUPPE</a>
-        <figure *ngIf="groupEntriesAvailable" [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'"></figure>
+        <a
+          routerLink="/Hundegruppentraining"
+          routerLinkActive="active"
+          (click)="switchCategories('')"
+          >HUNDEGRUPPE</a
+        >
+        <figure
+          *ngIf="groupEntriesAvailable"
+          [ngClass]="groups_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+        ></figure>
       </div>
       <ul *ngIf="groups_open" class="nav-ul-fade">
-        <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: '0'}" (click)='switchCategories("close")'>Fun Agility</li>
+        <li
+          routerLink="/Hundegruppentraining"
+          [queryParams]="{ openArticle: '0' }"
+          (click)="switchCategories('close')"
+        >
+          Fun Agility
+        </li>
         <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li> -->
         <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> -->
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '1'}" (click)='switchCategories("close")'>Tricks & Parcours</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '2'}" (click)='switchCategories("close")'>Hallentraining</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '3'}" (click)='switchCategories("close")'>Rally Obedience</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '4'}" (click)='switchCategories("close")'>Unterordnung</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '5'}" (click)='switchCategories("close")'>Social Walk</li>
+        <li
+          routerLink="/Hundegruppentraining"
+          [queryParams]="{ openArticle: '1' }"
+          (click)="switchCategories('close')"
+        >
+          Tricks & Parcours
+        </li>
+        <li
+          routerLink="/Hundegruppentraining"
+          [queryParams]="{ openArticle: '2' }"
+          (click)="switchCategories('close')"
+        >
+          Hallentraining
+        </li>
+        <li
+          routerLink="/Hundegruppentraining"
+          [queryParams]="{ openArticle: '3' }"
+          (click)="switchCategories('close')"
+        >
+          Rally Obedience
+        </li>
+        <li
+          routerLink="/Hundegruppentraining"
+          [queryParams]="{ openArticle: '4' }"
+          (click)="switchCategories('close')"
+        >
+          Unterordnung
+        </li>
+        <li
+          routerLink="/Hundegruppentraining"
+          [queryParams]="{ openArticle: '5' }"
+          (click)="switchCategories('close')"
+        >
+          Social Walk
+        </li>
         <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
       </ul>
     </div>
-    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="individual_open? 'nav-sub-menu-bg' : ''">
+    <div
+      *ngIf="!mobilePortrait"
+      class="nav-entry"
+      [ngClass]="individual_open ? 'nav-sub-menu-bg' : ''"
+    >
       <div class="nav-entry-top">
-        <a  routerLink="/Hundeeinzeltraining" routerLinkActive="active" (click)="switchCategories('')">EINZELTRAINING</a>
-        <figure *ngIf="individualEntriesAvailable" [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('individual_open')"></figure>
+        <a
+          routerLink="/Hundeeinzeltraining"
+          routerLinkActive="active"
+          (click)="switchCategories('')"
+          >EINZELTRAINING</a
+        >
+        <figure
+          *ngIf="individualEntriesAvailable"
+          [ngClass]="individual_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+          (click)="switchCategories('individual_open')"
+        ></figure>
       </div>
       <ul *ngIf="individual_open">
         <li>Eintrag 1</li>
@@ -34,10 +109,23 @@
         <li>Eintrag 3</li>
       </ul>
     </div>
-    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="horse_open? 'nav-sub-menu-bg' : ''">
+    <div
+      *ngIf="!mobilePortrait"
+      class="nav-entry"
+      [ngClass]="horse_open ? 'nav-sub-menu-bg' : ''"
+    >
       <div class="nav-entry-top">
-        <a routerLink="/Reitunterricht" routerLinkActive="active" (click)="switchCategories('')">REITUNTERRICHT</a>
-        <figure *ngIf="horseEntriesAvailable" [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" (click)="switchCategories('horse_open')"></figure>
+        <a
+          routerLink="/Reitunterricht"
+          routerLinkActive="active"
+          (click)="switchCategories('')"
+          >REITUNTERRICHT</a
+        >
+        <figure
+          *ngIf="horseEntriesAvailable"
+          [ngClass]="horse_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+          (click)="switchCategories('horse_open')"
+        ></figure>
       </div>
       <ul *ngIf="horse_open">
         <li>Eintrag 1</li>
@@ -45,24 +133,50 @@
         <li>Eintrag 3</li>
       </ul>
     </div>
-    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="stable_open? 'nav-sub-menu-bg' : ''" (mouseenter) ="switchCategories('stable_open')"  (mouseleave) ="switchCategories('close')">
-      <div class="nav-entry-top" >
-        <a routerLink="/Reitstall" routerLinkActive="active" (click)="switchCategories('')">STALL</a>
-        <figure [ngClass]="stable_open? 'nav-arrow-open' : 'nav-arrow-closed'" ></figure>
+    <div
+      *ngIf="!mobilePortrait"
+      class="nav-entry"
+      [ngClass]="stable_open ? 'nav-sub-menu-bg' : ''"
+      (mouseenter)="switchCategories('stable_open')"
+      (mouseleave)="switchCategories('close')"
+    >
+      <div class="nav-entry-top">
+        <a
+          routerLink="/Reitstall"
+          routerLinkActive="active"
+          (click)="switchCategories('')"
+          >STALL</a
+        >
+        <figure
+          [ngClass]="stable_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+        ></figure>
       </div>
       <ul *ngIf="stable_open" class="nav-ul-fade">
-        <li routerLink="/Reitstall" >Unser Reitstall</li>
-        <li routerLink="/Pension" >Pensionsstall</li>
+        <li routerLink="/Reitstall">Unser Reitstall</li>
+        <li routerLink="/Pension">Pensionsstall</li>
       </ul>
     </div>
-    <div *ngIf="!mobilePortrait" class="nav-entry" [ngClass]="personal_open? 'nav-sub-menu-bg' : ''" (mouseenter) ="switchCategories('personal_open')"  (mouseleave) ="switchCategories('close')">
-      <div class="nav-entry-top" >
-        <a routerLink="/DasBinIch" routerLinkActive="active" (click)="switchCategories('')">DAS BIN ICH</a>
-        <figure [ngClass]="personal_open? 'nav-arrow-open' : 'nav-arrow-closed'" ></figure>
+    <div
+      *ngIf="!mobilePortrait"
+      class="nav-entry"
+      [ngClass]="personal_open ? 'nav-sub-menu-bg' : ''"
+      (mouseenter)="switchCategories('personal_open')"
+      (mouseleave)="switchCategories('close')"
+    >
+      <div class="nav-entry-top">
+        <a
+          routerLink="/DasBinIch"
+          routerLinkActive="active"
+          (click)="switchCategories('')"
+          >DAS BIN ICH</a
+        >
+        <figure
+          [ngClass]="personal_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+        ></figure>
       </div>
       <ul *ngIf="personal_open" class="nav-ul-fade">
-        <li routerLink="/DasBinIch" >Über mich</li>
-        <li routerLink="/Kontakt" >Kontakt</li>
+        <li routerLink="/DasBinIch">Über mich</li>
+        <li routerLink="/Kontakt">Kontakt</li>
       </ul>
     </div>
     <!-- <div *ngIf="!mobilePortrait" class="nav-entry">
@@ -71,32 +185,114 @@
 
     <!-- mobile navbar here -->
     <div *ngIf="mobilePortrait" id="hamburger" class="nav-entry">
-      <figure *ngIf="!mobileNavOpen"  class="hamburger-menu default-hamburger" (click)='switchCategories("open")'></figure>
-      <figure *ngIf="mobileNavOpen"  class="hamburger-menu open-hamburger" (click)='switchCategories("close")'></figure>
+      <figure
+        *ngIf="!mobileNavOpen"
+        class="hamburger-menu default-hamburger"
+        (click)="switchCategories('open')"
+      ></figure>
+      <figure
+        *ngIf="mobileNavOpen"
+        class="hamburger-menu open-hamburger"
+        (click)="switchCategories('close')"
+      ></figure>
       <ul *ngIf="mobileNavOpen" class="mobile-nav-entries">
         <li>
           <div class="nav-entry-top" (click)="switchCategories('groups_open')">
             <a class="mobile-a" routerLinkActive="active">Hundegruppen</a>
-            <figure *ngIf="groupEntriesAvailable" [ngClass]="groups_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" ></figure>
+            <figure
+              *ngIf="groupEntriesAvailable"
+              [ngClass]="groups_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+              [ngStyle]="{ 'width.rem': 1, 'height.rem': 1 }"
+            ></figure>
           </div>
-          <ul class="mobile-nav-group" [ngClass]="{'entry-only': !groupEntriesAvailable}">
+          <ul
+            class="mobile-nav-group"
+            [ngClass]="{ 'entry-only': !groupEntriesAvailable }"
+          >
             <ul *ngIf="groups_open">
-              <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: '0'}" (click)='switchCategories("close")'>Fun Agility</li>
-              <!-- <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li>
-              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> -->
-              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '1'}" (click)='switchCategories("close")'>Tricks & Parcours</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '2'}" (click)='switchCategories("close")'>Hallentraining</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '3'}" (click)='switchCategories("close")'>Rally Obedience</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '4'}" (click)='switchCategories("close")'>Unterordnung</li>
-        <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: '5'}" (click)='switchCategories("close")'>Social Walk</li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '0' }"
+                (click)="switchCategories('close')"
+              >
+                Fun Agility
+              </li>
+              <!-- <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li> -->
+              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> 
+              <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Rowdygruppe</li> 
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '3' }"
+                (click)="switchCategories('close')"
+              >
+                Tricks & Parcours
+              </li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '4' }"
+                (click)="switchCategories('close')"
+              >
+                Hallentraining
+              </li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '5' }"
+                (click)="switchCategories('close')"
+              >
+                Rally Obedience
+              </li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '6' }"
+                (click)="switchCategories('close')"
+              >
+                Unterordnung
+              </li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '7' }"
+                (click)="switchCategories('close')"
+              >
+                Social Walk
+              </li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '8' }"
+                (click)="switchCategories('close')"
+              >
+                Junghunde-Training
+              </li>
+              <li
+                routerLink="/Hundegruppentraining"
+                [queryParams]="{ openArticle: '9' }"
+                (click)="switchCategories('close')"
+              >
+                Welpen-Training
+              </li>
               <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
             </ul>
           </ul>
         </li>
         <li>
-          <div class="nav-entry-top" [ngClass]="{'entry-only': !individualEntriesAvailable}">
-            <a class="mobile-a" routerLink="/Hundeeinzeltraining" routerLinkActive="active" (click)="switchCategories('')">Einzeltraining</a>
-            <figure *ngIf="individualEntriesAvailable" [ngClass]="individual_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('individual_open')"></figure>
+          <div
+            class="nav-entry-top"
+            [ngClass]="{ 'entry-only': !individualEntriesAvailable }"
+          >
+            <a
+              class="mobile-a"
+              routerLink="/Hundeeinzeltraining"
+              routerLinkActive="active"
+              (click)="switchCategories('')"
+              >Einzeltraining</a
+            >
+            <figure
+              *ngIf="individualEntriesAvailable"
+              [ngClass]="
+                individual_open ? 'nav-arrow-open' : 'nav-arrow-closed'
+              "
+              [ngStyle]="{ 'width.rem': 1, 'height.rem': 1 }"
+              (click)="switchCategories('individual_open')"
+            ></figure>
           </div>
           <ul class="mobile-nav-group">
             <ul *ngIf="individual_open">
@@ -107,9 +303,23 @@
           </ul>
         </li>
         <li>
-          <div class="nav-entry-top" [ngClass]="{'entry-only': !horseEntriesAvailable}">
-            <a class="mobile-a" routerLink="/Reitunterricht" routerLinkActive="active" (click)="switchCategories('')">Reitunterricht</a>
-            <figure *ngIf="horseEntriesAvailable" [ngClass]="horse_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" (click)="switchCategories('horse_open')"></figure>
+          <div
+            class="nav-entry-top"
+            [ngClass]="{ 'entry-only': !horseEntriesAvailable }"
+          >
+            <a
+              class="mobile-a"
+              routerLink="/Reitunterricht"
+              routerLinkActive="active"
+              (click)="switchCategories('')"
+              >Reitunterricht</a
+            >
+            <figure
+              *ngIf="horseEntriesAvailable"
+              [ngClass]="horse_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+              [ngStyle]="{ 'width.rem': 1, 'height.rem': 1 }"
+              (click)="switchCategories('horse_open')"
+            ></figure>
           </div>
           <ul class="mobile-nav-group">
             <ul *ngIf="horse_open">
@@ -122,25 +332,42 @@
         <li>
           <div class="nav-entry-top" (click)="switchCategories('stable_open')">
             <a class="mobile-a">Stall</a>
-            <figure [ngClass]="stable_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" ></figure>
+            <figure
+              [ngClass]="stable_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+              [ngStyle]="{ 'width.rem': 1, 'height.rem': 1 }"
+            ></figure>
           </div>
           <ul class="mobile-nav-group">
             <ul *ngIf="stable_open">
-              <li routerLink="/Reitstall" (click)='switchCategories("close")'>Unser Reitstall</li>
-              <li routerLink="/Pension" (click)='switchCategories("close")'>Pensionsstall</li>
+              <li routerLink="/Reitstall" (click)="switchCategories('close')">
+                Unser Reitstall
+              </li>
+              <li routerLink="/Pension" (click)="switchCategories('close')">
+                Pensionsstall
+              </li>
             </ul>
           </ul>
         </li>
 
         <li>
-          <div class="nav-entry-top" (click)="switchCategories('personal_open')">
+          <div
+            class="nav-entry-top"
+            (click)="switchCategories('personal_open')"
+          >
             <a class="mobile-a">Das bin ich</a>
-            <figure [ngClass]="personal_open? 'nav-arrow-open' : 'nav-arrow-closed'" [ngStyle]="{'width.rem': 1, 'height.rem': 1}" ></figure>
+            <figure
+              [ngClass]="personal_open ? 'nav-arrow-open' : 'nav-arrow-closed'"
+              [ngStyle]="{ 'width.rem': 1, 'height.rem': 1 }"
+            ></figure>
           </div>
           <ul class="mobile-nav-group">
             <ul *ngIf="personal_open">
-              <li routerLink="/DasBinIch" (click)='switchCategories("close")'>Über mich</li>
-              <li routerLink="/Kontakt" (click)='switchCategories("close")'>Kontakt</li>
+              <li routerLink="/DasBinIch" (click)="switchCategories('close')">
+                Über mich
+              </li>
+              <li routerLink="/Kontakt" (click)="switchCategories('close')">
+                Kontakt
+              </li>
             </ul>
           </ul>
         </li>
@@ -153,4 +380,3 @@
     </div>
   </div>
 </nav>
-
