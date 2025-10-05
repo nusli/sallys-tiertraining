@@ -30,51 +30,67 @@
         ></figure>
       </div>
       <ul *ngIf="groups_open" class="nav-ul-fade">
-        <li
-          routerLink="/Hundegruppentraining"
-          [queryParams]="{ openArticle: '0' }"
-          (click)="switchCategories('close')"
-        >
-          Fun Agility
-        </li>
-        <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li> -->
-        <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> -->
-        <li
-          routerLink="/Hundegruppentraining"
-          [queryParams]="{ openArticle: '1' }"
-          (click)="switchCategories('close')"
-        >
-          Tricks & Parcours
-        </li>
-        <li
-          routerLink="/Hundegruppentraining"
-          [queryParams]="{ openArticle: '2' }"
-          (click)="switchCategories('close')"
-        >
-          Hallentraining
-        </li>
-        <li
-          routerLink="/Hundegruppentraining"
-          [queryParams]="{ openArticle: '3' }"
-          (click)="switchCategories('close')"
-        >
-          Rally Obedience
-        </li>
-        <li
-          routerLink="/Hundegruppentraining"
-          [queryParams]="{ openArticle: '4' }"
-          (click)="switchCategories('close')"
-        >
-          Unterordnung
-        </li>
-        <li
-          routerLink="/Hundegruppentraining"
-          [queryParams]="{ openArticle: '5' }"
-          (click)="switchCategories('close')"
-        >
-          Social Walk
-        </li>
-        <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '0' }"
+            (click)="switchCategories('close')"
+          >
+            Fun Agility
+          </li>
+          <!-- <li routerLink="/Hundegruppentraining"  [queryParams]="{openArticle: 0}" (click)='switchCategories("close")'>Silvester</li> -->
+          <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 1}" (click)='switchCategories("close")'>Locagility</li> 
+          <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Rowdygruppe</li> 
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '3' }"
+            (click)="switchCategories('close')"
+          >
+            Tricks & Parcours
+          </li>
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '4' }"
+            (click)="switchCategories('close')"
+          >
+            Hallentraining
+          </li>
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '5' }"
+            (click)="switchCategories('close')"
+          >
+            Rally Obedience
+          </li>
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '6' }"
+            (click)="switchCategories('close')"
+          >
+            Unterordnung
+          </li>
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '7' }"
+            (click)="switchCategories('close')"
+          >
+            Social Walk
+          </li>
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '8' }"
+            (click)="switchCategories('close')"
+          >
+            Junghunde-Training
+          </li>
+          <li
+            routerLink="/Hundegruppentraining"
+            [queryParams]="{ openArticle: '9' }"
+            (click)="switchCategories('close')"
+          >
+            Welpen-Training
+          </li>
+          <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
+        
       </ul>
     </div>
     <div
