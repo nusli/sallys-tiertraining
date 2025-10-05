@@ -56,6 +56,7 @@ export class FooterComponent implements OnInit {
       text: "Verbessere dein Englisch beim Reiten mit mir als Muttersprachlerin. Egal ob Dressur, Freizeit oder Springen, bei jedem Leistungsniveau.",
       link: "/special/englischlehrgang",
     },
+    /*
     {
       id: "stangen_lehrgang",
       pictureUrl: "./assets/pictures/sally.jpg",
@@ -65,6 +66,8 @@ export class FooterComponent implements OnInit {
       Durch das Traning mit Stangen wird das Pferd gymnastiziert und der Sitz des Reiters verbessert.`,
       link: "/special/stangenlehrgang"
     },
+    */
+    /*
     {
       id: "hunde_wochenende",
       pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
@@ -75,6 +78,7 @@ export class FooterComponent implements OnInit {
       Lernen, Vertrauen und gemeinsamer Entwicklung.`,
       link: "/special/trainingswochenende"
     },
+    */
     {
       id: "abzeichen",
       pictureUrl: "./assets/pictures/training_setup.jpg",
@@ -83,6 +87,14 @@ export class FooterComponent implements OnInit {
       text: `Ihr wollt die Prüfung für ein Reitabzeichen absolvieren? Dieser Lehrgang bereitet euch optimal darauf vor. Im Lehrgang lernt ihr das theoretische Wissen und die
       praktischen Fähigkeiten um euch ein neues Reitabzeichen zu verdienen. Die Prüfung findet am 23. Oktober hier auf der Anlage statt.`,
       link: "special/abzeichen"
+    },
+    {
+      id: "springgymnastik",
+      pictureUrl: "./assets/pictures/frame_springen.jpg",
+      title: "Springgymnastik",
+      date: "6. und 7. Dezember",
+      text: `Ein Lehrgang  für alle Reiter ab E-Niveau mit dem Fokus auf Gymnastizierung. Perfekt für die Weiterentwicklung von Pferd und Reiter im Springsport`,
+      link: "/special/springgymnastik"
     },
   ];
 

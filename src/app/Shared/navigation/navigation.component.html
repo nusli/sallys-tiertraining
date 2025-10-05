@@ -214,10 +214,10 @@
             ></figure>
           </div>
           <ul
+            *ngIf="groups_open"
             class="mobile-nav-group"
             [ngClass]="{ 'entry-only': !groupEntriesAvailable }"
           >
-            <ul *ngIf="groups_open">
               <li
                 routerLink="/Hundegruppentraining"
                 [queryParams]="{ openArticle: '0' }"
@@ -278,7 +278,6 @@
                 Welpen-Training
               </li>
               <!-- <li routerLink="/Hundegruppentraining" [queryParams]="{openArticle: 2}" (click)='switchCategories("close")'>Mantrailing</li> -->
-            </ul>
           </ul>
         </li>
         <li>

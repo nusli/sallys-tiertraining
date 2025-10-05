@@ -1,12 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { Hero } from 'src/app/Models/hero.model';
+import { SharedModule } from "src/app/Shared/shared.module";
 
 @Component({
-  selector: 'app-stangenlehrgang',
-  templateUrl: './stangenlehrgang.component.html',
-  styleUrls: ['./stangenlehrgang.component.scss']
+  selector: 'app-springgymnastik',
+  templateUrl: './springgymnastik.component.html',
+  styleUrl: './springgymnastik.component.scss',
+  imports: [SharedModule],
+  standalone: true
 })
-export class StangenlehrgangComponent {
+export class SpringgymnastikComponent {
   @Input() mobilePortrait = false;
   @Input() hero!: Hero;
 

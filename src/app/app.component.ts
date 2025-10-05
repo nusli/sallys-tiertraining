@@ -131,6 +131,14 @@ export class AppComponent implements OnInit{
       subtitle: "Vorbereitung und Prüfung für das Reitabzeichen oder Pferdeführerschein",
       text: "Wichtige Etappen auf dem Weg zur reiterlichen Qualifikation"
     },
+    {
+      id:"springgymnastic",
+      pictureUrl: "./assets/pictures/frame_springen.jpg",
+      pictureUrlDesk: "./assets/pictures/frame_springen.jpg",
+      title: "Springgymnastiklehrgang",
+      subtitle: "Am 6.12.2025 und 7.12.2025",
+      text: "Mit Sally Davidson (Trainer A-Lizenz)"
+    },
 
   ]
   activeHero = this.heroes[0]
@@ -253,6 +261,10 @@ export class AppComponent implements OnInit{
       }
       case "/special/abzeichen": {
         this.activeHero = this.heroes[13];
+        break;
+      }
+      case "/special/springgymnastik": {
+        this.activeHero = this.heroes[14];
         break;
       }
     }

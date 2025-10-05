@@ -18,6 +18,7 @@ import { StangenlehrgangComponent } from 'src/app/special/stangenlehrgang/stange
 import { TrainingswochenendeComponent } from 'src/app/special/trainingswochenende/trainingswochenende.component';
 import { EnglischLehrgangComponent } from 'src/app/special/englisch-lehrgang/englisch-lehrgang.component';
 import { AbzeichenComponent } from 'src/app/special/abzeichen/abzeichen.component';
+import { SpringgymnastikComponent } from 'src/app/special/springgymnastik/springgymnastik.component';
 
 
 export const routes: Routes = [
@@ -35,6 +36,7 @@ export const routes: Routes = [
   {path: 'special/trainingswochenende', component: TrainingswochenendeComponent},
   {path: 'special/englischlehrgang', component: EnglischLehrgangComponent},
   {path: 'special/abzeichen', component: AbzeichenComponent},
+  {path: 'special/springgymnastik', component: SpringgymnastikComponent},
 ];
 
 @NgModule({

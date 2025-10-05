@@ -23,7 +23,7 @@ export class CoursesComponent implements OnInit {
       pictureUrl: "./assets/gallery/placeholder-icon.png",
       pictureUrlDesk: "./assets/gallery/placeholder-icon.png",
       title: "Freispringen",
-      text: "19.07., 13.08. bei uns in der Halle",
+      text: "11.10., 01.11. bei uns in der Halle",
       text2: "",
       link: "",
       fragment: "jumping",
@@ -51,6 +51,7 @@ export class CoursesComponent implements OnInit {
       fragment: "english",
       query: {},
     },
+    /*
     {
       id: "stangenlehrgang",
       pictureUrl: "./assets/pictures/training_setup.jpg",
@@ -62,6 +63,9 @@ export class CoursesComponent implements OnInit {
       fragment: "stangenlehrgang",
       query: {},
     },
+    */
+    /* Trainingswochenende */
+    /*
     {
       id: "trainingswochenende",
       pictureUrl: "./assets/pictures/hunde_mit_pferd.jpg",
@@ -73,6 +77,7 @@ export class CoursesComponent implements OnInit {
       fragment: "trainingswochenende",
       query: {},
     },
+    */
     {
       id: "abzeichen",
       pictureUrl: "./assets/pictures/reitergruppe.jpg",
@@ -82,6 +87,17 @@ export class CoursesComponent implements OnInit {
       text2: "",
       link: "special/abzeichen",
       fragment: "longe",
+      query: {},
+    },
+    {
+      id: "springgymnastik",
+      pictureUrl: "./assets/pictures/frame_springen.jpg",
+      pictureUrlDesk: "./assets/pictures/frame_springen.jpg",
+      title: "Springgymnastik",
+      text: "Ein Lehrgang  für alle Reiter ab E-Niveau mit dem Fokus auf Gymnastizierung.",
+      text2: "",
+      link: "special/springgymnastik",
+      fragment: "springgymnastik",
       query: {},
     },
   ]

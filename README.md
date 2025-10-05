@@ -42,7 +42,7 @@ You might have to navigate to repository settings and manually set the gh-pages 
 ## Code Doku
 ### Special Folder
 This folder contains all sites that advertise special events, like 1 time courses. These sites don't get a link in the navbar. Instead add them to the footer
-**footer.component.ts** "*News*" array and **courses.component.ts** "*specialCards*" array.
+**footer.component.ts** "*News*" array and **Landing/courses/courses.component.ts** "*specialCards*" array.
 
 ### adding a new component
 First, run `ng g c path-to-component\componentname`. Then add that component to *src\app\Modules\routing\routing.module.ts* with the desired url path.
