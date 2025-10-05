@@ -1,55 +1,50 @@
 .navbar{
   position: absolute;
   width: 100vw;
-  z-index: 3;
   top: 0px;
   left: 0px;
   padding: 7px 40px 7px 8.33vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  
 }
 
-.nav-bg-red{
-  background-image: url(../../../assets/backgrounds/red_top.svg);
+.nav-bg-image {
+  width: 105vw;
   background-size: 105vw;
   background-position: bottom;
   position: absolute;
-  width: 105vw;
-  height: 7.57vw;
-  max-height: 165px;
   top: 0px;
+}
+.nav-bg-red{
+  background-image: url(../../../assets/backgrounds/red_top.svg);
+  height: 12.57vh;
   left: -1vw;
-  z-index: 1;
 }
 
 .mobile-nav .nav-bg-red
 {
   background-image: url(../../../assets/backgrounds/red_top_mobile.svg);
-  height: 35.39vw;
-  max-height: 360px;
+  height: 107%;
 }
 
 .nav-bg-grey{
   background-image: url(../../../assets/backgrounds/grey_top.svg);
-  background-size: 105vw;
-  background-position: bottom;
-  position: absolute;
-  width: 105vw;
-  height: 7.57vw;
-  max-height: 165px;
-  top: -0.30vw;
+  height: 12vh;
   left: -0.15vw;
-  z-index: 2;
 }
 
 .mobile-nav .nav-bg-grey
 {
   background-image: url(../../../assets/backgrounds/grey_top_mobile.svg);
-  height: 35.39vw;
-  max-height: 360px;
-  top: -0.8vw;
+  height: 104%;
+}
+
+.navbar-content {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
 }
 
 .nav-entry

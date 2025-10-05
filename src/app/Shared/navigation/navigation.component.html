@@ -1,19 +1,11 @@
-<nav [ngClass]="{ 'mobile-nav': mobilePortrait }">
+<nav [ngClass]="{ 'mobile-nav': mobilePortrait }" class="navbar">
   <figure
-    class="nav-bg-red"
-    [ngStyle]="{
-      'height.vh': navBackgroundHeight,
-      'max-height.px': navBackgroundMaxHeight
-    }"
+    class="nav-bg-red nav-bg-image"
   ></figure>
   <figure
-    class="nav-bg-grey"
-    [ngStyle]="{
-      'height.vh': navBackgroundHeight,
-      'max-height.px': navBackgroundMaxHeight
-    }"
+    class="nav-bg-grey nav-bg-image"
   ></figure>
-  <div class="navbar">
+  <div class="navbar-content">
     <figure routerLink="" class="nav-logo nav-entry">
       <img src="./assets/icons/sallys_logo.svg" alt="sallys logo" />
     </figure>
