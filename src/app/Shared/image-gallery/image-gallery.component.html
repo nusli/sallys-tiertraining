@@ -16,6 +16,7 @@
     </button>
     
     <img [src]="images[selectedImage].url" [alt]="images[selectedImage].alt" (click)="showNextImage($event)" />
+    <p class="image-counter">{{ selectedImage }} / {{ images.length }}</p>
     <button class="button-next arrow-button">
         <figure class="nav-arrow-right arrow-image" (click)="showNextImage($event)"></figure>
     </button>

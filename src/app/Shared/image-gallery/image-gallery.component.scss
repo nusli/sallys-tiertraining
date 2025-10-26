@@ -75,22 +75,24 @@
 /* Portrait (vertical) orientation */
 @media screen and (orientation: portrait) {
     .bigImageView {
+        padding: 28vh 10vw;
+        grid-template-rows: 4fr 1fr;
+        grid-template-columns: repeat(5, 1fr);
         grid-template-areas: 
-        ". . . ."
-        "image image image image"
-        ". buttonPrev buttonNext .";
+        "image image image image image"
+        ". buttonPrev imageCounter buttonNext .";
     }
-    .arrow-button {
-        align-self: start
-    }
+    
   }
   
   /* Landscape (horizontal) orientation */
   @media screen and (orientation: landscape) {
     .bigImageView {
         grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 4fr 1fr;
         grid-template-areas: 
-        "buttonPrev image buttonNext";
+        "buttonPrev image buttonNext"
+        ". imageCounter .";
     }
   }
 
@@ -133,4 +135,10 @@
 .arrow-image {
     height: 100%;
     width: 100%;
+}
+
+.image-counter {
+    grid-area: imageCounter;
+    color: white;
+    font-weight: semi-bold;
 }
