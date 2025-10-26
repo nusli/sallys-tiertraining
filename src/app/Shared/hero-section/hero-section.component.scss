@@ -7,7 +7,6 @@
 }
 .mobile-hero-container
 {
-  padding-top: 6vh;
   height: 48vh;
   margin-bottom: 6.25vh;
 
@@ -46,7 +45,7 @@
 }
 .mobile-hero-container .hero-image
 {
-  height: 25vh;
+  height: 40vh;
 }
 
 .fader
@@ -54,14 +53,14 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
   position: absolute;
   left: 0;
-  top: 33vh;
+  top: vh;
   width: 100vw;
   height: 18vh;
 }
 .mobile-hero-container .fader
 {
   height: 10vh;
-  top: 25.1vh;
+  top: 32vh;
 }
 
 .hero-content

@@ -17,6 +17,7 @@
 .nav-bg-red{
   background-image: url(../../../assets/backgrounds/red_top.svg);
   height: 12.57vh;
+  min-height: 86px;
   left: 0;
 }
 
@@ -24,18 +25,21 @@
 {
   background-image: url(../../../assets/backgrounds/red_top_mobile.svg);
   height: 107%;
+  min-height: initial;
 }
 
 .nav-bg-grey{
   background-image: url(../../../assets/backgrounds/grey_top.svg);
   height: 12vh;
   left: 0vw;
+  min-height: 83px;
 }
 
 .mobile-nav .nav-bg-grey
 {
   background-image: url(../../../assets/backgrounds/grey_top_mobile.svg);
   height: 104%;
+  min-height: initial;
 }
 
 .navbar-content {
@@ -111,8 +115,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: start;
   width: 17.5vw;
-  height: 6.94vw;
+  height: 10vh;
   max-width: 223px;
   max-height: 120px;
   cursor: pointer;
@@ -121,8 +126,7 @@
 .mobile-nav .nav-logo
 {
   justify-content: flex-start;
-  width: 28.8vw;
-  height: 16.51vw;
+  width: initial;
 }
 .nav-logo img{
   width: 11.11vw;
@@ -132,8 +136,7 @@
 
 .mobile-nav .nav-logo img
 {
-  width: 28.8vw;
-  height: 16.51vw;
+  height: 8vh;
 }
 
 .nav-sub-menu-bg{
@@ -173,7 +176,7 @@
 
 #hamburger
 {
-  margin-top: 5.5vw;
+  margin-top: 3vh;
 }
 .hamburger-menu
 {
