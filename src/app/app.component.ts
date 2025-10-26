@@ -104,7 +104,7 @@ export class AppComponent implements OnInit{
       pictureUrl: "./assets/pictures/training_setup.jpg",
       pictureUrlDesk: "./assets/pictures/training_setup.jpg",
       title: "Stangenlehrgang",
-      subtitle: "Am 16.08.2025 und 17.08.2025",
+      subtitle: "Am 17.01.2026 und 18.01.2026",
       text: "Mit Sally Davidson (Trainer A-Lizenz)"
     },
     {

@@ -52,7 +52,7 @@ import { AbzeichenComponent } from './special/abzeichen/abzeichen.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-  ],
+],
   providers: [{provide: FIREBASE_OPTIONS, useValue: environment.firebase}],
   bootstrap: [AppComponent]
 })

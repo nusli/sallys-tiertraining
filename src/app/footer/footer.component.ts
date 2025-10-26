@@ -48,6 +48,7 @@ export class FooterComponent implements OnInit {
       date: "17. Oktober - 19. Oktober",
       text: "Erlerne die richtige Arbeit mit der Longe und Doppellonge. Durchgeführt vom Friesenverband."
     },
+    /*
     {
       id: "englisch_lehrgang",
       pictureUrl: "./assets/pictures/sally.jpg",
@@ -56,17 +57,18 @@ export class FooterComponent implements OnInit {
       text: "Verbessere dein Englisch beim Reiten mit mir als Muttersprachlerin. Egal ob Dressur, Freizeit oder Springen, bei jedem Leistungsniveau.",
       link: "/special/englischlehrgang",
     },
-    /*
+    */
+    
     {
       id: "stangen_lehrgang",
       pictureUrl: "./assets/pictures/sally.jpg",
       title: "Stangenlehrgang",
-      date: "16. und 17. August",
+      date: "17. und 18. Januar 2026",
       text: `Ein Lehrgang  für alle Reiter ab E-Niveau mit dem Fokus auf Stangenarbeit. 
       Durch das Traning mit Stangen wird das Pferd gymnastiziert und der Sitz des Reiters verbessert.`,
       link: "/special/stangenlehrgang"
     },
-    */
+    
     /*
     {
       id: "hunde_wochenende",

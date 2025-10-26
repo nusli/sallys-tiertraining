@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../Models/hero.model';
 import { Article } from '../Models/article.model';
+import { ImageGalleryComponent } from '../Shared/image-gallery/image-gallery.component';
 
 @Component({
   selector: 'app-stable',
@@ -73,5 +74,6 @@ export class StableComponent implements OnInit {
         },
       ]
     },
+    
   ]
 }

@@ -31,8 +31,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: "longe",
-      pictureUrl: "./assets/pictures/coffee.jpg",
-      pictureUrlDesk: "./assets/pictures/coffee.jpg",
+      pictureUrl: "./assets/pictures/Kaffeestube.jpg",
+      pictureUrlDesk: "./assets/pictures/Kaffeestube.jpg",
       title: "Longenlehrgang",
       text: "17.10. - 19.10.",
       text2: "Lehrgang zur Arbeit mit der Longe und Doppellonge.",
@@ -40,6 +40,7 @@ export class CoursesComponent implements OnInit {
       fragment: "longe",
       query: {},
     },
+    /*
     {
       id: "englisch_lehrgang",
       pictureUrl: "./assets/pictures/sally.jpg",
@@ -51,7 +52,8 @@ export class CoursesComponent implements OnInit {
       fragment: "english",
       query: {},
     },
-    /*
+    */
+    
     {
       id: "stangenlehrgang",
       pictureUrl: "./assets/pictures/training_setup.jpg",
@@ -63,7 +65,7 @@ export class CoursesComponent implements OnInit {
       fragment: "stangenlehrgang",
       query: {},
     },
-    */
+    
     /* Trainingswochenende */
     /*
     {

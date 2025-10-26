@@ -89,7 +89,7 @@ export class PensionComponent implements OnInit {
     },
     {
       id: "pension-intro4",
-      pictureUrl: "./assets/pictures/coffee.jpg",
+      pictureUrl: "./assets/pictures/Kaffeestube.jpg",
       sizeing: "cover",
       title: "Gemeinschaft",
       subtitle: "",
