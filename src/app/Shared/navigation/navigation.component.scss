@@ -8,8 +8,8 @@
 }
 
 .nav-bg-image {
-  width: 105vw;
-  background-size: 105vw;
+  width: 100vw;
+  background-size: 100vw;
   background-position: bottom;
   position: absolute;
   top: 0px;
@@ -17,7 +17,7 @@
 .nav-bg-red{
   background-image: url(../../../assets/backgrounds/red_top.svg);
   height: 12.57vh;
-  left: -1vw;
+  left: 0;
 }
 
 .mobile-nav .nav-bg-red
@@ -29,7 +29,7 @@
 .nav-bg-grey{
   background-image: url(../../../assets/backgrounds/grey_top.svg);
   height: 12vh;
-  left: -0.15vw;
+  left: 0vw;
 }
 
 .mobile-nav .nav-bg-grey

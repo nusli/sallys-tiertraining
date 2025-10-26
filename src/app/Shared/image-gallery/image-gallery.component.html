@@ -2,10 +2,22 @@
     <div class="gallery-container">
       <h2>Galerie</h2>
       <div class="gallery-grid">
-        <ng-container *ngFor="let image of images">
-            <p>loop</p>
-          <img [src]="image.url" [alt]="image.alt" />
+        <ng-container *ngFor="let image of images, let i = index">
+          <img [src]="image.url" [alt]="image.alt" (click)="openBigImageView(i)"/>
         </ng-container>
       </div>
     </div>
-  </section>
+</section>
+
+<div id="bigImageView" class="bigImageView" *ngIf="showBigImage" (click)="showBigImage=false">
+    
+    <button class="button-prev arrow-button">
+        <figure class="nav-arrow-left arrow-image" (click)="showPreviousImage($event)"></figure>
+    </button>
+    
+    <img [src]="images[selectedImage].url" [alt]="images[selectedImage].alt" (click)="showNextImage($event)" />
+    <button class="button-next arrow-button">
+        <figure class="nav-arrow-right arrow-image" (click)="showNextImage($event)"></figure>
+    </button>
+    
+</div>
