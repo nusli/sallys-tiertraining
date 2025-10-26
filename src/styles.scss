@@ -22,6 +22,10 @@
 ::-webkit-scrollbar {
   display: none;
 }
+/*this prevents the bouncing effect when a modal is open*/
+html {
+  overscroll-behavior-y: none;
+}
 
 html, body{
 height: 100%;
@@ -39,6 +43,9 @@ body{
   font-size: 1.13rem;
   line-height: 1.5rem;
   color: black;
+}
+html.no-scroll {
+  overflow-y: hidden;
 }
 h1{
   text-align: center;

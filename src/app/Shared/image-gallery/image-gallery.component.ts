@@ -15,7 +15,7 @@ export class ImageGalleryComponent {
   @HostListener('document:keydown.escape', ['$event'])
   onEscapeKey(event: KeyboardEvent) {
     // User can always close the big image view by pressing escape
-    this.showBigImage = false;
+    this.closeBigImageView()
   }
 
   private touchStartX: number = 0;
@@ -63,6 +63,10 @@ export class ImageGalleryComponent {
   openBigImageView(index: number) {
     this.showBigImage = true;
     this.selectedImage = index;
+  }
+
+  closeBigImageView() {
+    this.showBigImage = false;
   }
 
   showPreviousImage(event?: Event) {

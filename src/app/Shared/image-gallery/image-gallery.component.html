@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<div id="bigImageView" class="bigImageView" *ngIf="showBigImage" (click)="showBigImage=false">
+<div id="bigImageView" class="bigImageView" *ngIf="showBigImage" (click)="closeBigImageView()">
     
     <button class="button-prev arrow-button">
         <figure class="nav-arrow-left arrow-image" (click)="showPreviousImage($event)"></figure>
