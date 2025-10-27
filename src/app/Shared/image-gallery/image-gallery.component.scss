@@ -22,7 +22,7 @@
 }
 
 .gallery-grid img {
-    width: 60vw;
+    width: 80vw;
     max-width: 400px;
     margin-bottom: 2rem;
     transition: ALL 0.2s ease-in-out;
@@ -43,7 +43,7 @@
     }
 
     .gallery-grid img {
-        width: 30vw;
+        width: 35vw;
     }
 }
 
@@ -98,7 +98,7 @@
 
 .bigImageView img {
     max-height: 80vh;
-    max-width: 70vw;
+    max-width: 75vw;
     grid-area: image;
 }
 
@@ -112,6 +112,7 @@
 .arrow-button {
     width: 42px;
     height: 42px;
+    margin-top: 1rem;
     background-color: #dde1e5;
     border: 1px solid black;
     border-radius: 5px;
@@ -141,4 +142,5 @@
     grid-area: imageCounter;
     color: white;
     font-weight: semi-bold;
+    margin-top: 1rem;
 }
