@@ -73,3 +73,7 @@ Add the following code to the newly generated *component.ts* file and add the co
 ```
 
 
+# Current state
+the app has been disabled with the ```firebase hosting:disable``` cli command
+
+
